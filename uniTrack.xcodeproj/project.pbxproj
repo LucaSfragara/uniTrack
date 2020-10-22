@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E15253E107B00DADF91 /* AppDelegate.swift */; };
 		AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E17253E107B00DADF91 /* SceneDelegate.swift */; };
-		AC317E1A253E107B00DADF91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E19253E107B00DADF91 /* ViewController.swift */; };
 		AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1B253E107B00DADF91 /* Main.storyboard */; };
 		AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1E253E107C00DADF91 /* Assets.xcassets */; };
 		AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E20253E107C00DADF91 /* LaunchScreen.storyboard */; };
+		AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E2F253E11C200DADF91 /* UnisViewController.swift */; };
+		AC317E34253E11F800DADF91 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E33253E11F800DADF91 /* University.swift */; };
+		AC317E37253E13A800DADF91 /* UnisListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */; };
+		AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */; };
+		AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E42253F86B000DADF91 /* UniversityStore.swift */; };
+		AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E45253F8DBF00DADF91 /* PersistantService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC317E12253E107B00DADF91 /* uniTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uniTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC317E15253E107B00DADF91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC317E17253E107B00DADF91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC317E19253E107B00DADF91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC317E1C253E107B00DADF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC317E1E253E107C00DADF91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC317E21253E107C00DADF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC317E23253E107C00DADF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC317E2F253E11C200DADF91 /* UnisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisViewController.swift; sourceTree = "<group>"; };
+		AC317E33253E11F800DADF91 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisListTableViewCell.swift; sourceTree = "<group>"; };
+		AC317E3E253F85A100DADF91 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AC317E42253F86B000DADF91 /* UniversityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStore.swift; sourceTree = "<group>"; };
+		AC317E45253F8DBF00DADF91 /* PersistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,36 @@
 		AC317E14253E107B00DADF91 /* uniTrack */ = {
 			isa = PBXGroup;
 			children = (
-				AC317E15253E107B00DADF91 /* AppDelegate.swift */,
-				AC317E17253E107B00DADF91 /* SceneDelegate.swift */,
-				AC317E19253E107B00DADF91 /* ViewController.swift */,
+				AC317E39253F855E00DADF91 /* System */,
 				AC317E1B253E107B00DADF91 /* Main.storyboard */,
 				AC317E1E253E107C00DADF91 /* Assets.xcassets */,
 				AC317E20253E107C00DADF91 /* LaunchScreen.storyboard */,
 				AC317E23253E107C00DADF91 /* Info.plist */,
+				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
+				AC317E32253E11E100DADF91 /* Models */,
+				AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */,
+				AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */,
 			);
 			path = uniTrack;
+			sourceTree = "<group>";
+		};
+		AC317E32253E11E100DADF91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC317E33253E11F800DADF91 /* University.swift */,
+				AC317E42253F86B000DADF91 /* UniversityStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC317E39253F855E00DADF91 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				AC317E15253E107B00DADF91 /* AppDelegate.swift */,
+				AC317E17253E107B00DADF91 /* SceneDelegate.swift */,
+				AC317E45253F8DBF00DADF91 /* PersistantService.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC317E1A253E107B00DADF91 /* ViewController.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
+				AC317E34253E11F800DADF91 /* University.swift in Sources */,
+				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
+				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
+				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
+				AC317E37253E13A800DADF91 /* UnisListTableViewCell.swift in Sources */,
+				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +377,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC317E3E253F85A100DADF91 /* Model.xcdatamodel */,
+			);
+			currentVersion = AC317E3E253F85A100DADF91 /* Model.xcdatamodel */;
+			path = UniTrack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC317E0A253E107B00DADF91 /* Project object */;
 }
