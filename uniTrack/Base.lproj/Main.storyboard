@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaV-8a-nbe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i8p-rC-PH5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UnisListTableViewCell" id="oTb-N8-NCM" customClass="UnisListTableViewCell" customModule="uniTrack" customModuleProvider="target">
@@ -80,14 +80,16 @@
                             <constraint firstItem="37g-A1-LFH" firstAttribute="bottom" secondItem="i8p-rC-PH5" secondAttribute="bottom" id="dVv-De-6a7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Colleges" image="book.fill" catalog="system" id="B0d-8H-bfS"/>
+                    <navigationItem key="navigationItem" title="My Colleges" largeTitleDisplayMode="always" id="r7C-IM-afm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="eng-pY-b3S"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="i8p-rC-PH5" id="tZR-kC-UYn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgN-Vq-HQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626" y="-588"/>
+            <point key="canvasLocation" x="284.05797101449275" y="-588.61607142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eoy-Uu-EuY">
@@ -99,7 +101,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Rtp-tl-bda" kind="relationship" relationship="viewControllers" id="UEo-Xs-ezR"/>
+                        <segue destination="Vie-Nh-XU5" kind="relationship" relationship="viewControllers" id="UEo-Xs-ezR"/>
                         <segue destination="C0M-sc-NfA" kind="relationship" relationship="viewControllers" id="3o2-Eo-hnX"/>
                     </connections>
                 </tabBarController>
@@ -107,10 +109,30 @@
             </objects>
             <point key="canvasLocation" x="-1830" y="-335"/>
         </scene>
+        <!--My Colleges-->
+        <scene sceneID="hEN-YT-ICP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vie-Nh-XU5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Colleges" image="book.fill" catalog="system" id="B0d-8H-bfS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="SA8-rZ-Zkz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rtp-tl-bda" kind="relationship" relationship="rootViewController" id="sEh-vR-p89"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWw-2Z-v4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626.08695652173913" y="-588.61607142857144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

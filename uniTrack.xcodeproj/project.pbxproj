@@ -18,6 +18,8 @@
 		AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */; };
 		AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E42253F86B000DADF91 /* UniversityStore.swift */; };
 		AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E45253F8DBF00DADF91 /* PersistantService.swift */; };
+		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
+		ACCB170D2543570200D76512 /* UniversityFromData .swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromData .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		AC317E3E253F85A100DADF91 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC317E42253F86B000DADF91 /* UniversityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStore.swift; sourceTree = "<group>"; };
 		AC317E45253F8DBF00DADF91 /* PersistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantService.swift; sourceTree = "<group>"; };
+		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		ACCB170C2543570200D76512 /* UniversityFromData .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniversityFromData .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				AC317E33253E11F800DADF91 /* University.swift */,
 				AC317E42253F86B000DADF91 /* UniversityStore.swift */,
+				ACCB170C2543570200D76512 /* UniversityFromData .swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,11 +96,20 @@
 		AC317E39253F855E00DADF91 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				ACCB170225434F3500D76512 /* Data */,
 				AC317E15253E107B00DADF91 /* AppDelegate.swift */,
 				AC317E17253E107B00DADF91 /* SceneDelegate.swift */,
 				AC317E45253F8DBF00DADF91 /* PersistantService.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		ACCB170225434F3500D76512 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC691CFC2544C77A002D41F7 /* data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +172,7 @@
 				AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */,
 				AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */,
 				AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */,
+				AC691CFD2544C77A002D41F7 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +186,7 @@
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
+				ACCB170D2543570200D76512 /* UniversityFromData .swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,

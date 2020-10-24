@@ -10,10 +10,24 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var defaults = UserDefaults.standard
+    
+    var hasLaunchedBefore : Bool?{
+        get{
+            return defaults.bool(forKey: "hasLaunchedBefore")
+        }
+        set{
+            defaults.setValue(newValue, forKey: "hasLaunchedBefore")
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if hasLaunchedBefore != true{
+            //load universities csv into coredata
+            preloadUniversityData()
+        }
+        hasLaunchedBefore = true
         return true
     }
 
@@ -30,7 +44,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
+    private func preloadUniversityData(){
+        print("preloading data...")
+        guard let fileURL = Bundle.main.url(forResource: "data", withExtension: "json") else{
+            fatalError("Couldn't fetch the url for the university file")
+        }
+        
+        guard let jsonData = try? String(contentsOf: fileURL).data(using: .utf8) else {return}
+        
+        //json parsing
+        
+        let decoder = JSONDecoder()
+        
+        do{
+            let decodedUniversityList = try decoder.decode(UniversityListFromJSON.self, from: jsonData)
+        }catch let error{
+            print(error)
+            fatalError("Could not decode universities")
+        }
+        
+    }
 
 }
 
