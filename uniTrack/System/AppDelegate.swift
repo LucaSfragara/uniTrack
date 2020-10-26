@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,9 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         if hasLaunchedBefore != true{
-            //load universities csv into coredata
+            //load universities json into coredata
             preloadUniversityData()
+
         }
         hasLaunchedBefore = true
         return true
@@ -54,14 +57,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let jsonData = try? String(contentsOf: fileURL).data(using: .utf8) else {return}
         
         //json parsing
-        
         let decoder = JSONDecoder()
+        let BackgroundContext = PersistantService.persistentContainer.newBackgroundContext()
+        PersistantService.context.automaticallyMergesChangesFromParent = true
         
-        do{
-            let decodedUniversityList = try decoder.decode(UniversityListFromJSON.self, from: jsonData)
-        }catch let error{
-            print(error)
-            fatalError("Could not decode universities")
+        BackgroundContext.perform {
+            do {
+                guard let decodedUniversities = try? decoder.decode(UniversityListFromJSON.self, from: jsonData) else {
+                    return
+                }
+                
+                for university in decodedUniversities.universities{
+                    
+                    let universityObject = UniversityFromData(context: BackgroundContext)
+                    universityObject.name = university.name
+                    universityObject.telephone = university.telephone
+                    universityObject.zip = university.zip
+                    universityObject.address = university.address
+                    universityObject.population = university.population
+                    universityObject.latitude = Double(university.geoPoint!.components(separatedBy: ",")[0]) ?? 0.0
+                    universityObject.longitude = Double(university.geoPoint!.components(separatedBy: ",")[1]) ?? 0.0
+                    universityObject.city = university.city
+                    universityObject.state = university.state
+                }
+                
+                try BackgroundContext.save()
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+ 
+            
         }
         
     }
