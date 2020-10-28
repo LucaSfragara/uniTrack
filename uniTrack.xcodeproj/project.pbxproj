@@ -18,6 +18,17 @@
 		AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */; };
 		AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E42253F86B000DADF91 /* UniversityStore.swift */; };
 		AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E45253F8DBF00DADF91 /* PersistantService.swift */; };
+		AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */; };
+		AC59FE63254A23E700032322 /* Inter-Black-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5A2548552A00032322 /* Inter-Black-slnt=0.ttf */; };
+		AC59FE64254A23E700032322 /* Inter-Bold-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE582548552A00032322 /* Inter-Bold-slnt=0.ttf */; };
+		AC59FE65254A23E700032322 /* Inter-ExtraBold-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5E2548552A00032322 /* Inter-ExtraBold-slnt=0.ttf */; };
+		AC59FE66254A23E700032322 /* Inter-ExtraLight-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE592548552A00032322 /* Inter-ExtraLight-slnt=0.ttf */; };
+		AC59FE67254A23E700032322 /* Inter-Light-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */; };
+		AC59FE68254A23E700032322 /* Inter-Medium-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5B2548552A00032322 /* Inter-Medium-slnt=0.ttf */; };
+		AC59FE69254A23E700032322 /* Inter-Regular-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5C2548552A00032322 /* Inter-Regular-slnt=0.ttf */; };
+		AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5F2548552A00032322 /* Inter-SemiBold-slnt=0.ttf */; };
+		AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */; };
+		AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */; };
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +47,17 @@
 		AC317E3E253F85A100DADF91 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC317E42253F86B000DADF91 /* UniversityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStore.swift; sourceTree = "<group>"; };
 		AC317E45253F8DBF00DADF91 /* PersistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantService.swift; sourceTree = "<group>"; };
+		AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC59FE582548552A00032322 /* Inter-Bold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE592548552A00032322 /* Inter-ExtraLight-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE5A2548552A00032322 /* Inter-Black-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE5B2548552A00032322 /* Inter-Medium-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE5C2548552A00032322 /* Inter-Regular-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE5E2548552A00032322 /* Inter-ExtraBold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE5F2548552A00032322 /* Inter-SemiBold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-slnt=0.ttf"; sourceTree = "<group>"; };
+		AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,13 +92,12 @@
 		AC317E14253E107B00DADF91 /* uniTrack */ = {
 			isa = PBXGroup;
 			children = (
+				AC4B990625484200005000B4 /* Home */,
 				AC317E39253F855E00DADF91 /* System */,
 				AC317E1B253E107B00DADF91 /* Main.storyboard */,
 				AC317E1E253E107C00DADF91 /* Assets.xcassets */,
 				AC317E20253E107C00DADF91 /* LaunchScreen.storyboard */,
 				AC317E23253E107C00DADF91 /* Info.plist */,
-				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
-				AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */,
 				AC317E32253E11E100DADF91 /* Models */,
 				AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */,
 			);
@@ -96,12 +117,48 @@
 		AC317E39253F855E00DADF91 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				AC59FE572548551400032322 /* Fonts */,
 				ACCB170225434F3500D76512 /* Data */,
 				AC317E15253E107B00DADF91 /* AppDelegate.swift */,
 				AC317E17253E107B00DADF91 /* SceneDelegate.swift */,
 				AC317E45253F8DBF00DADF91 /* PersistantService.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		AC4B990625484200005000B4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
+				AC59FE70254A25D800032322 /* CollectionView cells */,
+				AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AC59FE572548551400032322 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC59FE5A2548552A00032322 /* Inter-Black-slnt=0.ttf */,
+				AC59FE582548552A00032322 /* Inter-Bold-slnt=0.ttf */,
+				AC59FE5E2548552A00032322 /* Inter-ExtraBold-slnt=0.ttf */,
+				AC59FE592548552A00032322 /* Inter-ExtraLight-slnt=0.ttf */,
+				AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */,
+				AC59FE5B2548552A00032322 /* Inter-Medium-slnt=0.ttf */,
+				AC59FE5C2548552A00032322 /* Inter-Regular-slnt=0.ttf */,
+				AC59FE5F2548552A00032322 /* Inter-SemiBold-slnt=0.ttf */,
+				AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AC59FE70254A25D800032322 /* CollectionView cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */,
+				AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */,
+			);
+			path = "CollectionView cells";
 			sourceTree = "<group>";
 		};
 		ACCB170225434F3500D76512 /* Data */ = {
@@ -169,6 +226,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC59FE63254A23E700032322 /* Inter-Black-slnt=0.ttf in Resources */,
+				AC59FE64254A23E700032322 /* Inter-Bold-slnt=0.ttf in Resources */,
+				AC59FE65254A23E700032322 /* Inter-ExtraBold-slnt=0.ttf in Resources */,
+				AC59FE66254A23E700032322 /* Inter-ExtraLight-slnt=0.ttf in Resources */,
+				AC59FE67254A23E700032322 /* Inter-Light-slnt=0.ttf in Resources */,
+				AC59FE68254A23E700032322 /* Inter-Medium-slnt=0.ttf in Resources */,
+				AC59FE69254A23E700032322 /* Inter-Regular-slnt=0.ttf in Resources */,
+				AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */,
+				AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */,
 				AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */,
 				AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */,
 				AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */,
@@ -187,8 +253,10 @@
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,
+				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
+				AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
 				AC317E37253E13A800DADF91 /* UnisListTableViewCell.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,

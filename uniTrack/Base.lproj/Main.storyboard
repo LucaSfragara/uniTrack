@@ -3,10 +3,26 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold-slnt=0.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-ExtraBold-slnt=0.ttf">
+            <string>Inter-ExtraBold</string>
+        </array>
+        <array key="Inter-Regular-slnt=0.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold-slnt=0.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Search-->
         <scene sceneID="btK-kA-cIb">
@@ -24,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="-588" y="125"/>
         </scene>
-        <!--My Colleges-->
+        <!--Dashboard-->
         <scene sceneID="nxv-5n-sKY">
             <objects>
                 <viewController id="Rtp-tl-bda" customClass="UnisViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,64 +48,150 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i8p-rC-PH5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UnisListTableViewCell" id="oTb-N8-NCM" customClass="UnisListTableViewCell" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oTb-N8-NCM" id="JkO-oq-h3J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-6A-2qP">
+                                <rect key="frame" x="20" y="150.5" width="374" height="70"/>
+                                <color key="backgroundColor" name="uniTrack Light Grey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="opP-uU-Rhv"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="35" minimumInteritemSpacing="10" id="kzb-Y4-Wt4">
+                                    <size key="itemSize" width="136" height="84"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingcellID" id="UDu-WF-w1E" customClass="UpComingCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-7" width="136" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ddY-oB-CgV">
+                                            <rect key="frame" x="0.0" y="0.0" width="136" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sg-uO-XlY">
-                                                    <rect key="frame" x="75" y="11.5" width="65.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-RQ-zgt">
+                                                    <rect key="frame" x="20" y="20" width="79.5" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUj-PM-k2m">
-                                                    <rect key="frame" x="258" y="11.5" width="68" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish essay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v23-yg-Wdq">
+                                                    <rect key="frame" x="20" y="50" width="108" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="FUj-PM-k2m" firstAttribute="leading" secondItem="5sg-uO-XlY" secondAttribute="trailing" constant="117.5" id="OMu-Oe-V9f"/>
-                                                <constraint firstItem="5sg-uO-XlY" firstAttribute="centerY" secondItem="JkO-oq-h3J" secondAttribute="centerY" id="Qh2-o3-h8l"/>
-                                                <constraint firstItem="FUj-PM-k2m" firstAttribute="centerY" secondItem="JkO-oq-h3J" secondAttribute="centerY" id="gZk-Kb-JSe"/>
-                                                <constraint firstItem="5sg-uO-XlY" firstAttribute="leading" secondItem="JkO-oq-h3J" secondAttribute="leadingMargin" constant="55" id="zTq-rT-d9H"/>
+                                                <constraint firstAttribute="trailing" secondItem="v23-yg-Wdq" secondAttribute="trailing" constant="8" id="1ix-uh-Eyu"/>
+                                                <constraint firstItem="v23-yg-Wdq" firstAttribute="top" secondItem="L5v-RQ-zgt" secondAttribute="bottom" constant="7" id="4xc-SN-pf8"/>
+                                                <constraint firstItem="L5v-RQ-zgt" firstAttribute="leading" secondItem="ddY-oB-CgV" secondAttribute="leadingMargin" constant="12" id="KhK-8q-yRE"/>
+                                                <constraint firstItem="L5v-RQ-zgt" firstAttribute="top" secondItem="ddY-oB-CgV" secondAttribute="topMargin" constant="12" id="WQu-bo-LYa"/>
+                                                <constraint firstItem="v23-yg-Wdq" firstAttribute="leading" secondItem="ddY-oB-CgV" secondAttribute="leading" constant="20" id="jWf-N5-bqS"/>
                                             </constraints>
-                                        </tableViewCellContentView>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="uniTrack Light Blue"/>
                                         <connections>
-                                            <outlet property="courseLabel" destination="FUj-PM-k2m" id="2OH-4l-uZj"/>
-                                            <outlet property="nameLabel" destination="5sg-uO-XlY" id="mXW-cY-ZcN"/>
+                                            <outlet property="taskLabel" destination="v23-yg-Wdq" id="9o3-L3-e2i"/>
+                                            <outlet property="universityNameLabel" destination="L5v-RQ-zgt" id="vQC-bh-61i"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB0-BG-CVy">
+                                <rect key="frame" x="20" y="111" width="178" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-R0-GnE">
+                                <rect key="frame" x="20" y="256.5" width="164.5" height="27"/>
+                                <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S88-ny-lRU">
+                                <rect key="frame" x="20" y="298.5" width="374" height="130"/>
+                                <color key="backgroundColor" name="uniTrack Light Grey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="wVr-mR-ZI9"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q8j-fc-hFB">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="deadlinesCellID" id="ddM-0g-aWz" customClass="DeadlinesCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oNR-Qj-BqF">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-qO-71p">
+                                                    <rect key="frame" x="40" y="38.5" width="48" height="51"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="42"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfz-0B-QgG">
+                                                    <rect key="frame" x="40" y="13" width="48.5" height="27"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YALE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln1-fO-0eo">
+                                                    <rect key="frame" x="43.5" y="91" width="41.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Np4-qO-71p" firstAttribute="centerX" secondItem="oNR-Qj-BqF" secondAttribute="centerX" id="6oe-Z9-ace"/>
+                                                <constraint firstItem="Yfz-0B-QgG" firstAttribute="top" secondItem="oNR-Qj-BqF" secondAttribute="top" constant="13" id="DDq-xr-yVD"/>
+                                                <constraint firstItem="Ln1-fO-0eo" firstAttribute="top" secondItem="Np4-qO-71p" secondAttribute="bottom" constant="1.5" id="Hjp-dw-QKI"/>
+                                                <constraint firstItem="Ln1-fO-0eo" firstAttribute="centerX" secondItem="oNR-Qj-BqF" secondAttribute="centerX" id="WFR-Fa-p38"/>
+                                                <constraint firstItem="Np4-qO-71p" firstAttribute="centerY" secondItem="oNR-Qj-BqF" secondAttribute="centerY" id="gD8-qV-XYe"/>
+                                                <constraint firstItem="Yfz-0B-QgG" firstAttribute="centerX" secondItem="oNR-Qj-BqF" secondAttribute="centerX" id="uVa-cB-tSy"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="uniTrack Light Blue"/>
+                                        <connections>
+                                            <outlet property="datePrimaryLabel" destination="Np4-qO-71p" id="4QP-dV-nXz"/>
+                                            <outlet property="dateSecondaryLabel" destination="Yfz-0B-QgG" id="Iow-si-f1N"/>
+                                            <outlet property="universityLabel" destination="Ln1-fO-0eo" id="4fP-ks-DSb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="37g-A1-LFH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="uniTrack Light Grey"/>
                         <constraints>
-                            <constraint firstItem="i8p-rC-PH5" firstAttribute="top" secondItem="37g-A1-LFH" secondAttribute="top" id="EYq-hP-9fn"/>
-                            <constraint firstItem="i8p-rC-PH5" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" id="Ptq-63-421"/>
-                            <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="i8p-rC-PH5" secondAttribute="trailing" id="ZZh-wT-ono"/>
-                            <constraint firstItem="37g-A1-LFH" firstAttribute="bottom" secondItem="i8p-rC-PH5" secondAttribute="bottom" id="dVv-De-6a7"/>
+                            <constraint firstItem="lB0-BG-CVy" firstAttribute="top" secondItem="37g-A1-LFH" secondAttribute="top" constant="23" id="0ln-98-NQg"/>
+                            <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="Qzk-6A-2qP" secondAttribute="trailing" constant="20" id="5bE-hF-t53"/>
+                            <constraint firstItem="S88-ny-lRU" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="EeR-kI-IHj"/>
+                            <constraint firstItem="mGU-R0-GnE" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="G3h-91-VCQ"/>
+                            <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="S88-ny-lRU" secondAttribute="trailing" constant="20" id="HOm-Sl-kKo"/>
+                            <constraint firstItem="Qzk-6A-2qP" firstAttribute="centerX" secondItem="5jJ-uA-k1W" secondAttribute="centerX" id="bu1-3K-Ipr"/>
+                            <constraint firstItem="mGU-R0-GnE" firstAttribute="top" secondItem="Qzk-6A-2qP" secondAttribute="bottom" constant="36" id="j36-mm-khb"/>
+                            <constraint firstItem="Qzk-6A-2qP" firstAttribute="top" secondItem="lB0-BG-CVy" secondAttribute="bottom" constant="15" id="qtE-po-Gpt"/>
+                            <constraint firstItem="lB0-BG-CVy" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="zMO-lT-9Kz"/>
+                            <constraint firstItem="S88-ny-lRU" firstAttribute="top" secondItem="mGU-R0-GnE" secondAttribute="bottom" constant="15" id="zW3-SL-sRo"/>
+                            <constraint firstItem="Qzk-6A-2qP" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="zlO-Ar-npo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Colleges" largeTitleDisplayMode="always" id="r7C-IM-afm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="eng-pY-b3S"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Dashboard" largeTitleDisplayMode="always" id="r7C-IM-afm"/>
                     <connections>
-                        <outlet property="tableview" destination="i8p-rC-PH5" id="tZR-kC-UYn"/>
+                        <outlet property="DeadlinesCollectionView" destination="S88-ny-lRU" id="qyB-34-5It"/>
+                        <outlet property="UpComingCollectionView" destination="Qzk-6A-2qP" id="CmW-Ps-Dd9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgN-Vq-HQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284.05797101449275" y="-588.61607142857144"/>
+            <point key="canvasLocation" x="282.60869565217394" y="-588.61607142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eoy-Uu-EuY">
@@ -109,11 +211,11 @@
             </objects>
             <point key="canvasLocation" x="-1830" y="-335"/>
         </scene>
-        <!--My Colleges-->
+        <!--Dashboard-->
         <scene sceneID="hEN-YT-ICP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vie-Nh-XU5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Colleges" image="book.fill" catalog="system" id="B0d-8H-bfS"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="book.fill" catalog="system" id="B0d-8H-bfS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="SA8-rZ-Zkz">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -132,7 +234,12 @@
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="uniTrack Light Blue">
+            <color red="0.29803921568627451" green="0.43137254901960786" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="uniTrack Light Grey">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
