@@ -19,6 +19,7 @@ class UnisViewController: UIViewController {
     
     @IBOutlet private weak var UpComingCollectionView: UICollectionView!
     @IBOutlet private weak var DeadlinesCollectionView: UICollectionView!
+    @IBOutlet private weak var CollegesCollectionView: UICollectionView!
     
     private var unisList: [UniversityFromJSON]? = []
     private var fetchedResultController: NSFetchedResultsController<NSFetchRequestResult>?
@@ -32,6 +33,9 @@ class UnisViewController: UIViewController {
         
         DeadlinesCollectionView.delegate = self
         DeadlinesCollectionView.dataSource = self
+        
+        CollegesCollectionView.delegate = self
+        CollegesCollectionView.dataSource = self
         
     }
     
@@ -59,7 +63,9 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         if collectionView == self.UpComingCollectionView{
             return 10
-        }else{ // DeadLinesCollectionView
+        }else if collectionView == self.DeadlinesCollectionView{
+            return 20
+        }else{ //CollegeCollectionView
             return 20
         }
     }
@@ -67,29 +73,33 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == self.UpComingCollectionView{
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingcellID", for: indexPath) as! UpComingCollectionViewCell
             cell.setup(universityName: "Harvard", task: "Aid applications")
             return cell
-        }else{ // DeadLinesCollectionView
+            
+        }else if collectionView == self.DeadlinesCollectionView{
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deadlinesCellID", for: indexPath) as! DeadlinesCollectionViewCell
             cell.setup(universityName: "Carnegie Mellon", date: Date())
             return cell
+            
+        }else{ // CollegesCollectionView
+           
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collegeCellID", for: indexPath) as! CollegesCollectionViewCell
+            cell.setup(photoImage: nil, name: "Yale College", course: "Business and Law", schoolType: .safety)
+            return cell
         }
-        
-        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == self.UpComingCollectionView{
             return CGSize(width: view.frame.width/3, height: view.frame.height)
-        }else{ // DeadLinesCollectionView
+        }else if collectionView == self.DeadlinesCollectionView{
             return CGSize(width: view.frame.width/3, height: view.frame.height)
+        }else{ //CollegeCollectionView
+            return CGSize(width: view.frame.width, height: view.frame.height/2.3)
         }
-        
-//        let itemsPerRow: CGFloat = 3
-//        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-//        let availableWidth = view.frame.width - paddingSpace
-//        let widthPerItem = availableWidth / itemsPerRow
         
     }
 }

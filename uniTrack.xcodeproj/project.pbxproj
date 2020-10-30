@@ -30,6 +30,7 @@
 		AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */; };
 		AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */; };
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
+		AC9EF9F1254CB80100728162 /* collegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* collegesCollectionViewCell.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		AC9EF9F0254CB80100728162 /* collegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 			children = (
 				AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */,
 				AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */,
+				AC9EF9F0254CB80100728162 /* collegesCollectionViewCell.swift */,
 			);
 			path = "CollectionView cells";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9EF9F1254CB80100728162 /* collegesCollectionViewCell.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
