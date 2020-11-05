@@ -24,7 +24,6 @@ class AddCollegeViewController: UIViewController {
     
 
     var delegate: doneButtonDelegate?
-    private var fetchedResultController: NSFetchedResultsController<NSFetchRequestResult>?
     
     @IBOutlet weak var cardViewTopCostraint: NSLayoutConstraint!
     
@@ -117,7 +116,9 @@ class AddCollegeViewController: UIViewController {
         
 
         if !text.trimmingCharacters(in: .whitespaces).isEmpty {
-            fetchUniversitiesFromData(withNameContaining: text)
+            if text.count > 3{
+                fetchUniversitiesFromData(withNameContaining: text)
+            }
             doneButton.isEnabled = true
             doneButton.alpha = 1
         }else{
@@ -137,12 +138,34 @@ class AddCollegeViewController: UIViewController {
             let fetchPredicate = NSPredicate(format: "name CONTAINS[c] %@", text)
             fetchRequest.predicate = fetchPredicate
         }
-        
+    
         do {
             let result = try PersistantService.context.fetch(fetchRequest)
+            handleDropDownMenu(data: result)
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    private func handleDropDownMenu(data: [UniversityFromData]){
+        
+        var universityNames = [String]()
+        for university in data{
+            universityNames.append(university.name ?? "")
+        }
+        let dropDown = DropDown()
+        dropDown.dataSource = universityNames
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            self?.nameField.text = item
+        }
+        
+        dropDown.anchorView = nameField
+        dropDown.direction = .bottom
+        dropDown.cornerRadius = 10
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        
+        dropDown.show()
+        
     }
 
 }
@@ -204,20 +227,6 @@ extension AddCollegeViewController{
     }
     
     
-}
-
-//MARK: fetchRequestController Delegate
-extension AddCollegeViewController: NSFetchedResultsControllerDelegate{
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        guard let results = controller.fetchedObjects as? [UniversityFromData] else{
-            return
-        }
-        
-        let selectionMenu = RSSelectionMenu(dataSource: results){(cell, item, indexPath) in
-            cell.textLabel?.text = item.name
-        }
-        selectionMenu.show(style: .push ,from: self)
-    }
 }
 
 

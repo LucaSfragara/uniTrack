@@ -32,7 +32,7 @@
                                     <outletCollection property="gestureRecognizers" destination="ByM-t5-gVO" appends="YES" id="uME-2d-sYk"/>
                                 </connections>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-6y-25X" customClass="DesignableView" customModule="authTest" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-6y-25X" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="429" width="414" height="467"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-Pi-fwN">
@@ -69,7 +69,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmH-BU-WOf" userLabel="drag View" customClass="DesignableView" customModule="authTest" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmH-BU-WOf" userLabel="drag View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
                                         <rect key="frame" x="114.5" y="16" width="185.5" height="7"/>
                                         <color key="backgroundColor" red="0.89389103650000001" green="0.89796465640000001" blue="0.90614050629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -81,7 +81,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-81-dOg" customClass="DesignableButton" customModule="authTest" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-81-dOg" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
                                         <rect key="frame" x="57" y="373" width="300" height="40"/>
                                         <color key="backgroundColor" name="uniTrack Light Blue"/>
                                         <constraints>

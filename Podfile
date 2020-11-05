@@ -3,9 +3,8 @@
 
 target 'uniTrack' do
   # Comment the next line if you don't want to use dynamic frameworks
-  pod 'DropDown', '2.3.2'
   use_frameworks!
-
+  pod 'DropDown'
   # Pods for uniTrack
 
 end
