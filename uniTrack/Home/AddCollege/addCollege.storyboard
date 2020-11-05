@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold-slnt=0.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular-slnt=0.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add College View Controller-->
+        <scene sceneID="p1Q-Mm-waW">
+            <objects>
+                <viewController storyboardIdentifier="addCollegeVC" id="pmO-HO-3UB" customClass="AddCollegeViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Xp-s9-t36">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pke-ox-Hbz" userLabel="Dimmer View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ByM-t5-gVO" appends="YES" id="uME-2d-sYk"/>
+                                </connections>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-6y-25X" customClass="DesignableView" customModule="authTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="429" width="414" height="467"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-Pi-fwN">
+                                        <rect key="frame" x="114.5" y="29" width="185.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="21"/>
+                                        <color key="textColor" red="0.1061546281" green="0.06595418602" blue="0.20333009960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TI-UC-8CC">
+                                        <rect key="frame" x="30" y="83" width="45.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                        <color key="textColor" red="0.46650874609999998" green="0.46149063109999999" blue="0.52776950600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrS-Mp-fKY">
+                                        <rect key="frame" x="30" y="111" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="g7Y-NQ-mNX"/>
+                                            <constraint firstAttribute="width" constant="354" id="xtq-6S-lyg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwH-VM-BEe">
+                                        <rect key="frame" x="30" y="178" width="59.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                        <color key="textColor" red="0.46650874609999998" green="0.46149063109999999" blue="0.52776950600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Computer Science, Physics, etc..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-CL-E47">
+                                        <rect key="frame" x="30" y="206" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmH-BU-WOf" userLabel="drag View" customClass="DesignableView" customModule="authTest" customModuleProvider="target">
+                                        <rect key="frame" x="114.5" y="16" width="185.5" height="7"/>
+                                        <color key="backgroundColor" red="0.89389103650000001" green="0.89796465640000001" blue="0.90614050629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="7" id="vKn-1m-RXA"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-81-dOg" customClass="DesignableButton" customModule="authTest" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="373" width="300" height="40"/>
+                                        <color key="backgroundColor" name="uniTrack Light Blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dqS-Mk-4bc"/>
+                                            <constraint firstAttribute="width" constant="300" id="vSV-wL-hLx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="11"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="uniTrack Light Blue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapDoneButton:" destination="pmO-HO-3UB" eventType="touchUpInside" id="jN0-Oo-0p7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3TI-UC-8CC" firstAttribute="top" secondItem="uQ1-6y-25X" secondAttribute="top" constant="83" id="3YS-EJ-ZVd"/>
+                                    <constraint firstItem="vU2-CL-E47" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="DJQ-4C-IeJ"/>
+                                    <constraint firstItem="vU2-CL-E47" firstAttribute="top" secondItem="GwH-VM-BEe" secondAttribute="bottom" constant="8" id="EFI-oS-BEy"/>
+                                    <constraint firstItem="jmH-BU-WOf" firstAttribute="width" secondItem="9n8-Pi-fwN" secondAttribute="width" id="Qb3-Su-4ch"/>
+                                    <constraint firstItem="9n8-Pi-fwN" firstAttribute="top" secondItem="jmH-BU-WOf" secondAttribute="bottom" constant="6" id="SSc-HL-GZO"/>
+                                    <constraint firstItem="aMl-81-dOg" firstAttribute="top" secondItem="vU2-CL-E47" secondAttribute="bottom" constant="125" id="XbQ-my-ebA"/>
+                                    <constraint firstItem="3TI-UC-8CC" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="b1v-b7-pW1"/>
+                                    <constraint firstItem="SrS-Mp-fKY" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="djc-TF-TsP"/>
+                                    <constraint firstItem="9n8-Pi-fwN" firstAttribute="centerX" secondItem="uQ1-6y-25X" secondAttribute="centerX" id="ecW-3a-Lfe"/>
+                                    <constraint firstItem="vU2-CL-E47" firstAttribute="width" secondItem="SrS-Mp-fKY" secondAttribute="width" id="fS3-ew-34a"/>
+                                    <constraint firstItem="GwH-VM-BEe" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="g0O-FK-DPZ"/>
+                                    <constraint firstItem="aMl-81-dOg" firstAttribute="centerX" secondItem="uQ1-6y-25X" secondAttribute="centerX" id="hNY-gF-GX9"/>
+                                    <constraint firstItem="GwH-VM-BEe" firstAttribute="top" secondItem="SrS-Mp-fKY" secondAttribute="bottom" constant="25" id="hur-rT-zFT"/>
+                                    <constraint firstItem="vU2-CL-E47" firstAttribute="height" secondItem="SrS-Mp-fKY" secondAttribute="height" id="kbA-EJ-ffH"/>
+                                    <constraint firstItem="jmH-BU-WOf" firstAttribute="top" secondItem="uQ1-6y-25X" secondAttribute="top" constant="16" id="p4x-F1-3Zp"/>
+                                    <constraint firstItem="jmH-BU-WOf" firstAttribute="centerX" secondItem="uQ1-6y-25X" secondAttribute="centerX" id="xnc-di-X4Z"/>
+                                    <constraint firstItem="SrS-Mp-fKY" firstAttribute="top" secondItem="3TI-UC-8CC" secondAttribute="bottom" constant="8" id="yTo-s0-iq2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="41"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9It-j4-9XJ"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9It-j4-9XJ" firstAttribute="trailing" secondItem="uQ1-6y-25X" secondAttribute="trailing" id="3hH-XH-iPj"/>
+                            <constraint firstItem="pke-ox-Hbz" firstAttribute="leading" secondItem="9It-j4-9XJ" secondAttribute="leading" id="7BO-b9-HOS"/>
+                            <constraint firstItem="pke-ox-Hbz" firstAttribute="trailing" secondItem="9It-j4-9XJ" secondAttribute="trailing" id="Ah0-UT-XMM"/>
+                            <constraint firstItem="pke-ox-Hbz" firstAttribute="top" secondItem="3Xp-s9-t36" secondAttribute="top" id="DGk-rx-as4"/>
+                            <constraint firstAttribute="bottom" secondItem="pke-ox-Hbz" secondAttribute="bottom" id="FdG-BG-G44"/>
+                            <constraint firstItem="uQ1-6y-25X" firstAttribute="leading" secondItem="9It-j4-9XJ" secondAttribute="leading" id="WNb-xF-hJN"/>
+                            <constraint firstItem="uQ1-6y-25X" firstAttribute="top" secondItem="9It-j4-9XJ" secondAttribute="top" constant="385" id="fCl-ua-u5w"/>
+                            <constraint firstAttribute="bottom" secondItem="uQ1-6y-25X" secondAttribute="bottom" id="fzm-74-VYk"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8rg-HC-S1i" appends="YES" id="h2L-IH-osA"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="uQ1-6y-25X" id="Zu0-gV-Ktu"/>
+                        <outlet property="cardViewTopCostraint" destination="fCl-ua-u5w" id="cbm-D4-k8P"/>
+                        <outlet property="courseField" destination="vU2-CL-E47" id="yWV-dw-WjV"/>
+                        <outlet property="dimmerView" destination="pke-ox-Hbz" id="Cvj-cz-W2i"/>
+                        <outlet property="doneButton" destination="aMl-81-dOg" id="dfb-V0-Ew9"/>
+                        <outlet property="nameField" destination="SrS-Mp-fKY" id="kqT-vC-7FE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xay-N7-St0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ByM-t5-gVO">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="pmO-HO-3UB" id="EYT-iq-NQB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer delaysTouchesEnded="NO" requiresExclusiveTouchType="NO" minimumNumberOfTouches="1" id="8rg-HC-S1i">
+                    <connections>
+                        <action selector="panGestureRecognizer:" destination="pmO-HO-3UB" id="9IA-BU-rVi"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="366.66666666666669" y="-227.00892857142856"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="aMl-81-dOg">
+            <size key="intrinsicContentSize" width="40" height="47"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="uniTrack Light Blue">
+            <color red="0.29803921568627451" green="0.43137254901960786" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

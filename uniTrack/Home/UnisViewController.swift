@@ -87,7 +87,7 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }else{ // CollegesCollectionView
            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collegeCellID", for: indexPath) as! CollegesCollectionViewCell
-            cell.setup(photoImage: nil, name: "Yale College", course: "Business and Law", schoolType: .safety)
+            //cell.setup(photoImage: nil, name: "Yale College", course: "Business and Law", schoolType: .safety)
             return cell
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73054726AF2A105DA5440BDA /* Pods_uniTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */; };
 		AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E15253E107B00DADF91 /* AppDelegate.swift */; };
 		AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E17253E107B00DADF91 /* SceneDelegate.swift */; };
 		AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1B253E107B00DADF91 /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E20253E107C00DADF91 /* LaunchScreen.storyboard */; };
 		AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E2F253E11C200DADF91 /* UnisViewController.swift */; };
 		AC317E34253E11F800DADF91 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E33253E11F800DADF91 /* University.swift */; };
-		AC317E37253E13A800DADF91 /* UnisListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */; };
 		AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */; };
 		AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E42253F86B000DADF91 /* UniversityStore.swift */; };
 		AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E45253F8DBF00DADF91 /* PersistantService.swift */; };
@@ -30,11 +30,17 @@
 		AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */; };
 		AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */; };
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
-		AC9EF9F1254CB80100728162 /* collegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* collegesCollectionViewCell.swift */; };
+		AC9EF9F1254CB80100728162 /* CollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* CollegesCollectionViewCell.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
+		ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */; };
+		ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */; };
+		ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D61254E1DC10037DF45 /* DesignableView.swift */; };
+		ACDC6D67254E1E2A0037DF45 /* addCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */; };
+		ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uniTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC317E12253E107B00DADF91 /* uniTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uniTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC317E15253E107B00DADF91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC317E17253E107B00DADF91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +50,6 @@
 		AC317E23253E107C00DADF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC317E2F253E11C200DADF91 /* UnisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisViewController.swift; sourceTree = "<group>"; };
 		AC317E33253E11F800DADF91 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
-		AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisListTableViewCell.swift; sourceTree = "<group>"; };
 		AC317E3E253F85A100DADF91 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC317E42253F86B000DADF91 /* UniversityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStore.swift; sourceTree = "<group>"; };
 		AC317E45253F8DBF00DADF91 /* PersistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantService.swift; sourceTree = "<group>"; };
@@ -60,8 +65,15 @@
 		AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		AC9EF9F0254CB80100728162 /* collegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collegesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC9EF9F0254CB80100728162 /* CollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
+		ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollegesViewController.swift; sourceTree = "<group>"; };
+		ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		ACDC6D61254E1DC10037DF45 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addCollege.storyboard; sourceTree = "<group>"; };
+		ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollegeViewController.swift; sourceTree = "<group>"; };
+		B15B93B0E4840F0DCC6C1279 /* Pods-uniTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uniTrack.release.xcconfig"; path = "Target Support Files/Pods-uniTrack/Pods-uniTrack.release.xcconfig"; sourceTree = "<group>"; };
+		CF8A37A94DD9A99941576E14 /* Pods-uniTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uniTrack.debug.xcconfig"; path = "Target Support Files/Pods-uniTrack/Pods-uniTrack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +81,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73054726AF2A105DA5440BDA /* Pods_uniTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A3505658FEDEAAB5858CDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A7D39E4A48FC847E4B5D61C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF8A37A94DD9A99941576E14 /* Pods-uniTrack.debug.xcconfig */,
+				B15B93B0E4840F0DCC6C1279 /* Pods-uniTrack.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AC317E09253E107B00DADF91 = {
 			isa = PBXGroup;
 			children = (
 				AC317E14253E107B00DADF91 /* uniTrack */,
 				AC317E13253E107B00DADF91 /* Products */,
+				9A7D39E4A48FC847E4B5D61C /* Pods */,
+				15A3505658FEDEAAB5858CDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +129,6 @@
 			children = (
 				AC4B990625484200005000B4 /* Home */,
 				AC317E39253F855E00DADF91 /* System */,
-				AC317E1B253E107B00DADF91 /* Main.storyboard */,
 				AC317E1E253E107C00DADF91 /* Assets.xcassets */,
 				AC317E20253E107C00DADF91 /* LaunchScreen.storyboard */,
 				AC317E23253E107C00DADF91 /* Info.plist */,
@@ -109,9 +141,9 @@
 		AC317E32253E11E100DADF91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC9EF9F6254E142A00728162 /* JSON Decoding */,
 				AC317E33253E11F800DADF91 /* University.swift */,
 				AC317E42253F86B000DADF91 /* UniversityStore.swift */,
-				ACCB170C2543570200D76512 /* UniversityFromJSON.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +151,7 @@
 		AC317E39253F855E00DADF91 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				ACDC6D5F254E1DC10037DF45 /* Style Classes */,
 				AC59FE572548551400032322 /* Fonts */,
 				ACCB170225434F3500D76512 /* Data */,
 				AC317E15253E107B00DADF91 /* AppDelegate.swift */,
@@ -131,9 +164,11 @@
 		AC4B990625484200005000B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ACDC6D58254E1B680037DF45 /* AddCollege */,
+				AC317E1B253E107B00DADF91 /* Main.storyboard */,
 				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
+				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
 				AC59FE70254A25D800032322 /* CollectionView cells */,
-				AC317E36253E13A800DADF91 /* UnisListTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -159,9 +194,17 @@
 			children = (
 				AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */,
 				AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */,
-				AC9EF9F0254CB80100728162 /* collegesCollectionViewCell.swift */,
+				AC9EF9F0254CB80100728162 /* CollegesCollectionViewCell.swift */,
 			);
 			path = "CollectionView cells";
+			sourceTree = "<group>";
+		};
+		AC9EF9F6254E142A00728162 /* JSON Decoding */ = {
+			isa = PBXGroup;
+			children = (
+				ACCB170C2543570200D76512 /* UniversityFromJSON.swift */,
+			);
+			path = "JSON Decoding";
 			sourceTree = "<group>";
 		};
 		ACCB170225434F3500D76512 /* Data */ = {
@@ -172,6 +215,24 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		ACDC6D58254E1B680037DF45 /* AddCollege */ = {
+			isa = PBXGroup;
+			children = (
+				ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */,
+				ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */,
+			);
+			path = AddCollege;
+			sourceTree = "<group>";
+		};
+		ACDC6D5F254E1DC10037DF45 /* Style Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */,
+				ACDC6D61254E1DC10037DF45 /* DesignableView.swift */,
+			);
+			path = "Style Classes";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC317E26253E107C00DADF91 /* Build configuration list for PBXNativeTarget "uniTrack" */;
 			buildPhases = (
+				C8452D48C4D2F06F73F3EBF7 /* [CP] Check Pods Manifest.lock */,
 				AC317E0E253E107B00DADF91 /* Sources */,
 				AC317E0F253E107B00DADF91 /* Frameworks */,
 				AC317E10253E107B00DADF91 /* Resources */,
+				50F664B0205F0D05534D9963 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,28 +304,74 @@
 				AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */,
 				AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */,
 				AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */,
+				ACDC6D67254E1E2A0037DF45 /* addCollege.storyboard in Resources */,
 				AC691CFD2544C77A002D41F7 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50F664B0205F0D05534D9963 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uniTrack/Pods-uniTrack-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uniTrack/Pods-uniTrack-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-uniTrack/Pods-uniTrack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8452D48C4D2F06F73F3EBF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-uniTrack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC317E0E253E107B00DADF91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC9EF9F1254CB80100728162 /* collegesCollectionViewCell.swift in Sources */,
+				ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */,
+				AC9EF9F1254CB80100728162 /* CollegesCollectionViewCell.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
+				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
+				ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,
 				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
 				AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */,
+				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
-				AC317E37253E13A800DADF91 /* UnisListTableViewCell.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +516,7 @@
 		};
 		AC317E27253E107C00DADF91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF8A37A94DD9A99941576E14 /* Pods-uniTrack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -426,6 +536,7 @@
 		};
 		AC317E28253E107C00DADF91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B15B93B0E4840F0DCC6C1279 /* Pods-uniTrack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

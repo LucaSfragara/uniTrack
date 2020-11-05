@@ -3,6 +3,7 @@
     <entity name="University" representedClassName="University" syncable="YES">
         <attribute name="course" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="baseModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UniversityFromData"/>
     </entity>
     <entity name="UniversityFromData" representedClassName="UniversityFromData" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>
@@ -16,7 +17,7 @@
         <attribute name="zip" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="University" positionX="-63" positionY="-18" width="218.1953125" height="73"/>
+        <element name="University" positionX="-63" positionY="-18" width="218.1953125" height="88"/>
         <element name="UniversityFromData" positionX="-18" positionY="0" width="128" height="28"/>
     </elements>
 </model>

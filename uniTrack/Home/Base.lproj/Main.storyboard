@@ -27,21 +27,29 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Search-->
+        <!--My Colleges-->
         <scene sceneID="btK-kA-cIb">
             <objects>
-                <viewController id="C0M-sc-NfA" sceneMemberID="viewController">
+                <viewController id="C0M-sc-NfA" customClass="MyCollegesViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAT-Yw-VoJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bg7-UW-Jnw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="7bA-TM-RRn"/>
+                    <navigationItem key="navigationItem" title="My Colleges" id="szC-dC-H0E">
+                        <barButtonItem key="rightBarButtonItem" image="solid Plus" id="peg-fX-9cL">
+                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" name="uniTrack Light Blue"/>
+                            <connections>
+                                <action selector="didPressAddButton:" destination="C0M-sc-NfA" id="UBP-ny-fiR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfh-yT-BW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="125"/>
+            <point key="canvasLocation" x="321.73913043478262" y="124.55357142857142"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="nxv-5n-sKY">
@@ -287,7 +295,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Vie-Nh-XU5" kind="relationship" relationship="viewControllers" id="UEo-Xs-ezR"/>
-                        <segue destination="C0M-sc-NfA" kind="relationship" relationship="viewControllers" id="3o2-Eo-hnX"/>
+                        <segue destination="3su-uG-DK6" kind="relationship" relationship="viewControllers" id="3o2-Eo-hnX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zon-jT-eZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,12 +321,32 @@
             </objects>
             <point key="canvasLocation" x="-626.08695652173913" y="-588.61607142857144"/>
         </scene>
+        <!--My Colleges-->
+        <scene sceneID="xkm-mi-xJx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3su-uG-DK6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Colleges" image="magnifyingglass" catalog="system" id="7bA-TM-RRn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZKF-m5-rg2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C0M-sc-NfA" kind="relationship" relationship="rootViewController" id="6w0-aA-LvK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9r-RX-Fte" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588.40579710144937" y="124.55357142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="safetySchool" width="25" height="25"/>
         <image name="scalemass.fill" catalog="system" width="128" height="119"/>
+        <image name="solid Plus" width="45" height="45"/>
         <namedColor name="uniTrack Light Blue">
             <color red="0.29803921568627451" green="0.43137254901960786" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
