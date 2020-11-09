@@ -35,7 +35,7 @@ class MyCollegesViewController: UIViewController {
 }
 
 extension MyCollegesViewController: doneButtonDelegate{
-    func doneButtonPressed(universityName: String, course: String) {
-        return
+    func doneButtonPressed(university: UniversityFromData?, course: String) {
+        guard let university = university else {return}
     }
 }

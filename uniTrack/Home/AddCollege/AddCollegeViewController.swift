@@ -16,16 +16,20 @@ class AddCollegeViewController: UIViewController {
     
     @IBOutlet weak var cardView: DesignableView!
     @IBOutlet weak var dimmerView: UIView!
+    @IBOutlet weak var cardViewTopCostraint: NSLayoutConstraint!
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var courseField: UITextField!
 
     @IBOutlet weak var doneButton: DesignableButton!
     
+    
+    
+    private var universityChosen: UniversityFromData?
 
     var delegate: doneButtonDelegate?
     
-    @IBOutlet weak var cardViewTopCostraint: NSLayoutConstraint!
+   
     
     var cardPanStartingTopConstant : CGFloat = 0.0
     
@@ -58,8 +62,8 @@ class AddCollegeViewController: UIViewController {
     @IBAction func didTapDoneButton(_ sender: Any) {
     
         
-        if let name = self.nameField.text, let delegate = self.delegate, let course = self.courseField.text{
-            delegate.doneButtonPressed(universityName: name, course: course)
+        if let delegate = self.delegate, let course = self.courseField.text{
+            delegate.doneButtonPressed(university: universityChosen, course: course)
             hideCard()
         }
         
@@ -157,6 +161,7 @@ class AddCollegeViewController: UIViewController {
         dropDown.dataSource = universityNames
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             self?.nameField.text = item
+            self?.universityChosen = data[index]
         }
         
         dropDown.anchorView = nameField
@@ -232,6 +237,6 @@ extension AddCollegeViewController{
 
 protocol doneButtonDelegate{
     
-    func doneButtonPressed(universityName: String, course: String)
+    func doneButtonPressed(university: UniversityFromData?, course: String)
 }
 
