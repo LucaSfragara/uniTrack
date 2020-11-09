@@ -94,11 +94,11 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == self.UpComingCollectionView{
-            return CGSize(width: view.frame.width/3, height: view.frame.height)
+            return CGSize(width: view.frame.width/2, height: collectionView.frame.height)
         }else if collectionView == self.DeadlinesCollectionView{
-            return CGSize(width: view.frame.width/3, height: view.frame.height)
+            return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.height)
         }else{ //CollegeCollectionView
-            return CGSize(width: view.frame.width, height: view.frame.height/2.3)
+            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2.3)
         }
         
     }
