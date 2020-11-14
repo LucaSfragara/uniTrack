@@ -15,17 +15,20 @@ class UnisViewController: UIViewController {
                                              left: 20.0,
                                              bottom: 50.0,
                                              right: 20.0)
-
+    
     
     @IBOutlet private weak var UpComingCollectionView: UICollectionView!
     @IBOutlet private weak var DeadlinesCollectionView: UICollectionView!
     @IBOutlet private weak var CollegesCollectionView: UICollectionView!
     
-    private var unisList: [UniversityFromJSON]? = []
+    private var universities: [UniversityFromJSON]? = []
     private var fetchedResultController: NSFetchedResultsController<NSFetchRequestResult>?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        self.tabBarController?.delegate = self
         configureFetchedResultController()
         
         UpComingCollectionView.delegate = self
@@ -53,6 +56,16 @@ class UnisViewController: UIViewController {
             print(error.localizedDescription)
         }
         
+    }
+}
+
+//MARK: UITabbar controleller delegate
+extension UnisViewController: UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let CollegeVC = viewController.children[0] as? MyCollegesViewController{
+            //CollegeVC.universities = self.universities
+            CollegeVC.universities = [University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Carnegie Mellon", course: "Math", schoolType: .safety, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil)]
+        }
     }
 }
 
@@ -86,7 +99,7 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         }else{ // CollegesCollectionView
            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collegeCellID", for: indexPath) as! CollegesCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardCollegeCellID", for: indexPath) as! DashboardCollegesCollectionViewCell
             //cell.setup(photoImage: nil, name: "Yale College", course: "Business and Law", schoolType: .safety)
             return cell
         }

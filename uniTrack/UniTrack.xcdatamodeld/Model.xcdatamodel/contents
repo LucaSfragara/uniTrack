@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="University" representedClassName="University" syncable="YES">
         <attribute name="course" optional="YES" attributeType="String"/>
+        <attribute name="deadlines" optional="YES" attributeType="Transformable"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="String"/>
+        <attribute name="reachType" optional="YES" attributeType="String"/>
         <relationship name="baseModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UniversityFromData"/>
     </entity>
     <entity name="UniversityFromData" representedClassName="UniversityFromData" syncable="YES" codeGenerationType="class">
@@ -17,7 +20,7 @@
         <attribute name="zip" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="University" positionX="-63" positionY="-18" width="218.1953125" height="88"/>
+        <element name="University" positionX="-63" positionY="-18" width="218.1953125" height="28"/>
         <element name="UniversityFromData" positionX="-18" positionY="0" width="128" height="28"/>
     </elements>
 </model>

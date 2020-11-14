@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollegesCollectionViewCell: UICollectionViewCell {
+class DashboardCollegesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak private var photoImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!

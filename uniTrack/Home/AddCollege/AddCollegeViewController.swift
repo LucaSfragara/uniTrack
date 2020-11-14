@@ -61,7 +61,6 @@ class AddCollegeViewController: UIViewController {
     
     @IBAction func didTapDoneButton(_ sender: Any) {
     
-        
         if let delegate = self.delegate, let course = self.courseField.text{
             delegate.doneButtonPressed(university: universityChosen, course: course)
             hideCard()

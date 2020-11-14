@@ -18,11 +18,12 @@ public class University: NSManagedObject{
 
     @NSManaged var name: String
     @NSManaged var course: String
-    @NSManaged var schoolType: ReachType.RawValue
+    @NSManaged var reachType: ReachType.RawValue
     @NSManaged var photo: String
-    @NSManaged var baseModel: UniversityFromData
+    @NSManaged var baseModel: UniversityFromData?
+    @NSManaged var deadlines: [Date]?
     
-    convenience init(name:String, course: String, schoolType: ReachType){
+    convenience init(name:String, course: String, schoolType: ReachType, baseModel: UniversityFromData??, deadlines: [Date]?){
         
         guard  let entity = NSEntityDescription.entity(forEntityName: "University", in: PersistantService.context) else {
             fatalError("No entity found for this name")
@@ -31,12 +32,16 @@ public class University: NSManagedObject{
         self.init(entity: entity, insertInto: PersistantService.context)
         self.name = name
         self.course = course
-        self.schoolType = schoolType.rawValue
+        self.reachType = schoolType.rawValue
     }
     
-    enum ReachType: Int{
-        case safety = 0
-        case match = 1
-        case reach = 2
+    func addDeadline(date: Date){
+        deadlines?.append(date)
+    }
+    
+    enum ReachType: String{
+        case safety = "Safety"
+        case match = "Match"
+        case reach = "Reach"
     }
 }

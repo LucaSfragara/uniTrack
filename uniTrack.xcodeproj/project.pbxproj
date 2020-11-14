@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,13 +30,14 @@
 		AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */; };
 		AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */; };
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
-		AC9EF9F1254CB80100728162 /* CollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* CollegesCollectionViewCell.swift */; };
+		AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 		ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */; };
 		ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */; };
 		ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D61254E1DC10037DF45 /* DesignableView.swift */; };
 		ACDC6D67254E1E2A0037DF45 /* addCollege.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */; };
 		ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */; };
+		ACF886F62560338A004A6830 /* CollegeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,13 +66,14 @@
 		AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		AC9EF9F0254CB80100728162 /* CollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 		ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollegesViewController.swift; sourceTree = "<group>"; };
 		ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		ACDC6D61254E1DC10037DF45 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addCollege.storyboard; sourceTree = "<group>"; };
 		ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCollegeViewController.swift; sourceTree = "<group>"; };
+		ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B15B93B0E4840F0DCC6C1279 /* Pods-uniTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uniTrack.release.xcconfig"; path = "Target Support Files/Pods-uniTrack/Pods-uniTrack.release.xcconfig"; sourceTree = "<group>"; };
 		CF8A37A94DD9A99941576E14 /* Pods-uniTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uniTrack.debug.xcconfig"; path = "Target Support Files/Pods-uniTrack/Pods-uniTrack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +104,6 @@
 				CF8A37A94DD9A99941576E14 /* Pods-uniTrack.debug.xcconfig */,
 				B15B93B0E4840F0DCC6C1279 /* Pods-uniTrack.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,7 +195,8 @@
 			children = (
 				AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */,
 				AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */,
-				AC9EF9F0254CB80100728162 /* CollegesCollectionViewCell.swift */,
+				AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */,
+				ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */,
 			);
 			path = "CollectionView cells";
 			sourceTree = "<group>";
@@ -359,7 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */,
-				AC9EF9F1254CB80100728162 /* CollegesCollectionViewCell.swift in Sources */,
+				AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
@@ -370,6 +372,7 @@
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
 				AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */,
+				ACF886F62560338A004A6830 /* CollegeCollectionViewCell.swift in Sources */,
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,

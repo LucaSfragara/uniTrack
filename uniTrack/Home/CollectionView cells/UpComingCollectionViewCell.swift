@@ -13,7 +13,7 @@ class UpComingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var taskLabel:UILabel!
     
     func setup(universityName: String, task: String){
-        universityNameLabel.text = universityName
+        
         taskLabel.text = task
         self.layer.cornerRadius = 10
         self.backgroundColor = UIColor.init(named: "uniTrack Light Blue")
