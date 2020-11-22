@@ -14,13 +14,13 @@ class DashboardCollegesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var courseLabel: UILabel!
     @IBOutlet weak private var reachImageView: UIImageView!
     
-    func setup(university: University){
+    func setup(university: University?){
         
         self.layer.cornerRadius = 10
         self.photoImageView.layer.cornerRadius = 10
         
-        nameLabel.text = university.name
-        courseLabel.text = university.course
+        nameLabel.text = university?.name
+        courseLabel.text = university?.course
         //photoImageView.image = university.photo
     }
     

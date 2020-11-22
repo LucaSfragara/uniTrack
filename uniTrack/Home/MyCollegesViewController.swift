@@ -64,7 +64,11 @@ extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDa
 }
 
 extension MyCollegesViewController: doneButtonDelegate{
-    func doneButtonPressed(university: UniversityFromData?, course: String) {
-        guard let university = university else {return}
+    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String) {
+        
+        guard let baseModel = universityChosen else {return}
+        let university = University(name: name, course: course, reachType: nil, baseModel: baseModel, deadlines: nil)
+        self.universities?.append(university)
+        self.CollegesCollectioView.reloadData()
     }
 }

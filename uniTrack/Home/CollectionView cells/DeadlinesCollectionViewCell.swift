@@ -13,18 +13,23 @@ class DeadlinesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var datePrimaryLabel: UILabel!
     @IBOutlet weak private var universityLabel: UILabel!
     
-    func setup(universityName: String, date: Date){
+    func setup(university: University?){
+        
+        guard let deadline = university?.deadlines?.last else {
+            return
+        }
+        
         let dateFormatter = DateFormatter()
         self.layer.cornerRadius = 10
         dateFormatter.dateFormat = "MMM/d"
-        let dateString = dateFormatter.string(from: date)
+        let dateString = dateFormatter.string(from: deadline)
         
         let month: String = dateString.components(separatedBy: "/")[0]
-        let day: String = dateString.components(separatedBy: "/")[0]
+        let day: String = dateString.components(separatedBy: "/")[1]
         
         dateSecondaryLabel.text = month
         datePrimaryLabel.text = day
-        universityLabel.text = universityName
+        universityLabel.text = university?.name
     }
     
     override func awakeFromNib() {

@@ -21,16 +21,14 @@ class UnisViewController: UIViewController {
     @IBOutlet private weak var DeadlinesCollectionView: UICollectionView!
     @IBOutlet private weak var CollegesCollectionView: UICollectionView!
     
-    private var universities: [UniversityFromJSON]? = []
-    private var fetchedResultController: NSFetchedResultsController<NSFetchRequestResult>?
+    private var universities: [University]? = []
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         self.tabBarController?.delegate = self
-        configureFetchedResultController()
-        
+    
         UpComingCollectionView.delegate = self
         UpComingCollectionView.dataSource = self
         
@@ -42,20 +40,27 @@ class UnisViewController: UIViewController {
         
     }
     
-    private func configureFetchedResultController(){
+    override func viewWillAppear(_ animated: Bool) {
+        fetchMyUniversity()
+    }
+    
+    private func fetchMyUniversity(){
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UniversityFromData")
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true) //Sort by alphebetical order A-Z
-        fetchRequest.sortDescriptors = [sortDescriptor ]
-        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: PersistantService.context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultController?.delegate =  self
+        let fetchRequest = NSFetchRequest<University>(entityName: "University")
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+    
+        let result = try? PersistantService.context.fetch(fetchRequest) 
         
-        do {
-            try fetchedResultController?.performFetch()
-        } catch{
-            print(error.localizedDescription)
+        guard let fetchedUniversities = result else{
+            return
         }
-        
+        universities = fetchedUniversities
+        DispatchQueue.main.async {
+            self.UpComingCollectionView.reloadData()
+            self.DeadlinesCollectionView.reloadData()
+            self.CollegesCollectionView.reloadData()
+        }
     }
 }
 
@@ -64,22 +69,28 @@ extension UnisViewController: UITabBarControllerDelegate{
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if let CollegeVC = viewController.children[0] as? MyCollegesViewController{
             //CollegeVC.universities = self.universities
-            CollegeVC.universities = [University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Carnegie Mellon", course: "Math", schoolType: .safety, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil),University(name: "Stanford", course: "Economics", schoolType: .match, baseModel: nil, deadlines: nil)]
+            CollegeVC.universities = self.universities
         }
     }
 }
 
 //MARK: UICollectionview delegate and datasource
+
 extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == self.UpComingCollectionView{
-            return 10
+            return universities?.count ?? 0
         }else if collectionView == self.DeadlinesCollectionView{
-            return 20
+            
+            let filteredUniversity = universities?.filter{ university in
+                return (university.deadlines?.count ?? 0) > 0 //display on deadlines collection only colleges with deadlines
+            }
+            return filteredUniversity?.count ?? 0
+            
         }else{ //CollegeCollectionView
-            return 20
+            return universities?.count ?? 0
         }
     }
     
@@ -94,13 +105,18 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }else if collectionView == self.DeadlinesCollectionView{
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deadlinesCellID", for: indexPath) as! DeadlinesCollectionViewCell
-            cell.setup(universityName: "Carnegie Mellon", date: Date())
+            
+            let filteredUniversity = universities?.filter{ university in
+                return (university.deadlines?.count ?? 0) > 0 //display on deadlines collection only colleges with deadlines
+            }
+            cell.setup(university: filteredUniversity?[indexPath.row])
+            
             return cell
             
         }else{ // CollegesCollectionView
            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardCollegeCellID", for: indexPath) as! DashboardCollegesCollectionViewCell
-            //cell.setup(photoImage: nil, name: "Yale College", course: "Business and Law", schoolType: .safety)
+            cell.setup(university: self.universities?[indexPath.row])
             return cell
         }
     }
@@ -117,12 +133,3 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
-
-
-//MARK: fetchRequestController Delegate
-
-extension UnisViewController: NSFetchedResultsControllerDelegate{
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        
-    }
-}

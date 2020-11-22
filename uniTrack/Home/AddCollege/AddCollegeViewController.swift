@@ -61,8 +61,8 @@ class AddCollegeViewController: UIViewController {
     
     @IBAction func didTapDoneButton(_ sender: Any) {
     
-        if let delegate = self.delegate, let course = self.courseField.text{
-            delegate.doneButtonPressed(university: universityChosen, course: course)
+        if let delegate = self.delegate, let course = self.courseField.text, let name = self.nameField.text{
+            delegate.doneButtonPressed(name: name, universityChosen: universityChosen, course: course)
             hideCard()
         }
         
@@ -236,6 +236,6 @@ extension AddCollegeViewController{
 
 protocol doneButtonDelegate{
     
-    func doneButtonPressed(university: UniversityFromData?, course: String)
+    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String)
 }
 
