@@ -61,6 +61,16 @@ extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let universitySelected = universities?[indexPath.row]
+        let storyboard = UIStoryboard(name: "CollegeDetail", bundle: nil)
+        let detailVCNavController = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! UINavigationController
+        let detailVC = detailVCNavController.children[0] as! CollegeDetailViewController
+        detailVC.university = universitySelected
+        present(detailVCNavController, animated: true, completion: nil)
+    }
+    
 }
 
 extension MyCollegesViewController: doneButtonDelegate{

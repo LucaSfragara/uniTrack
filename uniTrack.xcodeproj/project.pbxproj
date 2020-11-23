@@ -30,6 +30,8 @@
 		AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */; };
 		AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */; };
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
+		AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */; };
+		AC69E937256C6F7500D64083 /* CollegeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */; };
 		AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 		ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */; };
@@ -66,6 +68,8 @@
 		AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
+		AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollegeDetail.storyboard; sourceTree = "<group>"; };
 		AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 		ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollegesViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		AC4B990625484200005000B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AC69E92D256C68B300D64083 /* College Detail */,
 				ACDC6D58254E1B680037DF45 /* AddCollege */,
 				AC317E1B253E107B00DADF91 /* Main.storyboard */,
 				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
@@ -199,6 +204,15 @@
 				ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */,
 			);
 			path = "CollectionView cells";
+			sourceTree = "<group>";
+		};
+		AC69E92D256C68B300D64083 /* College Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */,
+				AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */,
+			);
+			path = "College Detail";
 			sourceTree = "<group>";
 		};
 		AC9EF9F6254E142A00728162 /* JSON Decoding */ = {
@@ -304,6 +318,7 @@
 				AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */,
 				AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */,
 				AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */,
+				AC69E937256C6F7500D64083 /* CollegeDetail.storyboard in Resources */,
 				AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */,
 				AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */,
 				ACDC6D67254E1E2A0037DF45 /* addCollege.storyboard in Resources */,
@@ -367,6 +382,7 @@
 				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
 				ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
+				AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,
 				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
