@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		73054726AF2A105DA5440BDA /* Pods_uniTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */; };
+		AC024F46258D65C500790FD8 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F44258D65C500790FD8 /* TaskDetailViewController.swift */; };
+		AC024F47258D65C500790FD8 /* TaskDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC024F45258D65C500790FD8 /* TaskDetailViewController.xib */; };
+		AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F49258D65D900790FD8 /* DeadlineDetailViewController.swift */; };
+		AC024F4C258D65D900790FD8 /* DeadlineDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */; };
 		AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */; };
 		AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */; };
 		AC1792D425869D1400AEE111 /* DetailTodosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */; };
@@ -56,6 +60,10 @@
 
 /* Begin PBXFileReference section */
 		988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uniTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC024F44258D65C500790FD8 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		AC024F45258D65C500790FD8 /* TaskDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailViewController.xib; sourceTree = "<group>"; };
+		AC024F49258D65D900790FD8 /* DeadlineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineDetailViewController.swift; sourceTree = "<group>"; };
+		AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeadlineDetailViewController.xib; sourceTree = "<group>"; };
 		AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodosCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTodosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -146,6 +154,24 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		AC024F3E258D653D00790FD8 /* Task Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AC024F44258D65C500790FD8 /* TaskDetailViewController.swift */,
+				AC024F45258D65C500790FD8 /* TaskDetailViewController.xib */,
+			);
+			path = "Task Detail";
+			sourceTree = "<group>";
+		};
+		AC024F4E258D65E100790FD8 /* Deadline Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AC024F49258D65D900790FD8 /* DeadlineDetailViewController.swift */,
+				AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */,
+			);
+			path = "Deadline Detail";
+			sourceTree = "<group>";
+		};
 		AC1792C92584CAC800AEE111 /* CollectionView cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +243,12 @@
 		AC4B990625484200005000B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AC024F3E258D653D00790FD8 /* Task Detail */,
 				ACC74C492587A6AD00AF1254 /* Helpers */,
 				AC69E92D256C68B300D64083 /* College Detail */,
 				ACDC6D58254E1B680037DF45 /* Add College */,
 				AC024F3B258D637C00790FD8 /* Dashboard */,
+				AC024F4E258D65E100790FD8 /* Deadline Detail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -388,12 +416,14 @@
 				AC59FE64254A23E700032322 /* Inter-Bold-slnt=0.ttf in Resources */,
 				AC59FE65254A23E700032322 /* Inter-ExtraBold-slnt=0.ttf in Resources */,
 				AC59FE66254A23E700032322 /* Inter-ExtraLight-slnt=0.ttf in Resources */,
+				AC024F4C258D65D900790FD8 /* DeadlineDetailViewController.xib in Resources */,
 				AC59FE67254A23E700032322 /* Inter-Light-slnt=0.ttf in Resources */,
 				AC59FE68254A23E700032322 /* Inter-Medium-slnt=0.ttf in Resources */,
 				AC59FE69254A23E700032322 /* Inter-Regular-slnt=0.ttf in Resources */,
 				AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */,
 				AC71C08D258810CC0016AD68 /* AddDeadlineViewController.xib in Resources */,
 				AC71C093258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib in Resources */,
+				AC024F47258D65C500790FD8 /* TaskDetailViewController.xib in Resources */,
 				AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */,
 				AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */,
 				AC69E937256C6F7500D64083 /* CollegeDetail.storyboard in Resources */,
@@ -477,6 +507,8 @@
 				ACF886F62560338A004A6830 /* CollegeCollectionViewCell.swift in Sources */,
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
+				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
+				AC024F46258D65C500790FD8 /* TaskDetailViewController.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,
 				AC1792DF2586BD8900AEE111 /* Task.swift in Sources */,
 				AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */,
