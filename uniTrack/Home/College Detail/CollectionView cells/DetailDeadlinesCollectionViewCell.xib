@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Light-slnt=0.ttf">
+            <string>Inter-Light</string>
+        </array>
+        <array key="Inter-SemiBold-slnt=0.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailDeadlinesCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="69"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-HB-xqG" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
+                        <rect key="frame" x="82" y="5" width="318" height="59"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCT-nv-JC1">
+                                <rect key="frame" x="10" y="8" width="300" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="12j-Sc-z9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="uniTrack Light Green"/>
+                        <constraints>
+                            <constraint firstItem="dCT-nv-JC1" firstAttribute="leading" secondItem="WHX-HB-xqG" secondAttribute="leading" constant="10" id="1VL-XM-8Bl"/>
+                            <constraint firstItem="dCT-nv-JC1" firstAttribute="top" secondItem="WHX-HB-xqG" secondAttribute="top" constant="8" id="R4Z-uv-6sO"/>
+                            <constraint firstAttribute="bottom" secondItem="dCT-nv-JC1" secondAttribute="bottom" constant="8" id="cco-jd-cwr"/>
+                            <constraint firstAttribute="trailing" secondItem="dCT-nv-JC1" secondAttribute="trailing" constant="8" id="y4s-EW-zb4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="11"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vmr-Xi-rFd" userLabel="Date Stack View">
+                        <rect key="frame" x="10" y="5" width="62" height="59"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May '20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njz-T7-bXE">
+                                <rect key="frame" x="0.0" y="0.0" width="62" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Qmr-Cw-1uc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-fO-oF2">
+                                <rect key="frame" x="19" y="18" width="24.5" height="41"/>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Njz-T7-bXE" firstAttribute="width" secondItem="Vmr-Xi-rFd" secondAttribute="width" id="fSe-Xj-8Iz"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Vmr-Xi-rFd" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2ml-SM-t1b"/>
+                <constraint firstAttribute="trailing" secondItem="WHX-HB-xqG" secondAttribute="trailing" id="8hk-r9-AGn"/>
+                <constraint firstItem="Vmr-Xi-rFd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ChK-aM-LZV"/>
+                <constraint firstItem="Vmr-Xi-rFd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="K86-eM-5EL"/>
+                <constraint firstAttribute="bottom" secondItem="WHX-HB-xqG" secondAttribute="bottom" constant="5" id="PRU-6V-110"/>
+                <constraint firstItem="WHX-HB-xqG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="XAX-4L-eLu"/>
+                <constraint firstAttribute="bottom" secondItem="Vmr-Xi-rFd" secondAttribute="bottom" constant="5" id="e8W-Sq-00d"/>
+                <constraint firstItem="WHX-HB-xqG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hcm-NT-eVx"/>
+                <constraint firstItem="WHX-HB-xqG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="82" id="lel-7J-baH"/>
+                <constraint firstItem="WHX-HB-xqG" firstAttribute="leading" secondItem="Vmr-Xi-rFd" secondAttribute="trailing" constant="10" id="mOO-7l-5Qp"/>
+            </constraints>
+            <connections>
+                <outlet property="datePrimaryLabel" destination="h9f-fO-oF2" id="mgQ-8W-1gc"/>
+                <outlet property="dateSecondaryLabel" destination="Njz-T7-bXE" id="qzu-aH-gly"/>
+                <outlet property="mainView" destination="WHX-HB-xqG" id="m1d-OZ-6Nl"/>
+                <outlet property="titleLabel" destination="dCT-nv-JC1" id="2Xk-gs-deF"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="uniTrack Light Green">
+            <color red="0.83921568627450982" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

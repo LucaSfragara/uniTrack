@@ -24,7 +24,7 @@ class CollegeCollectionViewCell: UICollectionViewCell {
         courseLabel.text = university.course
         locationLabel.text = "U.S., \(baseModel?.state ?? "")"
         reachLabel.text = university.reachType
-        deadlinesLabel.text = getDeadlinesLabelText(rawDate: university.deadlines?.last)
+        deadlinesLabel.text = getDeadlinesLabelText(rawDate: university.sortedDeadlines(ascending: true)?.last?.date)
         
     }
     

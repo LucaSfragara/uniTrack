@@ -97,13 +97,12 @@ class AddCollegeViewController: UIViewController {
         case .changed:
             if cardPanStartingTopConstant + translation.y > (safeAreaHeight+bottomPadding)/2.0{
                 cardViewTopCostraint.constant = cardPanStartingTopConstant + translation.y
-                
             }
         case .ended:
             if cardPanStartingTopConstant + translation.y > ((safeAreaHeight + bottomPadding) * (3/4)){
                 
                 hideCard()
-                
+                    
             }
             else{
                 showCard()

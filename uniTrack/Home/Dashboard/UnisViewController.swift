@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class UnisViewController: UIViewController {
+class UnisViewController: SwipableViewController {
     
     
     private let sectionInsets = UIEdgeInsets(top: 50.0,
@@ -66,6 +66,7 @@ class UnisViewController: UIViewController {
 
 //MARK: UITabbar controleller delegate
 extension UnisViewController: UITabBarControllerDelegate{
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if let CollegeVC = viewController.children[0] as? MyCollegesViewController{
             //CollegeVC.universities = self.universities
@@ -128,6 +129,22 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.height)
         }else{ //CollegeCollectionView
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2.3)
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if collectionView == CollegesCollectionView{ //college collection view
+            
+            guard let universitySelected = universities?[indexPath.row] else{
+                return
+            }
+            let storyboard = UIStoryboard(name: "CollegeDetail", bundle: nil)
+            let detailVCNavController = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! UINavigationController
+            let detailVC = detailVCNavController.children[0] as! CollegeDetailViewController
+            detailVC.university = universitySelected
+            present(detailVCNavController, animated: true, completion: nil)
         }
         
     }

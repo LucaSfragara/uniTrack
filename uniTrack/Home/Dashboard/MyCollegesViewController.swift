@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MyCollegesViewController: UIViewController {
+class MyCollegesViewController: SwipableViewController {
 
     @IBOutlet private weak var CollegesCollectioView: UICollectionView!
     
@@ -19,8 +19,9 @@ class MyCollegesViewController: UIViewController {
         
         CollegesCollectioView.delegate = self
         CollegesCollectioView.dataSource = self
-        // Do any additional setup after loading the view.
+    
     }
+
     
     @IBAction func didPressAddButton(_ sender: Any) {
         
@@ -77,8 +78,11 @@ extension MyCollegesViewController: doneButtonDelegate{
     func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String) {
         
         guard let baseModel = universityChosen else {return}
+        
         let university = University(name: name, course: course, reachType: nil, baseModel: baseModel, deadlines: nil)
+        PersistantService.saveContext()
         self.universities?.append(university)
         self.CollegesCollectioView.reloadData()
+        
     }
 }

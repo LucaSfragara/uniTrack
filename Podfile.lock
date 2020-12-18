@@ -1,16 +1,20 @@
 PODS:
   - DropDown (2.3.13)
+  - SimpleCheckbox (2.1.0)
 
 DEPENDENCIES:
   - DropDown
+  - SimpleCheckbox
 
 SPEC REPOS:
   trunk:
     - DropDown
+    - SimpleCheckbox
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
 
-PODFILE CHECKSUM: ca84a746e7c2550e57b28e83b8476941df76d710
+PODFILE CHECKSUM: ebc82b5a55ffafd61c9c91ac1b5839657c536e61
 
 COCOAPODS: 1.9.3

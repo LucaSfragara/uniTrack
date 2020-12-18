@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular-slnt=0.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold-slnt=0.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailTodosCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rv-Ka-de1" userLabel="Main View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="X8W-tE-hDH">
+                                <rect key="frame" x="40" y="25" width="199.5" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Essay Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYv-9I-Ugs">
+                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Information on website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gK-6p-Lqj">
+                                        <rect key="frame" x="0.0" y="31" width="199.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-fA-wT8" customClass="Checkbox" customModule="SimpleCheckbox">
+                                <rect key="frame" x="351" y="38" width="24" height="24"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="RZ0-MM-PvD"/>
+                                    <constraint firstAttribute="width" constant="24" id="pV0-TV-d8t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="uniTrack Light Blue"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uQg-fA-wT8" secondAttribute="trailing" constant="25" id="740-Wx-OBc"/>
+                            <constraint firstItem="X8W-tE-hDH" firstAttribute="centerY" secondItem="9rv-Ka-de1" secondAttribute="centerY" id="HVL-SV-z4P"/>
+                            <constraint firstItem="X8W-tE-hDH" firstAttribute="leading" secondItem="9rv-Ka-de1" secondAttribute="leading" constant="40" id="zcr-sd-dRT"/>
+                            <constraint firstItem="uQg-fA-wT8" firstAttribute="centerY" secondItem="9rv-Ka-de1" secondAttribute="centerY" id="zvG-eF-vJE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9rv-Ka-de1" secondAttribute="bottom" id="J7t-kk-L0x"/>
+                <constraint firstItem="9rv-Ka-de1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QZl-CE-hTW"/>
+                <constraint firstAttribute="trailing" secondItem="9rv-Ka-de1" secondAttribute="trailing" id="jot-5T-83w"/>
+                <constraint firstItem="9rv-Ka-de1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w9y-ba-jrN"/>
+            </constraints>
+            <connections>
+                <outlet property="checkbox" destination="uQg-fA-wT8" id="BQz-Qo-LqV"/>
+                <outlet property="mainView" destination="9rv-Ka-de1" id="TQG-uV-jsr"/>
+                <outlet property="secondaryLabel" destination="8gK-6p-Lqj" id="m4Q-pU-jzE"/>
+                <outlet property="titleLabel" destination="VYv-9I-Ugs" id="FvY-mi-che"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="67.633928571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="uniTrack Light Blue">
+            <color red="0.81000000238418579" green="0.92500001192092896" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

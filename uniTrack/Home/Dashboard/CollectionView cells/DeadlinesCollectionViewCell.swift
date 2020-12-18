@@ -15,14 +15,14 @@ class DeadlinesCollectionViewCell: UICollectionViewCell {
     
     func setup(university: University?){
         
-        guard let deadline = university?.deadlines?.last else {
+        guard let deadline = university?.sortedDeadlines(ascending: true)?.last else {
             return
         }
         
         let dateFormatter = DateFormatter()
         self.layer.cornerRadius = 10
         dateFormatter.dateFormat = "MMM/d"
-        let dateString = dateFormatter.string(from: deadline)
+        let dateString = dateFormatter.string(from: deadline.date)
         
         let month: String = dateString.components(separatedBy: "/")[0]
         let day: String = dateString.components(separatedBy: "/")[1]

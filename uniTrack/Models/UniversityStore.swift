@@ -33,7 +33,7 @@ class UniversityStore{
         completion(.success(uni))
     }
     
-    func fetchTasks(completion: @escaping (Result<[University],StoreError>)->()){
+    func fetchUniversities(completion: @escaping (Result<[University],StoreError>)->()){
         
         let fetchRequest = NSFetchRequest<University>(entityName: "University")
         

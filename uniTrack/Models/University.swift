@@ -20,8 +20,28 @@ public class University: NSManagedObject{
     @NSManaged var course: String
     @NSManaged var reachType: ReachType.RawValue?
     @NSManaged var photo: String
+    
     @NSManaged var baseModel: UniversityFromData?
-    @NSManaged var deadlines: [Date]?
+    @NSManaged var deadlines: NSSet?
+    @NSManaged var todos: NSSet?
+    
+    func sortedDeadlines(ascending: Bool) -> [Deadline]?{
+        
+        guard let deadlinesArray = deadlines?.allObjects as? [Deadline] else{
+            return nil
+        }
+        if ascending{
+            return deadlinesArray.sorted{ $0.date > $1.date}
+        }else{
+            return deadlinesArray.sorted{ $0.date > $1.date}
+        }
+    }
+    
+    func getTodos()->[Task]?{
+        
+        return (todos?.allObjects as? [Task])
+        
+    }
     
     convenience init(name:String, course: String, reachType: ReachType?, baseModel: UniversityFromData?, deadlines: [Date]?){
         
@@ -36,9 +56,18 @@ public class University: NSManagedObject{
         self.baseModel = baseModel
     }
     
-    func addDeadline(date: Date){
-        deadlines?.append(date)
-    }
+    @objc(addDeadlinesObject:)
+    @NSManaged func addDeadline(_ value: Deadline)
+
+    @objc(removeDeadlinesObject:)
+    @NSManaged func removeDeadline(_ value: Deadline)
+
+    @objc(addTodosObject:)
+    @NSManaged func addTask(_ value: Task)
+
+    @objc(removeTodosObject:)
+    @NSManaged func removeTask(_ value: Task)
+
     
     enum ReachType: String{
         case safety = "Safety"

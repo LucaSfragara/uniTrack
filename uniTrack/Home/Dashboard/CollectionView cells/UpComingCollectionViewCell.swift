@@ -16,7 +16,7 @@ class UpComingCollectionViewCell: UICollectionViewCell {
         
         taskLabel.text = task
         self.layer.cornerRadius = 10
-        self.backgroundColor = UIColor.init(named: "uniTrack Light Blue")
+        self.backgroundColor = UIColor.init(named: "uniTrack Blue")
     }
     
     override func awakeFromNib() {

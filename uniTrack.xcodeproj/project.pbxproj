@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		73054726AF2A105DA5440BDA /* Pods_uniTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */; };
+		AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */; };
+		AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */; };
+		AC1792D425869D1400AEE111 /* DetailTodosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */; };
+		AC1792DC2586BD7600AEE111 /* Deadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792DB2586BD7600AEE111 /* Deadline.swift */; };
+		AC1792DF2586BD8900AEE111 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792DE2586BD8900AEE111 /* Task.swift */; };
 		AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E15253E107B00DADF91 /* AppDelegate.swift */; };
 		AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E17253E107B00DADF91 /* SceneDelegate.swift */; };
 		AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1B253E107B00DADF91 /* Main.storyboard */; };
@@ -32,7 +37,14 @@
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
 		AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */; };
 		AC69E937256C6F7500D64083 /* CollegeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */; };
+		AC71C08C258810CC0016AD68 /* AddDeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71C08A258810CC0016AD68 /* AddDeadlineViewController.swift */; };
+		AC71C08D258810CC0016AD68 /* AddDeadlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC71C08B258810CC0016AD68 /* AddDeadlineViewController.xib */; };
+		AC71C093258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC71C092258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib */; };
+		AC71C098258811330016AD68 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71C096258811330016AD68 /* AddTaskViewController.swift */; };
+		AC71C099258811330016AD68 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC71C097258811330016AD68 /* AddTaskViewController.xib */; };
 		AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */; };
+		ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */; };
+		ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 		ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */; };
 		ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */; };
@@ -44,6 +56,11 @@
 
 /* Begin PBXFileReference section */
 		988ACBBA1988D32A139BF8B6 /* Pods_uniTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uniTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodosCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTodosCollectionViewCell.xib; sourceTree = "<group>"; };
+		AC1792DB2586BD7600AEE111 /* Deadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deadline.swift; sourceTree = "<group>"; };
+		AC1792DE2586BD8900AEE111 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AC317E12253E107B00DADF91 /* uniTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uniTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC317E15253E107B00DADF91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC317E17253E107B00DADF91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +87,14 @@
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
 		AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollegeDetail.storyboard; sourceTree = "<group>"; };
+		AC71C08A258810CC0016AD68 /* AddDeadlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeadlineViewController.swift; sourceTree = "<group>"; };
+		AC71C08B258810CC0016AD68 /* AddDeadlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeadlineViewController.xib; sourceTree = "<group>"; };
+		AC71C092258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailDeadlinesCollectionViewCell.xib; sourceTree = "<group>"; };
+		AC71C096258811330016AD68 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		AC71C097258811330016AD68 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
 		AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollegesCollectionViewCell.swift; sourceTree = "<group>"; };
+		ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
+		ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableViewController.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 		ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollegesViewController.swift; sourceTree = "<group>"; };
 		ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
@@ -111,6 +135,28 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AC024F3B258D637C00790FD8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AC317E1B253E107B00DADF91 /* Main.storyboard */,
+				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
+				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
+				AC59FE70254A25D800032322 /* CollectionView cells */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AC1792C92584CAC800AEE111 /* CollectionView cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC71C092258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib */,
+				AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */,
+				AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */,
+				AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */,
+			);
+			path = "CollectionView cells";
+			sourceTree = "<group>";
+		};
 		AC317E09253E107B00DADF91 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +195,8 @@
 				AC9EF9F6254E142A00728162 /* JSON Decoding */,
 				AC317E33253E11F800DADF91 /* University.swift */,
 				AC317E42253F86B000DADF91 /* UniversityStore.swift */,
+				AC1792DB2586BD7600AEE111 /* Deadline.swift */,
+				AC1792DE2586BD8900AEE111 /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,12 +217,10 @@
 		AC4B990625484200005000B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ACC74C492587A6AD00AF1254 /* Helpers */,
 				AC69E92D256C68B300D64083 /* College Detail */,
-				ACDC6D58254E1B680037DF45 /* AddCollege */,
-				AC317E1B253E107B00DADF91 /* Main.storyboard */,
-				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
-				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
-				AC59FE70254A25D800032322 /* CollectionView cells */,
+				ACDC6D58254E1B680037DF45 /* Add College */,
+				AC024F3B258D637C00790FD8 /* Dashboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -209,10 +255,31 @@
 		AC69E92D256C68B300D64083 /* College Detail */ = {
 			isa = PBXGroup;
 			children = (
+				AC71C0882588107F0016AD68 /* Add task */,
+				AC71C086258810670016AD68 /* Add deadline */,
+				AC1792C92584CAC800AEE111 /* CollectionView cells */,
 				AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */,
 				AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */,
 			);
 			path = "College Detail";
+			sourceTree = "<group>";
+		};
+		AC71C086258810670016AD68 /* Add deadline */ = {
+			isa = PBXGroup;
+			children = (
+				AC71C08A258810CC0016AD68 /* AddDeadlineViewController.swift */,
+				AC71C08B258810CC0016AD68 /* AddDeadlineViewController.xib */,
+			);
+			path = "Add deadline";
+			sourceTree = "<group>";
+		};
+		AC71C0882588107F0016AD68 /* Add task */ = {
+			isa = PBXGroup;
+			children = (
+				AC71C096258811330016AD68 /* AddTaskViewController.swift */,
+				AC71C097258811330016AD68 /* AddTaskViewController.xib */,
+			);
+			path = "Add task";
 			sourceTree = "<group>";
 		};
 		AC9EF9F6254E142A00728162 /* JSON Decoding */ = {
@@ -223,6 +290,15 @@
 			path = "JSON Decoding";
 			sourceTree = "<group>";
 		};
+		ACC74C492587A6AD00AF1254 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */,
+				ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		ACCB170225434F3500D76512 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,13 +307,13 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		ACDC6D58254E1B680037DF45 /* AddCollege */ = {
+		ACDC6D58254E1B680037DF45 /* Add College */ = {
 			isa = PBXGroup;
 			children = (
 				ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */,
 				ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */,
 			);
-			path = AddCollege;
+			path = "Add College";
 			sourceTree = "<group>";
 		};
 		ACDC6D5F254E1DC10037DF45 /* Style Classes */ = {
@@ -260,7 +336,7 @@
 				AC317E0E253E107B00DADF91 /* Sources */,
 				AC317E0F253E107B00DADF91 /* Frameworks */,
 				AC317E10253E107B00DADF91 /* Resources */,
-				50F664B0205F0D05534D9963 /* [CP] Embed Pods Frameworks */,
+				2D050C0141E528699909D153 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,20 +392,24 @@
 				AC59FE68254A23E700032322 /* Inter-Medium-slnt=0.ttf in Resources */,
 				AC59FE69254A23E700032322 /* Inter-Regular-slnt=0.ttf in Resources */,
 				AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */,
+				AC71C08D258810CC0016AD68 /* AddDeadlineViewController.xib in Resources */,
+				AC71C093258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib in Resources */,
 				AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */,
 				AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */,
 				AC69E937256C6F7500D64083 /* CollegeDetail.storyboard in Resources */,
+				AC1792D425869D1400AEE111 /* DetailTodosCollectionViewCell.xib in Resources */,
 				AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */,
 				AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */,
 				ACDC6D67254E1E2A0037DF45 /* addCollege.storyboard in Resources */,
 				AC691CFD2544C77A002D41F7 /* data.json in Resources */,
+				AC71C099258811330016AD68 /* AddTaskViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50F664B0205F0D05534D9963 /* [CP] Embed Pods Frameworks */ = {
+		2D050C0141E528699909D153 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,14 +456,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */,
+				AC71C098258811330016AD68 /* AddTaskViewController.swift in Sources */,
 				AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
+				AC1792DC2586BD7600AEE111 /* Deadline.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
+				ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */,
 				ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */,
+				AC71C08C258810CC0016AD68 /* AddDeadlineViewController.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,
+				AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */,
+				ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */,
 				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
@@ -392,6 +478,8 @@
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,
+				AC1792DF2586BD8900AEE111 /* Task.swift in Sources */,
+				AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

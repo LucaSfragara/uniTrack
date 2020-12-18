@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-SemiBold-slnt=0.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskViewController" customModule="uniTrack" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="1hZ-2N-ix5" id="rn1-BJ-Nsi"/>
+                <outlet property="textTextField" destination="naf-I9-2Vo" id="xhF-Q7-WaG"/>
+                <outlet property="titleTextField" destination="ai5-Su-b6I" id="yEM-mi-4wl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jh-Op-9Pi" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utT-ae-HCQ">
+                            <rect key="frame" x="30" y="43" width="69.5" height="19"/>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                            <color key="textColor" name="uniTrack secondary label color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What do you have to do?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ai5-Su-b6I">
+                            <rect key="frame" x="30" y="79" width="354" height="37"/>
+                            <color key="backgroundColor" red="0.94892865420000005" green="0.95589858289999996" blue="0.97276180980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="SUw-Sz-HyB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hZ-2N-ix5" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
+                            <rect key="frame" x="309" y="38" width="75" height="31"/>
+                            <color key="backgroundColor" name="uniTrack Light Orange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="31" id="Iva-sj-dQV"/>
+                                <constraint firstAttribute="width" constant="75" id="Rkc-Yj-NrP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
+                            <state key="normal" title="Add">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" name="uniTrack Light Orange"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapAddTask:" destination="-1" eventType="touchUpInside" id="EfK-9o-ZnR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pp4-Cu-kD8">
+                            <rect key="frame" x="33" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="ftA-to-8I8"/>
+                                <constraint firstAttribute="width" constant="28" id="vXr-9t-T6G"/>
+                            </constraints>
+                            <state key="normal" image="Close Icon"/>
+                            <connections>
+                                <action selector="didTapDismiss:" destination="-1" eventType="touchUpInside" id="Tna-4S-9d4"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Any other useful information? (links, hints,...)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="naf-I9-2Vo">
+                            <rect key="frame" x="30" y="133" width="354" height="37"/>
+                            <color key="backgroundColor" red="0.94892865420000005" green="0.95589858289999996" blue="0.97276180980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="iDq-vr-hNC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="naf-I9-2Vo" firstAttribute="leading" secondItem="4Jh-Op-9Pi" secondAttribute="leading" constant="30" id="47N-Ve-qRs"/>
+                        <constraint firstAttribute="trailing" secondItem="naf-I9-2Vo" secondAttribute="trailing" constant="30" id="8CY-Uw-18m"/>
+                        <constraint firstItem="naf-I9-2Vo" firstAttribute="top" secondItem="ai5-Su-b6I" secondAttribute="bottom" constant="17" id="9fs-m5-duz"/>
+                        <constraint firstItem="pp4-Cu-kD8" firstAttribute="leading" secondItem="4Jh-Op-9Pi" secondAttribute="leading" constant="33" id="Ldf-91-el5"/>
+                        <constraint firstItem="1hZ-2N-ix5" firstAttribute="top" secondItem="4Jh-Op-9Pi" secondAttribute="top" constant="38" id="NIz-qU-d4L"/>
+                        <constraint firstAttribute="height" constant="200" id="QSr-s2-IMe"/>
+                        <constraint firstAttribute="trailing" secondItem="1hZ-2N-ix5" secondAttribute="trailing" constant="30" id="U9Z-cv-doi"/>
+                        <constraint firstItem="ai5-Su-b6I" firstAttribute="top" secondItem="utT-ae-HCQ" secondAttribute="bottom" constant="17" id="f4r-YI-9sJ"/>
+                        <constraint firstItem="pp4-Cu-kD8" firstAttribute="top" secondItem="4Jh-Op-9Pi" secondAttribute="top" constant="11" id="gWZ-2M-Roi"/>
+                        <constraint firstAttribute="trailing" secondItem="ai5-Su-b6I" secondAttribute="trailing" constant="30" id="m26-AC-Sxw"/>
+                        <constraint firstItem="ai5-Su-b6I" firstAttribute="leading" secondItem="4Jh-Op-9Pi" secondAttribute="leading" constant="30" id="p5e-FD-nR3"/>
+                        <constraint firstItem="utT-ae-HCQ" firstAttribute="leading" secondItem="4Jh-Op-9Pi" secondAttribute="leading" constant="30" id="yXl-em-Bfu"/>
+                        <constraint firstItem="utT-ae-HCQ" firstAttribute="top" secondItem="4Jh-Op-9Pi" secondAttribute="top" constant="43" id="zmF-73-Rse"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.37490159270000001" green="0.37495988609999997" blue="0.37488880749999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Jh-Op-9Pi" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="P2d-ZI-Fpl"/>
+                <constraint firstAttribute="bottom" secondItem="4Jh-Op-9Pi" secondAttribute="bottom" id="cXn-QF-arU"/>
+                <constraint firstItem="4Jh-Op-9Pi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ziU-v1-tok"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1hZ-2N-ix5">
+            <size key="intrinsicContentSize" width="30" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Close Icon" width="25" height="25"/>
+        <namedColor name="uniTrack Light Orange">
+            <color red="1" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="uniTrack secondary label color">
+            <color red="0.55699998140335083" green="0.5910000205039978" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
