@@ -12,6 +12,8 @@
 		AC024F47258D65C500790FD8 /* TaskDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC024F45258D65C500790FD8 /* TaskDetailViewController.xib */; };
 		AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F49258D65D900790FD8 /* DeadlineDetailViewController.swift */; };
 		AC024F4C258D65D900790FD8 /* DeadlineDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */; };
+		AC024F55258D793800790FD8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F54258D793800790FD8 /* DataManager.swift */; };
+		AC024F59258D79A900790FD8 /* CrudStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F58258D79A900790FD8 /* CrudStrategy.swift */; };
 		AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */; };
 		AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */; };
 		AC1792D425869D1400AEE111 /* DetailTodosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */; };
@@ -64,6 +66,8 @@
 		AC024F45258D65C500790FD8 /* TaskDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailViewController.xib; sourceTree = "<group>"; };
 		AC024F49258D65D900790FD8 /* DeadlineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineDetailViewController.swift; sourceTree = "<group>"; };
 		AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeadlineDetailViewController.xib; sourceTree = "<group>"; };
+		AC024F54258D793800790FD8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AC024F58258D79A900790FD8 /* CrudStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudStrategy.swift; sourceTree = "<group>"; };
 		AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodosCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTodosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				AC317E23253E107C00DADF91 /* Info.plist */,
 				AC317E32253E11E100DADF91 /* Models */,
 				AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */,
+				AC024F54258D793800790FD8 /* DataManager.swift */,
+				AC024F58258D79A900790FD8 /* CrudStrategy.swift */,
 			);
 			path = uniTrack;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC1792DC2586BD7600AEE111 /* Deadline.swift in Sources */,
+				AC024F59258D79A900790FD8 /* CrudStrategy.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
 				ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */,
@@ -507,6 +514,7 @@
 				ACF886F62560338A004A6830 /* CollegeCollectionViewCell.swift in Sources */,
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
+				AC024F55258D793800790FD8 /* DataManager.swift in Sources */,
 				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
 				AC024F46258D65C500790FD8 /* TaskDetailViewController.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,

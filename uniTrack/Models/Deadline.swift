@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 @objc(Deadline)
-class Deadline: NSManagedObject{
+class Deadline: NSManagedObject, AddableObject{
     
     @NSManaged var date: Date
     @NSManaged var title: String

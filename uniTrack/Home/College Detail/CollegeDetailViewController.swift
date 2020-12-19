@@ -74,6 +74,7 @@ class CollegeDetailViewController: UIViewController {
         self.deadlineCollectionViewHeight.constant = deadlinesCollectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
+  
     /*
     // MARK: - Navigation
 
@@ -86,6 +87,7 @@ class CollegeDetailViewController: UIViewController {
 
 }
 
+//TODO: add peek and pop logic to UICollectionview cells
 
 //MARK: CollectionViews delegate and datasource
 

@@ -74,7 +74,6 @@ class AddCollegeViewController: UIViewController {
         super.viewDidAppear(animated)
         
         showCard()
-        
     }
     
     @IBAction func tapGestureRecognizer (_ tapRecognizer: UITapGestureRecognizer ){

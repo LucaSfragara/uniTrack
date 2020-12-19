@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 @objc(Task)
-class Task: NSManagedObject{
+class Task: NSManagedObject, AddableObject{
     
     @NSManaged var title: String
     @NSManaged var text: String
@@ -22,7 +22,7 @@ class Task: NSManagedObject{
         self.init(entity: entity, insertInto: PersistantService.context)
         self.title = title
         self.text = text
-        
     }
     
 }
+
