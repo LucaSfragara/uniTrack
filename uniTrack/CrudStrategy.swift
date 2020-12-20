@@ -9,6 +9,8 @@ import Foundation
 
 protocol CrudStrategy{
     
+    var universities: [University]? {get}
+    
     //MARK: CREATE
     ///add - add task or deadline to university
     func addItem<Item: AddableObject>(item: Item, forUniversity: University, completion: (Result<Bool, PersistantStoreError>)->())
