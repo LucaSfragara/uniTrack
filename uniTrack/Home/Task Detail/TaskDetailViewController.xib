@@ -1,22 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold-slnt=0.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Light-slnt=0.ttf">
+            <string>Inter-Light</string>
+        </array>
+        <array key="Inter-Regular-slnt=0.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskDetailViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskDetailViewController" customModule="uniTrack" customModuleProvider="target">
             <connections>
+                <outlet property="deleteButton" destination="HO9-Bk-OjN" id="eq8-Wf-O6W"/>
+                <outlet property="mainButton" destination="3DF-0R-fCg" id="b8e-Gv-pKJ"/>
+                <outlet property="taskText" destination="kqi-cS-Ki0" id="kkf-hw-G9F"/>
+                <outlet property="taskTitle" destination="8K1-Nw-xHY" id="Zeb-yD-xJz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill Common App Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K1-Nw-xHY" userLabel="Fill Questions">
+                    <rect key="frame" x="57.5" y="115" width="299" height="28"/>
+                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look up on college website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-cS-Ki0">
+                    <rect key="frame" x="97.5" y="165" width="219.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DF-0R-fCg">
+                    <rect key="frame" x="341" y="37" width="33" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Edit"/>
+                    <connections>
+                        <action selector="mainbuttonPressedWithSender:" destination="-1" eventType="touchUpInside" id="VFq-Tk-mOu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WA-RL-U68">
+                    <rect key="frame" x="40" y="37" width="42" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" systemColor="linkColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressBackButton:" destination="-1" eventType="touchUpInside" id="yTx-CK-Ujc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-Bk-OjN" userLabel="Delete Button">
+                    <rect key="frame" x="154.5" y="697" width="105" height="35"/>
+                    <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
+                    <state key="normal" title="Delete Task">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="zqw-CR-gLY"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HO9-Bk-OjN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="19P-9d-Dbv"/>
+                <constraint firstItem="8K1-Nw-xHY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="71" id="7Ff-oj-QSK"/>
+                <constraint firstItem="kqi-cS-Ki0" firstAttribute="top" secondItem="8K1-Nw-xHY" secondAttribute="bottom" constant="22" id="AQt-NC-a3M"/>
+                <constraint firstItem="6WA-RL-U68" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="CgW-Xv-Wuq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3DF-0R-fCg" secondAttribute="trailing" constant="40" id="Zfj-nr-Rn9"/>
+                <constraint firstItem="8K1-Nw-xHY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iqI-Yc-BnL"/>
+                <constraint firstItem="3DF-0R-fCg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="jxl-jv-x2W"/>
+                <constraint firstItem="6WA-RL-U68" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="lCb-V4-e0y"/>
+                <constraint firstItem="kqi-cS-Ki0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mod-T1-Piu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HO9-Bk-OjN" secondAttribute="bottom" constant="130" id="vB1-Q6-ueC"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="129"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

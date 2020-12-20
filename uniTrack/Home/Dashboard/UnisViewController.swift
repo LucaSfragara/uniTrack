@@ -141,10 +141,9 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return
             }
             let storyboard = UIStoryboard(name: "CollegeDetail", bundle: nil)
-            let detailVCNavController = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! UINavigationController
-            let detailVC = detailVCNavController.children[0] as! CollegeDetailViewController
+            let detailVC = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! CollegeDetailViewController
             detailVC.university = universitySelected
-            present(detailVCNavController, animated: true, completion: nil)
+            present(detailVC, animated: true, completion: nil)
         }
         
     }

@@ -40,6 +40,7 @@ class CollegeDetailViewController: UIViewController {
         guard let university = university else{
             return 
         }
+        
         navigationController?.isNavigationBarHidden = true
         
         self.title = university.name
@@ -141,6 +142,19 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
             return 15.0
         }else { //deadline collectionview
             return 4
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == todosCollectionView{ //todos collectionview
+            let taskDetailVC = TaskDetailViewController()
+            guard let selectedTask = university?.getTodos()?[indexPath.row] else{
+                return
+            }
+            taskDetailVC.task = selectedTask
+            present(taskDetailVC, animated: true, completion: nil)
+        }else { //deadline collectionview
+            
         }
     }
 }

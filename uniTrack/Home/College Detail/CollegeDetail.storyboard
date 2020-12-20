@@ -27,31 +27,31 @@
         <!--Title-->
         <scene sceneID="UFN-I6-Xbt">
             <objects>
-                <viewController id="mil-PW-M1A" customClass="CollegeDetailViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollegeDetailVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mil-PW-M1A" customClass="CollegeDetailViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ij-1N-nPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stanford Sample " translatesAutoresizingMaskIntoConstraints="NO" id="XQf-81-Ovo" userLabel="Stanford ImageView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="287"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="287"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="287" id="O5K-Wx-P8g"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-JH-MQP">
-                                <rect key="frame" x="20" y="252" width="156" height="52.5"/>
+                                <rect key="frame" x="20" y="208" width="156" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keD-0f-czW">
-                                <rect key="frame" x="20" y="169" width="173" height="52.5"/>
+                                <rect key="frame" x="20" y="125" width="173" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewX-TW-DVd">
-                                <rect key="frame" x="20" y="113" width="51" height="46"/>
+                                <rect key="frame" x="20" y="69" width="51" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="94Z-ah-r20"/>
                                     <constraint firstAttribute="width" constant="51" id="NPD-D4-ppF"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6g-pi-Xfv" userLabel="Card view" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="364" width="414" height="498"/>
+                                <rect key="frame" x="0.0" y="320" width="414" height="542"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-yA-Zcc" userLabel="Separator View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
                                         <rect key="frame" x="57" y="152" width="300" height="4"/>
@@ -241,7 +241,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-QG-PY0">
-                                        <rect key="frame" x="20" y="427.5" width="374" height="64"/>
+                                        <rect key="frame" x="20" y="427.5" width="374" height="108"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8X7-Ub-xyW">
                                             <size key="itemSize" width="374" height="39"/>
@@ -368,24 +368,6 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="473.91304347826093" y="-29.464285714285712"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7UC-Xn-tYC">
-            <objects>
-                <navigationController storyboardIdentifier="CollegeDetailVCID" automaticallyAdjustsScrollViewInsets="NO" id="gnO-9q-lON" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="05M-xc-sgB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mil-PW-M1A" kind="relationship" relationship="rootViewController" id="QiQ-AC-h2X"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0FC-SI-w2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-342" y="44"/>
         </scene>
     </scenes>
     <resources>

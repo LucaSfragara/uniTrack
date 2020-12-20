@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CrudStrategy{
+protocol CrudStrategy: class{
     
     var universities: [University]? {get}
     
