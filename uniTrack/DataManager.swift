@@ -10,6 +10,7 @@ import CoreData
 
 //DATA MANAGER SINGLETON
 class DataManager: CrudStrategy{
+    
 
     var universities: [University]?
     
@@ -69,7 +70,7 @@ class DataManager: CrudStrategy{
         }
     }
 
-    func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping ((Result<Item, PersistantStoreError>) -> ())){
+    func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping ((Result<AddableObject, PersistantStoreError>) -> ())){
         
         let universityIndex = (self.universities?.firstIndex(of: university))!
         
@@ -107,7 +108,7 @@ class DataManager: CrudStrategy{
             
         case is Task:
             
-            let taskToUpdate = itemToUpdate as! Task
+            let taskToUpdate = itemToUpdate as Item as! Task
             self.universities?[universityIndex].removeTask(taskToUpdate)
             for (key, value) in updateValues{
             
@@ -124,7 +125,7 @@ class DataManager: CrudStrategy{
                         completion(.failure(.updateValueNotValid))
                         return
                     }
-                    taskToUpdate.title = newText
+                    taskToUpdate.text = newText
                     
                 default:
                     completion(.failure(.updateKeyNotRecognized))
@@ -133,7 +134,7 @@ class DataManager: CrudStrategy{
             }
         
             self.universities?[universityIndex].addTask(taskToUpdate)
-            completion(.success(itemToUpdate))
+            completion(.success(taskToUpdate))
         default:
             completion(.failure(.unrecognizedItem))
         }

@@ -26,8 +26,6 @@ class UnisViewController: SwipableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        self.tabBarController?.delegate = self
     
         UpComingCollectionView.delegate = self
         UpComingCollectionView.dataSource = self
@@ -41,39 +39,20 @@ class UnisViewController: SwipableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        fetchMyUniversity()
-    }
-    
-    private func fetchMyUniversity(){
-        
-        let fetchRequest = NSFetchRequest<University>(entityName: "University")
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-    
-        let result = try? PersistantService.context.fetch(fetchRequest) 
-        
-        guard let fetchedUniversities = result else{
-            return
-        }
-        universities = fetchedUniversities
-        DispatchQueue.main.async {
-            self.UpComingCollectionView.reloadData()
-            self.DeadlinesCollectionView.reloadData()
-            self.CollegesCollectionView.reloadData()
+        DataManager.shared.getUniversities{result in
+            
+            switch result {
+            case .failure(let error):
+                //TODO: handle error appropriately
+                print(error)
+            case .success(let universities):
+                self.universities = universities
+            }
         }
     }
+    
 }
 
-//MARK: UITabbar controleller delegate
-extension UnisViewController: UITabBarControllerDelegate{
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        if let CollegeVC = viewController.children[0] as? MyCollegesViewController{
-            //CollegeVC.universities = self.universities
-            CollegeVC.universities = self.universities
-        }
-    }
-}
 
 //MARK: UICollectionview delegate and datasource
 

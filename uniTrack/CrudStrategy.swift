@@ -23,7 +23,7 @@ protocol CrudStrategy: class{
     func getUniversities(withNameContaining text: String?, completion: @escaping(Result<[University], PersistantStoreError>)->())
 
     //MARK: UPDATE
-    func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping((Result<Item, PersistantStoreError>) -> ()))
+    func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping((Result<AddableObject, PersistantStoreError>) -> ()))
     func updateUniversity(universityToUpdate: University, updateValues: [String : Any], completion: @escaping((Result<University, PersistantStoreError>) -> ()))
     
     //MARK: DELETE

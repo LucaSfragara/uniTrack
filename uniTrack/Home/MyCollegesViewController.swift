@@ -21,7 +21,20 @@ class MyCollegesViewController: SwipableViewController {
         CollegesCollectioView.dataSource = self
     
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        DataManager.shared.getUniversities{result in
+            
+            switch result {
+            case .failure(let error):
+                //TODO: handle error appropriately
+                print(error)
+            case .success(let universities):
+                self.universities = universities
+                
+            }
+        }
+    }
     
     @IBAction func didPressAddButton(_ sender: Any) {
         

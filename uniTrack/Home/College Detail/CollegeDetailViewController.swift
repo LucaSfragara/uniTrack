@@ -52,7 +52,21 @@ class CollegeDetailViewController: UIViewController {
         
         self.cardState = .normal
     }
-  
+    
+    override func viewWillAppear(_ animated: Bool) {
+        DataManager.shared.getUniversities(withNameContaining: self.university?.name){ result in
+            switch result {
+            case .success(let universities):
+                self.university = universities[0]
+                print(self.university?.getTodos())
+            case .failure(let error):
+                //TODO:  TODO: handle error
+                print(error)
+            }
+            self.todosCollectionView.reloadData()
+        }
+    }
+    
     @IBAction func didPressBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -107,11 +121,11 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == deadlinesCollectionView { //deadline collectionview
             deadlinesCollectionView.register(UINib(nibName: "DetailDeadlinesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "detailDeadlinesCellID")
             let cell = deadlinesCollectionView.dequeueReusableCell(withReuseIdentifier: "detailDeadlinesCellID", for: indexPath) as! DetailDeadlinesCollectionViewCell
-            
             if let deadline = university?.sortedDeadlines(ascending: true)?[indexPath.row]{
                 cell.setup(deadline: deadline)
             }
             return cell
+            
         }else{ //to-dos collectionview
             todosCollectionView.register(UINib(nibName: "DetailTodosCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "detailTodosCellID")
             let cell = todosCollectionView.dequeueReusableCell(withReuseIdentifier: "detailTodosCellID", for: indexPath) as! DetailTodosCollectionViewCell
@@ -152,6 +166,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
                 return
             }
             taskDetailVC.task = selectedTask
+            taskDetailVC.university = university
             present(taskDetailVC, animated: true, completion: nil)
         }else { //deadline collectionview
             
@@ -163,7 +178,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
 extension CollegeDetailViewController{
     
     @IBAction private func panGestureRecognizer(_ panRecognizer: UIPanGestureRecognizer){
-
+        
         var cardPanStartingTopCostraint = CGFloat()
         let translation = panRecognizer.translation(in: self.view)
 

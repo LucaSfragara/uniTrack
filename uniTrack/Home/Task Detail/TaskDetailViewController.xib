@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,9 +23,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskDetailViewController" customModule="uniTrack" customModuleProvider="target">
             <connections>
                 <outlet property="deleteButton" destination="HO9-Bk-OjN" id="eq8-Wf-O6W"/>
+                <outlet property="editView" destination="yPY-ZJ-AzJ" id="Hy7-a8-rkI"/>
                 <outlet property="mainButton" destination="3DF-0R-fCg" id="b8e-Gv-pKJ"/>
+                <outlet property="taskInfoView" destination="cBz-GC-orp" id="4Bp-Zr-kpS"/>
                 <outlet property="taskText" destination="kqi-cS-Ki0" id="kkf-hw-G9F"/>
                 <outlet property="taskTitle" destination="8K1-Nw-xHY" id="Zeb-yD-xJz"/>
+                <outlet property="textTextField" destination="HME-g6-dSm" id="UhN-0d-Hgh"/>
+                <outlet property="titleTextField" destination="4g2-QZ-MPC" id="7VY-c6-W1J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,24 +38,85 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill Common App Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K1-Nw-xHY" userLabel="Fill Questions">
-                    <rect key="frame" x="57.5" y="115" width="299" height="28"/>
-                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="23"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look up on college website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-cS-Ki0">
-                    <rect key="frame" x="97.5" y="165" width="219.5" height="21"/>
-                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-ZJ-AzJ" userLabel="Task Edit View">
+                    <rect key="frame" x="0.0" y="126" width="414" height="128"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rtw-2d-sj6">
+                            <rect key="frame" x="20" y="0.0" width="374" height="128"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-QZ-MPC" userLabel="title TextField">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
+                                    <color key="backgroundColor" name="uniTrack textField BackGround"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add additional information(links,...)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HME-g6-dSm">
+                                    <rect key="frame" x="0.0" y="74" width="374" height="54"/>
+                                    <color key="backgroundColor" name="uniTrack textField BackGround"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rtw-2d-sj6" secondAttribute="bottom" id="8Ye-ud-ToQ"/>
+                        <constraint firstAttribute="trailing" secondItem="rtw-2d-sj6" secondAttribute="trailing" constant="20" id="KvQ-Ge-hqp"/>
+                        <constraint firstItem="rtw-2d-sj6" firstAttribute="leading" secondItem="yPY-ZJ-AzJ" secondAttribute="leading" constant="20" id="Sje-Jp-byh"/>
+                        <constraint firstItem="rtw-2d-sj6" firstAttribute="top" secondItem="yPY-ZJ-AzJ" secondAttribute="top" id="cBn-lu-k4L"/>
+                        <constraint firstAttribute="height" constant="128" id="kLe-MQ-NcA"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-GC-orp" userLabel="Task detail View">
+                    <rect key="frame" x="0.0" y="85" width="414" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill Common App Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K1-Nw-xHY" userLabel="Fill Questions">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="XWj-Vg-o3o"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look up on college website" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-cS-Ki0">
+                            <rect key="frame" x="0.0" y="53" width="414" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="XBx-4q-GpS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="8K1-Nw-xHY" firstAttribute="top" secondItem="cBz-GC-orp" secondAttribute="top" id="4Vd-du-bJo"/>
+                        <constraint firstAttribute="trailing" secondItem="8K1-Nw-xHY" secondAttribute="trailing" id="IQ1-2A-bAT"/>
+                        <constraint firstItem="kqi-cS-Ki0" firstAttribute="leading" secondItem="cBz-GC-orp" secondAttribute="leading" id="WZt-sd-RJL"/>
+                        <constraint firstAttribute="height" constant="70" id="Yir-vQ-iTl"/>
+                        <constraint firstAttribute="trailing" secondItem="kqi-cS-Ki0" secondAttribute="trailing" id="lqx-F7-zIU"/>
+                        <constraint firstItem="kqi-cS-Ki0" firstAttribute="top" secondItem="8K1-Nw-xHY" secondAttribute="bottom" constant="25" id="mkG-lu-Jwa"/>
+                        <constraint firstItem="8K1-Nw-xHY" firstAttribute="leading" secondItem="cBz-GC-orp" secondAttribute="leading" id="mqu-ao-qF9"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DF-0R-fCg">
                     <rect key="frame" x="341" y="37" width="33" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <state key="normal" title="Edit"/>
                     <connections>
                         <action selector="mainbuttonPressedWithSender:" destination="-1" eventType="touchUpInside" id="VFq-Tk-mOu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-Bk-OjN" userLabel="Delete Button">
+                    <rect key="frame" x="158" y="697" width="98" height="35"/>
+                    <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
+                    <state key="normal" title="Delete Task">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="zqw-CR-gLY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WA-RL-U68">
@@ -63,35 +129,30 @@
                         <action selector="didPressBackButton:" destination="-1" eventType="touchUpInside" id="yTx-CK-Ujc"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-Bk-OjN" userLabel="Delete Button">
-                    <rect key="frame" x="154.5" y="697" width="105" height="35"/>
-                    <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
-                    <state key="normal" title="Delete Task">
-                        <color key="titleColor" systemColor="systemRedColor"/>
-                    </state>
-                    <connections>
-                        <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="zqw-CR-gLY"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="HO9-Bk-OjN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="19P-9d-Dbv"/>
-                <constraint firstItem="8K1-Nw-xHY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="71" id="7Ff-oj-QSK"/>
-                <constraint firstItem="kqi-cS-Ki0" firstAttribute="top" secondItem="8K1-Nw-xHY" secondAttribute="bottom" constant="22" id="AQt-NC-a3M"/>
                 <constraint firstItem="6WA-RL-U68" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="CgW-Xv-Wuq"/>
+                <constraint firstItem="cBz-GC-orp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="41" id="Cow-1e-m8H"/>
+                <constraint firstItem="cBz-GC-orp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W7d-XV-3au"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3DF-0R-fCg" secondAttribute="trailing" constant="40" id="Zfj-nr-Rn9"/>
-                <constraint firstItem="8K1-Nw-xHY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iqI-Yc-BnL"/>
+                <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="82" id="dho-h2-qak"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cBz-GC-orp" secondAttribute="trailing" id="gxL-74-lmH"/>
                 <constraint firstItem="3DF-0R-fCg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="jxl-jv-x2W"/>
                 <constraint firstItem="6WA-RL-U68" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="lCb-V4-e0y"/>
-                <constraint firstItem="kqi-cS-Ki0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mod-T1-Piu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yPY-ZJ-AzJ" secondAttribute="trailing" id="mPO-hV-iSY"/>
+                <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sDI-5V-b8Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HO9-Bk-OjN" secondAttribute="bottom" constant="130" id="vB1-Q6-ueC"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="129"/>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="uniTrack textField BackGround">
+            <color red="0.94918996099999997" green="0.9565659165" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
