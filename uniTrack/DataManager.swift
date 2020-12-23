@@ -153,9 +153,11 @@ class DataManager: CrudStrategy{
         switch itemToDelete{
         case is Deadline:
             university?.removeDeadline(itemToDelete as! Deadline)
+            PersistantService.context.delete(itemToDelete as! Deadline)
             completion(.success(true))
         case is Task:
             university?.removeTask(itemToDelete as! Task)
+            PersistantService.context.delete(itemToDelete as! Task)
             completion(.success(true))
         default:
             completion(.failure(.unrecognizedItem))

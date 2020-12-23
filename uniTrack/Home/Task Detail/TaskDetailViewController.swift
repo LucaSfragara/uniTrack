@@ -32,7 +32,11 @@ class TaskDetailViewController: UIViewController {
         taskText.text = task?.text
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //This makes the collegeDetailViewController fetch the university with the updated task
+        self.presentingViewController?.viewWillAppear(true)
+    }
     
     @IBAction func mainbuttonPressed(sender: UIButton){ //this can either be 'Edit' or 'Done'
         
@@ -59,11 +63,9 @@ class TaskDetailViewController: UIViewController {
                     self.hideDeleteButton()
                     self.mainButton.setTitle("Edit", for: .normal)
                     self.mainButton.titleLabel?.textAlignment = .center
-                    self.task = updatedTask as! Task
+                    self.task = updatedTask as? Task
                     self.taskTitle.text = self.task?.title
                     self.taskText.text = self.task?.text
-                    
-                    self.presentingViewController?.viewWillAppear(true)
                     
                 case .failure(let error):
                     //TODO: handle the errors (with alerts maybe?)
@@ -102,9 +104,17 @@ class TaskDetailViewController: UIViewController {
     
     @IBAction private func didPressDeleteButton(){
         let alert = Utilities.createAlertView(title: "Delete Task", message: "Are you sure you want to permanently delete this task?"){
-            //datamanager delete task
+            guard let taskToDelete = self.task, let university = self.university else{return}
+            DataManager.shared.deleteItem(itemToDelete: taskToDelete, forUniversity: university){ result in
+                switch result {
+                case .success(_):
+                    self.dismiss(animated: true, completion: nil)
+                case .failure(let error):
+                    //TODO: TODO: handle error
+                    print(error)
+                }
+            }
         }
-        
         present(alert, animated: false, completion: nil)
     }
     
