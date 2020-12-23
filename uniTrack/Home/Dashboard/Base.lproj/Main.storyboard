@@ -127,7 +127,7 @@
                     <navigationItem key="navigationItem" title="My Colleges" id="szC-dC-H0E">
                         <barButtonItem key="rightBarButtonItem" image="solid Plus" id="peg-fX-9cL">
                             <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
-                            <color key="tintColor" name="uniTrack Light Blue"/>
+                            <color key="tintColor" name="uniTrack Blue"/>
                             <connections>
                                 <action selector="didPressAddButton:" destination="C0M-sc-NfA" id="UBP-ny-fiR"/>
                             </connections>
@@ -260,7 +260,7 @@
                                                 <constraint firstItem="Yfz-0B-QgG" firstAttribute="centerX" secondItem="oNR-Qj-BqF" secondAttribute="centerX" id="uVa-cB-tSy"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" name="uniTrack Light Blue"/>
+                                        <color key="backgroundColor" name="uniTrack Blue"/>
                                         <connections>
                                             <outlet property="datePrimaryLabel" destination="Np4-qO-71p" id="4QP-dV-nXz"/>
                                             <outlet property="dateSecondaryLabel" destination="Yfz-0B-QgG" id="Iow-si-f1N"/>

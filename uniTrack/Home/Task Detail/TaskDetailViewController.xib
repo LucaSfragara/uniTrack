@@ -42,10 +42,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-ZJ-AzJ" userLabel="Task Edit View">
-                    <rect key="frame" x="0.0" y="126" width="414" height="190"/>
+                    <rect key="frame" x="0.0" y="126" width="414" height="188"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-QZ-MPC" userLabel="title TextField">
-                            <rect key="frame" x="20" y="35" width="374" height="50"/>
+                            <rect key="frame" x="20" y="34" width="374" height="50"/>
                             <color key="backgroundColor" name="uniTrack textField BackGround"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="xHg-XX-Y9r"/>
@@ -54,19 +54,19 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-C3-dCm">
-                            <rect key="frame" x="20" y="0.0" width="74" height="20"/>
+                            <rect key="frame" x="20" y="0.0" width="67" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9h-GF-tRm">
-                            <rect key="frame" x="20" y="105" width="74" height="20"/>
+                            <rect key="frame" x="20" y="104" width="66.5" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add additional information(links,...)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HME-g6-dSm">
-                            <rect key="frame" x="20" y="140" width="374" height="50"/>
+                            <rect key="frame" x="20" y="138" width="374" height="50"/>
                             <color key="backgroundColor" name="uniTrack textField BackGround"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Eqw-gx-cHV"/>
@@ -132,7 +132,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-Bk-OjN" userLabel="Delete Button">
-                    <rect key="frame" x="154.5" y="676" width="105" height="35"/>
+                    <rect key="frame" x="158" y="676" width="98" height="35"/>
                     <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
                     <state key="normal" title="Delete Task">
                         <color key="titleColor" systemColor="systemRedColor"/>
