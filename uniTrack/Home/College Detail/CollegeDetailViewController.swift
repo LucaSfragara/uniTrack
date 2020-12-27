@@ -58,12 +58,12 @@ class CollegeDetailViewController: UIViewController {
             switch result {
             case .success(let universities):
                 self.university = universities[0]
-                print(self.university?.getTodos())
             case .failure(let error):
                 //TODO:  TODO: handle error
                 print(error)
             }
             self.todosCollectionView.reloadData()
+            self.deadlinesCollectionView.reloadData()
         }
     }
     
@@ -110,7 +110,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == deadlinesCollectionView{ //deadline collectionView
-            return university?.sortedDeadlines(ascending: true)?.count ?? 0
+            return university?.getDeadlines()?.count ?? 0
         }else{ //to-dos collectionView
             return university?.getTodos()?.count ?? 0
         }
@@ -121,7 +121,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == deadlinesCollectionView { //deadline collectionview
             deadlinesCollectionView.register(UINib(nibName: "DetailDeadlinesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "detailDeadlinesCellID")
             let cell = deadlinesCollectionView.dequeueReusableCell(withReuseIdentifier: "detailDeadlinesCellID", for: indexPath) as! DetailDeadlinesCollectionViewCell
-            if let deadline = university?.sortedDeadlines(ascending: true)?[indexPath.row]{
+            if let deadline = university?.getDeadlines()?[indexPath.row]{
                 cell.setup(deadline: deadline)
             }
             return cell
@@ -169,7 +169,13 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
             taskDetailVC.university = university
             present(taskDetailVC, animated: true, completion: nil)
         }else { //deadline collectionview
-            
+            let deadlineDetailVC = DeadlineDetailViewController()
+            guard let selectedDeadline = university?.getDeadlines()?[indexPath.row] else{
+                return
+            }
+            deadlineDetailVC.deadline = selectedDeadline
+            deadlineDetailVC.university = university
+            present(deadlineDetailVC, animated: true, completion: nil)
         }
     }
 }

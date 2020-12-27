@@ -43,7 +43,7 @@ class DataManager: CrudStrategy{
         switch itemClass{
         case is Deadline.Type:
             
-            let deadlines: [Deadline]? = university.sortedDeadlines(ascending: true)
+            let deadlines: [Deadline]? = university.getDeadlines()
             return deadlines as [Deadline]? as? [Item]
             
         case is Task.Type:

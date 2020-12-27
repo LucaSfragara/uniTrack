@@ -252,13 +252,13 @@
 		AC4B990625484200005000B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AC024F3E258D653D00790FD8 /* Task Detail */,
 				ACC74C492587A6AD00AF1254 /* Helpers */,
+				AC71C0882588107F0016AD68 /* Add task */,
+				AC71C086258810670016AD68 /* Add deadline */,
 				AC69E92D256C68B300D64083 /* College Detail */,
 				ACDC6D58254E1B680037DF45 /* Add College */,
 				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
 				AC024F3B258D637C00790FD8 /* Dashboard */,
-				AC024F4E258D65E100790FD8 /* Deadline Detail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -293,8 +293,8 @@
 		AC69E92D256C68B300D64083 /* College Detail */ = {
 			isa = PBXGroup;
 			children = (
-				AC71C0882588107F0016AD68 /* Add task */,
-				AC71C086258810670016AD68 /* Add deadline */,
+				AC024F3E258D653D00790FD8 /* Task Detail */,
+				AC024F4E258D65E100790FD8 /* Deadline Detail */,
 				AC1792C92584CAC800AEE111 /* CollectionView cells */,
 				AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */,
 				AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */,
@@ -685,7 +685,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sfra.uniTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -705,7 +705,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sfra.uniTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

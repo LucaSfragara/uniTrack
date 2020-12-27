@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold-slnt=0.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Light-slnt=0.ttf">
+            <string>Inter-Light</string>
+        </array>
+        <array key="Inter-Medium-slnt=0.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular-slnt=0.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeadlineDetailViewController" customModule="uniTrack" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="iH9-zI-amE" id="jly-Nw-1Ob"/>
+                <outlet property="datePicker" destination="pc5-Cc-rkD" id="Yu2-5u-lb1"/>
+                <outlet property="deleteButton" destination="Ccs-Ge-Jqw" id="hHt-S2-lDv"/>
+                <outlet property="editView" destination="wX4-hF-uXA" id="oM5-Uo-InM"/>
+                <outlet property="infoView" destination="f9M-X9-mbJ" id="PrM-IR-pL7"/>
+                <outlet property="mainButton" destination="yLg-F0-ZhY" id="7sr-wB-4SC"/>
+                <outlet property="titleField" destination="ex4-kP-G5p" id="9JJ-ZQ-jOg"/>
+                <outlet property="titleLabel" destination="s1m-Ti-gsW" id="aOS-Iy-DdT"/>
+                <outlet property="view" destination="TEq-t4-x42" id="SZT-WO-VIh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="TEq-t4-x42">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-hF-uXA" userLabel="Deadline Edit View">
+                    <rect key="frame" x="0.0" y="126" width="414" height="175"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ex4-kP-G5p" userLabel="title TextField">
+                            <rect key="frame" x="20" y="34" width="374" height="50"/>
+                            <color key="backgroundColor" name="uniTrack textField BackGround"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="QlU-QU-B91"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sn-eE-DsW" userLabel="Deadline Title">
+                            <rect key="frame" x="20" y="0.0" width="105.5" height="19"/>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <color key="textColor" name="uniTrack secondary label color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnj-rg-tfv" userLabel="Deadline Text">
+                            <rect key="frame" x="20" y="104" width="106" height="19"/>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                            <color key="textColor" name="uniTrack secondary label color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-Cc-rkD">
+                            <rect key="frame" x="20" y="138" width="126" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="3aE-Tq-T1c"/>
+                                <constraint firstAttribute="width" constant="126" id="q5d-sZ-XJS"/>
+                            </constraints>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                <!--1970-01-01 11:00:00 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ex4-kP-G5p" firstAttribute="leading" secondItem="wX4-hF-uXA" secondAttribute="leading" constant="20" id="060-Ck-eC8"/>
+                        <constraint firstItem="Wnj-rg-tfv" firstAttribute="leading" secondItem="wX4-hF-uXA" secondAttribute="leading" constant="20" id="1DH-GR-NPZ"/>
+                        <constraint firstAttribute="trailing" secondItem="ex4-kP-G5p" secondAttribute="trailing" constant="20" id="1Zh-iv-0FX"/>
+                        <constraint firstItem="0sn-eE-DsW" firstAttribute="top" secondItem="wX4-hF-uXA" secondAttribute="top" id="Mbd-4y-qbP"/>
+                        <constraint firstItem="ex4-kP-G5p" firstAttribute="top" secondItem="0sn-eE-DsW" secondAttribute="bottom" constant="15" id="ayk-Up-yDY"/>
+                        <constraint firstAttribute="bottom" secondItem="pc5-Cc-rkD" secondAttribute="bottom" id="lfF-dy-PVB"/>
+                        <constraint firstItem="0sn-eE-DsW" firstAttribute="leading" secondItem="wX4-hF-uXA" secondAttribute="leading" constant="20" id="lp9-Tg-q6h"/>
+                        <constraint firstItem="Wnj-rg-tfv" firstAttribute="top" secondItem="ex4-kP-G5p" secondAttribute="bottom" constant="20" id="mT8-Ug-M3g"/>
+                        <constraint firstItem="pc5-Cc-rkD" firstAttribute="leading" secondItem="wX4-hF-uXA" secondAttribute="leading" constant="20" id="oXM-C1-Yix"/>
+                        <constraint firstItem="pc5-Cc-rkD" firstAttribute="top" secondItem="Wnj-rg-tfv" secondAttribute="bottom" constant="15" id="yjd-bb-7MK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-X9-mbJ" userLabel="Deadline detail View">
+                    <rect key="frame" x="0.0" y="104" width="414" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Decision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-Ti-gsW" userLabel="Fill Questions">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="IJf-uG-Jqv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday 8th, Semptember 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iH9-zI-amE">
+                            <rect key="frame" x="0.0" y="53" width="414" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="hDv-xw-JjM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="iH9-zI-amE" firstAttribute="leading" secondItem="f9M-X9-mbJ" secondAttribute="leading" id="71h-ox-LHf"/>
+                        <constraint firstAttribute="height" constant="70" id="Bk4-zb-faV"/>
+                        <constraint firstItem="s1m-Ti-gsW" firstAttribute="leading" secondItem="f9M-X9-mbJ" secondAttribute="leading" id="H90-yg-m3w"/>
+                        <constraint firstAttribute="trailing" secondItem="s1m-Ti-gsW" secondAttribute="trailing" id="Sfa-HL-Vch"/>
+                        <constraint firstAttribute="trailing" secondItem="iH9-zI-amE" secondAttribute="trailing" id="Ts6-Cu-SFT"/>
+                        <constraint firstItem="s1m-Ti-gsW" firstAttribute="top" secondItem="f9M-X9-mbJ" secondAttribute="top" id="cAb-hr-arN"/>
+                        <constraint firstItem="iH9-zI-amE" firstAttribute="top" secondItem="s1m-Ti-gsW" secondAttribute="bottom" constant="25" id="orH-Oj-Va2"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLg-F0-ZhY">
+                    <rect key="frame" x="341" y="37" width="33" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Edit"/>
+                    <connections>
+                        <action selector="mainbuttonPressedWithSender:" destination="-1" eventType="touchUpInside" id="7fT-UQ-eCa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccs-Ge-Jqw" userLabel="Delete Button">
+                    <rect key="frame" x="136.5" y="676" width="141" height="35"/>
+                    <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
+                    <state key="normal" title="Delete Deadline">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="KFH-t7-OZz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-rk-1WL">
+                    <rect key="frame" x="40" y="37" width="42" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" systemColor="linkColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressBackButton:" destination="-1" eventType="touchUpInside" id="Og3-4i-zjC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="rR5-d1-N0X"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ccs-Ge-Jqw" firstAttribute="centerX" secondItem="TEq-t4-x42" secondAttribute="centerX" id="7UZ-dR-XUP"/>
+                <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="yLg-F0-ZhY" secondAttribute="trailing" constant="40" id="AYE-vV-eET"/>
+                <constraint firstItem="f9M-X9-mbJ" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="60" id="IJh-nb-Uk1"/>
+                <constraint firstItem="wX4-hF-uXA" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="82" id="JdG-qy-3Lc"/>
+                <constraint firstItem="nFi-rk-1WL" firstAttribute="top" secondItem="TEq-t4-x42" secondAttribute="top" constant="37" id="XEH-pl-WxO"/>
+                <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="wX4-hF-uXA" secondAttribute="trailing" id="a73-Xc-qwm"/>
+                <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="f9M-X9-mbJ" secondAttribute="trailing" id="aZo-Mv-x2J"/>
+                <constraint firstItem="f9M-X9-mbJ" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" id="bZI-M6-dGK"/>
+                <constraint firstItem="nFi-rk-1WL" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" constant="40" id="ez4-E3-Dds"/>
+                <constraint firstItem="wX4-hF-uXA" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" id="g2X-mi-GfM"/>
+                <constraint firstItem="rR5-d1-N0X" firstAttribute="bottom" secondItem="Ccs-Ge-Jqw" secondAttribute="bottom" constant="151" id="omm-W1-g9P"/>
+                <constraint firstItem="yLg-F0-ZhY" firstAttribute="top" secondItem="TEq-t4-x42" secondAttribute="top" constant="37" id="qz0-ch-wi3"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="uniTrack secondary label color">
+            <color red="0.55699998140335083" green="0.5910000205039978" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="uniTrack textField BackGround">
+            <color red="0.94900000095367432" green="0.9570000171661377" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

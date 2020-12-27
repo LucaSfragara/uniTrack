@@ -15,7 +15,7 @@ class DeadlinesCollectionViewCell: UICollectionViewCell {
     
     func setup(university: University?){
         
-        guard let deadline = university?.sortedDeadlines(ascending: true)?.last else {
+        guard let deadline = university?.getDeadlines()?.last else {
             return
         }
         

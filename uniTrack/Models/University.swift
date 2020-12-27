@@ -25,16 +25,12 @@ public class University: NSManagedObject{
     @NSManaged var deadlines: NSSet?
     @NSManaged var todos: NSSet?
     
-    func sortedDeadlines(ascending: Bool) -> [Deadline]?{
+    func getDeadlines() -> [Deadline]?{
         
         guard let deadlinesArray = deadlines?.allObjects as? [Deadline] else{
             return nil
         }
-        if ascending{
-            return deadlinesArray.sorted{ $0.date > $1.date}
-        }else{
-            return deadlinesArray.sorted{ $0.date > $1.date}
-        }
+        return deadlinesArray
     }
     
     func getTodos()->[Task]?{
