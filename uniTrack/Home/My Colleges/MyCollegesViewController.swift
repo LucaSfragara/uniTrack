@@ -16,7 +16,6 @@ class MyCollegesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         CollegesCollectioView.delegate = self
         CollegesCollectioView.dataSource = self
     

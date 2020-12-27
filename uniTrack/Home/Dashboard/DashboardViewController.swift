@@ -26,7 +26,6 @@ class DashboardViewController: UIViewController{
     override func viewDidLoad() {
         
         super.viewDidLoad()
-    
         UpComingCollectionView.delegate = self
         UpComingCollectionView.dataSource = self
         
@@ -39,6 +38,7 @@ class DashboardViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
         DataManager.shared.getUniversities{result in
             
             switch result {
