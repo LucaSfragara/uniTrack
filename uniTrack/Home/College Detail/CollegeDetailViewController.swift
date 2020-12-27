@@ -54,6 +54,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){ result in
             switch result {
             case .success(let universities):
@@ -68,7 +69,8 @@ class CollegeDetailViewController: UIViewController {
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func didTapAddDeadline(_ sender: Any) {
@@ -260,8 +262,9 @@ extension CollegeDetailViewController{
 //MARK: add task button delegate
 extension CollegeDetailViewController: AddTaskButtonDelegate{
     func didPressAddTask(title: String, text: String?) {
-        let newTask = Task(taskTitle: title, taskText: (text ?? ""))
-        university?.addTask(newTask)
+        guard let university = self.university else{return}
+        let newTask = Task(taskTitle: title, taskText: (text ?? ""), forUniversity: university)
+        university.addTask(newTask)
         PersistantService.saveContext()
         todosCollectionView.reloadData()
     }
@@ -270,8 +273,9 @@ extension CollegeDetailViewController: AddTaskButtonDelegate{
 //MARK: add deadline button delegate
 extension CollegeDetailViewController: addDeadlineButtonDelegate{
     func didPressAddDeadline(title: String, date: Date) {
-        let newDeadline = Deadline(date: date, title: title)
-        university?.addDeadline(newDeadline)
+        guard let university = self.university else{return}
+        let newDeadline = Deadline(date: date, title: title, forUniversity: university)
+        university.addDeadline(newDeadline)
         PersistantService.saveContext()
 //        fixCollectionViewHeight()
         self.view.layoutIfNeeded()

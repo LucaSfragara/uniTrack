@@ -17,7 +17,10 @@ class DataManager: CrudStrategy{
     static var shared = DataManager()
     
     init(){}
-    
+}
+
+//MARK: CREATE
+extension DataManager{
     func addItem<Item: AddableObject>(item: Item, forUniversity university: University, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) {
         
         switch item{
@@ -38,7 +41,35 @@ class DataManager: CrudStrategy{
         self.universities?.append(university)
         completion(.success(true))
     }
+}
 
+//MARK: READ
+extension DataManager{
+    
+    func getAllItems<Item: AddableObject>(itemClass: Item.Type, sortAscending: Bool = true) -> [Item]?{
+        
+
+        
+        guard let universities = universities else{return nil}
+        
+        switch itemClass {
+        
+        case is Deadline.Type:
+            
+            let deadlines: [Deadline] = universities.flatMap{($0.getDeadlines() ?? [])}
+            let sortedDeadlines = sortDeadlines(deadlines: deadlines, ascending: sortAscending)
+            
+            return sortedDeadlines as [Deadline] as? [Item]
+            
+        case is Task.Type:
+            let tasks: [Task] = universities.flatMap{($0.getTodos() ?? [])}
+            return tasks as [Task] as? [Item]
+        default:
+            return nil
+        }
+        
+    }
+    
     func getItems<Item>(itemClass: Item.Type, forUniversity university: University) -> [Item]? where Item : AddableObject {
         switch itemClass{
         case is Deadline.Type:
@@ -69,7 +100,10 @@ class DataManager: CrudStrategy{
             }
         }
     }
+}
 
+//MARK: UPDATE
+extension DataManager{
     func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping ((Result<AddableObject, PersistantStoreError>) -> ())){
         
         let universityIndex = (self.universities?.firstIndex(of: university))!
@@ -143,10 +177,13 @@ class DataManager: CrudStrategy{
         
     }
 
-    func updateUniversity(universityToUpdate: University, updateValues: [String : Any], completion: @escaping ((Result<University, PersistantStoreError>) -> ())) {
+    func updateUniversity(universityToUpdate: University, updateValues: [String : Any], completion: @escaping ((Result<University, PersistantStoreError>) -> ())){
 
     }
+}
 
+//MARK: DELETE
+extension DataManager{
     func deleteItem<Item>(itemToDelete: Item, forUniversity university: University, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) where Item : AddableObject {
         
         let university = self.universities?[(self.universities?.firstIndex(of: university))!]
@@ -173,7 +210,9 @@ class DataManager: CrudStrategy{
 
 }
 
-//MARK: Loading and Saving from CoreData
+
+
+//MARK: HELPERS - Loading and Saving from CoreData
 extension DataManager{
     
     private func loadFromCoreData(withNameContaining inputText: String? = nil, completion: @escaping(Result<[University], PersistantStoreError>)->()){
@@ -197,4 +236,19 @@ extension DataManager{
     func saveToPersistantStore(){
         PersistantService.saveContext()
     }
+    
+    //sortDeadline by date
+    private func sortDeadlines(deadlines: [Deadline], ascending: Bool) -> [Deadline]{
+        
+        let sortedDeadlines = deadlines.sorted{
+            if ascending{ //sort in ascending order
+                return $0.date < $1.date
+            }else{ //sort in descending order
+                return $0.date > $1.date
+            }
+        }
+        
+        return sortedDeadlines
+    }
 }
+

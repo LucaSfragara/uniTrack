@@ -24,7 +24,7 @@
 		AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1B253E107B00DADF91 /* Main.storyboard */; };
 		AC317E1F253E107C00DADF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1E253E107C00DADF91 /* Assets.xcassets */; };
 		AC317E22253E107C00DADF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E20253E107C00DADF91 /* LaunchScreen.storyboard */; };
-		AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E2F253E11C200DADF91 /* UnisViewController.swift */; };
+		AC317E30253E11C200DADF91 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E2F253E11C200DADF91 /* DashboardViewController.swift */; };
 		AC317E34253E11F800DADF91 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E33253E11F800DADF91 /* University.swift */; };
 		AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */; };
 		AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E42253F86B000DADF91 /* UniversityStore.swift */; };
@@ -82,7 +82,7 @@
 		AC317E1E253E107C00DADF91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC317E21253E107C00DADF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC317E23253E107C00DADF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC317E2F253E11C200DADF91 /* UnisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisViewController.swift; sourceTree = "<group>"; };
+		AC317E2F253E11C200DADF91 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		AC317E33253E11F800DADF91 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		AC317E3E253F85A100DADF91 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AC317E42253F86B000DADF91 /* UniversityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStore.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				AC317E1B253E107B00DADF91 /* Main.storyboard */,
-				AC317E2F253E11C200DADF91 /* UnisViewController.swift */,
+				AC317E2F253E11C200DADF91 /* DashboardViewController.swift */,
 				AC59FE70254A25D800032322 /* CollectionView cells */,
 			);
 			path = Dashboard;
@@ -255,9 +255,9 @@
 				ACC74C492587A6AD00AF1254 /* Helpers */,
 				AC71C0882588107F0016AD68 /* Add task */,
 				AC71C086258810670016AD68 /* Add deadline */,
+				AC85C6C72599394A00B653BF /* My Colleges */,
 				AC69E92D256C68B300D64083 /* College Detail */,
 				ACDC6D58254E1B680037DF45 /* Add College */,
-				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
 				AC024F3B258D637C00790FD8 /* Dashboard */,
 			);
 			path = Home;
@@ -282,10 +282,9 @@
 		AC59FE70254A25D800032322 /* CollectionView cells */ = {
 			isa = PBXGroup;
 			children = (
+				AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */,
 				AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */,
 				AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */,
-				AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */,
-				ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */,
 			);
 			path = "CollectionView cells";
 			sourceTree = "<group>";
@@ -318,6 +317,15 @@
 				AC71C097258811330016AD68 /* AddTaskViewController.xib */,
 			);
 			path = "Add task";
+			sourceTree = "<group>";
+		};
+		AC85C6C72599394A00B653BF /* My Colleges */ = {
+			isa = PBXGroup;
+			children = (
+				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
+				ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */,
+			);
+			path = "My Colleges";
 			sourceTree = "<group>";
 		};
 		AC9EF9F6254E142A00728162 /* JSON Decoding */ = {
@@ -521,7 +529,7 @@
 				AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */,
 				ACF886F62560338A004A6830 /* CollegeCollectionViewCell.swift in Sources */,
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
-				AC317E30253E11C200DADF91 /* UnisViewController.swift in Sources */,
+				AC317E30253E11C200DADF91 /* DashboardViewController.swift in Sources */,
 				AC024F55258D793800790FD8 /* DataManager.swift in Sources */,
 				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
 				AC024F46258D65C500790FD8 /* TaskDetailViewController.swift in Sources */,

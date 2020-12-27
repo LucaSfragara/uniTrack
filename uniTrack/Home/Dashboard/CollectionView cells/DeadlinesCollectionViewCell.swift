@@ -13,11 +13,7 @@ class DeadlinesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var datePrimaryLabel: UILabel!
     @IBOutlet weak private var universityLabel: UILabel!
     
-    func setup(university: University?){
-        
-        guard let deadline = university?.getDeadlines()?.last else {
-            return
-        }
+    func setup(deadline: Deadline){
         
         let dateFormatter = DateFormatter()
         self.layer.cornerRadius = 10
@@ -29,7 +25,7 @@ class DeadlinesCollectionViewCell: UICollectionViewCell {
         
         dateSecondaryLabel.text = month
         datePrimaryLabel.text = day
-        universityLabel.text = university?.name
+        universityLabel.text = deadline.university.name
     }
     
     override func awakeFromNib() {

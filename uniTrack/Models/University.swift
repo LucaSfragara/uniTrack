@@ -71,3 +71,4 @@ public class University: NSManagedObject{
         case reach = "Reach"
     }
 }
+

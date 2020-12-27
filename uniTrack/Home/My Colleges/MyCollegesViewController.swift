@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MyCollegesViewController: SwipableViewController {
+class MyCollegesViewController: UIViewController {
 
     @IBOutlet private weak var CollegesCollectioView: UICollectionView!
     

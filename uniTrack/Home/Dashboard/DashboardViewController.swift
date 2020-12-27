@@ -1,5 +1,5 @@
 //
-//  UnisViewController.swift
+//  DashboardViewController.swift
 //  uniTrack
 //
 //  Created by Luca Sfragara on 19/10/2020.
@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class UnisViewController: SwipableViewController {
+class DashboardViewController: UIViewController{
     
     
     private let sectionInsets = UIEdgeInsets(top: 50.0,
@@ -47,7 +47,11 @@ class UnisViewController: SwipableViewController {
                 print(error)
             case .success(let universities):
                 self.universities = universities
+                self.UpComingCollectionView.reloadData()
+                self.DeadlinesCollectionView.reloadData()
+                self.CollegesCollectionView.reloadData()
             }
+            
         }
     }
     
@@ -56,18 +60,16 @@ class UnisViewController: SwipableViewController {
 
 //MARK: UICollectionview delegate and datasource
 
-extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == self.UpComingCollectionView{
-            return universities?.count ?? 0
+            return DataManager.shared.getAllItems(itemClass: Task.self)?.count ?? 0
+            
         }else if collectionView == self.DeadlinesCollectionView{
             
-            let filteredUniversity = universities?.filter{ university in
-                return (university.deadlines?.count ?? 0) > 0 //display on deadlines collection only colleges with deadlines
-            }
-            return filteredUniversity?.count ?? 0
+            return DataManager.shared.getAllItems(itemClass: Deadline.self)?.count ?? 0
             
         }else{ //CollegeCollectionView
             return universities?.count ?? 0
@@ -76,20 +78,23 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if collectionView == self.UpComingCollectionView{
+        if collectionView == self.UpComingCollectionView{ //Tasks CollectionView
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingcellID", for: indexPath) as! UpComingCollectionViewCell
-            cell.setup(universityName: "Harvard", task: "Aid applications")
+            let task = DataManager.shared.getAllItems(itemClass: Task.self)?[indexPath.row]
+            if let task = task{
+                cell.setup(task: task)
+            }
             return cell
             
-        }else if collectionView == self.DeadlinesCollectionView{
+        }else if collectionView == self.DeadlinesCollectionView{ //Deadlines CollectionView
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deadlinesCellID", for: indexPath) as! DeadlinesCollectionViewCell
             
-            let filteredUniversity = universities?.filter{ university in
-                return (university.deadlines?.count ?? 0) > 0 //display on deadlines collection only colleges with deadlines
+            let deadline = DataManager.shared.getAllItems(itemClass: Deadline.self)?[indexPath.row]
+            if let deadline = deadline{
+                cell.setup(deadline: deadline)
             }
-            cell.setup(university: filteredUniversity?[indexPath.row])
             
             return cell
             
@@ -114,6 +119,11 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        if collectionView == DeadlinesCollectionView{ //deadlines collection view
+
+            
+        }
+        
         if collectionView == CollegesCollectionView{ //college collection view
             
             guard let universitySelected = universities?[indexPath.row] else{
@@ -122,7 +132,7 @@ extension UnisViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let storyboard = UIStoryboard(name: "CollegeDetail", bundle: nil)
             let detailVC = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! CollegeDetailViewController
             detailVC.university = universitySelected
-            present(detailVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(detailVC, animated: true)
         }
         
     }

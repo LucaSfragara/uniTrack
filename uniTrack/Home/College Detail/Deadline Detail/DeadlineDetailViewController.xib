@@ -54,13 +54,13 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sn-eE-DsW" userLabel="Deadline Title">
-                            <rect key="frame" x="20" y="0.0" width="105.5" height="19"/>
+                            <rect key="frame" x="20" y="0.0" width="97" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnj-rg-tfv" userLabel="Deadline Text">
-                            <rect key="frame" x="20" y="104" width="106" height="19"/>
+                            <rect key="frame" x="20" y="104" width="99" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
@@ -132,7 +132,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccs-Ge-Jqw" userLabel="Delete Button">
-                    <rect key="frame" x="136.5" y="676" width="141" height="35"/>
+                    <rect key="frame" x="140" y="676" width="134" height="35"/>
                     <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
                     <state key="normal" title="Delete Deadline">
                         <color key="titleColor" systemColor="systemRedColor"/>
