@@ -13,27 +13,27 @@ protocol CrudStrategy: class{
     
     //MARK: CREATE
     ///add - add task or deadline to university
-    func addItem<Item: AddableObject>(item: Item, forUniversity universty: University, completion: @escaping(Result<Bool, PersistantStoreError>)->())
+    func addItem<Item: AddableObject>(item: Item, completion: @escaping(Result<Bool, PersistantStoreError>)->())
     func createUniversity(university: University, completion: @escaping (Result<Bool, PersistantStoreError>) -> ())
     
     
     //MARK: READ
     ///read - get all items
-    func getItems<Item: AddableObject>(itemClass: Item.Type, forUniversity: University) -> [Item]?
+    func getItems<Item: AddableObject>(itemClass: Item.Type, forUniversity university: University) -> [Item]?
     func getUniversities(withNameContaining text: String?, completion: @escaping(Result<[University], PersistantStoreError>)->())
 
     //MARK: UPDATE
-    func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping((Result<AddableObject, PersistantStoreError>) -> ()))
+    func updateItem<Item: AddableObject>(itemToUpdate: Item, updateValues: [String : Any], completion: @escaping((Result<AddableObject, PersistantStoreError>) -> ()))
     func updateUniversity(universityToUpdate: University, updateValues: [String : Any], completion: @escaping((Result<University, PersistantStoreError>) -> ()))
     
     //MARK: DELETE
-    func deleteItem<Item: AddableObject>(itemToDelete: Item, forUniversity university:University, completion: @escaping(Result<Bool, PersistantStoreError>) -> ())
+    func deleteItem<Item: AddableObject>(itemToDelete: Item, completion: @escaping(Result<Bool, PersistantStoreError>) -> ())
     func deleteUniversity(universityToDelete: University,  completion: @escaping(Result<Bool, PersistantStoreError>) -> ())
     
 }
 
 protocol AddableObject: class{
-    
+    var university: University {get}
 }
 
 //MARK: custom error

@@ -168,7 +168,6 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
                 return
             }
             taskDetailVC.task = selectedTask
-            taskDetailVC.university = university
             present(taskDetailVC, animated: true, completion: nil)
         }else { //deadline collectionview
             let deadlineDetailVC = DeadlineDetailViewController()
@@ -176,7 +175,6 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
                 return
             }
             deadlineDetailVC.deadline = selectedDeadline
-            deadlineDetailVC.university = university
             present(deadlineDetailVC, animated: true, completion: nil)
         }
     }

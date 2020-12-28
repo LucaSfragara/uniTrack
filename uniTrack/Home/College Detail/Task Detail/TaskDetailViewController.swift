@@ -21,7 +21,6 @@ class TaskDetailViewController: UIViewController {
     private var state: TaskState = .notEditing //default is sone
 
     weak var task: Task?
-    weak var university: University?
     
     override func viewDidLoad() {
         
@@ -78,9 +77,9 @@ class TaskDetailViewController: UIViewController {
     
     private func updateTask(newTitle title: String, newText text: String, completion: @escaping (Result<AddableObject, PersistantStoreError>)->()){
         
-        guard let taskToUpdate = self.task, let universityToUpdate = self.university else{return}
+        guard let taskToUpdate = self.task else{return}
         
-        DataManager.shared.updateItem(itemToUpdate: taskToUpdate, forUniverity: universityToUpdate, updateValues: ["title": title, "text": text], completion: completion)
+        DataManager.shared.updateItem(itemToUpdate: taskToUpdate, updateValues: ["title": title, "text": text], completion: completion)
     }
     
     private func showDeleteButton(){
@@ -104,8 +103,8 @@ class TaskDetailViewController: UIViewController {
     
     @IBAction private func didPressDeleteButton(){
         let alert = Utilities.createAlertView(title: "Delete Task", message: "Are you sure you want to permanently delete this task?"){
-            guard let taskToDelete = self.task, let university = self.university else{return}
-            DataManager.shared.deleteItem(itemToDelete: taskToDelete, forUniversity: university){ result in
+            guard let taskToDelete = self.task else{return}
+            DataManager.shared.deleteItem(itemToDelete: taskToDelete){ result in
                 switch result {
                 case .success(_):
                     self.dismiss(animated: true, completion: nil)

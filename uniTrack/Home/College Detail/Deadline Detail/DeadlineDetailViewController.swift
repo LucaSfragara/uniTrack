@@ -20,7 +20,6 @@ class DeadlineDetailViewController: UIViewController {
     @IBOutlet weak private var datePicker: UIDatePicker!
 
     weak var deadline: Deadline?
-    weak var university: University?
     
     private var state: deadlineState = .notEditing
     
@@ -85,8 +84,8 @@ class DeadlineDetailViewController: UIViewController {
     
     @IBAction private func didPressDeleteButton(){
         let alert = Utilities.createAlertView(title: "Delete Deadline", message: "Are you sure you want to permanently delete this deadline?"){
-            guard let deadlineToDelete = self.deadline, let university = self.university else{return}
-            DataManager.shared.deleteItem(itemToDelete: deadlineToDelete, forUniversity: university){ result in
+            guard let deadlineToDelete = self.deadline else{return}
+            DataManager.shared.deleteItem(itemToDelete: deadlineToDelete){ result in
                 switch result {
                 case .success(_):
                     self.dismiss(animated: true, completion: nil)
@@ -122,9 +121,9 @@ class DeadlineDetailViewController: UIViewController {
     
     private func updateDeadline(newTitle title: String, newDate date: Date, completion: @escaping (Result<AddableObject, PersistantStoreError>)->()){
     
-        guard let deadlineToUpdate = deadline, let universityToUpdate = university else {return}
+        guard let deadlineToUpdate = deadline else {return}
         
-        DataManager.shared.updateItem(itemToUpdate: deadlineToUpdate, forUniverity: universityToUpdate, updateValues: ["title": title, "date": date], completion: completion)
+        DataManager.shared.updateItem(itemToUpdate: deadlineToUpdate, updateValues: ["title": title, "date": date], completion: completion)
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {

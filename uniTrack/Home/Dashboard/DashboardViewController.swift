@@ -121,6 +121,9 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         
         if collectionView == DeadlinesCollectionView{ //deadlines collection view
 
+            guard let selectedDeadline = DataManager.shared.getAllItems(itemClass: Deadline.self)?[indexPath.row] else{return}
+            let deadlineDetailVC = DeadlineDetailViewController()
+            deadlineDetailVC.deadline = selectedDeadline
             
         }
         

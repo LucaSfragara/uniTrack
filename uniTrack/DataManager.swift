@@ -21,8 +21,9 @@ class DataManager: CrudStrategy{
 
 //MARK: CREATE
 extension DataManager{
-    func addItem<Item: AddableObject>(item: Item, forUniversity university: University, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) {
+    func addItem<Item: AddableObject>(item: Item, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) {
         
+        let university = item.university
         switch item{
         case is Deadline:
             university.addDeadline(item as! Deadline)
@@ -47,8 +48,6 @@ extension DataManager{
 extension DataManager{
     
     func getAllItems<Item: AddableObject>(itemClass: Item.Type, sortAscending: Bool = true) -> [Item]?{
-        
-
         
         guard let universities = universities else{return nil}
         
@@ -104,8 +103,9 @@ extension DataManager{
 
 //MARK: UPDATE
 extension DataManager{
-    func updateItem<Item: AddableObject>(itemToUpdate: Item, forUniverity university: University, updateValues: [String : Any], completion: @escaping ((Result<AddableObject, PersistantStoreError>) -> ())){
+    func updateItem<Item: AddableObject>(itemToUpdate: Item, updateValues: [String : Any], completion: @escaping ((Result<AddableObject, PersistantStoreError>) -> ())){
         
+        let university = itemToUpdate.university
         let universityIndex = (self.universities?.firstIndex(of: university))!
         
         switch itemToUpdate{
@@ -184,9 +184,10 @@ extension DataManager{
 
 //MARK: DELETE
 extension DataManager{
-    func deleteItem<Item>(itemToDelete: Item, forUniversity university: University, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) where Item : AddableObject {
+    func deleteItem<Item>(itemToDelete: Item, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) where Item : AddableObject {
         
-        let university = self.universities?[(self.universities?.firstIndex(of: university))!]
+        
+        let university = self.universities?[(self.universities?.firstIndex(of: itemToDelete.university))!]
         switch itemToDelete{
         case is Deadline:
             university?.removeDeadline(itemToDelete as! Deadline)
