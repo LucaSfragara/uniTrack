@@ -39,13 +39,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-JH-MQP">
-                                <rect key="frame" x="20" y="208" width="156" height="52.5"/>
+                                <rect key="frame" x="20" y="210" width="172" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keD-0f-czW">
-                                <rect key="frame" x="20" y="125" width="173" height="52.5"/>
+                                <rect key="frame" x="20" y="125" width="191" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                 <rect key="frame" x="0.0" y="320" width="414" height="542"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-yA-Zcc" userLabel="Separator View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="152" width="300" height="4"/>
+                                        <rect key="frame" x="57" y="153" width="300" height="4"/>
                                         <color key="backgroundColor" name="uniTrack Light Grey"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="OWq-Q4-jZv"/>
@@ -78,13 +78,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcx-5l-aZ4">
-                                        <rect key="frame" x="20" y="26" width="35.5" height="24.5"/>
+                                        <rect key="frame" x="20" y="26" width="39" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="FXT-gS-UTe" userLabel="Info StackView">
-                                        <rect key="frame" x="20" y="64" width="374" height="74"/>
+                                        <rect key="frame" x="20" y="65" width="374" height="74"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TZY-d9-qEZ" userLabel="Location ">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -189,16 +189,16 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzi-IO-GYu">
-                                        <rect key="frame" x="20" y="176" width="93" height="24.5"/>
+                                        <rect key="frame" x="20" y="177" width="101" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JBd-RL-Zyc" customClass="DynamicCollectionView" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="210.5" width="374" height="162.5"/>
+                                        <rect key="frame" x="20" y="212.5" width="374" height="163"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="162.5" id="fE7-Nn-AxA"/>
+                                            <constraint firstAttribute="height" constant="163" id="fE7-Nn-AxA"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2py-76-Avj">
                                             <size key="itemSize" width="398" height="65"/>
@@ -235,14 +235,17 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVd-Uv-Lvk">
-                                        <rect key="frame" x="20" y="393" width="67.5" height="24.5"/>
+                                        <rect key="frame" x="20" y="395.5" width="74.5" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-QG-PY0">
-                                        <rect key="frame" x="20" y="427.5" width="374" height="108"/>
+                                        <rect key="frame" x="20" y="431" width="374" height="163"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="163" id="AxL-EM-k50"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8X7-Ub-xyW">
                                             <size key="itemSize" width="374" height="39"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -263,7 +266,7 @@
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-cU-bhz">
-                                        <rect key="frame" x="297" y="169.5" width="97" height="31"/>
+                                        <rect key="frame" x="290" y="170.5" width="104" height="32"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                         <state key="normal" title="Add Deadline">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,7 +276,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhk-18-kus">
-                                        <rect key="frame" x="327" y="386.5" width="67" height="31"/>
+                                        <rect key="frame" x="322" y="389" width="72" height="32"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                         <state key="normal" title="Add Task">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,7 +298,6 @@
                                     <constraint firstItem="Nzi-IO-GYu" firstAttribute="leading" secondItem="w6g-pi-Xfv" secondAttribute="leading" constant="20" id="8Ok-xo-iK2"/>
                                     <constraint firstItem="JBd-RL-Zyc" firstAttribute="top" secondItem="Nzi-IO-GYu" secondAttribute="bottom" constant="10" id="8XI-ZQ-QoL"/>
                                     <constraint firstItem="FVd-Uv-Lvk" firstAttribute="top" secondItem="JBd-RL-Zyc" secondAttribute="bottom" constant="20" id="D7r-Ai-EBs"/>
-                                    <constraint firstAttribute="bottom" secondItem="OPB-QG-PY0" secondAttribute="bottom" constant="6.5" id="EQm-pT-Vkk"/>
                                     <constraint firstItem="YS4-yA-Zcc" firstAttribute="top" secondItem="FXT-gS-UTe" secondAttribute="bottom" constant="14" id="FN9-a6-K6l"/>
                                     <constraint firstAttribute="trailing" secondItem="fhk-18-kus" secondAttribute="trailing" constant="20" id="GKE-tm-Q7w"/>
                                     <constraint firstAttribute="trailing" secondItem="JBd-RL-Zyc" secondAttribute="trailing" constant="20" id="HCF-tG-v2b"/>
@@ -357,7 +359,8 @@
                         <outlet property="nameLabel" destination="keD-0f-czW" id="OJN-vm-DAP"/>
                         <outlet property="populationLabel" destination="nfQ-ow-CZO" id="FkN-cD-D6B"/>
                         <outlet property="stateLabel" destination="DTl-ul-4wN" id="PRQ-y0-6cA"/>
-                        <outlet property="todosCollectionView" destination="OPB-QG-PY0" id="mzO-x5-9f2"/>
+                        <outlet property="tasksCollectionView" destination="OPB-QG-PY0" id="mzO-x5-9f2"/>
+                        <outlet property="tasksCollectionViewHeight" destination="AxL-EM-k50" id="jnV-V4-EXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbj-vq-9JS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -20,9 +20,14 @@ class CollegeDetailViewController: UIViewController {
 
     
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
-    @IBOutlet private weak var todosCollectionView: UICollectionView!
+    @IBOutlet private weak var tasksCollectionView: UICollectionView!
     
     @IBOutlet weak var deadlineCollectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var tasksCollectionViewHeight: NSLayoutConstraint!
+    
+    private var CVcontentSizeObservation: [NSKeyValueObservation]?
+    
+    private var initialCollectionViewsHeight: InitialCollectionViewsHeight?
     
     weak var university: University?
     private var cardState: cardState!
@@ -30,11 +35,15 @@ class CollegeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //get costraint initial(maximum) values
+        initialCollectionViewsHeight = InitialCollectionViewsHeight(deadlines: deadlineCollectionViewHeight.constant, tasks: tasksCollectionViewHeight.constant)
+        observeCollectionView()
+        
         deadlinesCollectionView.delegate = self
         deadlinesCollectionView.dataSource = self
         
-        todosCollectionView.delegate = self
-        todosCollectionView.dataSource = self
+        tasksCollectionView.delegate = self
+        tasksCollectionView.dataSource = self
         
         
         guard let university = university else{
@@ -53,6 +62,38 @@ class CollegeDetailViewController: UIViewController {
         self.cardState = .normal
     }
     
+    deinit {
+        CVcontentSizeObservation?.forEach({$0.invalidate()})
+    }
+    
+    private func observeCollectionView(){
+        
+        CVcontentSizeObservation = [
+
+            deadlinesCollectionView.observe(\.contentSize, options: .new, changeHandler: {[weak self] (cv, _) in
+                
+                guard let self = self else { return }
+                    
+                if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.deadlines{
+                    
+                    self.deadlineCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
+                    
+                }
+            }),
+            
+            tasksCollectionView.observe(\.contentSize, options: .new, changeHandler: {[weak self] (cv, _) in
+                
+                guard let self = self else { return }
+                    
+                if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.tasks{
+                    
+                    self.tasksCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
+                }
+            })
+        ]
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){ result in
@@ -63,7 +104,7 @@ class CollegeDetailViewController: UIViewController {
                 //TODO:  TODO: handle error
                 print(error)
             }
-            self.todosCollectionView.reloadData()
+            self.tasksCollectionView.reloadData()
             self.deadlinesCollectionView.reloadData()
         }
     }
@@ -88,6 +129,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     private func fixCollectionViewHeight(){
+        self.view.layoutIfNeeded()
         self.deadlineCollectionViewHeight.constant = deadlinesCollectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
@@ -129,8 +171,8 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
             return cell
             
         }else{ //to-dos collectionview
-            todosCollectionView.register(UINib(nibName: "DetailTodosCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "detailTodosCellID")
-            let cell = todosCollectionView.dequeueReusableCell(withReuseIdentifier: "detailTodosCellID", for: indexPath) as! DetailTodosCollectionViewCell
+            tasksCollectionView.register(UINib(nibName: "DetailTodosCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "detailTodosCellID")
+            let cell = tasksCollectionView.dequeueReusableCell(withReuseIdentifier: "detailTodosCellID", for: indexPath) as! DetailTodosCollectionViewCell
     
             if let task = university?.getTodos()?[indexPath.row] {
                 cell.setup(task: task){ isChecked in
@@ -150,11 +192,11 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
             //fixCollectionViewHeight()
             return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/3))
         }else{ //todos collection view
-            return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/1.3))
+            return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2))
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if collectionView == todosCollectionView{ //todos collectionview
+        if collectionView == tasksCollectionView{ //todos collectionview
             return 15.0
         }else { //deadline collectionview
             return 4
@@ -162,7 +204,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == todosCollectionView{ //todos collectionview
+        if collectionView == tasksCollectionView{ //todos collectionview
             let taskDetailVC = TaskDetailViewController()
             guard let selectedTask = university?.getTodos()?[indexPath.row] else{
                 return
@@ -264,7 +306,7 @@ extension CollegeDetailViewController: AddTaskButtonDelegate{
         let newTask = Task(taskTitle: title, taskText: (text ?? ""), forUniversity: university)
         university.addTask(newTask)
         PersistantService.saveContext()
-        todosCollectionView.reloadData()
+        tasksCollectionView.reloadData()
     }
 }
 
@@ -278,5 +320,13 @@ extension CollegeDetailViewController: addDeadlineButtonDelegate{
 //        fixCollectionViewHeight()
         self.view.layoutIfNeeded()
         deadlinesCollectionView.reloadData()
+    }
+}
+
+//MARK: CUSTOM TYPES
+extension CollegeDetailViewController{
+    private struct InitialCollectionViewsHeight{
+        var deadlines: CGFloat
+        var tasks: CGFloat
     }
 }

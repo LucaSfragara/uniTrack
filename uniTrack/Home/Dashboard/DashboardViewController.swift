@@ -23,6 +23,18 @@ class DashboardViewController: UIViewController{
     
     private var universities: [University]? = []
     
+    private var allDeadlines: [Deadline]? {
+        get{
+            return DataManager.shared.getAllItems(itemClass: Deadline.self)
+        }
+    }
+    
+    private var allTasks: [Task]?{
+        get{
+            return DataManager.shared.getAllItems(itemClass: Task.self)
+        }
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -65,11 +77,11 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == self.UpComingCollectionView{
-            return DataManager.shared.getAllItems(itemClass: Task.self)?.count ?? 0
+            return allTasks?.count ?? 0
             
         }else if collectionView == self.DeadlinesCollectionView{
             
-            return DataManager.shared.getAllItems(itemClass: Deadline.self)?.count ?? 0
+            return allDeadlines?.count ?? 0
             
         }else{ //CollegeCollectionView
             return universities?.count ?? 0
@@ -81,7 +93,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         if collectionView == self.UpComingCollectionView{ //Tasks CollectionView
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingcellID", for: indexPath) as! UpComingCollectionViewCell
-            let task = DataManager.shared.getAllItems(itemClass: Task.self)?[indexPath.row]
+            let task = allTasks?[indexPath.row]
             if let task = task{
                 cell.setup(task: task)
             }
@@ -91,7 +103,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deadlinesCellID", for: indexPath) as! DeadlinesCollectionViewCell
             
-            let deadline = DataManager.shared.getAllItems(itemClass: Deadline.self)?[indexPath.row]
+            let deadline = allDeadlines?[indexPath.row]
             if let deadline = deadline{
                 cell.setup(deadline: deadline)
             }
@@ -121,10 +133,19 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         
         if collectionView == DeadlinesCollectionView{ //deadlines collection view
 
-            guard let selectedDeadline = DataManager.shared.getAllItems(itemClass: Deadline.self)?[indexPath.row] else{return}
+            guard let selectedDeadline = allDeadlines?[indexPath.row] else{return}
+            
             let deadlineDetailVC = DeadlineDetailViewController()
             deadlineDetailVC.deadline = selectedDeadline
+            self.navigationController?.pushViewController(deadlineDetailVC, animated: true)
             
+        }else if collectionView == UpComingCollectionView{ //Tasks collectionView
+            
+            guard let selectedTask = allTasks?[indexPath.row] else {return}
+            
+            let taskDetailVC = TaskDetailViewController()
+            taskDetailVC.task = selectedTask
+            navigationController?.pushViewController(taskDetailVC, animated: true)
         }
         
         if collectionView == CollegesCollectionView{ //college collection view
