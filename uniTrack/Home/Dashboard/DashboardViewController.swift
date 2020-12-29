@@ -158,7 +158,6 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             detailVC.university = universitySelected
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
-        
     }
 }
 

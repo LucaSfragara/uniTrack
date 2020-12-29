@@ -25,6 +25,7 @@ class TaskDetailViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         hideDeleteButton()
         hideEditView()
         taskTitle.text = task?.title
@@ -33,8 +34,11 @@ class TaskDetailViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        //This makes the collegeDetailViewController fetch the university with the updated task
-        self.presentingViewController?.viewWillAppear(true)
+        
+        self.navigationController?.isNavigationBarHidden = true
+        //This makes the collegeDetailViewController fetch the university with the updated task - not needed anymore cause of vc being pushed
+        //self.presentingViewController?.viewWillAppear(true)
+        
     }
     
     @IBAction func mainbuttonPressed(sender: UIButton){ //this can either be 'Edit' or 'Done'

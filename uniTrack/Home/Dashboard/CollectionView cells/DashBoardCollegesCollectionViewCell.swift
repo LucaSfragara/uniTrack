@@ -12,7 +12,6 @@ class DashboardCollegesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var photoImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var courseLabel: UILabel!
-    @IBOutlet weak private var reachImageView: UIImageView!
     
     func setup(university: University?){
         

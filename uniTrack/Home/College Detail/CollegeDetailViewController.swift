@@ -17,7 +17,8 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet private weak var countryLabel: UILabel!
     @IBOutlet private weak var stateLabel: UILabel!
     @IBOutlet private weak var populationLabel: UILabel!
-
+    @IBOutlet private weak var reachTypeLabel: UILabel!
+    @IBOutlet weak var linkButton: UIButton!
     
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
     @IBOutlet private weak var tasksCollectionView: UICollectionView!
@@ -58,6 +59,7 @@ class CollegeDetailViewController: UIViewController {
         countryLabel.text = "US"
         stateLabel.text = university.baseModel?.state
         populationLabel.text = university.baseModel?.population ?? "na"
+        reachTypeLabel.text = university.reachType
         
         self.cardState = .normal
     }
@@ -95,7 +97,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(true)
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){ result in
             switch result {
             case .success(let universities):
@@ -114,6 +116,10 @@ class CollegeDetailViewController: UIViewController {
         
     }
     
+    @IBAction func didPressLinkButton(_ sender: Any){
+        
+    }
+    
     @IBAction func didTapAddDeadline(_ sender: Any) {
         let addDeadlineVC = AddDeadlineViewController()
         addDeadlineVC.delegate = self
@@ -126,11 +132,6 @@ class CollegeDetailViewController: UIViewController {
         addTaskVC.delegate = self
         addTaskVC.modalPresentationStyle = .overFullScreen
         present(addTaskVC, animated: true, completion: nil)
-    }
-    
-    private func fixCollectionViewHeight(){
-        self.view.layoutIfNeeded()
-        self.deadlineCollectionViewHeight.constant = deadlinesCollectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
   
@@ -210,14 +211,14 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
                 return
             }
             taskDetailVC.task = selectedTask
-            present(taskDetailVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(taskDetailVC, animated: true)
         }else { //deadline collectionview
             let deadlineDetailVC = DeadlineDetailViewController()
             guard let selectedDeadline = university?.getDeadlines()?[indexPath.row] else{
                 return
             }
             deadlineDetailVC.deadline = selectedDeadline
-            present(deadlineDetailVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(deadlineDetailVC, animated: true)
         }
     }
 }

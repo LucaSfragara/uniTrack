@@ -200,7 +200,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB0-BG-CVy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB0-BG-CVy">
                                 <rect key="frame" x="20" y="111" width="178" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -312,21 +312,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safetySchool" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-Hw-ZDy">
-                                                    <rect key="frame" x="309" y="40.5" width="49" height="49"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="49" id="4c5-RL-sU2"/>
-                                                        <constraint firstAttribute="height" constant="49" id="www-FJ-70o"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="8jx-Hw-ZDy" secondAttribute="trailing" constant="16" id="6LV-3p-b0V"/>
                                                 <constraint firstItem="X3g-cf-xWS" firstAttribute="leading" secondItem="gdt-vK-ZVC" secondAttribute="trailing" constant="24" id="H2y-Rv-GII"/>
                                                 <constraint firstItem="gdt-vK-ZVC" firstAttribute="leading" secondItem="p8v-HE-jhH" secondAttribute="leading" constant="20" id="ZPN-ed-YOf"/>
                                                 <constraint firstItem="X3g-cf-xWS" firstAttribute="top" secondItem="J9g-hO-cDe" secondAttribute="bottom" constant="19" id="aVz-AO-eNk"/>
                                                 <constraint firstItem="gdt-vK-ZVC" firstAttribute="centerY" secondItem="p8v-HE-jhH" secondAttribute="centerY" id="d4T-Fg-F9d"/>
-                                                <constraint firstItem="8jx-Hw-ZDy" firstAttribute="centerY" secondItem="p8v-HE-jhH" secondAttribute="centerY" id="iWR-Ie-JOX"/>
                                                 <constraint firstItem="J9g-hO-cDe" firstAttribute="leading" secondItem="gdt-vK-ZVC" secondAttribute="trailing" constant="24" id="vIk-aA-UOu"/>
                                                 <constraint firstItem="J9g-hO-cDe" firstAttribute="top" secondItem="p8v-HE-jhH" secondAttribute="top" constant="31" id="zA3-YE-nKu"/>
                                             </constraints>
@@ -337,7 +328,6 @@
                                             <outlet property="courseLabel" destination="X3g-cf-xWS" id="Vqw-WH-Obg"/>
                                             <outlet property="nameLabel" destination="J9g-hO-cDe" id="PTB-xm-9ec"/>
                                             <outlet property="photoImageView" destination="gdt-vK-ZVC" id="so9-Y2-RON"/>
-                                            <outlet property="reachImageView" destination="8jx-Hw-ZDy" id="Gtq-xF-5eN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -437,7 +427,6 @@
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="safetySchool" width="25" height="25"/>
         <image name="scalemass.fill" catalog="system" width="128" height="119"/>
         <image name="solid Plus" width="45" height="45"/>
         <namedColor name="uniTrack Blue">

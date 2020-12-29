@@ -30,7 +30,6 @@
                 <outlet property="deleteButton" destination="Ccs-Ge-Jqw" id="hHt-S2-lDv"/>
                 <outlet property="editView" destination="wX4-hF-uXA" id="oM5-Uo-InM"/>
                 <outlet property="infoView" destination="f9M-X9-mbJ" id="PrM-IR-pL7"/>
-                <outlet property="mainButton" destination="yLg-F0-ZhY" id="7sr-wB-4SC"/>
                 <outlet property="titleField" destination="ex4-kP-G5p" id="9JJ-ZQ-jOg"/>
                 <outlet property="titleLabel" destination="s1m-Ti-gsW" id="aOS-Iy-DdT"/>
                 <outlet property="view" destination="TEq-t4-x42" id="SZT-WO-VIh"/>
@@ -42,7 +41,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-hF-uXA" userLabel="Deadline Edit View">
-                    <rect key="frame" x="0.0" y="126" width="414" height="175"/>
+                    <rect key="frame" x="0.0" y="56" width="414" height="175"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ex4-kP-G5p" userLabel="title TextField">
                             <rect key="frame" x="20" y="34" width="374" height="50"/>
@@ -91,7 +90,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-X9-mbJ" userLabel="Deadline detail View">
-                    <rect key="frame" x="0.0" y="104" width="414" height="70"/>
+                    <rect key="frame" x="0.0" y="62" width="414" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Decision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-Ti-gsW" userLabel="Fill Questions">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
@@ -123,14 +122,6 @@
                         <constraint firstItem="iH9-zI-amE" firstAttribute="top" secondItem="s1m-Ti-gsW" secondAttribute="bottom" constant="25" id="orH-Oj-Va2"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLg-F0-ZhY">
-                    <rect key="frame" x="341" y="37" width="33" height="35"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="Edit"/>
-                    <connections>
-                        <action selector="mainbuttonPressedWithSender:" destination="-1" eventType="touchUpInside" id="7fT-UQ-eCa"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccs-Ge-Jqw" userLabel="Delete Button">
                     <rect key="frame" x="140" y="676" width="134" height="35"/>
                     <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
@@ -141,32 +132,18 @@
                         <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="KFH-t7-OZz"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-rk-1WL">
-                    <rect key="frame" x="40" y="37" width="42" height="35"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="Back">
-                        <color key="titleColor" systemColor="linkColor"/>
-                    </state>
-                    <connections>
-                        <action selector="didPressBackButton:" destination="-1" eventType="touchUpInside" id="Og3-4i-zjC"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="rR5-d1-N0X"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Ccs-Ge-Jqw" firstAttribute="centerX" secondItem="TEq-t4-x42" secondAttribute="centerX" id="7UZ-dR-XUP"/>
-                <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="yLg-F0-ZhY" secondAttribute="trailing" constant="40" id="AYE-vV-eET"/>
-                <constraint firstItem="f9M-X9-mbJ" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="60" id="IJh-nb-Uk1"/>
-                <constraint firstItem="wX4-hF-uXA" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="82" id="JdG-qy-3Lc"/>
-                <constraint firstItem="nFi-rk-1WL" firstAttribute="top" secondItem="TEq-t4-x42" secondAttribute="top" constant="37" id="XEH-pl-WxO"/>
+                <constraint firstItem="f9M-X9-mbJ" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="18" id="IJh-nb-Uk1"/>
+                <constraint firstItem="wX4-hF-uXA" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="12" id="JdG-qy-3Lc"/>
                 <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="wX4-hF-uXA" secondAttribute="trailing" id="a73-Xc-qwm"/>
                 <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="f9M-X9-mbJ" secondAttribute="trailing" id="aZo-Mv-x2J"/>
                 <constraint firstItem="f9M-X9-mbJ" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" id="bZI-M6-dGK"/>
-                <constraint firstItem="nFi-rk-1WL" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" constant="40" id="ez4-E3-Dds"/>
                 <constraint firstItem="wX4-hF-uXA" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" id="g2X-mi-GfM"/>
                 <constraint firstItem="rR5-d1-N0X" firstAttribute="bottom" secondItem="Ccs-Ge-Jqw" secondAttribute="bottom" constant="151" id="omm-W1-g9P"/>
-                <constraint firstItem="yLg-F0-ZhY" firstAttribute="top" secondItem="TEq-t4-x42" secondAttribute="top" constant="37" id="qz0-ch-wi3"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </view>
@@ -178,9 +155,6 @@
         <namedColor name="uniTrack textField BackGround">
             <color red="0.94900000095367432" green="0.9570000171661377" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

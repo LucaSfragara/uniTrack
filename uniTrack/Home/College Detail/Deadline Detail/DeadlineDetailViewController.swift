@@ -11,7 +11,6 @@ class DeadlineDetailViewController: UIViewController {
 
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var dateLabel: UILabel!
-    @IBOutlet weak private var mainButton: UIButton!
     @IBOutlet weak private var deleteButton: UIButton!
     @IBOutlet weak private var infoView: UIView!
     
@@ -21,34 +20,51 @@ class DeadlineDetailViewController: UIViewController {
 
     weak var deadline: Deadline?
     
-    private var state: deadlineState = .notEditing
+    private lazy var doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(mainButtonPressed))
+    private lazy var editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(mainButtonPressed))
+    
+    private var state: deadlineState?{
+        didSet{
+            
+            switch state!{
+            case .editing:
+                navigationItem.rightBarButtonItem = doneBarButtonItem
+            case .notEditing:
+                navigationItem.rightBarButtonItem = editBarButtonItem
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
+        navigationController?.isNavigationBarHidden = false
+        state = .notEditing
         
         datePicker.minimumDate = Date()
         titleLabel.text = deadline?.title
         dateLabel.text = deadline?.date.toString()
         hideDeleteButton()
         hideEditView()
-        
+    
         // Do any additional setup after loading the view.
     }
 
     //FIXME: FIX: to be removed when navigationController is used to push VC
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationController?.isNavigationBarHidden = true
         //This makes the collegeDetailViewController fetch the university with the updated task
-        self.presentingViewController?.viewWillAppear(true)
+        //Not needed anymore cause of VC being pushed rather than presented
+       // self.presentingViewController?.viewWillAppear(true)
     }
     
-    
-    @IBAction func mainbuttonPressed(sender: UIButton){ //this can either be 'Edit' or 'Done'
+    @objc func mainButtonPressed(){ //this can either be 'Edit' or 'Done'
         
         if state == .notEditing{
             //start editing
             state = .editing
-            mainButton.setTitle("Done", for: .normal)
-            mainButton.titleLabel?.textAlignment = .center
             showDeleteButton()
             showEditView()
             
@@ -67,8 +83,6 @@ class DeadlineDetailViewController: UIViewController {
                     self.hideEditView()
                     self.state = .notEditing
                     self.hideDeleteButton()
-                    self.mainButton.setTitle("Edit", for: .normal)
-                    self.mainButton.titleLabel?.textAlignment = .center
                     self.deadline =  updatedDeadline as? Deadline
                     self.titleLabel.text = self.deadline?.title
                     self.dateLabel.text = self.deadline?.date.toString()
@@ -124,10 +138,6 @@ class DeadlineDetailViewController: UIViewController {
         guard let deadlineToUpdate = deadline else {return}
         
         DataManager.shared.updateItem(itemToUpdate: deadlineToUpdate, updateValues: ["title": title, "date": date], completion: completion)
-    }
-    
-    @IBAction func didPressBackButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     /*
