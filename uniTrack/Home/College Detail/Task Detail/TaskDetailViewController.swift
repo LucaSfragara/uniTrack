@@ -11,21 +11,36 @@ class TaskDetailViewController: UIViewController {
 
     @IBOutlet weak private var taskTitle: UILabel!
     @IBOutlet weak private var taskText: UILabel!
-    @IBOutlet weak private var mainButton: UIButton!
     @IBOutlet weak private var deleteButton: UIButton!
     @IBOutlet weak private var taskInfoView: UIView!
     @IBOutlet weak private var editView: UIView!
     @IBOutlet weak private var titleTextField: UITextField!
     @IBOutlet weak private var textTextField: UITextField!
     
-    private var state: TaskState = .notEditing //default is sone
+    private lazy var doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(mainButtonPressed))
+    private lazy var editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(mainButtonPressed))
+    
+    private var state: TaskState?{
+        didSet{
+            
+            switch state!{
+            case .editing:
+                navigationItem.rightBarButtonItem = doneBarButtonItem
+            case .notEditing:
+                navigationItem.rightBarButtonItem = editBarButtonItem
+            }
+        }
+    }
 
     weak var task: Task?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        navigationItem.largeTitleDisplayMode = .never
+        navigationController?.isNavigationBarHidden = false
+        state = .notEditing
+
         hideDeleteButton()
         hideEditView()
         taskTitle.text = task?.title
@@ -34,20 +49,18 @@ class TaskDetailViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        super.viewWillDisappear(true)
         self.navigationController?.isNavigationBarHidden = true
         //This makes the collegeDetailViewController fetch the university with the updated task - not needed anymore cause of vc being pushed
         //self.presentingViewController?.viewWillAppear(true)
         
     }
     
-    @IBAction func mainbuttonPressed(sender: UIButton){ //this can either be 'Edit' or 'Done'
+     @objc func mainButtonPressed(sender: UIButton){ //this can either be 'Edit' or 'Done'
         
         if state == .notEditing{
             
             state = .editing
-            mainButton.setTitle("Done", for: .normal)
-            mainButton.titleLabel?.textAlignment = .center
             showDeleteButton()
             showEditView()
             
@@ -64,8 +77,7 @@ class TaskDetailViewController: UIViewController {
                     self.hideEditView()
                     self.state = .notEditing
                     self.hideDeleteButton()
-                    self.mainButton.setTitle("Edit", for: .normal)
-                    self.mainButton.titleLabel?.textAlignment = .center
+
                     self.task = updatedTask as? Task
                     self.taskTitle.text = self.task?.title
                     self.taskText.text = self.task?.text
@@ -111,7 +123,7 @@ class TaskDetailViewController: UIViewController {
             DataManager.shared.deleteItem(itemToDelete: taskToDelete){ result in
                 switch result {
                 case .success(_):
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                 case .failure(let error):
                     //TODO: TODO: handle error
                     print(error)
@@ -120,11 +132,6 @@ class TaskDetailViewController: UIViewController {
         }
         present(alert, animated: false, completion: nil)
     }
-    
-    @IBAction func didPressBackButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     
     /*
     // MARK: - Navigation

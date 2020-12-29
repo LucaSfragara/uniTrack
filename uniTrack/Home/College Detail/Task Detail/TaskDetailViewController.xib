@@ -27,7 +27,6 @@
             <connections>
                 <outlet property="deleteButton" destination="HO9-Bk-OjN" id="eq8-Wf-O6W"/>
                 <outlet property="editView" destination="yPY-ZJ-AzJ" id="Hy7-a8-rkI"/>
-                <outlet property="mainButton" destination="3DF-0R-fCg" id="b8e-Gv-pKJ"/>
                 <outlet property="taskInfoView" destination="cBz-GC-orp" id="4Bp-Zr-kpS"/>
                 <outlet property="taskText" destination="kqi-cS-Ki0" id="kkf-hw-G9F"/>
                 <outlet property="taskTitle" destination="8K1-Nw-xHY" id="Zeb-yD-xJz"/>
@@ -42,7 +41,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-ZJ-AzJ" userLabel="Task Edit View">
-                    <rect key="frame" x="0.0" y="126" width="414" height="188"/>
+                    <rect key="frame" x="0.0" y="56" width="414" height="188"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-QZ-MPC" userLabel="title TextField">
                             <rect key="frame" x="20" y="34" width="374" height="50"/>
@@ -91,7 +90,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-GC-orp" userLabel="Task detail View">
-                    <rect key="frame" x="0.0" y="104" width="414" height="70"/>
+                    <rect key="frame" x="0.0" y="62" width="414" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill Common App Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K1-Nw-xHY" userLabel="Fill Questions">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
@@ -123,14 +122,6 @@
                         <constraint firstItem="8K1-Nw-xHY" firstAttribute="leading" secondItem="cBz-GC-orp" secondAttribute="leading" id="mqu-ao-qF9"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DF-0R-fCg">
-                    <rect key="frame" x="341" y="37" width="33" height="35"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="Edit"/>
-                    <connections>
-                        <action selector="mainbuttonPressedWithSender:" destination="-1" eventType="touchUpInside" id="VFq-Tk-mOu"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-Bk-OjN" userLabel="Delete Button">
                     <rect key="frame" x="158" y="676" width="98" height="35"/>
                     <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
@@ -141,29 +132,15 @@
                         <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="zqw-CR-gLY"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WA-RL-U68">
-                    <rect key="frame" x="40" y="37" width="42" height="35"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="Back">
-                        <color key="titleColor" systemColor="linkColor"/>
-                    </state>
-                    <connections>
-                        <action selector="didPressBackButton:" destination="-1" eventType="touchUpInside" id="yTx-CK-Ujc"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="HO9-Bk-OjN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="19P-9d-Dbv"/>
-                <constraint firstItem="6WA-RL-U68" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="CgW-Xv-Wuq"/>
-                <constraint firstItem="cBz-GC-orp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="Cow-1e-m8H"/>
+                <constraint firstItem="cBz-GC-orp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="Cow-1e-m8H"/>
                 <constraint firstItem="cBz-GC-orp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W7d-XV-3au"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3DF-0R-fCg" secondAttribute="trailing" constant="40" id="Zfj-nr-Rn9"/>
-                <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="82" id="dho-h2-qak"/>
+                <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="dho-h2-qak"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cBz-GC-orp" secondAttribute="trailing" id="gxL-74-lmH"/>
-                <constraint firstItem="3DF-0R-fCg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="jxl-jv-x2W"/>
-                <constraint firstItem="6WA-RL-U68" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="lCb-V4-e0y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yPY-ZJ-AzJ" secondAttribute="trailing" id="mPO-hV-iSY"/>
                 <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sDI-5V-b8Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HO9-Bk-OjN" secondAttribute="bottom" constant="151" id="vB1-Q6-ueC"/>
@@ -178,9 +155,6 @@
         <namedColor name="uniTrack textField BackGround">
             <color red="0.94900000095367432" green="0.9570000171661377" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,12 +9,13 @@ import UIKit
 
 class DeadlineDetailViewController: UIViewController {
 
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var dateLabel: UILabel!
     @IBOutlet weak private var deleteButton: UIButton!
     @IBOutlet weak private var infoView: UIView!
-    
     @IBOutlet weak private var editView: UIView!
+    
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var dateLabel: UILabel!
+   
     @IBOutlet weak private var titleField: UITextField!
     @IBOutlet weak private var datePicker: UIDatePicker!
 
@@ -38,6 +39,7 @@ class DeadlineDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.isNavigationBarHidden = false
         state = .notEditing
@@ -102,7 +104,7 @@ class DeadlineDetailViewController: UIViewController {
             DataManager.shared.deleteItem(itemToDelete: deadlineToDelete){ result in
                 switch result {
                 case .success(_):
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                 case .failure(let error):
                     //TODO: TODO: handle error
                     print(error)
