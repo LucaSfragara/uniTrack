@@ -40,6 +40,8 @@
 		AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5F2548552A00032322 /* Inter-SemiBold-slnt=0.ttf */; };
 		AC59FE6B254A23E700032322 /* Inter-Thin-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5D2548552A00032322 /* Inter-Thin-slnt=0.ttf */; };
 		AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */; };
+		AC5B228525A128DF00E3EA94 /* SelectorSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B228425A128DF00E3EA94 /* SelectorSingleView.swift */; };
+		AC5B228825A12DBE00E3EA94 /* OptionSelectionSingleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5B228725A12DBE00E3EA94 /* OptionSelectionSingleView.xib */; };
 		AC691CFD2544C77A002D41F7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AC691CFC2544C77A002D41F7 /* data.json */; };
 		AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */; };
 		AC69E937256C6F7500D64083 /* CollegeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */; };
@@ -48,6 +50,9 @@
 		AC71C093258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC71C092258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib */; };
 		AC71C098258811330016AD68 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71C096258811330016AD68 /* AddTaskViewController.swift */; };
 		AC71C099258811330016AD68 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC71C097258811330016AD68 /* AddTaskViewController.xib */; };
+		AC7749DF259D3DCE0057BF88 /* CollegeEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7749DE259D3DCE0057BF88 /* CollegeEditViewController.swift */; };
+		AC7749E2259D4A8C0057BF88 /* OptionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7749E1259D4A8C0057BF88 /* OptionSelectionView.swift */; };
+		AC7749E6259D4ACC0057BF88 /* OptionSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7749E5259D4ACC0057BF88 /* OptionSelectionView.xib */; };
 		AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */; };
 		ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */; };
 		ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */; };
@@ -98,6 +103,8 @@
 		AC59FE5F2548552A00032322 /* Inter-SemiBold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE602548552A00032322 /* Inter-Light-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE6D254A25CE00032322 /* DeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC5B228425A128DF00E3EA94 /* SelectorSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorSingleView.swift; sourceTree = "<group>"; };
+		AC5B228725A12DBE00E3EA94 /* OptionSelectionSingleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionSelectionSingleView.xib; sourceTree = "<group>"; };
 		AC691CFC2544C77A002D41F7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
 		AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollegeDetail.storyboard; sourceTree = "<group>"; };
@@ -106,6 +113,9 @@
 		AC71C092258811140016AD68 /* DetailDeadlinesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailDeadlinesCollectionViewCell.xib; sourceTree = "<group>"; };
 		AC71C096258811330016AD68 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		AC71C097258811330016AD68 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
+		AC7749DE259D3DCE0057BF88 /* CollegeEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeEditViewController.swift; sourceTree = "<group>"; };
+		AC7749E1259D4A8C0057BF88 /* OptionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectionView.swift; sourceTree = "<group>"; };
+		AC7749E5259D4ACC0057BF88 /* OptionSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionSelectionView.xib; sourceTree = "<group>"; };
 		AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
 		ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableViewController.swift; sourceTree = "<group>"; };
@@ -296,7 +306,9 @@
 				AC024F4E258D65E100790FD8 /* Deadline Detail */,
 				AC1792C92584CAC800AEE111 /* CollectionView cells */,
 				AC69E92E256C68F400D64083 /* CollegeDetailViewController.swift */,
+				AC7749E4259D4A920057BF88 /* Selector View */,
 				AC69E936256C6F7500D64083 /* CollegeDetail.storyboard */,
+				AC7749DE259D3DCE0057BF88 /* CollegeEditViewController.swift */,
 			);
 			path = "College Detail";
 			sourceTree = "<group>";
@@ -317,6 +329,17 @@
 				AC71C097258811330016AD68 /* AddTaskViewController.xib */,
 			);
 			path = "Add task";
+			sourceTree = "<group>";
+		};
+		AC7749E4259D4A920057BF88 /* Selector View */ = {
+			isa = PBXGroup;
+			children = (
+				AC5B228425A128DF00E3EA94 /* SelectorSingleView.swift */,
+				AC7749E1259D4A8C0057BF88 /* OptionSelectionView.swift */,
+				AC7749E5259D4ACC0057BF88 /* OptionSelectionView.xib */,
+				AC5B228725A12DBE00E3EA94 /* OptionSelectionSingleView.xib */,
+			);
+			path = "Selector View";
 			sourceTree = "<group>";
 		};
 		AC85C6C72599394A00B653BF /* My Colleges */ = {
@@ -437,7 +460,9 @@
 				AC59FE65254A23E700032322 /* Inter-ExtraBold-slnt=0.ttf in Resources */,
 				AC59FE66254A23E700032322 /* Inter-ExtraLight-slnt=0.ttf in Resources */,
 				AC024F4C258D65D900790FD8 /* DeadlineDetailViewController.xib in Resources */,
+				AC7749E6259D4ACC0057BF88 /* OptionSelectionView.xib in Resources */,
 				AC59FE67254A23E700032322 /* Inter-Light-slnt=0.ttf in Resources */,
+				AC5B228825A12DBE00E3EA94 /* OptionSelectionSingleView.xib in Resources */,
 				AC59FE68254A23E700032322 /* Inter-Medium-slnt=0.ttf in Resources */,
 				AC59FE69254A23E700032322 /* Inter-Regular-slnt=0.ttf in Resources */,
 				AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */,
@@ -520,6 +545,7 @@
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,
+				AC5B228525A128DF00E3EA94 /* SelectorSingleView.swift in Sources */,
 				AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */,
 				ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */,
 				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
@@ -531,7 +557,9 @@
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* DashboardViewController.swift in Sources */,
 				AC024F55258D793800790FD8 /* DataManager.swift in Sources */,
+				AC7749DF259D3DCE0057BF88 /* CollegeEditViewController.swift in Sources */,
 				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
+				AC7749E2259D4A8C0057BF88 /* OptionSelectionView.swift in Sources */,
 				AC024F46258D65C500790FD8 /* TaskDetailViewController.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,
 				AC1792DF2586BD8900AEE111 /* Task.swift in Sources */,

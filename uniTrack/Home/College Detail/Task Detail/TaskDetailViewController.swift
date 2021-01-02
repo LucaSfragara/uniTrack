@@ -73,7 +73,7 @@ class TaskDetailViewController: UIViewController {
             updateTask(newTitle: title, newText: text){result in
                 switch result{
                 case .success(let updatedTask):
-                    
+
                     self.hideEditView()
                     self.state = .notEditing
                     self.hideDeleteButton()

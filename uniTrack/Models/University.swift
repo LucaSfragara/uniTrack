@@ -68,7 +68,7 @@ public class University: NSManagedObject{
     enum ReachType: String{
         case safety = "Safety"
         case match = "Match"
-        case reach = "Reach"
+        case target = "Target"
     }
 }
 

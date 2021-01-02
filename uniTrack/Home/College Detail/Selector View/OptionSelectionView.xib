@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionSelectionView" customModule="uniTrack" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="jft-ZT-hvs" id="r5n-kn-rWG"/>
+                <outlet property="firstView" destination="pGw-9q-87c" id="h0d-H6-P8b"/>
+                <outlet property="secondView" destination="uTs-iD-ljP" id="6E1-OV-ZbU"/>
+                <outlet property="thirdView" destination="D0j-OP-pz6" id="A1E-KP-pup"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jft-ZT-hvs">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-f8-oke">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-9q-87c" customClass="SelectorSingleView" customModule="uniTrack" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="uniTrack secondary label color"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="7zO-ie-Rbe" appends="YES" id="7XR-o0-tkL"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-iD-ljP" customClass="SelectorSingleView" customModule="uniTrack" customModuleProvider="target">
+                            <rect key="frame" x="100" y="0.0" width="100" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="uniTrack secondary label color"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="5i4-Sk-liC" appends="YES" id="AvX-mZ-zgh"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0j-OP-pz6" customClass="SelectorSingleView" customModule="uniTrack" customModuleProvider="target">
+                            <rect key="frame" x="200" y="0.0" width="100" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="uniTrack secondary label color"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="eq2-Lf-Jri" appends="YES" id="dZd-n5-uUs"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gTO-Q3-0Rc"/>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gTO-Q3-0Rc" firstAttribute="trailing" secondItem="5Ma-f8-oke" secondAttribute="trailing" id="XSw-qy-Ahf"/>
+                <constraint firstItem="5Ma-f8-oke" firstAttribute="leading" secondItem="gTO-Q3-0Rc" secondAttribute="leading" id="dD7-cl-bDI"/>
+                <constraint firstAttribute="bottom" secondItem="5Ma-f8-oke" secondAttribute="bottom" id="jb6-ce-pPO"/>
+                <constraint firstItem="5Ma-f8-oke" firstAttribute="top" secondItem="jft-ZT-hvs" secondAttribute="top" id="kHK-5F-GxP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-153" y="86"/>
+        </view>
+        <tapGestureRecognizer id="7zO-ie-Rbe" userLabel="Tap Gesture Recognizer firstView">
+            <connections>
+                <action selector="didTapFirstView:" destination="-1" id="ghG-Jz-egI"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="5i4-Sk-liC" userLabel="Tap Gesture Recognizer secondView">
+            <connections>
+                <action selector="didTapSecondView:" destination="-1" id="uN7-ve-iQ9"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="eq2-Lf-Jri" userLabel="Tap Gesture Recognizer thirdView">
+            <connections>
+                <action selector="didTapThirdView:" destination="-1" id="A8e-FV-lpU"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <namedColor name="uniTrack secondary label color">
+            <color red="0.55699998140335083" green="0.5910000205039978" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

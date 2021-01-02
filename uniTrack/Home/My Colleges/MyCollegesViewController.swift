@@ -22,6 +22,7 @@ class MyCollegesViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
         DataManager.shared.getUniversities{result in
             
             switch result {
@@ -80,7 +81,7 @@ extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDa
         let storyboard = UIStoryboard(name: "CollegeDetail", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! CollegeDetailViewController
         detailVC.university = universitySelected
-        self.present(detailVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }

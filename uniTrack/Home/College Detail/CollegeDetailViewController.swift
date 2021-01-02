@@ -134,6 +134,11 @@ class CollegeDetailViewController: UIViewController {
         present(addTaskVC, animated: true, completion: nil)
     }
     
+    @IBAction func didTapEditButton(_ sender: Any){
+        let collegegeEditVC = self.storyboard?.instantiateViewController(withIdentifier: "CollegeEditVCID") as! CollegeEditViewController
+        collegegeEditVC.university = self.university
+        navigationController?.pushViewController(collegegeEditVC, animated: true)
+    }
   
     /*
     // MARK: - Navigation

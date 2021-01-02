@@ -145,6 +145,11 @@
                 <constraint firstItem="wX4-hF-uXA" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" id="g2X-mi-GfM"/>
                 <constraint firstItem="rR5-d1-N0X" firstAttribute="bottom" secondItem="Ccs-Ge-Jqw" secondAttribute="bottom" constant="151" id="omm-W1-g9P"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="f9M-X9-mbJ"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </view>
     </objects>
