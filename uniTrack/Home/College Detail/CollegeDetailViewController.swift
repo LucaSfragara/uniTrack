@@ -101,6 +101,7 @@ class CollegeDetailViewController: UIViewController {
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){ result in
             switch result {
             case .success(let universities):
+                guard universities.isEmpty == false else{return}
                 self.university = universities[0]
             case .failure(let error):
                 //TODO:  TODO: handle error

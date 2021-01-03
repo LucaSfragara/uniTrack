@@ -24,7 +24,7 @@ protocol CrudStrategy: class{
 
     //MARK: UPDATE
     func updateItem<Item: AddableObject>(itemToUpdate: Item, updateValues: [String : Any], completion: @escaping((Result<AddableObject, PersistantStoreError>) -> ()))
-    func updateUniversity(universityToUpdate: University, updateValues: [String : Any], completion: @escaping((Result<University, PersistantStoreError>) -> ()))
+    func updateUniversity(universityToUpdate: University, updateValues: [String : Any?], completion: @escaping((Result<University, PersistantStoreError>) -> ()))
     
     //MARK: DELETE
     func deleteItem<Item: AddableObject>(itemToDelete: Item, completion: @escaping(Result<Bool, PersistantStoreError>) -> ())

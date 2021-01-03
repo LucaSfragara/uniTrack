@@ -33,7 +33,10 @@ class OptionSelectionView: UIView {
                 secondView.deactivate()
                 thirdView.activate()
             case .none:
-                break
+                firstView.deactivate()
+                secondView.deactivate()
+                thirdView.deactivate()
+                
             }
         }
     }

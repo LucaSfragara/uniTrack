@@ -177,8 +177,74 @@ extension DataManager{
         
     }
 
-    func updateUniversity(universityToUpdate: University, updateValues: [String : Any], completion: @escaping ((Result<University, PersistantStoreError>) -> ())){
-
+    func updateUniversity(universityToUpdate: University, updateValues: [String : Any?], completion: @escaping ((Result<University, PersistantStoreError>) -> ())){
+        
+        for (key, value) in updateValues{
+            
+            switch key.lowercased(){
+            
+            case "name":
+                
+                guard let newName = value as? String else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                universityToUpdate.baseModel?.name = newName
+                universityToUpdate.name = newName
+                
+            case "course":
+                
+                guard let newCourse = value as? String else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                universityToUpdate.course = newCourse
+            
+            case "reachtype":
+                
+                if value != nil{
+                    guard let newReachType = value as? University.ReachType else{
+                        completion(.failure(.updateValueNotValid))
+                        return
+                    }
+                    universityToUpdate.reachType = newReachType.rawValue
+                    
+                }
+            //EDITS on base model
+            
+            case "population":
+                
+                guard let newPopulation = value as? Int else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                universityToUpdate.baseModel?.population = String(newPopulation)
+            
+            
+//            case "country": //Add later with multi country support
+//
+//                guard let newCountry = value as? String else{
+//                    completion(.failure(.updateValueNotValid))
+//                    return
+//                }
+                
+            case "state":
+                
+                guard let newState = value as? String else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                universityToUpdate.baseModel?.population = newState
+         
+                
+            default:
+                completion(.failure(.updateKeyNotRecognized))
+                return
+            }
+            
+        }
+        completion(.success(universityToUpdate))
+        saveToPersistantStore()
     }
 }
 

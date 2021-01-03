@@ -13,10 +13,10 @@ class CollegeEditViewController: UIViewController {
     @IBOutlet weak private var nameField: UITextField!
     @IBOutlet weak private var courseField: UITextField!
     @IBOutlet weak private var countryField: UITextField!
+    @IBOutlet weak var stateField: UITextField!
     @IBOutlet weak private var populationField: UITextField!
     @IBOutlet weak private var linkField: UITextField!
-    @IBOutlet weak private var schoolTypeSelectorView: UIView!
-    
+    @IBOutlet weak private var schoolTypeSelectorView: OptionSelectionView!
     
     weak var university: University?
         
@@ -25,6 +25,12 @@ class CollegeEditViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Edit University"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPressed))
+        
+        nameField.text = university?.name
+        courseField.text = university?.course
+        stateField.text = university?.baseModel?.state
+        populationField.text = university?.baseModel?.population
+        schoolTypeSelectorView.selectedOption = (university?.reachType).map { University.ReachType(rawValue: $0)!}
         
         // Do any additional setup after loading the view.
     }
@@ -41,8 +47,47 @@ class CollegeEditViewController: UIViewController {
     
     @objc func doneButtonPressed(){
         
+        guard let name = nameField.text,
+              let course = courseField.text,
+              let populationText = populationField.text,
+              let population = Int(populationText),
+              let state = stateField.text else {return}
+                
+        updateUniversity(newName: name, newCourse: course, newReachType: schoolTypeSelectorView.selectedOption, newPopulation: population, newState: state){[weak self]result in
+            switch result{
+            case .success(let updatedUniversity):
+                guard let presentingVC = self?.navigationController?.viewControllers[(self?.navigationController?.viewControllers.count)!-2] as? CollegeDetailViewController else{
+                    return
+                }
+                
+                presentingVC.university = updatedUniversity
+                self?.navigationController?.popViewController(animated: true)
+                
+            //TODO: TODO: handle error
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-
+    
+    private func updateUniversity(newName name: String,
+                                  newCourse course: String,
+                                  newReachType reachType: University.ReachType?,
+                                  newPopulation population: Int,
+                                  newState state: String,
+                                  completion: @escaping (Result<University, PersistantStoreError>) -> ()){
+        
+        guard let university = self.university else{return}
+        
+        DataManager.shared.updateUniversity(universityToUpdate: university, updateValues: [
+            "name" : name,
+            "course" : course,
+            "reachtype": reachType,
+            "population" : population,
+            "state" : state
+        ], completion: completion)
+    }
+    
     /*
     // MARK: - Navigation
 
