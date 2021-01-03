@@ -269,8 +269,11 @@ extension DataManager{
         saveToPersistantStore()
     }
 
-    func deleteUniversity(universityToDelete: University, completion: @escaping (Result<Bool, PersistantStoreError>) -> ()) {
+    func deleteUniversity(universityToDelete: University, completion: @escaping (Result<University, PersistantStoreError>) -> ()) {
         
+        PersistantService.context.delete(universityToDelete)
+        completion(.success(universityToDelete))
+        saveToPersistantStore()
     }
     
 

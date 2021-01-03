@@ -28,7 +28,7 @@ protocol CrudStrategy: class{
     
     //MARK: DELETE
     func deleteItem<Item: AddableObject>(itemToDelete: Item, completion: @escaping(Result<Bool, PersistantStoreError>) -> ())
-    func deleteUniversity(universityToDelete: University,  completion: @escaping(Result<Bool, PersistantStoreError>) -> ())
+    func deleteUniversity(universityToDelete: University,  completion: @escaping(Result<University, PersistantStoreError>) -> ())
     
 }
 

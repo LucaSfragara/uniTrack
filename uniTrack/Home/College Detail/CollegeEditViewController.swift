@@ -67,6 +67,25 @@ class CollegeEditViewController: UIViewController {
         }
     }
     
+    @IBAction private func didPressDeleteButton(){
+        guard let university = university else{return}
+        
+        let alertView = Utilities.createAlertView(title: "Delete University", message: "Are you sure you want to permanently delete the this university"){
+            DataManager.shared.deleteUniversity(universityToDelete: university){[weak self] result in
+                
+                switch result{
+                case .success(let _):
+                    self?.navigationController?.popToRootViewController(animated: true)
+                //TODO: TODO: Error
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        
+        present(alertView, animated: true, completion: nil)
+    }
+    
     private func updateUniversity(newName name: String,
                                   newCourse course: String,
                                   newReachType reachType: University.ReachType?,
