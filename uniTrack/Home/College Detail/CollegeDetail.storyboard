@@ -621,7 +621,7 @@
                         <outlet property="nameField" destination="RA2-nu-c6K" id="pEV-H3-gCl"/>
                         <outlet property="populationField" destination="tYj-aV-nmh" id="jnN-h5-yCe"/>
                         <outlet property="schoolTypeSelectorView" destination="Njn-ys-Hqb" id="A8I-Sw-5hR"/>
-                        <outlet property="stateField" destination="lhv-vp-FUb" id="T9W-6c-clu"/>
+                        <outlet property="stateField" destination="ej6-X3-0sh" id="yMv-hZ-xQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwU-7v-nQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

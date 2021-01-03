@@ -98,17 +98,30 @@ class CollegeDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        DataManager.shared.getUniversities(withNameContaining: self.university?.name){ result in
+        
+        guard let university = university else{return}
+        
+        self.title = university.name
+        nameLabel.text = university.name
+        courseLabel.text = university.course
+        countryLabel.text = "US"
+        stateLabel.text = university.baseModel?.state
+        populationLabel.text = university.baseModel?.population ?? "na"
+        reachTypeLabel.text = university.reachType
+
+        
+        DataManager.shared.getUniversities(withNameContaining: self.university?.name){[weak self] result in
             switch result {
             case .success(let universities):
                 guard universities.isEmpty == false else{return}
-                self.university = universities[0]
+                self?.university = universities[0]
+                print(self?.university?.course)
             case .failure(let error):
                 //TODO:  TODO: handle error
                 print(error)
             }
-            self.tasksCollectionView.reloadData()
-            self.deadlinesCollectionView.reloadData()
+            self?.tasksCollectionView.reloadData()
+            self?.deadlinesCollectionView.reloadData()
         }
     }
     

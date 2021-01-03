@@ -180,7 +180,7 @@ extension DataManager{
     func updateUniversity(universityToUpdate: University, updateValues: [String : Any?], completion: @escaping ((Result<University, PersistantStoreError>) -> ())){
         
         for (key, value) in updateValues{
-            
+            guard value != nil else{continue} //Do not change attribute if value is nil
             switch key.lowercased(){
             
             case "name":
@@ -202,14 +202,13 @@ extension DataManager{
             
             case "reachtype":
                 
-                if value != nil{
-                    guard let newReachType = value as? University.ReachType else{
-                        completion(.failure(.updateValueNotValid))
-                        return
-                    }
-                    universityToUpdate.reachType = newReachType.rawValue
-                    
+                guard let newReachType = value as? University.ReachType else{
+                    completion(.failure(.updateValueNotValid))
+                    return
                 }
+                universityToUpdate.reachType = newReachType.rawValue
+                
+                
             //EDITS on base model
             
             case "population":
@@ -234,7 +233,7 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid))
                     return
                 }
-                universityToUpdate.baseModel?.population = newState
+                universityToUpdate.baseModel?.state = newState
          
                 
             default:

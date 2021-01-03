@@ -47,13 +47,10 @@ class CollegeEditViewController: UIViewController {
     
     @objc func doneButtonPressed(){
         
-        guard let name = nameField.text,
-              let course = courseField.text,
-              let populationText = populationField.text,
-              let population = Int(populationText),
-              let state = stateField.text else {return}
+        guard let name = nameField.text, let course = courseField.text else {return}
                 
-        updateUniversity(newName: name, newCourse: course, newReachType: schoolTypeSelectorView.selectedOption, newPopulation: population, newState: state){[weak self]result in
+        updateUniversity(newName: name, newCourse: course, newReachType: schoolTypeSelectorView.selectedOption, newPopulation: Int(populationField.text ?? "a"), newState: stateField.text){[weak self] result in //a make the Int conversion return nil, hence the value is not updated
+            
             switch result{
             case .success(let updatedUniversity):
                 guard let presentingVC = self?.navigationController?.viewControllers[(self?.navigationController?.viewControllers.count)!-2] as? CollegeDetailViewController else{
@@ -73,8 +70,8 @@ class CollegeEditViewController: UIViewController {
     private func updateUniversity(newName name: String,
                                   newCourse course: String,
                                   newReachType reachType: University.ReachType?,
-                                  newPopulation population: Int,
-                                  newState state: String,
+                                  newPopulation population: Int?,
+                                  newState state: String?,
                                   completion: @escaping (Result<University, PersistantStoreError>) -> ()){
         
         guard let university = self.university else{return}
