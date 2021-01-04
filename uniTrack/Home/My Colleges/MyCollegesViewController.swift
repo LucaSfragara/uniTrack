@@ -22,15 +22,17 @@ class MyCollegesViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         self.navigationController?.isNavigationBarHidden = false
-        DataManager.shared.getUniversities{result in
+        DataManager.shared.getUniversities{[weak self ]result in
             
             switch result {
             case .failure(let error):
                 //TODO: handle error appropriately
                 print(error)
             case .success(let universities):
-                self.universities = universities
+                self?.universities = universities
+                self?.CollegesCollectioView.reloadData()
                 
             }
         }
