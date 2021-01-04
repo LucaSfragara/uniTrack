@@ -24,7 +24,7 @@ class MyCollegesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.isNavigationBarHidden = false
-        DataManager.shared.getUniversities{[weak self ]result in
+        DataManager.shared.getSortedUniversities(byDateAscending: false){[weak self ]result in
             
             switch result {
             case .failure(let error):
@@ -33,7 +33,6 @@ class MyCollegesViewController: UIViewController {
             case .success(let universities):
                 self?.universities = universities
                 self?.CollegesCollectioView.reloadData()
-                
             }
         }
     }
@@ -95,7 +94,7 @@ extension MyCollegesViewController: doneButtonDelegate{
         
         let university = University(name: name, course: course, reachType: nil, baseModel: baseModel, deadlines: nil)
         PersistantService.saveContext()
-        self.universities?.append(university)
+        self.universities?.insert(university, at: 0)
         self.CollegesCollectioView.reloadData()
         
     }

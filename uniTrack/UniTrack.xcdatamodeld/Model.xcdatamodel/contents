@@ -12,6 +12,7 @@
     </entity>
     <entity name="University" representedClassName="University" syncable="YES">
         <attribute name="course" optional="YES" attributeType="String"/>
+        <attribute name="dateOfAdd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="photo" optional="YES" attributeType="String"/>
         <attribute name="reachType" optional="YES" attributeType="String"/>
@@ -33,7 +34,7 @@
     <elements>
         <element name="Deadline" positionX="-102.5927734375" positionY="-166.1656799316406" width="128" height="74"/>
         <element name="Task" positionX="-27" positionY="36" width="128" height="74"/>
-        <element name="University" positionX="115.2598876953125" positionY="-273.0502319335938" width="218.1953125" height="134"/>
+        <element name="University" positionX="115.2598876953125" positionY="-273.0502319335938" width="218.1953125" height="149"/>
         <element name="UniversityFromData" positionX="172.5072021484375" positionY="-4.01434326171875" width="128" height="28"/>
     </elements>
 </model>

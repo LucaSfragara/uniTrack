@@ -99,8 +99,21 @@ extension DataManager{
             }
         }
     }
+    
+    func getSortedUniversities(byDateAscending ascending: Bool, completion: @escaping(Result<[University], PersistantStoreError>)->()){
+        
+        loadFromCoreData(withSortByDateAscending: ascending){result in
+            
+            switch result{
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let fetchedUniversities):
+                completion(.success(fetchedUniversities))
+            }
+            
+        }
+    }
 }
-
 //MARK: UPDATE
 extension DataManager{
     func updateItem<Item: AddableObject>(itemToUpdate: Item, updateValues: [String : Any], completion: @escaping ((Result<AddableObject, PersistantStoreError>) -> ())){
@@ -301,6 +314,22 @@ extension DataManager{
             completion(.failure(.couldNotFetchUniversities))
         }
     }
+    
+    private func loadFromCoreData(withSortByDateAscending ascending: Bool, completion: @escaping(Result<[University], PersistantStoreError>)->()){
+        
+        let fetchRequest = NSFetchRequest<University>(entityName: "University")
+        let sortDescripor = NSSortDescriptor(key: "dateOfAdd", ascending: ascending)
+        fetchRequest.sortDescriptors = [sortDescripor]
+        
+        do {
+            let result = try PersistantService.context.fetch(fetchRequest)
+            completion(.success(result))
+        } catch{
+            //TODO: switch error type here and throw appropriate persistansStoreError
+            completion(.failure(.couldNotFetchUniversities))
+        }
+    }
+    
     
     func saveToPersistantStore(){
         PersistantService.saveContext()
