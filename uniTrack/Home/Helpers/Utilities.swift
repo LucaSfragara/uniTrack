@@ -39,27 +39,35 @@ struct Country{
     
     var name: String
     var isoCountryCode: String
-    
     var flag: String?{
-        func isLowercaseASCIIScalar(_ scalar: Unicode.Scalar) -> Bool {
-                    return scalar.value >= 0x61 && scalar.value <= 0x7A
-                }
+        get{
+            func isLowercaseASCIIScalar(_ scalar: Unicode.Scalar) -> Bool {
+                        return scalar.value >= 0x61 && scalar.value <= 0x7A
+                    }
 
-                func regionalIndicatorSymbol(for scalar: Unicode.Scalar) -> Unicode.Scalar {
-                    precondition(isLowercaseASCIIScalar(scalar))
+                    func regionalIndicatorSymbol(for scalar: Unicode.Scalar) -> Unicode.Scalar {
+                        precondition(isLowercaseASCIIScalar(scalar))
 
-                    // 0x1F1E6 marks the start of the Regional Indicator Symbol range and corresponds to 'A'
-                    // 0x61 marks the start of the lowercase ASCII alphabet: 'a'
-                    return Unicode.Scalar(scalar.value + (0x1F1E6 - 0x61))!
-                }
+                        // 0x1F1E6 marks the start of the Regional Indicator Symbol range and corresponds to 'A'
+                        // 0x61 marks the start of the lowercase ASCII alphabet: 'a'
+                        return Unicode.Scalar(scalar.value + (0x1F1E6 - 0x61))!
+                    }
 
-                let lowercasedCode = isoCountryCode.lowercased()
-                guard lowercasedCode.count == 2 else { return nil }
-                guard lowercasedCode.unicodeScalars.reduce(true, { accum, scalar in accum && isLowercaseASCIIScalar(scalar) }) else { return nil }
+                    let lowercasedCode = isoCountryCode.lowercased()
+                    guard lowercasedCode.count == 2 else { return nil }
+                    guard lowercasedCode.unicodeScalars.reduce(true, { accum, scalar in accum && isLowercaseASCIIScalar(scalar) }) else { return nil }
 
-                let indicatorSymbols = lowercasedCode.unicodeScalars.map({ regionalIndicatorSymbol(for: $0) })
-                return String(indicatorSymbols.map({ Character($0) }))
-        
+                    let indicatorSymbols = lowercasedCode.unicodeScalars.map({ regionalIndicatorSymbol(for: $0) })
+                    return String(indicatorSymbols.map({ Character($0) }))
+        }
     }
+}
+
+extension Country{
     
+    init(fromIsoCountryCode code: String){
+        let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: code])
+        self.name = NSLocale(localeIdentifier: "en_UK").displayName(forKey: NSLocale.Key.identifier, value: id) ?? "Country not found for code: \(code)"
+        self.isoCountryCode = code
+    }
 }

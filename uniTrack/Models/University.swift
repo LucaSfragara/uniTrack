@@ -21,6 +21,7 @@ public class University: NSManagedObject{
     @NSManaged var reachType: ReachType.RawValue?
     @NSManaged var photo: String
     @NSManaged var dateOfAdd: Date
+    @NSManaged var isoCountryCode: String
     
     @NSManaged var baseModel: UniversityFromData?
     @NSManaged var deadlines: NSSet?
@@ -40,7 +41,7 @@ public class University: NSManagedObject{
         
     }
     
-    convenience init(name:String, course: String, reachType: ReachType?, baseModel: UniversityFromData?, deadlines: [Date]?){
+    convenience init(name:String, course: String, countryIsoCode: String, reachType: ReachType?, baseModel: UniversityFromData?){
         
         guard  let entity = NSEntityDescription.entity(forEntityName: "University", in: PersistantService.context) else {
             fatalError("No entity found for this name")
@@ -52,6 +53,7 @@ public class University: NSManagedObject{
         self.reachType = reachType?.rawValue
         self.baseModel = baseModel
         self.dateOfAdd = Date()
+        self.isoCountryCode = countryIsoCode
         
     }
     
