@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 class CollegeEditViewController: UIViewController {
 
@@ -18,21 +19,27 @@ class CollegeEditViewController: UIViewController {
     @IBOutlet weak private var linkField: UITextField!
     @IBOutlet weak private var schoolTypeSelectorView: OptionSelectionView!
     
+    
     weak var university: University?
-        
+    private var countryChosen:  Country?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.title = "Edit University"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPressed))
         
+        countryChosen = university?.country
+        
         nameField.text = university?.name
         courseField.text = university?.course
+        countryField.text = "\(university?.country?.flag ?? "") \(university?.country?.isoCountryCode ?? "")"
         stateField.text = university?.baseModel?.state
         populationField.text = university?.baseModel?.population
         schoolTypeSelectorView.selectedOption = (university?.reachType).map { University.ReachType(rawValue: $0)!}
         
-        // Do any additional setup after loading the view.
+        countryField.addTarget(self, action: #selector(handleCountryTextChanged), for: .editingChanged)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,9 +54,14 @@ class CollegeEditViewController: UIViewController {
     
     @objc func doneButtonPressed(){
         
-        guard let name = nameField.text, let course = courseField.text else {return}
+        guard let name = nameField.text, let course = courseField.text,  let country = countryChosen else {return}
                 
-        updateUniversity(newName: name, newCourse: course, newReachType: schoolTypeSelectorView.selectedOption, newPopulation: Int(populationField.text ?? "a"), newState: stateField.text){[weak self] result in //a make the Int conversion return nil, hence the value is not updated
+        updateUniversity(newName: name,
+                         newCourse: course,
+                         newReachType: schoolTypeSelectorView.selectedOption,
+                         newPopulation: Int(populationField.text ?? "a"),
+                         newState: stateField.text,
+                         newCountry: country){[weak self] result in //a make the Int conversion return nil, hence the value is not updated
             
             switch result{
             case .success(let updatedUniversity):
@@ -86,11 +98,43 @@ class CollegeEditViewController: UIViewController {
         present(alertView, animated: true, completion: nil)
     }
     
+    @objc private func handleCountryTextChanged(){
+        
+        guard let text = countryField.text else{return}
+        
+        let filteredCountries = Utilities.countryList().filter{
+            $0.name.lowercased().contains(text.lowercased())
+        }
+        
+        handleCountryDropDownMenu(data: filteredCountries)
+    }
+    
+    private func handleCountryDropDownMenu(data: [Country]){
+        
+        let datasource = data.map{"\($0.flag ?? "") \($0.name)"}
+        let dropDown = DropDown()
+        
+        dropDown.dataSource = datasource
+        
+        dropDown.selectionAction = { [weak self] (index: Int, item : String) in
+            self?.countryField.text = "\(data[index].flag ?? "") \(data[index].isoCountryCode)"
+            self?.countryChosen = data[index]
+        }
+        
+        dropDown.anchorView = countryField
+        dropDown.direction = .bottom
+        dropDown.cornerRadius = 10
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.show()
+
+    }
+    
     private func updateUniversity(newName name: String,
                                   newCourse course: String,
                                   newReachType reachType: University.ReachType?,
                                   newPopulation population: Int?,
                                   newState state: String?,
+                                  newCountry country: Country,
                                   completion: @escaping (Result<University, PersistantStoreError>) -> ()){
         
         guard let university = self.university else{return}
@@ -100,7 +144,8 @@ class CollegeEditViewController: UIViewController {
             "course" : course,
             "reachtype": reachType,
             "population" : population,
-            "state" : state
+            "state" : state,
+            "isoCountryCode": country.isoCountryCode
         ], completion: completion)
     }
     

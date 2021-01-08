@@ -193,9 +193,9 @@ extension DataManager{
     func updateUniversity(universityToUpdate: University, updateValues: [String : Any?], completion: @escaping ((Result<University, PersistantStoreError>) -> ())){
         
         for (key, value) in updateValues{
-            guard value != nil else{continue} //Do not change attribute if value is nil
-            switch key.lowercased(){
             
+            guard value != nil else{continue} //Do not change attribute if value is nil
+            switch key{
             case "name":
                 
                 guard let newName = value as? String else{
@@ -233,13 +233,14 @@ extension DataManager{
                 universityToUpdate.baseModel?.population = String(newPopulation)
             
             
-//            case "country": //Add later with multi country support
-//
-//                guard let newCountry = value as? String else{
-//                    completion(.failure(.updateValueNotValid))
-//                    return
-//                }
-                
+           case "isoCountryCode":
+
+                guard let newIsoCode = value as? String else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+            universityToUpdate.isoCountryCode = newIsoCode
+                    
             case "state":
                 
                 guard let newState = value as? String else{
@@ -250,6 +251,7 @@ extension DataManager{
          
                 
             default:
+                print(key)
                 completion(.failure(.updateKeyNotRecognized))
                 return
             }
