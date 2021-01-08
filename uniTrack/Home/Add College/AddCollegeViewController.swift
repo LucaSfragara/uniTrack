@@ -27,8 +27,13 @@ class AddCollegeViewController: UIViewController {
     
     
     private var universityChosen: UniversityFromData?
-    private var countryChosen: Country?
     
+    private var countryChosen: Country?{
+        didSet{
+            self.countryField.text = "\(countryChosen?.flag ?? "") \(countryChosen?.name ?? "")"
+        }
+    }
+
     var delegate: doneButtonDelegate?
     
     var cardPanStartingTopConstant : CGFloat = 0.0
@@ -36,7 +41,7 @@ class AddCollegeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         doneButton.isEnabled = false // set done button state to disabled by default
         doneButton.alpha = 0.6
         
@@ -192,6 +197,9 @@ class AddCollegeViewController: UIViewController {
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             self?.nameField.text = item
             self?.universityChosen = data[index]
+            if let isoCountryCode = data[index].isoCountryCode{
+                self?.countryChosen = Country(fromIsoCountryCode: isoCountryCode)
+            }
         }
         
         dropDown.anchorView = nameField

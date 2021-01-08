@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func preloadUniversityData(){
         print("preloading data...")
+        
         guard let fileURL = Bundle.main.url(forResource: "data", withExtension: "json") else{
             fatalError("Couldn't fetch the url for the university file")
         }
@@ -79,6 +80,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     universityObject.longitude = Double(university.geoPoint!.components(separatedBy: ",")[1]) ?? 0.0
                     universityObject.city = university.city
                     universityObject.state = university.state
+                    universityObject.isoCountryCode = "US"
+                    
                 }
                 
                 try BackgroundContext.save()

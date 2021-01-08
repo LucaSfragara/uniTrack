@@ -6,6 +6,7 @@
         <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="deadlines" inverseEntity="University"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES">
+        <attribute name="isoCoutryCode" optional="YES" attributeType="String"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="todos" inverseEntity="University"/>
@@ -24,6 +25,7 @@
     <entity name="UniversityFromData" representedClassName="UniversityFromData" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>
         <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="isoCountryCode" optional="YES" attributeType="String"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -34,8 +36,8 @@
     </entity>
     <elements>
         <element name="Deadline" positionX="-102.5927734375" positionY="-166.1656799316406" width="128" height="74"/>
-        <element name="Task" positionX="-27" positionY="36" width="128" height="74"/>
+        <element name="Task" positionX="-27" positionY="36" width="128" height="103"/>
         <element name="University" positionX="115.2598876953125" positionY="-273.0502319335938" width="218.1953125" height="164"/>
-        <element name="UniversityFromData" positionX="172.5072021484375" positionY="-4.01434326171875" width="128" height="28"/>
+        <element name="UniversityFromData" positionX="172.5072021484375" positionY="-4.01434326171875" width="128" height="179"/>
     </elements>
 </model>

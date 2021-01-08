@@ -99,17 +99,6 @@ class CollegeDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        guard let university = university else{return}
-        
-        self.title = university.name
-        nameLabel.text = university.name
-        courseLabel.text = university.course
-        countryLabel.text = university.country?.name
-        stateLabel.text = university.baseModel?.state
-        populationLabel.text = university.baseModel?.population ?? "na"
-        reachTypeLabel.text = university.reachType
-
-        
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){[weak self] result in
             switch result {
             case .success(let universities):
@@ -123,6 +112,19 @@ class CollegeDetailViewController: UIViewController {
             self?.tasksCollectionView.reloadData()
             self?.deadlinesCollectionView.reloadData()
         }
+        
+        guard let university = university else{return}
+        
+        self.title = university.name
+        nameLabel.text = university.name
+        courseLabel.text = university.course
+        countryLabel.text = university.country?.name
+        stateLabel.text = university.baseModel?.state
+        populationLabel.text = university.baseModel?.population ?? "na"
+        reachTypeLabel.text = university.reachType
+
+        
+       
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {
