@@ -53,13 +53,6 @@ class CollegeDetailViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = true
         
-        self.title = university.name
-        nameLabel.text = university.name
-        courseLabel.text = university.course
-        countryLabel.text = "US"
-        stateLabel.text = university.baseModel?.state
-        populationLabel.text = university.baseModel?.population ?? "na"
-        reachTypeLabel.text = university.reachType
         
         self.cardState = .normal
     }
@@ -118,7 +111,7 @@ class CollegeDetailViewController: UIViewController {
         self.title = university.name
         nameLabel.text = university.name
         courseLabel.text = university.course
-        countryLabel.text = university.country?.name
+        countryLabel.text = university.country?.isoCountryCode
         stateLabel.text = university.baseModel?.state
         populationLabel.text = university.baseModel?.population ?? "na"
         reachTypeLabel.text = university.reachType
