@@ -25,7 +25,6 @@ class AddCollegeViewController: UIViewController {
     @IBOutlet weak var doneButton: DesignableButton!
     
     
-    
     private var universityChosen: UniversityFromData?
     
     private var countryChosen: Country?{
@@ -42,13 +41,14 @@ class AddCollegeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        doneButton.isEnabled = false // set done button state to disabled by default
-        doneButton.alpha = 0.6
+        doneButton.disableButton()
         
         //fetchedResultController?.delegate = self
-        
-        nameField.addTarget(self, action: #selector(handleTextChanged), for: .editingChanged)
+        nameField.addTarget(self, action: #selector(handleNameTextChanged), for: .editingChanged)
         countryField.addTarget(self, action: #selector(handleCountryTextChanged), for: .editingChanged)
+        
+        //Add target to check when to enable button
+        [courseField, countryField, nameField].forEach{$0?.addTarget(self, action: #selector(handleTextChanged), for: .editingChanged)}
         
         
         cardView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -64,6 +64,20 @@ class AddCollegeViewController: UIViewController {
         
         
     }
+    
+    @objc  private func handleTextChanged(){
+    
+        if let course = self.courseField.text, course.isEmpty == false,
+           let name = self.nameField.text, name.isEmpty == false,
+           let country = self.countryField.text, country.isEmpty == false
+         {
+            doneButton.enableButton()
+         }else {
+            doneButton.disableButton()
+         }
+            
+    }
+    
     
     @objc private func handleCountryTextChanged(){
         
@@ -129,7 +143,7 @@ class AddCollegeViewController: UIViewController {
         }
     }
     
-    @objc func handleTextChanged (){
+    @objc func handleNameTextChanged (){
         
         guard let text = nameField.text else {return}
         
@@ -138,13 +152,6 @@ class AddCollegeViewController: UIViewController {
             if text.count > 3{
                 fetchUniversitiesFromData(withNameContaining: text)
             }
-            doneButton.isEnabled = true
-            doneButton.alpha = 1
-        }else{
-        
-            doneButton.alpha = 0.6
-            doneButton.isEnabled = false
-    
         }
     }
     
