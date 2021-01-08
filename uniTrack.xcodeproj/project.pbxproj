@@ -381,8 +381,8 @@
 		ACDC6D58254E1B680037DF45 /* Add College */ = {
 			isa = PBXGroup;
 			children = (
-				ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */,
 				ACDC6D69254E1E690037DF45 /* AddCollegeViewController.swift */,
+				ACDC6D66254E1E2A0037DF45 /* addCollege.storyboard */,
 			);
 			path = "Add College";
 			sourceTree = "<group>";

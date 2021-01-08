@@ -36,19 +36,19 @@
                                 <rect key="frame" x="0.0" y="429" width="414" height="467"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-Pi-fwN">
-                                        <rect key="frame" x="114.5" y="29" width="185.5" height="24.5"/>
+                                        <rect key="frame" x="106" y="29" width="202.5" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="21"/>
                                         <color key="textColor" red="0.1061546281" green="0.06595418602" blue="0.20333009960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TI-UC-8CC">
-                                        <rect key="frame" x="30" y="83" width="45.5" height="20"/>
+                                        <rect key="frame" x="30" y="83" width="47.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                         <color key="textColor" red="0.46650874609999998" green="0.46149063109999999" blue="0.52776950600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrS-Mp-fKY">
-                                        <rect key="frame" x="30" y="111" width="354" height="42"/>
+                                        <rect key="frame" x="30" y="112" width="354" height="42"/>
                                         <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="g7Y-NQ-mNX"/>
@@ -58,19 +58,19 @@
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwH-VM-BEe">
-                                        <rect key="frame" x="30" y="178" width="59.5" height="20"/>
+                                        <rect key="frame" x="30" y="179" width="62.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                         <color key="textColor" red="0.46650874609999998" green="0.46149063109999999" blue="0.52776950600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Computer Science, Physics, etc..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-CL-E47">
-                                        <rect key="frame" x="30" y="206" width="354" height="42"/>
+                                        <rect key="frame" x="30" y="208" width="354" height="42"/>
                                         <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmH-BU-WOf" userLabel="drag View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="114.5" y="16" width="185.5" height="7"/>
+                                        <rect key="frame" x="106" y="16" width="202.5" height="7"/>
                                         <color key="backgroundColor" red="0.89389103650000001" green="0.89796465640000001" blue="0.90614050629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="7" id="vKn-1m-RXA"/>
@@ -82,7 +82,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-81-dOg" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="373" width="300" height="40"/>
+                                        <rect key="frame" x="57" y="375" width="300" height="40"/>
                                         <color key="backgroundColor" name="uniTrack Blue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="dqS-Mk-4bc"/>
@@ -111,6 +111,18 @@
                                             <action selector="didTapDoneButton:" destination="pmO-HO-3UB" eventType="touchUpInside" id="jN0-Oo-0p7"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIM-YM-Gqc">
+                                        <rect key="frame" x="30" y="275" width="65" height="21"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                        <color key="textColor" red="0.46650874609999998" green="0.46149063109999999" blue="0.52776950600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="United States, Canada, Italy, ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-C7-zXN">
+                                        <rect key="frame" x="30" y="304" width="354" height="34"/>
+                                        <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -119,7 +131,10 @@
                                     <constraint firstItem="vU2-CL-E47" firstAttribute="top" secondItem="GwH-VM-BEe" secondAttribute="bottom" constant="8" id="EFI-oS-BEy"/>
                                     <constraint firstItem="jmH-BU-WOf" firstAttribute="width" secondItem="9n8-Pi-fwN" secondAttribute="width" id="Qb3-Su-4ch"/>
                                     <constraint firstItem="9n8-Pi-fwN" firstAttribute="top" secondItem="jmH-BU-WOf" secondAttribute="bottom" constant="6" id="SSc-HL-GZO"/>
+                                    <constraint firstItem="rg8-C7-zXN" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="VtV-HI-2CQ"/>
+                                    <constraint firstItem="rg8-C7-zXN" firstAttribute="top" secondItem="TIM-YM-Gqc" secondAttribute="bottom" constant="8" id="Xas-OW-tKq"/>
                                     <constraint firstItem="aMl-81-dOg" firstAttribute="top" secondItem="vU2-CL-E47" secondAttribute="bottom" constant="125" id="XbQ-my-ebA"/>
+                                    <constraint firstItem="rg8-C7-zXN" firstAttribute="width" secondItem="vU2-CL-E47" secondAttribute="width" id="ZAf-AR-Rfg"/>
                                     <constraint firstItem="3TI-UC-8CC" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="b1v-b7-pW1"/>
                                     <constraint firstItem="SrS-Mp-fKY" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="djc-TF-TsP"/>
                                     <constraint firstItem="9n8-Pi-fwN" firstAttribute="centerX" secondItem="uQ1-6y-25X" secondAttribute="centerX" id="ecW-3a-Lfe"/>
@@ -128,6 +143,8 @@
                                     <constraint firstItem="aMl-81-dOg" firstAttribute="centerX" secondItem="uQ1-6y-25X" secondAttribute="centerX" id="hNY-gF-GX9"/>
                                     <constraint firstItem="GwH-VM-BEe" firstAttribute="top" secondItem="SrS-Mp-fKY" secondAttribute="bottom" constant="25" id="hur-rT-zFT"/>
                                     <constraint firstItem="vU2-CL-E47" firstAttribute="height" secondItem="SrS-Mp-fKY" secondAttribute="height" id="kbA-EJ-ffH"/>
+                                    <constraint firstItem="TIM-YM-Gqc" firstAttribute="leading" secondItem="uQ1-6y-25X" secondAttribute="leading" constant="30" id="ldN-7o-qjf"/>
+                                    <constraint firstItem="TIM-YM-Gqc" firstAttribute="top" secondItem="vU2-CL-E47" secondAttribute="bottom" constant="25" id="njI-X5-Ln8"/>
                                     <constraint firstItem="jmH-BU-WOf" firstAttribute="top" secondItem="uQ1-6y-25X" secondAttribute="top" constant="16" id="p4x-F1-3Zp"/>
                                     <constraint firstItem="jmH-BU-WOf" firstAttribute="centerX" secondItem="uQ1-6y-25X" secondAttribute="centerX" id="xnc-di-X4Z"/>
                                     <constraint firstItem="SrS-Mp-fKY" firstAttribute="top" secondItem="3TI-UC-8CC" secondAttribute="bottom" constant="8" id="yTo-s0-iq2"/>
@@ -164,6 +181,7 @@
                     <connections>
                         <outlet property="cardView" destination="uQ1-6y-25X" id="Zu0-gV-Ktu"/>
                         <outlet property="cardViewTopCostraint" destination="fCl-ua-u5w" id="cbm-D4-k8P"/>
+                        <outlet property="countryField" destination="rg8-C7-zXN" id="iSm-4u-xIC"/>
                         <outlet property="courseField" destination="vU2-CL-E47" id="yWV-dw-WjV"/>
                         <outlet property="dimmerView" destination="pke-ox-Hbz" id="Cvj-cz-W2i"/>
                         <outlet property="doneButton" destination="aMl-81-dOg" id="dfb-V0-Ew9"/>

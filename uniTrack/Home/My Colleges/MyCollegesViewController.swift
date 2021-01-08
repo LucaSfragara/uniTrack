@@ -88,11 +88,13 @@ extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDa
 }
 
 extension MyCollegesViewController: doneButtonDelegate{
-    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String) {
+    
+    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String, country: Country) {
         
         guard let baseModel = universityChosen else {return}
         
-        let university = University(name: name, course: course, reachType: nil, baseModel: baseModel, deadlines: nil)
+        let university = University(name: name, course: course, countryIsoCode: country.isoCountryCode, reachType: nil, baseModel: baseModel)
+        
         PersistantService.saveContext()
         self.universities?.insert(university, at: 0)
         self.CollegesCollectioView.reloadData()

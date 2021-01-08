@@ -3,12 +3,12 @@
     <entity name="Deadline" representedClassName="Deadline" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="deadlines" inverseEntity="University"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="todos" inverseEntity="University"/>
     </entity>
     <entity name="University" representedClassName="University" syncable="YES">
         <attribute name="course" optional="YES" attributeType="String"/>
@@ -18,8 +18,8 @@
         <attribute name="photo" optional="YES" attributeType="String"/>
         <attribute name="reachType" optional="YES" attributeType="String"/>
         <relationship name="baseModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UniversityFromData"/>
-        <relationship name="deadlines" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Deadline"/>
-        <relationship name="todos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task"/>
+        <relationship name="deadlines" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Deadline" inverseName="university" inverseEntity="Deadline"/>
+        <relationship name="todos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task" inverseName="university" inverseEntity="Task"/>
     </entity>
     <entity name="UniversityFromData" representedClassName="UniversityFromData" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>

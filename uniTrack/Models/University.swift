@@ -27,6 +27,16 @@ public class University: NSManagedObject{
     @NSManaged var deadlines: NSSet?
     @NSManaged var todos: NSSet?
     
+    var country: Country?{
+        get{
+            return Utilities.countryList().first(where: {$0.isoCountryCode == self.isoCountryCode})
+        }
+        set{
+            guard let newISOCountryCode = newValue?.isoCountryCode else{return}
+            self.isoCountryCode = newISOCountryCode
+        }
+    }
+    
     func getDeadlines() -> [Deadline]?{
         
         guard let deadlinesArray = deadlines?.allObjects as? [Deadline] else{

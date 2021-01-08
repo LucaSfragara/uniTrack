@@ -23,7 +23,7 @@ class Utilities{
         return alert
     }
     
-    static func getCountryList() -> [Country]{
+    static func countryList() -> [Country]{
         
         var countries: [Country] = []
         for code in NSLocale.isoCountryCodes  {

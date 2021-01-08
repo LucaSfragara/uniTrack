@@ -104,7 +104,7 @@ class CollegeDetailViewController: UIViewController {
         self.title = university.name
         nameLabel.text = university.name
         courseLabel.text = university.course
-        countryLabel.text = "US"
+        countryLabel.text = university.country?.name
         stateLabel.text = university.baseModel?.state
         populationLabel.text = university.baseModel?.population ?? "na"
         reachTypeLabel.text = university.reachType

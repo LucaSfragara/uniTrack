@@ -20,16 +20,16 @@ class AddCollegeViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var courseField: UITextField!
-
+    @IBOutlet weak var countryField: UITextField!
+    
     @IBOutlet weak var doneButton: DesignableButton!
     
     
     
     private var universityChosen: UniversityFromData?
-
-    var delegate: doneButtonDelegate?
+    private var countryChosen: Country?
     
-   
+    var delegate: doneButtonDelegate?
     
     var cardPanStartingTopConstant : CGFloat = 0.0
     
@@ -43,6 +43,8 @@ class AddCollegeViewController: UIViewController {
         //fetchedResultController?.delegate = self
         
         nameField.addTarget(self, action: #selector(handleTextChanged), for: .editingChanged)
+        countryField.addTarget(self, action: #selector(handleCountryTextChanged), for: .editingChanged)
+        
         
         cardView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
@@ -58,16 +60,27 @@ class AddCollegeViewController: UIViewController {
         
     }
     
+    @objc private func handleCountryTextChanged(){
+        
+        guard let text = countryField.text else{return}
+        
+        let filteredCountries = Utilities.countryList().filter{
+            $0.name.lowercased().contains(text.lowercased())
+        }
+        
+        handleCountryDropDownMenu(data: filteredCountries)
+    }
     
     @IBAction func didTapDoneButton(_ sender: Any) {
     
-        if let delegate = self.delegate, let course = self.courseField.text, let name = self.nameField.text{
-            delegate.doneButtonPressed(name: name, universityChosen: universityChosen, course: course)
-            hideCard()
-        }
-        
-        
-        
+        guard let delegate = self.delegate,
+           let course = self.courseField.text, course.isEmpty == false,
+           let name = self.nameField.text, name.isEmpty == false,
+           let country = self.countryChosen
+           else {return}
+           
+        delegate.doneButtonPressed(name: name, universityChosen: universityChosen, course: course, country: country)
+        hideCard()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,13 +155,33 @@ class AddCollegeViewController: UIViewController {
     
         do {
             let result = try PersistantService.context.fetch(fetchRequest)
-            handleDropDownMenu(data: result)
+            handleUniversityDropDownMenu(data: result)
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    private func handleDropDownMenu(data: [UniversityFromData]){
+    private func handleCountryDropDownMenu(data: [Country]){
+        
+        let datasource = data.map{"\($0.flag ?? "") \($0.name)"}
+        let dropDown = DropDown()
+        
+        dropDown.dataSource = datasource
+        
+        dropDown.selectionAction = { [weak self] (index: Int, item : String) in
+            self?.countryField.text = data[index].name
+            self?.countryChosen = data[index]
+        }
+        
+        dropDown.anchorView = countryField
+        dropDown.direction = .bottom
+        dropDown.cornerRadius = 10
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.show()
+
+    }
+    
+    private func handleUniversityDropDownMenu(data: [UniversityFromData]){
         
         var universityNames = [String]()
         for university in data{
@@ -234,6 +267,7 @@ extension AddCollegeViewController{
 
 protocol doneButtonDelegate{
     
-    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String)
+    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String, country: Country)
+    
 }
 

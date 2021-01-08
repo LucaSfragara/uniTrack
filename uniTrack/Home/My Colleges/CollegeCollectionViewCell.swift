@@ -15,7 +15,7 @@ class CollegeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var reachLabel: UILabel!
     @IBOutlet weak private var locationLabel: UILabel!
     @IBOutlet weak private var deadlinesLabel: UILabel!
-    
+
     func setup(university: University){
         
         let baseModel = university.baseModel
