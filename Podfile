@@ -4,7 +4,7 @@
 target 'uniTrack' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SimpleCheckbox'
+  pod 'M13Checkbox'
   pod 'DropDown'
   # Pods for uniTrack
 

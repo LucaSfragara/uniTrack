@@ -190,13 +190,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
             let cell = tasksCollectionView.dequeueReusableCell(withReuseIdentifier: "detailTodosCellID", for: indexPath) as! DetailTodosCollectionViewCell
     
             if let task = university?.getTodos()?[indexPath.row] {
-                cell.setup(task: task){ isChecked in
-                    if isChecked {
-                        
-                    }else{
-                        
-                    }
-                }
+                cell.setup(task: task)
             }
             return cell
         }

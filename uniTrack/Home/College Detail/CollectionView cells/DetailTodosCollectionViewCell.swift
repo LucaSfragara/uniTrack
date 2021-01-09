@@ -6,43 +6,80 @@
 //
 
 import UIKit
-import SimpleCheckbox
+import M13Checkbox
 
 class DetailTodosCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var mainView: DesignableView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: StrikethroughLabel!
     @IBOutlet weak var secondaryLabel: UILabel!
-    @IBOutlet weak var checkbox: Checkbox!
+    @IBOutlet weak var checkbox: M13Checkbox!
+    
+    var titleAttributeString: NSMutableAttributedString?
+    
+    var task: Task?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupCheckbox()
-        mainView.backgroundColor = randomColor()
+        mainView.backgroundColor = UIColor(named: "uniTrack Light Blue")
     }
     
-    func setup(task: Task, completion: @escaping (Bool) ->()){ //replace parameters with task object
+    func setup(task: Task){ //replace parameters with task object
+        self.task = task
         self.titleLabel.text = task.title
         self.secondaryLabel.text = task.text
-        checkbox.valueChanged = {(isChecked) in
-            if isChecked{
-                completion(true)
-            }else{
-                completion(false)
-            }
+        titleAttributeString =  NSMutableAttributedString(string: task.title)
+        
+        if task.isCompleted {
+            checkbox.setCheckState(.checked, animated: false)
+            titleAttributeString!.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, titleAttributeString!.length))
+            self.titleLabel.attributedText = titleAttributeString
+            
+        }else{
+            checkbox.setCheckState(.unchecked, animated: false)
+            checkbox.isSelected = false
+            self.titleLabel.text = task.title
         }
+        
+
     }
+    @objc private func didPressCheckbox(sender: M13Checkbox){
+        
+        titleAttributeString!.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSMakeRange(0, titleAttributeString!.length))
+        self.titleLabel.attributedText = titleAttributeString
+
+        switch sender.value as! Bool{
+        case true:
+            self.titleLabel.strikeThroughText()
+            task?.isCompleted = true
+            
+        case false:
+            self.titleLabel.hideStrikeTextLayer()
+            task?.isCompleted = false
+        }
+        DataManager.shared.saveToPersistantStore()
+    }
+    
     
     private func setupCheckbox(){
         
-        checkbox.checkedBorderColor = .black
-        checkbox.uncheckedBorderColor = .black
-        checkbox.borderStyle = .square
-        checkbox.checkmarkStyle = .tick
-        checkbox.checkmarkSize = 0.6
-        checkbox.checkmarkColor = .black
-        checkbox.borderCornerRadius = 3
+        checkbox.addTarget(self, action: #selector(didPressCheckbox(sender:)), for: .valueChanged)
+        
+        checkbox.checkedValue = true
+        checkbox.uncheckedValue = false
+        
+        checkbox.boxType = .square
+        checkbox.markType = .checkmark
+        checkbox.checkmarkLineWidth = 2.0
+        
+        checkbox.cornerRadius = 4
+        checkbox.boxLineWidth = 2.0
+        checkbox.backgroundColor = UIColor(named: "uniTrack Light Blue")
+        
+        checkbox.stateChangeAnimation = .stroke
+        
     }
     
     private func randomColor() -> UIColor{

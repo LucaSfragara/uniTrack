@@ -53,6 +53,7 @@
 		AC7749DF259D3DCE0057BF88 /* CollegeEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7749DE259D3DCE0057BF88 /* CollegeEditViewController.swift */; };
 		AC7749E2259D4A8C0057BF88 /* OptionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7749E1259D4A8C0057BF88 /* OptionSelectionView.swift */; };
 		AC7749E6259D4ACC0057BF88 /* OptionSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7749E5259D4ACC0057BF88 /* OptionSelectionView.xib */; };
+		AC85976225A9F64000B1E0A9 /* StrikeThroughLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85976125A9F64000B1E0A9 /* StrikeThroughLabel.swift */; };
 		AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */; };
 		ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */; };
 		ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */; };
@@ -116,6 +117,7 @@
 		AC7749DE259D3DCE0057BF88 /* CollegeEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeEditViewController.swift; sourceTree = "<group>"; };
 		AC7749E1259D4A8C0057BF88 /* OptionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectionView.swift; sourceTree = "<group>"; };
 		AC7749E5259D4ACC0057BF88 /* OptionSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionSelectionView.xib; sourceTree = "<group>"; };
+		AC85976125A9F64000B1E0A9 /* StrikeThroughLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeThroughLabel.swift; sourceTree = "<group>"; };
 		AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
 		ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableViewController.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			children = (
 				ACDC6D60254E1DC10037DF45 /* DesignableButton.swift */,
 				ACDC6D61254E1DC10037DF45 /* DesignableView.swift */,
+				AC85976125A9F64000B1E0A9 /* StrikeThroughLabel.swift */,
 			);
 			path = "Style Classes";
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
 				AC7749E2259D4A8C0057BF88 /* OptionSelectionView.swift in Sources */,
 				AC024F46258D65C500790FD8 /* TaskDetailViewController.swift in Sources */,
+				AC85976225A9F64000B1E0A9 /* StrikeThroughLabel.swift in Sources */,
 				AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */,
 				AC1792DF2586BD8900AEE111 /* Task.swift in Sources */,
 				AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */,

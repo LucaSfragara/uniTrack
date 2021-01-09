@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,9 +11,6 @@
     <customFonts key="customFonts">
         <array key="Inter-Regular-slnt=0.ttf">
             <string>Inter-Regular</string>
-        </array>
-        <array key="Inter-SemiBold-slnt=0.ttf">
-            <string>Inter-SemiBold</string>
         </array>
     </customFonts>
     <objects>
@@ -30,28 +27,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="X8W-tE-hDH">
-                                <rect key="frame" x="40" y="25" width="199.5" height="50"/>
+                                <rect key="frame" x="40" y="24.5" width="210" height="51.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Essay Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYv-9I-Ugs">
-                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Essay Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYv-9I-Ugs" customClass="StrikethroughLabel" customModule="uniTrack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="21"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Information on website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gK-6p-Lqj">
-                                        <rect key="frame" x="0.0" y="31" width="199.5" height="19"/>
+                                        <rect key="frame" x="0.0" y="32" width="210" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-fA-wT8" customClass="Checkbox" customModule="SimpleCheckbox">
-                                <rect key="frame" x="351" y="38" width="24" height="24"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-fA-wT8" customClass="M13Checkbox" customModule="M13Checkbox">
+                                <rect key="frame" x="345" y="35" width="30" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="RZ0-MM-PvD"/>
-                                    <constraint firstAttribute="width" constant="24" id="pV0-TV-d8t"/>
+                                    <constraint firstAttribute="height" constant="30" id="RZ0-MM-PvD"/>
+                                    <constraint firstAttribute="width" constant="30" id="pV0-TV-d8t"/>
                                 </constraints>
                             </view>
                         </subviews>
