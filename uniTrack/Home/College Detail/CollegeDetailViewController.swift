@@ -33,19 +33,20 @@ class CollegeDetailViewController: UIViewController {
     weak var university: University?
     private var cardState: cardState!
     
+    private var lastCVHeight: CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //get costraint initial(maximum) values
         initialCollectionViewsHeight = InitialCollectionViewsHeight(deadlines: deadlineCollectionViewHeight.constant, tasks: tasksCollectionViewHeight.constant)
-        observeCollectionView()
+        //observeCollectionView()
         
         deadlinesCollectionView.delegate = self
         deadlinesCollectionView.dataSource = self
         
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
-        
         
         guard let university = university else{
             return 
@@ -58,7 +59,8 @@ class CollegeDetailViewController: UIViewController {
     }
     
     deinit {
-        CVcontentSizeObservation?.forEach({$0.invalidate()})
+        print("Byeee")
+        // CVcontentSizeObservation?.forEach({$0.invalidate()})
     }
     
     private func observeCollectionView(){
@@ -68,11 +70,19 @@ class CollegeDetailViewController: UIViewController {
             deadlinesCollectionView.observe(\.contentSize, options: .new, changeHandler: {[weak self] (cv, _) in
                 
                 guard let self = self else { return }
+                
+                if let collectionViewHeight = self.lastCVHeight{
+                    self.deadlineCollectionViewHeight.constant = collectionViewHeight
+                    cv.layoutIfNeeded()
+                    self.view.layoutIfNeeded()
                     
-                if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.deadlines{
-                    
-                    self.deadlineCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
-                    
+                    self.lastCVHeight = nil
+                }else{
+                    if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.deadlines{
+                        
+                        self.deadlineCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
+                        self.view.layoutIfNeeded()
+                    }
                 }
             }),
             
@@ -89,7 +99,17 @@ class CollegeDetailViewController: UIViewController {
         
     }
     
+    private func fixCollectionviews(){
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        lastCVHeight = deadlineCollectionViewHeight.constant
+
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(true)
         
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){[weak self] result in
@@ -97,7 +117,7 @@ class CollegeDetailViewController: UIViewController {
             case .success(let universities):
                 guard universities.isEmpty == false else{return}
                 self?.university = universities[0]
-                print(self?.university?.course)
+
             case .failure(let error):
                 //TODO:  TODO: handle error
                 print(error)
@@ -115,9 +135,7 @@ class CollegeDetailViewController: UIViewController {
         stateLabel.text = university.baseModel?.state
         populationLabel.text = university.baseModel?.population ?? "na"
         reachTypeLabel.text = university.reachType
-
         
-       
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {
@@ -126,10 +144,19 @@ class CollegeDetailViewController: UIViewController {
     }
     
     @IBAction func didPressLinkButton(_ sender: Any){
+        let webViewVC = WebViewController(url: URL(string: "https://www.apple.com")!)
         
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromTop
+        navigationController?.view.layer.add(transition, forKey: nil)
+        self.navigationController?.pushViewController(webViewVC, animated: true)
     }
     
     @IBAction func didTapAddDeadline(_ sender: Any) {
+    
         let addDeadlineVC = AddDeadlineViewController()
         addDeadlineVC.delegate = self
         addDeadlineVC.modalPresentationStyle = .overFullScreen
@@ -137,6 +164,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     @IBAction func didTapAddTask(_ sender: Any) {
+
         let addTaskVC = AddTaskViewController()
         addTaskVC.delegate = self
         addTaskVC.modalPresentationStyle = .overFullScreen
@@ -200,6 +228,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == deadlinesCollectionView{ //deadline collectionview
             //fixCollectionViewHeight()
             return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/3))
+            //return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height))
         }else{ //todos collection view
             return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2))
         }

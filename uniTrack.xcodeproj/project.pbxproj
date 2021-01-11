@@ -30,6 +30,7 @@
 		AC317E43253F86B000DADF91 /* UniversityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E42253F86B000DADF91 /* UniversityStore.swift */; };
 		AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E45253F8DBF00DADF91 /* PersistantService.swift */; };
 		AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */; };
+		AC58498925ACF80D008AC030 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58498825ACF80D008AC030 /* WebViewController.swift */; };
 		AC59FE63254A23E700032322 /* Inter-Black-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5A2548552A00032322 /* Inter-Black-slnt=0.ttf */; };
 		AC59FE64254A23E700032322 /* Inter-Bold-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE582548552A00032322 /* Inter-Bold-slnt=0.ttf */; };
 		AC59FE65254A23E700032322 /* Inter-ExtraBold-slnt=0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC59FE5E2548552A00032322 /* Inter-ExtraBold-slnt=0.ttf */; };
@@ -94,6 +95,7 @@
 		AC317E42253F86B000DADF91 /* UniversityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStore.swift; sourceTree = "<group>"; };
 		AC317E45253F8DBF00DADF91 /* PersistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantService.swift; sourceTree = "<group>"; };
 		AC4B990725484240005000B4 /* UpComingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC58498825ACF80D008AC030 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AC59FE582548552A00032322 /* Inter-Bold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE592548552A00032322 /* Inter-ExtraLight-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight-slnt=0.ttf"; sourceTree = "<group>"; };
 		AC59FE5A2548552A00032322 /* Inter-Black-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black-slnt=0.ttf"; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		AC4B990625484200005000B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AC58498725ACF7E3008AC030 /* Common */,
 				ACC74C492587A6AD00AF1254 /* Helpers */,
 				AC71C0882588107F0016AD68 /* Add task */,
 				AC71C086258810670016AD68 /* Add deadline */,
@@ -273,6 +276,14 @@
 				AC024F3B258D637C00790FD8 /* Dashboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		AC58498725ACF7E3008AC030 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AC58498825ACF80D008AC030 /* WebViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		AC59FE572548551400032322 /* Fonts */ = {
@@ -552,6 +563,7 @@
 				AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */,
 				ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */,
 				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
+				AC58498925ACF80D008AC030 /* WebViewController.swift in Sources */,
 				AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */,
 				ACD2D5C7258ECA1500619BD4 /* Utilities.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
