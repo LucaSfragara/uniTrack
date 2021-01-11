@@ -18,7 +18,7 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet private weak var stateLabel: UILabel!
     @IBOutlet private weak var populationLabel: UILabel!
     @IBOutlet private weak var reachTypeLabel: UILabel!
-    @IBOutlet weak var linkButton: UIButton!
+    @IBOutlet weak var linkButton: DesignableButton!
     
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
     @IBOutlet private weak var tasksCollectionView: UICollectionView!
@@ -136,6 +136,11 @@ class CollegeDetailViewController: UIViewController {
         populationLabel.text = university.baseModel?.population ?? "na"
         reachTypeLabel.text = university.reachType
         
+        if university.URL != nil {
+            linkButton.enableButton()
+        }else{
+            linkButton.disableButton()
+        }
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {
@@ -144,7 +149,9 @@ class CollegeDetailViewController: UIViewController {
     }
     
     @IBAction func didPressLinkButton(_ sender: Any){
-        let webViewVC = WebViewController(url: URL(string: "https://www.apple.com")!)
+        
+        guard let URLToOpen = university?.URL else{return}
+        let webViewVC = WebViewController(url: URLToOpen)
         
         let transition = CATransition()
         transition.duration = 0.5

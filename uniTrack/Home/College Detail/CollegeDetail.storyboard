@@ -180,7 +180,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck2-KT-vdG">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck2-KT-vdG" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
                                                                         <rect key="frame" x="186" y="0.0" width="137" height="30"/>
                                                                         <state key="normal" image="Link Icon"/>
                                                                         <connections>
@@ -644,6 +644,9 @@
     <designables>
         <designable name="2rY-GN-QX2">
             <size key="intrinsicContentSize" width="30" height="32"/>
+        </designable>
+        <designable name="ck2-KT-vdG">
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
     </designables>
     <resources>

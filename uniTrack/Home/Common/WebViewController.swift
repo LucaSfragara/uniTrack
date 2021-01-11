@@ -27,10 +27,12 @@ class WebViewController: UIViewController {
         super.viewWillAppear(false)
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = true
         
     }
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         
     }
     

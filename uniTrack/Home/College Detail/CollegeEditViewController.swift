@@ -37,6 +37,7 @@ class CollegeEditViewController: UIViewController {
         stateField.text = university?.baseModel?.state
         populationField.text = university?.baseModel?.population
         schoolTypeSelectorView.selectedOption = (university?.reachType).map { University.ReachType(rawValue: $0)!}
+        linkField.text = university?.link
         
         countryField.addTarget(self, action: #selector(handleCountryTextChanged), for: .editingChanged)
         
@@ -61,7 +62,9 @@ class CollegeEditViewController: UIViewController {
                          newReachType: schoolTypeSelectorView.selectedOption,
                          newPopulation: Int(populationField.text ?? "a"),
                          newState: stateField.text,
-                         newCountry: country){[weak self] result in //a make the Int conversion return nil, hence the value is not updated
+                         newCountry: country,
+                         newLink: linkField.text
+        ){[weak self] result in //a make the Int conversion return nil, hence the value is not updated
             
             switch result{
             case .success(let updatedUniversity):
@@ -135,6 +138,7 @@ class CollegeEditViewController: UIViewController {
                                   newPopulation population: Int?,
                                   newState state: String?,
                                   newCountry country: Country,
+                                  newLink link: String?,
                                   completion: @escaping (Result<University, PersistantStoreError>) -> ()){
         
         guard let university = self.university else{return}
@@ -145,7 +149,8 @@ class CollegeEditViewController: UIViewController {
             "reachtype": reachType,
             "population" : population,
             "state" : state,
-            "isoCountryCode": country.isoCountryCode
+            "isoCountryCode": country.isoCountryCode,
+            "link": link
         ], completion: completion)
     }
     

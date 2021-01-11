@@ -195,6 +195,7 @@ extension DataManager{
         for (key, value) in updateValues{
             
             guard value != nil else{continue} //Do not change attribute if value is nil
+            
             switch key{
             case "name":
                 
@@ -221,6 +222,24 @@ extension DataManager{
                 }
                 universityToUpdate.reachType = newReachType.rawValue
                 
+            
+            case "link":
+                
+                guard let newLink = value as? String else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                
+                if newLink.isEmpty{
+                    universityToUpdate.URL = nil
+                    break
+                }
+                guard let newURL = URL(string: newLink) else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                
+                universityToUpdate.URL = newURL
                 
             //EDITS on base model
             

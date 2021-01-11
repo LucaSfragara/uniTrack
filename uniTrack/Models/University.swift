@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 @objc(University)
 
@@ -22,10 +23,21 @@ public class University: NSManagedObject{
     @NSManaged var photo: String
     @NSManaged var dateOfAdd: Date
     @NSManaged var isoCountryCode: String
+    @NSManaged var link: String?
     
     @NSManaged var baseModel: UniversityFromData?
     @NSManaged var deadlines: NSSet?
     @NSManaged var todos: NSSet?
+    
+    var URL: URL?{
+        get{
+            guard let link = link else {return nil}
+            return Foundation.URL(string: link)
+        }
+        set{
+            self.link = newValue?.absoluteString
+        }
+    }
     
     var country: Country?{
         get{
