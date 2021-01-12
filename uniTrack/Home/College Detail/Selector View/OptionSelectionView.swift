@@ -72,15 +72,27 @@ class OptionSelectionView: UIView {
 extension OptionSelectionView{
     
     @IBAction private func didTapFirstView(_ gestureRecognizer: UITapGestureRecognizer){
+        if selectedOption == .safety{
+            selectedOption = nil
+            return
+        }
         selectedOption = .safety
 
     }
     
     @IBAction private func didTapSecondView(_ gestureRecognizer: UITapGestureRecognizer){
+        if selectedOption == .match{
+            selectedOption = nil
+            return
+        }
         selectedOption = .match
     }
     
     @IBAction private func didTapThirdView(_ gestureRecognizer: UITapGestureRecognizer){
+        if selectedOption == .target{
+            selectedOption = nil
+            return
+        }
         selectedOption = .target
     }
 }

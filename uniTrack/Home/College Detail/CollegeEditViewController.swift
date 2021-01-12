@@ -28,9 +28,7 @@ class CollegeEditViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Edit University"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPressed))
-        
         countryChosen = university?.country
-        
         nameField.text = university?.name
         courseField.text = university?.course
         countryField.text = "\(university?.country?.flag ?? "") \(university?.country?.isoCountryCode ?? "")"
@@ -56,7 +54,7 @@ class CollegeEditViewController: UIViewController {
     @objc func doneButtonPressed(){
         
         guard let name = nameField.text, let course = courseField.text,  let country = countryChosen else {return}
-                
+        print(schoolTypeSelectorView.selectedOption)
         updateUniversity(newName: name,
                          newCourse: course,
                          newReachType: schoolTypeSelectorView.selectedOption,

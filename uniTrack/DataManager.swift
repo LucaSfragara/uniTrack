@@ -194,7 +194,7 @@ extension DataManager{
         
         for (key, value) in updateValues{
             
-            guard value != nil else{continue} //Do not change attribute if value is nil
+            //guard value != nil else{continue} //Do not change attribute if value is nil
             
             switch key{
             case "name":
@@ -216,12 +216,17 @@ extension DataManager{
             
             case "reachtype":
                 
+                guard value != nil else{
+                    universityToUpdate.reachType = nil
+                    continue
+                }
+                
                 guard let newReachType = value as? University.ReachType else{
                     completion(.failure(.updateValueNotValid))
                     return
                 }
                 universityToUpdate.reachType = newReachType.rawValue
-                
+
             
             case "link":
                 
@@ -244,7 +249,9 @@ extension DataManager{
             //EDITS on base model
             
             case "population":
-                
+                guard value != nil else{
+                    continue
+                }
                 guard let newPopulation = value as? Int else{
                     completion(.failure(.updateValueNotValid))
                     return
@@ -261,6 +268,10 @@ extension DataManager{
             universityToUpdate.isoCountryCode = newIsoCode
                     
             case "state":
+                
+                guard value != nil else{
+                    continue
+                }
                 
                 guard let newState = value as? String else{
                     completion(.failure(.updateValueNotValid))

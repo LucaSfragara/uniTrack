@@ -59,8 +59,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     deinit {
-        print("Byeee")
-        // CVcontentSizeObservation?.forEach({$0.invalidate()})
+         CVcontentSizeObservation?.forEach({$0.invalidate()})
     }
     
     private func observeCollectionView(){
@@ -135,7 +134,7 @@ class CollegeDetailViewController: UIViewController {
         stateLabel.text = university.baseModel?.state
         populationLabel.text = university.baseModel?.population ?? "na"
         reachTypeLabel.text = university.reachType
-        
+        print(university.reachType)
         if university.URL != nil {
             linkButton.enableButton()
         }else{
