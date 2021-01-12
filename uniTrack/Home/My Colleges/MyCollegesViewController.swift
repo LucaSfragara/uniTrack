@@ -13,11 +13,18 @@ class MyCollegesViewController: UIViewController {
     @IBOutlet private weak var CollegesCollectioView: UICollectionView!
     
     var universities: [University]?
+    var searchController: UISearchController?
+    
+    private var isSearchBarEmpty: Bool{
+        return searchController?.searchBar.text?.isEmpty ?? true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         CollegesCollectioView.delegate = self
         CollegesCollectioView.dataSource = self
+        setUpSearchController()
+       
     
     }
     
@@ -47,12 +54,45 @@ class MyCollegesViewController: UIViewController {
         present(addCollegeVC, animated: false, completion: nil)
     }
     
+    private func setUpSearchController(){
+        searchController = UISearchController(searchResultsController: nil)
+        searchController?.searchResultsUpdater = self
+        searchController?.obscuresBackgroundDuringPresentation = false
+        
+        searchController?.searchBar.placeholder = "Search in My Colleges"
+        navigationItem.searchController = searchController
+        
+        definesPresentationContext = true
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+}
+
+//MARK: Search controller delegate
+extension MyCollegesViewController: UISearchResultsUpdating{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        let searchText = isSearchBarEmpty ? nil : searchController.searchBar.text
+        
+        DataManager.shared.getUniversities(withNameContaining: searchText){[weak self] result in
+            switch result {
+            case .failure(let error):
+                //TODO: handle error appropriately
+                print(error)
+            case .success(let universities):
+                self?.universities = universities
+                self?.CollegesCollectioView.reloadData()
+            }
+        }
+        
+    }
+    
+    
 }
 
 //MARK: CollectionView delegate and datasource
