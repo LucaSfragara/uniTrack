@@ -23,7 +23,7 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
     @IBOutlet private weak var tasksCollectionView: UICollectionView!
     
-    @IBOutlet weak var deadlineCollectionViewHeight: NSLayoutConstraint!
+   // @IBOutlet weak var deadlineCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tasksCollectionViewHeight: NSLayoutConstraint!
     
     private var CVcontentSizeObservation: [NSKeyValueObservation]?
@@ -37,9 +37,10 @@ class CollegeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController?.pushViewController(NotesViewController(), animated: true)
         
         //get costraint initial(maximum) values
-        initialCollectionViewsHeight = InitialCollectionViewsHeight(deadlines: deadlineCollectionViewHeight.constant, tasks: tasksCollectionViewHeight.constant)
+        //initialCollectionViewsHeight = InitialCollectionViewsHeight(deadlines: deadlineCollectionViewHeight.constant, tasks: tasksCollectionViewHeight.constant)
         //observeCollectionView()
         
         deadlinesCollectionView.delegate = self
@@ -71,7 +72,7 @@ class CollegeDetailViewController: UIViewController {
                 guard let self = self else { return }
                 
                 if let collectionViewHeight = self.lastCVHeight{
-                    self.deadlineCollectionViewHeight.constant = collectionViewHeight
+                    //self.deadlineCollectionViewHeight.constant = collectionViewHeight
                     cv.layoutIfNeeded()
                     self.view.layoutIfNeeded()
                     
@@ -79,7 +80,7 @@ class CollegeDetailViewController: UIViewController {
                 }else{
                     if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.deadlines{
                         
-                        self.deadlineCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
+                       // self.deadlineCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
                         self.view.layoutIfNeeded()
                     }
                 }
@@ -103,7 +104,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        lastCVHeight = deadlineCollectionViewHeight.constant
+        //lastCVHeight = deadlineCollectionViewHeight.constant
 
     }
     
@@ -123,6 +124,8 @@ class CollegeDetailViewController: UIViewController {
             }
             self?.tasksCollectionView.reloadData()
             self?.deadlinesCollectionView.reloadData()
+            self?.deadlinesCollectionView.invalidateIntrinsicContentSize()
+            self?.deadlinesCollectionView.layoutIfNeeded()
         }
         
         guard let university = university else{return}
@@ -362,8 +365,9 @@ extension CollegeDetailViewController: addDeadlineButtonDelegate{
         university.addDeadline(newDeadline)
         PersistantService.saveContext()
 //        fixCollectionViewHeight()
-        self.view.layoutIfNeeded()
         deadlinesCollectionView.reloadData()
+        self.deadlinesCollectionView.layoutIfNeeded()
+        deadlinesCollectionView.invalidateIntrinsicContentSize()
     }
 }
 

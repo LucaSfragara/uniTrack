@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		AC024F4C258D65D900790FD8 /* DeadlineDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */; };
 		AC024F55258D793800790FD8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F54258D793800790FD8 /* DataManager.swift */; };
 		AC024F59258D79A900790FD8 /* CrudStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC024F58258D79A900790FD8 /* CrudStrategy.swift */; };
+		AC0819DD25AE530B00DDF916 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0819DB25AE530B00DDF916 /* NotesViewController.swift */; };
+		AC0819DE25AE530B00DDF916 /* NotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC0819DC25AE530B00DDF916 /* NotesViewController.xib */; };
+		AC0819E925AE59CA00DDF916 /* Proton in Frameworks */ = {isa = PBXBuildFile; productRef = AC0819E825AE59CA00DDF916 /* Proton */; };
 		AC1792CC2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */; };
 		AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */; };
 		AC1792D425869D1400AEE111 /* DetailTodosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */; };
@@ -77,6 +80,8 @@
 		AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeadlineDetailViewController.xib; sourceTree = "<group>"; };
 		AC024F54258D793800790FD8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC024F58258D79A900790FD8 /* CrudStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudStrategy.swift; sourceTree = "<group>"; };
+		AC0819DB25AE530B00DDF916 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		AC0819DC25AE530B00DDF916 /* NotesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesViewController.xib; sourceTree = "<group>"; };
 		AC1792CA2584CB0100AEE111 /* DetailDeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC1792D125869D1400AEE111 /* DetailTodosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodosCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTodosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0819E925AE59CA00DDF916 /* Proton in Frameworks */,
 				73054726AF2A105DA5440BDA /* Pods_uniTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +197,14 @@
 				AC024F4A258D65D900790FD8 /* DeadlineDetailViewController.xib */,
 			);
 			path = "Deadline Detail";
+			sourceTree = "<group>";
+		};
+		AC0819DA25AE52F100DDF916 /* Notes  */ = {
+			isa = PBXGroup;
+			children = (
+				AC0819DC25AE530B00DDF916 /* NotesViewController.xib */,
+			);
+			path = "Notes ";
 			sourceTree = "<group>";
 		};
 		AC1792C92584CAC800AEE111 /* CollectionView cells */ = {
@@ -315,6 +329,8 @@
 		AC69E92D256C68B300D64083 /* College Detail */ = {
 			isa = PBXGroup;
 			children = (
+				AC0819DB25AE530B00DDF916 /* NotesViewController.swift */,
+				AC0819DA25AE52F100DDF916 /* Notes  */,
 				AC024F3E258D653D00790FD8 /* Task Detail */,
 				AC024F4E258D65E100790FD8 /* Deadline Detail */,
 				AC1792C92584CAC800AEE111 /* CollectionView cells */,
@@ -428,6 +444,9 @@
 			dependencies = (
 			);
 			name = uniTrack;
+			packageProductDependencies = (
+				AC0819E825AE59CA00DDF916 /* Proton */,
+			);
 			productName = uniTrack;
 			productReference = AC317E12253E107B00DADF91 /* uniTrack.app */;
 			productType = "com.apple.product-type.application";
@@ -455,6 +474,9 @@
 				Base,
 			);
 			mainGroup = AC317E09253E107B00DADF91;
+			packageReferences = (
+				AC0819E725AE59CA00DDF916 /* XCRemoteSwiftPackageReference "proton" */,
+			);
 			productRefGroup = AC317E13253E107B00DADF91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -477,6 +499,7 @@
 				AC7749E6259D4ACC0057BF88 /* OptionSelectionView.xib in Resources */,
 				AC59FE67254A23E700032322 /* Inter-Light-slnt=0.ttf in Resources */,
 				AC5B228825A12DBE00E3EA94 /* OptionSelectionSingleView.xib in Resources */,
+				AC0819DE25AE530B00DDF916 /* NotesViewController.xib in Resources */,
 				AC59FE68254A23E700032322 /* Inter-Medium-slnt=0.ttf in Resources */,
 				AC59FE69254A23E700032322 /* Inter-Regular-slnt=0.ttf in Resources */,
 				AC59FE6A254A23E700032322 /* Inter-SemiBold-slnt=0.ttf in Resources */,
@@ -553,6 +576,7 @@
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
 				ACD2D5CA258ED06300619BD4 /* DetailEditViewController.swift in Sources */,
+				AC0819DD25AE530B00DDF916 /* NotesViewController.swift in Sources */,
 				ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */,
 				ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */,
 				AC71C08C258810CC0016AD68 /* AddDeadlineViewController.swift in Sources */,
@@ -783,6 +807,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC0819E725AE59CA00DDF916 /* XCRemoteSwiftPackageReference "proton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rajdeep/proton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC0819E825AE59CA00DDF916 /* Proton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC0819E725AE59CA00DDF916 /* XCRemoteSwiftPackageReference "proton" */;
+			productName = Proton;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AC317E3D253F85A100DADF91 /* UniTrack.xcdatamodeld */ = {

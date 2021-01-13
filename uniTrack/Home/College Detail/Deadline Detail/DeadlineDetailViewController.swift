@@ -59,7 +59,7 @@ class DeadlineDetailViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         //This makes the collegeDetailViewController fetch the university with the updated task
         //Not needed anymore cause of VC being pushed rather than presented
-       // self.presentingViewController?.viewWillAppear(true)
+       self.presentingViewController?.viewWillAppear(true)
     }
     
     @objc func mainButtonPressed(){ //this can either be 'Edit' or 'Done'

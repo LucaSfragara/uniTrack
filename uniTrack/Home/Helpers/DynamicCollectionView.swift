@@ -9,20 +9,25 @@ import UIKit
 
 class DynamicCollectionView: UICollectionView {
     
-    var isDynamicSizeRequired = false
-    
-    override func layoutSubviews() {
+        override func layoutSubviews() {
         
             super.layoutSubviews()
-            if !__CGSizeEqualToSize(bounds.size, self.intrinsicContentSize) {
+            
+            if (self.bounds.size.equalTo(self.intrinsicContentSize)) {
                 self.invalidateIntrinsicContentSize()
             }
-        
         }
         
-    override var intrinsicContentSize: CGSize {
-        return contentSize
-    }
+        override var intrinsicContentSize: CGSize
+        {
+            //if self.collectionViewLayout.collectionViewContentSize.height < 163{
+                return self.collectionViewLayout.collectionViewContentSize
+            //}else{
+              //  return CGSize(width: self.collectionViewLayout.collectionViewContentSize.width, height: 163.0)
+            //}
+            
+        }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
