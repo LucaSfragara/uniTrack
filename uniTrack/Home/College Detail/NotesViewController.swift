@@ -16,15 +16,10 @@ class NotesViewController: UIViewController {
         super.viewDidLoad()
         setupEditorView()
         self.title = "Notes"
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationItem.largeTitleDisplayMode = .always
         editorView.setFocus()
+        // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear(_ animated: Bool) {

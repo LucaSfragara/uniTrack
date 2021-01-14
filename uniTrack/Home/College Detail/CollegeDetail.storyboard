@@ -343,6 +343,16 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-nZ-LiH">
+                                        <rect key="frame" x="311" y="171" width="64" height="33"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                        <state key="normal" title="Notes &gt;">
+                                            <color key="titleColor" name="uniTrack Light Orange"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressNotesButton" destination="mil-PW-M1A" eventType="touchUpInside" id="zyY-1M-iqv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -352,12 +362,14 @@
                                     <constraint firstItem="JBd-RL-Zyc" firstAttribute="leading" secondItem="w6g-pi-Xfv" secondAttribute="leading" constant="20" id="7g3-9g-iZ4"/>
                                     <constraint firstItem="Nzi-IO-GYu" firstAttribute="leading" secondItem="w6g-pi-Xfv" secondAttribute="leading" constant="20" id="8Ok-xo-iK2"/>
                                     <constraint firstItem="JBd-RL-Zyc" firstAttribute="top" secondItem="Nzi-IO-GYu" secondAttribute="bottom" constant="10" id="8XI-ZQ-QoL"/>
+                                    <constraint firstItem="VIY-nZ-LiH" firstAttribute="top" secondItem="YS4-yA-Zcc" secondAttribute="bottom" constant="14" id="CR7-yb-pU4"/>
                                     <constraint firstItem="FVd-Uv-Lvk" firstAttribute="top" secondItem="JBd-RL-Zyc" secondAttribute="bottom" constant="20" id="D7r-Ai-EBs"/>
                                     <constraint firstItem="3Eg-je-6eV" firstAttribute="leading" secondItem="w6g-pi-Xfv" secondAttribute="leading" constant="20" id="DS7-0e-Uq3"/>
                                     <constraint firstItem="3Eg-je-6eV" firstAttribute="top" secondItem="YS4-yA-Zcc" secondAttribute="bottom" constant="14" id="EMD-xc-uJF"/>
                                     <constraint firstItem="YS4-yA-Zcc" firstAttribute="top" secondItem="FXT-gS-UTe" secondAttribute="bottom" constant="14" id="FN9-a6-K6l"/>
                                     <constraint firstAttribute="trailing" secondItem="fhk-18-kus" secondAttribute="trailing" constant="20" id="GKE-tm-Q7w"/>
                                     <constraint firstAttribute="trailing" secondItem="JBd-RL-Zyc" secondAttribute="trailing" constant="20" id="HCF-tG-v2b"/>
+                                    <constraint firstItem="VIY-nZ-LiH" firstAttribute="leading" secondItem="w6g-pi-Xfv" secondAttribute="leading" constant="311" id="HDy-pT-F7U"/>
                                     <constraint firstItem="FVd-Uv-Lvk" firstAttribute="leading" secondItem="w6g-pi-Xfv" secondAttribute="leading" constant="20" id="HP3-k7-51B"/>
                                     <constraint firstItem="OPB-QG-PY0" firstAttribute="top" secondItem="fhk-18-kus" secondAttribute="bottom" constant="10" id="HYc-wf-P3u"/>
                                     <constraint firstItem="JBd-RL-Zyc" firstAttribute="top" secondItem="zS3-cU-bhz" secondAttribute="bottom" constant="10" id="KEF-pe-Ld5"/>
@@ -653,6 +665,9 @@
         <image name="safetySchool" width="25" height="25"/>
         <namedColor name="uniTrack Light Grey">
             <color red="0.95300000905990601" green="0.95300000905990601" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="uniTrack Light Orange">
+            <color red="1" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="uniTrack secondary label color">
             <color red="0.55699998140335083" green="0.5910000205039978" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

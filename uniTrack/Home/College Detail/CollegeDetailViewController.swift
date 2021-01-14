@@ -30,7 +30,6 @@ class CollegeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.pushViewController(NotesViewController(), animated: true)
         
         deadlinesCollectionView.delegate = self
         deadlinesCollectionView.dataSource = self
@@ -78,6 +77,10 @@ class CollegeDetailViewController: UIViewController {
         }else{
             linkButton.disableButton()
         }
+    }
+    
+    @IBAction func didPressNotesButton(){
+        self.navigationController?.pushViewController(NotesViewController(), animated: true)
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {
