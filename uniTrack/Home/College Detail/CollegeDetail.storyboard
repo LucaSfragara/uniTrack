@@ -439,7 +439,6 @@
                         <outlet property="reachTypeLabel" destination="ZAL-HJ-pZy" id="VPj-Ks-Q5A"/>
                         <outlet property="stateLabel" destination="DTl-ul-4wN" id="PRQ-y0-6cA"/>
                         <outlet property="tasksCollectionView" destination="OPB-QG-PY0" id="mzO-x5-9f2"/>
-                        <outlet property="tasksCollectionViewHeight" destination="AxL-EM-k50" id="jnV-V4-EXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbj-vq-9JS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

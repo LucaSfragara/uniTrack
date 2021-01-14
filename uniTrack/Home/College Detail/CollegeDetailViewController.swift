@@ -23,25 +23,14 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
     @IBOutlet private weak var tasksCollectionView: UICollectionView!
     
-   // @IBOutlet weak var deadlineCollectionViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var tasksCollectionViewHeight: NSLayoutConstraint!
-    
-    private var CVcontentSizeObservation: [NSKeyValueObservation]?
-    
-    private var initialCollectionViewsHeight: InitialCollectionViewsHeight?
-    
     weak var university: University?
     private var cardState: cardState!
     
-    private var lastCVHeight: CGFloat?
+    private var deadlineCellHeight: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.pushViewController(NotesViewController(), animated: true)
-        
-        //get costraint initial(maximum) values
-        //initialCollectionViewsHeight = InitialCollectionViewsHeight(deadlines: deadlineCollectionViewHeight.constant, tasks: tasksCollectionViewHeight.constant)
-        //observeCollectionView()
         
         deadlinesCollectionView.delegate = self
         deadlinesCollectionView.dataSource = self
@@ -49,63 +38,10 @@ class CollegeDetailViewController: UIViewController {
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
         
-        guard let university = university else{
-            return 
-        }
-        
         navigationController?.isNavigationBarHidden = true
         
         
         self.cardState = .normal
-    }
-    
-    deinit {
-         CVcontentSizeObservation?.forEach({$0.invalidate()})
-    }
-    
-    private func observeCollectionView(){
-        
-        CVcontentSizeObservation = [
-
-            deadlinesCollectionView.observe(\.contentSize, options: .new, changeHandler: {[weak self] (cv, _) in
-                
-                guard let self = self else { return }
-                
-                if let collectionViewHeight = self.lastCVHeight{
-                    //self.deadlineCollectionViewHeight.constant = collectionViewHeight
-                    cv.layoutIfNeeded()
-                    self.view.layoutIfNeeded()
-                    
-                    self.lastCVHeight = nil
-                }else{
-                    if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.deadlines{
-                        
-                       // self.deadlineCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
-                        self.view.layoutIfNeeded()
-                    }
-                }
-            }),
-            
-            tasksCollectionView.observe(\.contentSize, options: .new, changeHandler: {[weak self] (cv, _) in
-                
-                guard let self = self else { return }
-                    
-                if cv.collectionViewLayout.collectionViewContentSize.height < self.initialCollectionViewsHeight!.tasks{
-                    
-                    self.tasksCollectionViewHeight.constant = cv.collectionViewLayout.collectionViewContentSize.height
-                }
-            })
-        ]
-        
-    }
-    
-    private func fixCollectionviews(){
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        //lastCVHeight = deadlineCollectionViewHeight.constant
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -124,8 +60,7 @@ class CollegeDetailViewController: UIViewController {
             }
             self?.tasksCollectionView.reloadData()
             self?.deadlinesCollectionView.reloadData()
-            self?.deadlinesCollectionView.invalidateIntrinsicContentSize()
-            self?.deadlinesCollectionView.layoutIfNeeded()
+            self?.deadlineCellHeight = (self?.deadlinesCollectionView.frame.height)!/3
         }
         
         guard let university = university else{return}
@@ -236,7 +171,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == deadlinesCollectionView{ //deadline collectionview
             //fixCollectionViewHeight()
-            return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/3))
+            return(CGSize(width: collectionView.frame.width, height: deadlineCellHeight ?? 54))
             //return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height))
         }else{ //todos collection view
             return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2))
@@ -276,16 +211,16 @@ extension CollegeDetailViewController{
         
         var cardPanStartingTopCostraint = CGFloat()
         let translation = panRecognizer.translation(in: self.view)
-
+        
         guard let safeAreaHeight = UIApplication.shared.windows.first?.safeAreaLayoutGuide.layoutFrame.size.height,
-            let bottomPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom else{print("safe Area height or bottom padding not available"); return}
-
+              let bottomPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom else{print("safe Area height or bottom padding not available"); return}
+        
         switch panRecognizer.state{
-
+        
         case .began:
             cardPanStartingTopCostraint = cardViewTopConstraint.constant
         case .changed:
-        
+            
             if translation.y < 0 && self.cardState == .normal{
                 expandCard()
                 self.cardState = .expanded
@@ -298,7 +233,7 @@ extension CollegeDetailViewController{
         default:
             return
         }
-
+        
     }
     
     //Animations
@@ -329,7 +264,7 @@ extension CollegeDetailViewController{
         }
         
         self.cardViewTopConstraint.constant = self.view.frame.height * 69/224
-    
+        
         
         let cardAnimation = UIViewPropertyAnimator(duration: 0.25, curve: .easeIn){
             self.view.layoutIfNeeded()
@@ -364,10 +299,7 @@ extension CollegeDetailViewController: addDeadlineButtonDelegate{
         let newDeadline = Deadline(date: date, title: title, forUniversity: university)
         university.addDeadline(newDeadline)
         PersistantService.saveContext()
-//        fixCollectionViewHeight()
         deadlinesCollectionView.reloadData()
-        self.deadlinesCollectionView.layoutIfNeeded()
-        deadlinesCollectionView.invalidateIntrinsicContentSize()
     }
 }
 

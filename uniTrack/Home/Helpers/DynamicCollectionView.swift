@@ -20,13 +20,17 @@ class DynamicCollectionView: UICollectionView {
         
         override var intrinsicContentSize: CGSize
         {
-            //if self.collectionViewLayout.collectionViewContentSize.height < 163{
+            if self.collectionViewLayout.collectionViewContentSize.height < 163{
                 return self.collectionViewLayout.collectionViewContentSize
-            //}else{
-              //  return CGSize(width: self.collectionViewLayout.collectionViewContentSize.width, height: 163.0)
-            //}
-            
+            }else{
+                return CGSize(width: self.collectionViewLayout.collectionViewContentSize.width, height: 163.0)
+            }
         }
+    
+    override func reloadData() {
+        super.reloadData()
+        self.invalidateIntrinsicContentSize()
+    }
     
     /*
     // Only override draw() if you perform custom drawing.
