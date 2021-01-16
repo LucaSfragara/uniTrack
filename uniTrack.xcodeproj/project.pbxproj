@@ -60,6 +60,8 @@
 		AC85976225A9F64000B1E0A9 /* StrikeThroughLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC85976125A9F64000B1E0A9 /* StrikeThroughLabel.swift */; };
 		AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */; };
 		ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */; };
+		ACAAFC0425B3977600CC8EBE /* ProtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */; };
+		ACAAFC1425B39C1D00CC8EBE /* ProtonBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */; };
 		ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 		ACD2D5C7258ECA1500619BD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D5C6258ECA1500619BD4 /* Utilities.swift */; };
@@ -127,6 +129,8 @@
 		AC85976125A9F64000B1E0A9 /* StrikeThroughLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeThroughLabel.swift; sourceTree = "<group>"; };
 		AC9EF9F0254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollegesCollectionViewCell.swift; sourceTree = "<group>"; };
 		ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
+		ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonExtensions.swift; sourceTree = "<group>"; };
+		ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonBaseViewController.swift; sourceTree = "<group>"; };
 		ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableViewController.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 		ACD2D5C6258ECA1500619BD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 		AC317E14253E107B00DADF91 /* uniTrack */ = {
 			isa = PBXGroup;
 			children = (
+				ACAAFC0225B396E500CC8EBE /* Proton Classes */,
 				AC4B990625484200005000B4 /* Home */,
 				AC317E39253F855E00DADF91 /* System */,
 				AC317E1E253E107C00DADF91 /* Assets.xcassets */,
@@ -329,7 +334,6 @@
 		AC69E92D256C68B300D64083 /* College Detail */ = {
 			isa = PBXGroup;
 			children = (
-				AC0819DB25AE530B00DDF916 /* NotesViewController.swift */,
 				AC0819DA25AE52F100DDF916 /* Notes  */,
 				AC024F3E258D653D00790FD8 /* Task Detail */,
 				AC024F4E258D65E100790FD8 /* Deadline Detail */,
@@ -386,6 +390,16 @@
 				ACCB170C2543570200D76512 /* UniversityFromJSON.swift */,
 			);
 			path = "JSON Decoding";
+			sourceTree = "<group>";
+		};
+		ACAAFC0225B396E500CC8EBE /* Proton Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */,
+				AC0819DB25AE530B00DDF916 /* NotesViewController.swift */,
+				ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */,
+			);
+			path = "Proton Classes";
 			sourceTree = "<group>";
 		};
 		ACC74C492587A6AD00AF1254 /* Helpers */ = {
@@ -573,6 +587,7 @@
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC1792DC2586BD7600AEE111 /* Deadline.swift in Sources */,
 				AC024F59258D79A900790FD8 /* CrudStrategy.swift in Sources */,
+				ACAAFC1425B39C1D00CC8EBE /* ProtonBaseViewController.swift in Sources */,
 				AC317E34253E11F800DADF91 /* University.swift in Sources */,
 				ACDC6D63254E1DC10037DF45 /* DesignableView.swift in Sources */,
 				ACD2D5CA258ED06300619BD4 /* DetailEditViewController.swift in Sources */,
@@ -592,6 +607,7 @@
 				ACD2D5C7258ECA1500619BD4 /* Utilities.swift in Sources */,
 				AC317E3F253F85A100DADF91 /* UniTrack.xcdatamodeld in Sources */,
 				AC4B990825484240005000B4 /* UpComingCollectionViewCell.swift in Sources */,
+				ACAAFC0425B3977600CC8EBE /* ProtonExtensions.swift in Sources */,
 				ACF886F62560338A004A6830 /* CollegeCollectionViewCell.swift in Sources */,
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* DashboardViewController.swift in Sources */,
