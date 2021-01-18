@@ -61,7 +61,8 @@ extension DataManager{
             return sortedDeadlines as [Deadline] as? [Item]
             
         case is Task.Type:
-            let tasks: [Task] = universities.flatMap{($0.getTasks() ?? [])}
+            var tasks: [Task] = universities.flatMap{($0.getTasks() ?? [])}
+            tasks.sort(by: {!$0.isCompleted && $1.isCompleted})
             return tasks as [Task] as? [Item]
         default:
             return nil
