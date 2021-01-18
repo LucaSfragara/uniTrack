@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -156,44 +157,57 @@
                                     <constraint firstAttribute="height" constant="70" id="opP-uU-Rhv"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kzb-Y4-Wt4">
-                                    <size key="itemSize" width="136" height="84"/>
+                                    <size key="itemSize" width="199" height="77"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingcellID" id="UDu-WF-w1E" customClass="UpComingCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="136" height="84"/>
+                                        <rect key="frame" x="0.0" y="-3.5" width="199" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jVn-B8-fZi">
-                                            <rect key="frame" x="0.0" y="0.0" width="136" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="199" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-RQ-zgt">
-                                                    <rect key="frame" x="20" y="11" width="109.5" height="23"/>
-                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish essay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v23-yg-Wdq">
-                                                    <rect key="frame" x="20" y="41" width="108" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aiF-qo-wrt">
+                                                    <rect key="frame" x="14" y="14" width="140" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-RQ-zgt" customClass="StrikethroughLabel" customModule="uniTrack" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="73" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish essay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v23-yg-Wdq">
+                                                            <rect key="frame" x="0.0" y="26.5" width="93.5" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0H-2f-gWm" customClass="M13Checkbox" customModule="M13Checkbox">
+                                                    <rect key="frame" x="154" y="21" width="35" height="35"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="WS0-PF-ZL0"/>
+                                                        <constraint firstAttribute="height" constant="35" id="umA-cL-KMK"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="v23-yg-Wdq" secondAttribute="trailing" constant="8" id="1ix-uh-Eyu"/>
-                                                <constraint firstItem="v23-yg-Wdq" firstAttribute="top" secondItem="L5v-RQ-zgt" secondAttribute="bottom" constant="7" id="4xc-SN-pf8"/>
-                                                <constraint firstItem="L5v-RQ-zgt" firstAttribute="leading" secondItem="jVn-B8-fZi" secondAttribute="leadingMargin" constant="12" id="KhK-8q-yRE"/>
-                                                <constraint firstItem="L5v-RQ-zgt" firstAttribute="top" secondItem="jVn-B8-fZi" secondAttribute="topMargin" constant="3" id="WQu-bo-LYa"/>
-                                                <constraint firstItem="v23-yg-Wdq" firstAttribute="leading" secondItem="jVn-B8-fZi" secondAttribute="leading" constant="20" id="jWf-N5-bqS"/>
-                                                <constraint firstAttribute="trailing" secondItem="L5v-RQ-zgt" secondAttribute="trailing" constant="6.5" id="yZx-C5-3Ye"/>
+                                                <constraint firstItem="aiF-qo-wrt" firstAttribute="centerY" secondItem="jVn-B8-fZi" secondAttribute="centerY" id="2os-fm-Mbm"/>
+                                                <constraint firstItem="x0H-2f-gWm" firstAttribute="centerY" secondItem="jVn-B8-fZi" secondAttribute="centerY" id="8AA-pP-5KX"/>
+                                                <constraint firstAttribute="trailing" secondItem="x0H-2f-gWm" secondAttribute="trailing" constant="10" id="Bbr-lg-dBJ"/>
+                                                <constraint firstItem="x0H-2f-gWm" firstAttribute="leading" secondItem="aiF-qo-wrt" secondAttribute="trailing" id="NVj-AN-WnS"/>
+                                                <constraint firstItem="aiF-qo-wrt" firstAttribute="leading" secondItem="jVn-B8-fZi" secondAttribute="leading" constant="14" id="dQc-aC-xPQ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="uniTrack Blue"/>
-                                        <size key="customSize" width="136" height="84"/>
+                                        <size key="customSize" width="199" height="77"/>
                                         <connections>
+                                            <outlet property="checkBox" destination="x0H-2f-gWm" id="qJ3-3E-QIP"/>
                                             <outlet property="taskLabel" destination="L5v-RQ-zgt" id="2u4-WK-eTn"/>
                                             <outlet property="universityNameLabel" destination="v23-yg-Wdq" id="9px-Zv-9hh"/>
                                         </connections>
@@ -301,13 +315,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-hO-cDe">
-                                                    <rect key="frame" x="138" y="31" width="139" height="23"/>
+                                                    <rect key="frame" x="138" y="31" width="139" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-cf-xWS">
-                                                    <rect key="frame" x="138" y="73" width="142" height="20"/>
+                                                    <rect key="frame" x="138" y="72.5" width="142" height="20"/>
                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -438,5 +452,8 @@
         <namedColor name="uniTrack Light Grey">
             <color red="0.95300000905990601" green="0.95300000905990601" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
