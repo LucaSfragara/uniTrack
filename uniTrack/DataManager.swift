@@ -61,7 +61,7 @@ extension DataManager{
             return sortedDeadlines as [Deadline] as? [Item]
             
         case is Task.Type:
-            let tasks: [Task] = universities.flatMap{($0.getTodos() ?? [])}
+            let tasks: [Task] = universities.flatMap{($0.getTasks() ?? [])}
             return tasks as [Task] as? [Item]
         default:
             return nil
@@ -70,6 +70,7 @@ extension DataManager{
     }
     
     func getItems<Item>(itemClass: Item.Type, forUniversity university: University) -> [Item]? where Item : AddableObject {
+        
         switch itemClass{
         case is Deadline.Type:
             
@@ -77,7 +78,7 @@ extension DataManager{
             return deadlines as [Deadline]? as? [Item]
             
         case is Task.Type:
-            return university.getTodos() as [Task]? as? [Item]
+            return university.getTasks() as [Task]? as? [Item]
             
         default:
             return nil
@@ -99,6 +100,7 @@ extension DataManager{
             }
         }
     }
+    
     
     func getSortedUniversities(byDateAscending ascending: Bool, completion: @escaping(Result<[University], PersistantStoreError>)->()){
         

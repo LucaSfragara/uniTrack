@@ -58,9 +58,17 @@ public class University: NSManagedObject{
         return deadlinesArray
     }
     
-    func getTodos()->[Task]?{
+    func getTasks(sortByCompletedFirst: Bool = true)->[Task]?{ //if nil doesn't sort, otherwise it sorts
+         
+        let tasks: [Task]?
         
-        return (todos?.allObjects as? [Task])
+        if sortByCompletedFirst{
+            tasks = (todos?.allObjects as? [Task])?.sorted(by: {!$0.isCompleted && $1.isCompleted})
+        }else{
+            tasks = todos?.allObjects as? [Task]
+        }
+
+        return tasks
         
     }
     

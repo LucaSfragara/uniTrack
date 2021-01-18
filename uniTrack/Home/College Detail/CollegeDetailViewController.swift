@@ -147,7 +147,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == deadlinesCollectionView{ //deadline collectionView
             return university?.getDeadlines()?.count ?? 0
         }else{ //to-dos collectionView
-            return university?.getTodos()?.count ?? 0
+            return university?.getTasks()?.count ?? 0
         }
     }
     
@@ -165,7 +165,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
             tasksCollectionView.register(UINib(nibName: "DetailTodosCollectionViewCell",bundle: nil), forCellWithReuseIdentifier: "detailTodosCellID")
             let cell = tasksCollectionView.dequeueReusableCell(withReuseIdentifier: "detailTodosCellID", for: indexPath) as! DetailTodosCollectionViewCell
     
-            if let task = university?.getTodos()?[indexPath.row] {
+            if let task = university?.getTasks()?[indexPath.row] {
                 cell.setup(task: task)
             }
             return cell
@@ -192,7 +192,7 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == tasksCollectionView{ //todos collectionview
             let taskDetailVC = TaskDetailViewController()
-            guard let selectedTask = university?.getTodos()?[indexPath.row] else{
+            guard let selectedTask = university?.getTasks()?[indexPath.row] else{
                 return
             }
             taskDetailVC.task = selectedTask
