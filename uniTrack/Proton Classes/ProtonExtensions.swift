@@ -28,8 +28,9 @@ class EditorCommandButton: UIButton {
 
     override var isSelected: Bool {
         didSet {
-            setTitleColor(isSelected ? .white : .systemBlue, for: .normal)
-            backgroundColor = isSelected ? .systemBlue : .systemBackground
+            setTitleColor(isSelected ? .white : UIColor(named: "uniTrack Blue"), for: .normal)
+            
+            backgroundColor = isSelected ? UIColor(named: "uniTrack Blue") : .systemBackground
         }
     }
 }

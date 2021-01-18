@@ -245,6 +245,16 @@ extension DataManager{
                 }
                 
                 universityToUpdate.URL = newURL
+            
+            case "notes":
+                
+                guard let newNotes = value as? NSAttributedString else{
+                    completion(.failure(.updateValueNotValid))
+                    return
+                }
+                
+                universityToUpdate.notes = newNotes
+                
                 
             //EDITS on base model
             

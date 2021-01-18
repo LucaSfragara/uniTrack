@@ -80,7 +80,9 @@ class CollegeDetailViewController: UIViewController {
     }
     
     @IBAction func didPressNotesButton(){
-        self.navigationController?.pushViewController(NotesViewController(), animated: true)
+        let notesVC = NotesViewController()
+        notesVC.university = self.university
+        self.navigationController?.pushViewController(notesVC, animated: true)
     }
     
     @IBAction func didPressBackButton(_ sender: Any) {
@@ -92,7 +94,6 @@ class CollegeDetailViewController: UIViewController {
         
         guard let URLToOpen = university?.URL else{return}
         let webViewVC = WebViewController(url: URLToOpen)
-        
         let transition = CATransition()
         transition.duration = 0.5
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)

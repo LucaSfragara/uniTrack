@@ -24,6 +24,7 @@ public class University: NSManagedObject{
     @NSManaged var dateOfAdd: Date
     @NSManaged var isoCountryCode: String
     @NSManaged var link: String?
+    @NSManaged var notes: NSAttributedString?
     
     @NSManaged var baseModel: UniversityFromData?
     @NSManaged var deadlines: NSSet?

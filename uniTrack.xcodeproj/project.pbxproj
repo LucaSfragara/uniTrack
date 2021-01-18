@@ -206,6 +206,7 @@
 		AC0819DA25AE52F100DDF916 /* Notes  */ = {
 			isa = PBXGroup;
 			children = (
+				AC0819DB25AE530B00DDF916 /* NotesViewController.swift */,
 				AC0819DC25AE530B00DDF916 /* NotesViewController.xib */,
 			);
 			path = "Notes ";
@@ -396,7 +397,6 @@
 			isa = PBXGroup;
 			children = (
 				ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */,
-				AC0819DB25AE530B00DDF916 /* NotesViewController.swift */,
 				ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */,
 			);
 			path = "Proton Classes";
