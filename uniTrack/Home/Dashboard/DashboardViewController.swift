@@ -47,6 +47,7 @@ class DashboardViewController: UIViewController{
         CollegesCollectionView.delegate = self
         CollegesCollectionView.dataSource = self
         
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

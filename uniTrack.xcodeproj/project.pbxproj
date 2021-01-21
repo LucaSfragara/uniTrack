@@ -63,6 +63,9 @@
 		ACAAFC0425B3977600CC8EBE /* ProtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */; };
 		ACAAFC1425B39C1D00CC8EBE /* ProtonBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */; };
 		ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */; };
+		ACC7FFCA25BA2D7200ED956F /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFC925BA2D7200ED956F /* TabItems.swift */; };
+		ACC7FFCD25BA2FB200ED956F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */; };
+		ACC7FFD025BA310200ED956F /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFCF25BA310200ED956F /* TabNavigationMenu.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 		ACD2D5C7258ECA1500619BD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D5C6258ECA1500619BD4 /* Utilities.swift */; };
 		ACD2D5CA258ED06300619BD4 /* DetailEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D5C9258ED06300619BD4 /* DetailEditViewController.swift */; };
@@ -132,6 +135,9 @@
 		ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonExtensions.swift; sourceTree = "<group>"; };
 		ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonBaseViewController.swift; sourceTree = "<group>"; };
 		ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableViewController.swift; sourceTree = "<group>"; };
+		ACC7FFC925BA2D7200ED956F /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
+		ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		ACC7FFCF25BA310200ED956F /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 		ACD2D5C6258ECA1500619BD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		ACD2D5C9258ED06300619BD4 /* DetailEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +308,9 @@
 			isa = PBXGroup;
 			children = (
 				AC58498825ACF80D008AC030 /* WebViewController.swift */,
+				ACC7FFC925BA2D7200ED956F /* TabItems.swift */,
+				ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */,
+				ACC7FFCF25BA310200ED956F /* TabNavigationMenu.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -595,10 +604,12 @@
 				ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */,
 				ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */,
 				AC71C08C258810CC0016AD68 /* AddDeadlineViewController.swift in Sources */,
+				ACC7FFD025BA310200ED956F /* TabNavigationMenu.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,
 				AC5B228525A128DF00E3EA94 /* SelectorSingleView.swift in Sources */,
+				ACC7FFCA25BA2D7200ED956F /* TabItems.swift in Sources */,
 				AC1792D325869D1400AEE111 /* DetailTodosCollectionViewCell.swift in Sources */,
 				ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */,
 				AC59FE6E254A25CE00032322 /* DeadlinesCollectionViewCell.swift in Sources */,
@@ -612,6 +623,7 @@
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* DashboardViewController.swift in Sources */,
 				AC024F55258D793800790FD8 /* DataManager.swift in Sources */,
+				ACC7FFCD25BA2FB200ED956F /* CustomTabBarController.swift in Sources */,
 				AC7749DF259D3DCE0057BF88 /* CollegeEditViewController.swift in Sources */,
 				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
 				AC7749E2259D4A8C0057BF88 /* OptionSelectionView.swift in Sources */,

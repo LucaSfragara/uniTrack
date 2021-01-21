@@ -381,10 +381,10 @@
             </objects>
             <point key="canvasLocation" x="282.60869565217394" y="-588.61607142857144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="eoy-Uu-EuY">
             <objects>
-                <tabBarController id="oaV-8a-nbe" sceneMemberID="viewController">
+                <tabBarController id="oaV-8a-nbe" customClass="CustomTabBarController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mmf-20-KNd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -402,7 +402,7 @@
         <!--Dashboard-->
         <scene sceneID="hEN-YT-ICP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vie-Nh-XU5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DashboardNavVCID" automaticallyAdjustsScrollViewInsets="NO" id="Vie-Nh-XU5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dashboard" image="book.fill" catalog="system" id="B0d-8H-bfS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="SA8-rZ-Zkz">
@@ -421,7 +421,7 @@
         <!--My Colleges-->
         <scene sceneID="xkm-mi-xJx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3su-uG-DK6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CollegesNavVCID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3su-uG-DK6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Colleges" image="magnifyingglass" catalog="system" id="7bA-TM-RRn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZKF-m5-rg2">
