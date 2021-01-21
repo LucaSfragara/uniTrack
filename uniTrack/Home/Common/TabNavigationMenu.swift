@@ -21,24 +21,50 @@ class TabNavigationMenu: UIView {
     }
     
     convenience init(menuItems: [TabItem], frame: CGRect){
+        
         self.init(frame: frame)
         
         self.layer.backgroundColor = UIColor.white.cgColor
+        self.layer.cornerRadius = 10
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        var tabBarMenuItems: [UIView] = []
+        
         for i in 0 ..< menuItems.count {
+            
             let itemWidth = self.frame.width / CGFloat(menuItems.count)
             let leadingAnchor = itemWidth * CGFloat(i)
-            
+        
             let itemView = self.createTabItem(item: menuItems[i])
             itemView.translatesAutoresizingMaskIntoConstraints = false
             itemView.clipsToBounds = true
             itemView.tag = i
-        self.addSubview(itemView)
-        NSLayoutConstraint.activate([
-                itemView.heightAnchor.constraint(equalTo: self.heightAnchor),
-                itemView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingAnchor),
-                itemView.topAnchor.constraint(equalTo: self.topAnchor),
-            ])
+            tabBarMenuItems.append(itemView)
+            
+        //self.addSubview(itemView)
+//        NSLayoutConstraint.activate([
+//                itemView.heightAnchor.constraint(equalTo: self.heightAnchor),
+//                itemView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingAnchor),
+//                itemView.topAnchor.constraint(equalTo: self.topAnchor),
+//            ])
         }
+        
+        //setup stackView
+        let stackView = UIStackView(arrangedSubviews: tabBarMenuItems)
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 10
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor)
+        ])
+        
         self.setNeedsLayout()
         self.layoutIfNeeded()
         self.activateTab(tab: 0)
@@ -48,32 +74,27 @@ class TabNavigationMenu: UIView {
     func createTabItem(item: TabItem) -> UIView{
         
         let tabBarItem = UIView(frame: CGRect.zero)
-        let itemTitleLabel = UILabel(frame: CGRect.zero)
         let itemIconView = UIImageView(frame: CGRect.zero)
-        itemTitleLabel.text = item.displayTitle
-        itemTitleLabel.textAlignment = .center
-        itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        itemTitleLabel.clipsToBounds = true
-
-        itemIconView.image = item.icon.withRenderingMode(.automatic)
         
+        itemIconView.image = item.icon.withRenderingMode(.automatic)
+        itemIconView.contentMode = .scaleAspectFit
         itemIconView.translatesAutoresizingMaskIntoConstraints = false
         itemIconView.clipsToBounds = true
+        
         tabBarItem.layer.backgroundColor = UIColor.white.cgColor
         tabBarItem.addSubview(itemIconView)
-        tabBarItem.addSubview(itemTitleLabel)
         tabBarItem.translatesAutoresizingMaskIntoConstraints = false
         tabBarItem.clipsToBounds = true
+        
         NSLayoutConstraint.activate([
-            itemIconView.heightAnchor.constraint(equalToConstant: 25), // Fixed height for our tab item(25pts)
-            itemIconView.widthAnchor.constraint(equalToConstant: 25), // Fixed width for our tab item icon
-            itemIconView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
-            itemIconView.topAnchor.constraint(equalTo: tabBarItem.topAnchor, constant: 8), // Position menu item icon 8pts from the top of it's parent view
-            itemIconView.leadingAnchor.constraint(equalTo: tabBarItem.leadingAnchor, constant: 35),
-            itemTitleLabel.heightAnchor.constraint(equalToConstant: 13), // Fixed height for title label
-            itemTitleLabel.widthAnchor.constraint(equalTo: tabBarItem.widthAnchor), // Position label full width across tab bar item
-            itemTitleLabel.topAnchor.constraint(equalTo: itemIconView.bottomAnchor, constant: 4), // Position title label 4pts below item icon
+            
+            itemIconView.bottomAnchor.constraint(equalTo: tabBarItem.bottomAnchor),
+            itemIconView.topAnchor.constraint(equalTo: tabBarItem.topAnchor, constant: 0),
+            itemIconView.leadingAnchor.constraint(equalTo: tabBarItem.leadingAnchor, constant: 0),
+            itemIconView.trailingAnchor.constraint(equalTo: tabBarItem.trailingAnchor, constant: 0)
+            
         ])
+
         tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap))) // Each item should be able to trigger and action on tap
         return tabBarItem
         
@@ -89,35 +110,40 @@ class TabNavigationMenu: UIView {
     }
     func activateTab(tab: Int) {
         
-        let tabToActivate = self.subviews[tab]
-        let borderWidth = tabToActivate.frame.size.width - 20
-        let borderLayer = CALayer()
-        borderLayer.backgroundColor = UIColor.green.cgColor
-        borderLayer.name = "active border"
-        borderLayer.frame = CGRect(x: 10, y: 0, width: borderWidth, height: 2)
-        
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.8, delay: 0.0, options: [.curveEaseIn, .allowUserInteraction], animations: {
-                tabToActivate.layer.addSublayer(borderLayer)
-                tabToActivate.setNeedsLayout()
-                tabToActivate.layoutIfNeeded()
-            })
-            self.itemTapped?(tab)
-        }
+       
+        self.itemTapped?(tab)
         self.activeItem = tab
+        
     }
     func deactivateTab(tab: Int) {
-        let inactiveTab = self.subviews[tab]
-        let layersToRemove = inactiveTab.layer.sublayers!.filter({ $0.name == "active border" })
-        
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.4, delay: 0.0, options: [.curveEaseIn, .allowUserInteraction], animations: {
-                layersToRemove.forEach({ $0.removeFromSuperlayer() })
-                inactiveTab.setNeedsLayout()
-                inactiveTab.layoutIfNeeded()
-            })
-        }
+       
     }
     
 
 }
+
+
+//setup stackView
+//        let stackView = UIStackView(arrangedSubviews: tabBarMenuItems)
+//        stackView.axis = .horizontal
+//        stackView.distribution = .equalSpacing
+//        stackView.alignment = .fill
+//        stackView.spacing = 20
+//        stackView.backgroundColor = .red
+//        let otherView = UIView()
+//        otherView.backgroundColor = .red
+//        self.addSubview(otherView)
+//        NSLayoutConstraint.activate([
+//            otherView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+//            otherView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+//            otherView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//            otherView.topAnchor.constraint(equalTo: self.topAnchor)
+//        ])
+//        NSLayoutConstraint.activate([
+//
+//            NSLayoutConstraint(item: otherView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: otherView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: otherView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: otherView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
+//
+//        ])
