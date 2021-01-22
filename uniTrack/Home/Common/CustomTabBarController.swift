@@ -10,7 +10,7 @@ import UIKit
 class CustomTabBarController: UITabBarController {
 
     var customTabBar: TabNavigationMenu!
-    var tabBarHeight: CGFloat = 100.0
+    var tabBarHeight: CGFloat = 80
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,9 @@ class CustomTabBarController: UITabBarController {
         var controllers = [UIViewController]()
         // hide the tab bar
         tabBar.isHidden = true
-        
         self.customTabBar = TabNavigationMenu(menuItems: menuItems, frame: frame)
         self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
-        self.customTabBar.clipsToBounds = true
+        self.customTabBar.clipsToBounds = false
         self.customTabBar.itemTapped = self.changeTab
         // Add it to the view
         self.view.addSubview(customTabBar)

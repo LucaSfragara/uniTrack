@@ -36,6 +36,15 @@ enum TabItem: String, CaseIterable{
         }
     }
     
+    var selectedIcon: UIImage{
+        switch self{
+        case .home:
+            return UIImage(named: "Home selected")!
+        case .colleges:
+            return UIImage(named: "Colleges selected")!
+        }
+    }
+    
     var displayTitle: String {
             return self.rawValue.capitalized(with: nil)
         }
