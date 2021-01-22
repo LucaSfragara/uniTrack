@@ -1,0 +1,20 @@
+PODS:
+  - DropDown (2.3.13)
+  - M13Checkbox (3.4.0)
+
+DEPENDENCIES:
+  - DropDown
+  - M13Checkbox
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - M13Checkbox
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+
+PODFILE CHECKSUM: 8e5484257715a56431796beeff8efff69ab00f04
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Proton",
+        "repositoryURL": "https://github.com/rajdeep/proton.git",
+        "state": {
+          "branch": null,
+          "revision": "e9257e11ff2a708f6b6ea98a9d593ab3bef7ea1b",
+          "version": "0.5.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
