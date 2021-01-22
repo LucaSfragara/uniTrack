@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfh-yT-BW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321.73913043478262" y="124.55357142857142"/>
+            <point key="canvasLocation" x="383" y="-335"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="nxv-5n-sKY">
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgN-Vq-HQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282.60869565217394" y="-588.61607142857144"/>
+            <point key="canvasLocation" x="384" y="-1292"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="eoy-Uu-EuY">
@@ -393,6 +393,7 @@
                     <connections>
                         <segue destination="Vie-Nh-XU5" kind="relationship" relationship="viewControllers" id="UEo-Xs-ezR"/>
                         <segue destination="3su-uG-DK6" kind="relationship" relationship="viewControllers" id="3o2-Eo-hnX"/>
+                        <segue destination="Jwz-ro-ryz" kind="relationship" relationship="viewControllers" id="hiC-uY-DE6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zon-jT-eZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -416,7 +417,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWw-2Z-v4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626.08695652173913" y="-588.61607142857144"/>
+            <point key="canvasLocation" x="-655" y="-1292"/>
         </scene>
         <!--My Colleges-->
         <scene sceneID="xkm-mi-xJx">
@@ -435,7 +436,55 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9r-RX-Fte" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588.40579710144937" y="124.55357142857142"/>
+            <point key="canvasLocation" x="-655" y="-335"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="l4W-py-C26">
+            <objects>
+                <navigationController storyboardIdentifier="SettingsNavVCID" id="Jwz-ro-ryz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Nmr-cf-WfJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cSt-pn-Bu0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wE9-ZE-vLT" kind="relationship" relationship="rootViewController" id="MH5-Ty-eC1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7M-0e-hFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655" y="448"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="KZC-6S-TXC">
+            <objects>
+                <viewController id="wE9-ZE-vLT" customClass="SettingsViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CcV-IW-2SW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cae-q0-dR6">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xLb-O6-6mo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xLb-O6-6mo" firstAttribute="bottom" secondItem="Cae-q0-dR6" secondAttribute="bottom" id="Mzu-9D-FZO"/>
+                            <constraint firstItem="Cae-q0-dR6" firstAttribute="top" secondItem="xLb-O6-6mo" secondAttribute="top" id="dIs-ae-qXv"/>
+                            <constraint firstItem="Cae-q0-dR6" firstAttribute="leading" secondItem="xLb-O6-6mo" secondAttribute="leading" id="kwe-Ns-w4A"/>
+                            <constraint firstItem="xLb-O6-6mo" firstAttribute="trailing" secondItem="Cae-q0-dR6" secondAttribute="trailing" id="pNo-NC-BAh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vsZ-Tl-rzF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Cae-q0-dR6" id="cjZ-iT-Tai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsf-Lg-f9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="448"/>
         </scene>
     </scenes>
     <resources>

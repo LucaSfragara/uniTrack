@@ -19,7 +19,7 @@ class CustomTabBarController: UITabBarController {
     }
     
     func loadTabBar(){
-        let tabItems: [TabItem] = [.home, .colleges]
+        let tabItems: [TabItem] = [.home, .colleges, .settings]
         
         setupCustomTabMenu(tabItems){ (controllers) in
             

@@ -334,6 +334,19 @@ extension DataManager{
         saveToPersistantStore()
     }
     
+    func deleteAllUniversities(completion: @escaping(Result<Bool, PersistantStoreError>) ->()){
+        loadFromCoreData{[weak self] (result) in
+            switch result{
+            case .success(let universities):
+                for university in universities{
+                    self?.deleteUniversity(universityToDelete: university){_ in}
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
 
 }
 
