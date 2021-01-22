@@ -146,9 +146,11 @@ class TabItemView: UIView{
         
         addSubview(imageView)
         
+        //Constraints
         NSLayoutConstraint.activate([
             
-            imageView.heightAnchor.constraint(equalToConstant: 40),
+            imageView.heightAnchor.constraint(equalToConstant: 35),
+            imageView.heightAnchor.constraint(equalToConstant: 35),
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),

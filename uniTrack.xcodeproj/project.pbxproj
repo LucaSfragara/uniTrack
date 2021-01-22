@@ -66,6 +66,7 @@
 		ACC7FFCA25BA2D7200ED956F /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFC925BA2D7200ED956F /* TabItems.swift */; };
 		ACC7FFCD25BA2FB200ED956F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */; };
 		ACC7FFD025BA310200ED956F /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFCF25BA310200ED956F /* TabNavigationMenu.swift */; };
+		ACC7FFD625BB8D5700ED956F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFD525BB8D5700ED956F /* SettingsViewController.swift */; };
 		ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCB170C2543570200D76512 /* UniversityFromJSON.swift */; };
 		ACD2D5C7258ECA1500619BD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D5C6258ECA1500619BD4 /* Utilities.swift */; };
 		ACD2D5CA258ED06300619BD4 /* DetailEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2D5C9258ED06300619BD4 /* DetailEditViewController.swift */; };
@@ -138,6 +139,7 @@
 		ACC7FFC925BA2D7200ED956F /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		ACC7FFCF25BA310200ED956F /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
+		ACC7FFD525BB8D5700ED956F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACCB170C2543570200D76512 /* UniversityFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityFromJSON.swift; sourceTree = "<group>"; };
 		ACD2D5C6258ECA1500619BD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		ACD2D5C9258ED06300619BD4 /* DetailEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +186,6 @@
 		AC024F3B258D637C00790FD8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				AC317E1B253E107B00DADF91 /* Main.storyboard */,
 				AC317E2F253E11C200DADF91 /* DashboardViewController.swift */,
 				AC59FE70254A25D800032322 /* CollectionView cells */,
 			);
@@ -298,8 +299,9 @@
 				AC71C086258810670016AD68 /* Add deadline */,
 				AC85C6C72599394A00B653BF /* My Colleges */,
 				AC69E92D256C68B300D64083 /* College Detail */,
-				ACDC6D58254E1B680037DF45 /* Add College */,
 				AC024F3B258D637C00790FD8 /* Dashboard */,
+				AC317E1B253E107B00DADF91 /* Main.storyboard */,
+				ACC7FFD425BB8CF700ED956F /* Settings */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -388,6 +390,7 @@
 		AC85C6C72599394A00B653BF /* My Colleges */ = {
 			isa = PBXGroup;
 			children = (
+				ACDC6D58254E1B680037DF45 /* Add College */,
 				ACDC6D59254E1B9F0037DF45 /* MyCollegesViewController.swift */,
 				ACF886F52560338A004A6830 /* CollegeCollectionViewCell.swift */,
 			);
@@ -420,6 +423,14 @@
 				ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ACC7FFD425BB8CF700ED956F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				ACC7FFD525BB8D5700ED956F /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		ACCB170225434F3500D76512 /* Data */ = {
@@ -623,6 +634,7 @@
 				ACDC6D62254E1DC10037DF45 /* DesignableButton.swift in Sources */,
 				AC317E30253E11C200DADF91 /* DashboardViewController.swift in Sources */,
 				AC024F55258D793800790FD8 /* DataManager.swift in Sources */,
+				ACC7FFD625BB8D5700ED956F /* SettingsViewController.swift in Sources */,
 				ACC7FFCD25BA2FB200ED956F /* CustomTabBarController.swift in Sources */,
 				AC7749DF259D3DCE0057BF88 /* CollegeEditViewController.swift in Sources */,
 				AC024F4B258D65D900790FD8 /* DeadlineDetailViewController.swift in Sources */,
