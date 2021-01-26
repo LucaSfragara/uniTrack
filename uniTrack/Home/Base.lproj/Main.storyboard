@@ -126,7 +126,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Colleges" id="szC-dC-H0E">
-                        <barButtonItem key="rightBarButtonItem" image="solid Plus" id="peg-fX-9cL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="peg-fX-9cL">
                             <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" name="uniTrack Blue"/>
                             <connections>
@@ -221,13 +221,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-R0-GnE">
-                                <rect key="frame" x="20" y="255.5" width="149.5" height="26"/>
+                                <rect key="frame" x="20" y="239.5" width="149.5" height="26"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S88-ny-lRU">
-                                <rect key="frame" x="20" y="296.5" width="374" height="130"/>
+                                <rect key="frame" x="20" y="280.5" width="374" height="130"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="wVr-mR-ZI9"/>
@@ -283,14 +283,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-wo-PRy">
-                                <rect key="frame" x="20" y="462.5" width="122" height="26"/>
-                                <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-oE-tso">
-                                <rect key="frame" x="20" y="503.5" width="374" height="289.5"/>
+                                <rect key="frame" x="20" y="470.5" width="374" height="322.5"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQK-Wv-0Be">
                                     <size key="itemSize" width="374" height="130"/>
@@ -346,6 +340,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-wo-PRy">
+                                <rect key="frame" x="20" y="429.5" width="122" height="26"/>
+                                <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="37g-A1-LFH"/>
                         <color key="backgroundColor" name="uniTrack Light Grey"/>
@@ -358,10 +358,10 @@
                             <constraint firstItem="mGU-R0-GnE" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="G3h-91-VCQ"/>
                             <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="S88-ny-lRU" secondAttribute="trailing" constant="20" id="HOm-Sl-kKo"/>
                             <constraint firstItem="37g-A1-LFH" firstAttribute="bottom" secondItem="Lxu-oE-tso" secondAttribute="bottom" constant="20" id="Nlt-dA-Tdp"/>
-                            <constraint firstItem="y3L-wo-PRy" firstAttribute="top" secondItem="S88-ny-lRU" secondAttribute="bottom" constant="36" id="UDa-hf-NkL"/>
+                            <constraint firstItem="y3L-wo-PRy" firstAttribute="top" secondItem="S88-ny-lRU" secondAttribute="bottom" constant="19" id="UDa-hf-NkL"/>
                             <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="lB0-BG-CVy" secondAttribute="trailing" constant="216" id="WFg-Rs-68Q"/>
                             <constraint firstItem="Qzk-6A-2qP" firstAttribute="centerX" secondItem="5jJ-uA-k1W" secondAttribute="centerX" id="bu1-3K-Ipr"/>
-                            <constraint firstItem="mGU-R0-GnE" firstAttribute="top" secondItem="Qzk-6A-2qP" secondAttribute="bottom" constant="36" id="j36-mm-khb"/>
+                            <constraint firstItem="mGU-R0-GnE" firstAttribute="top" secondItem="Qzk-6A-2qP" secondAttribute="bottom" constant="20" id="j36-mm-khb"/>
                             <constraint firstItem="Qzk-6A-2qP" firstAttribute="top" secondItem="lB0-BG-CVy" secondAttribute="bottom" constant="15" id="qtE-po-Gpt"/>
                             <constraint firstItem="Lxu-oE-tso" firstAttribute="top" secondItem="y3L-wo-PRy" secondAttribute="bottom" constant="15" id="sfX-po-etL"/>
                             <constraint firstItem="Lxu-oE-tso" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="zHA-Fp-AoG"/>
@@ -491,7 +491,6 @@
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="scalemass.fill" catalog="system" width="128" height="119"/>
-        <image name="solid Plus" width="45" height="45"/>
         <namedColor name="uniTrack Blue">
             <color red="0.29803921568627451" green="0.43137254901960786" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

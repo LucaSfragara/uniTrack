@@ -125,6 +125,10 @@ extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDa
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/4)
+    }
+    
 }
 
 extension MyCollegesViewController: doneButtonDelegate{

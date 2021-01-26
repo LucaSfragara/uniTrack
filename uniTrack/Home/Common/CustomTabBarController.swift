@@ -10,7 +10,7 @@ import UIKit
 class CustomTabBarController: UITabBarController {
 
     var customTabBar: TabNavigationMenu!
-    var tabBarHeight: CGFloat = 70
+    var tabBarHeight: CGFloat = 65
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,16 @@ class CustomTabBarController: UITabBarController {
         }
         
         self.selectedIndex = 0
+    }
+    
+    func hideTabBar(){
+        self.customTabBar.heightAnchor.constraint(equalToConstant: 0).isActive = true
+        self.view.layoutIfNeeded()
+    }
+    
+    func showTabBar(){
+        self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight).isActive = true
+        self.view.layoutIfNeeded()
     }
     
     func setupCustomTabMenu(_ menuItems: [TabItem], completion: @escaping ([UIViewController]) -> ()){

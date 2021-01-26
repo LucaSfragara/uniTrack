@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyi-yo-fYq" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                    <rect key="frame" x="0.0" y="668" width="414" height="228"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIL-bI-Y9R">
                             <rect key="frame" x="30" y="45" width="99.5" height="19"/>
@@ -45,11 +45,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q6-H8-JUa" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
-                            <rect key="frame" x="309" y="38" width="75" height="31"/>
+                            <rect key="frame" x="304" y="36" width="80" height="35"/>
                             <color key="backgroundColor" name="uniTrack Light Orange"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="75" id="cgq-Oh-pTA"/>
-                                <constraint firstAttribute="height" constant="31" id="z1J-a6-WTT"/>
+                                <constraint firstAttribute="width" constant="80" id="cgq-Oh-pTA"/>
+                                <constraint firstAttribute="height" constant="35" id="z1J-a6-WTT"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                             <state key="normal" title="Add">
@@ -101,8 +101,8 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="o6h-wp-tL9" firstAttribute="leading" secondItem="wyi-yo-fYq" secondAttribute="leading" constant="30" id="5bh-Ki-sAU"/>
-                        <constraint firstAttribute="height" constant="250" id="AcP-wK-aPr"/>
-                        <constraint firstItem="7Q6-H8-JUa" firstAttribute="top" secondItem="wyi-yo-fYq" secondAttribute="top" constant="38" id="I4p-nz-NmK"/>
+                        <constraint firstAttribute="height" constant="228" id="AcP-wK-aPr"/>
+                        <constraint firstItem="7Q6-H8-JUa" firstAttribute="top" secondItem="wyi-yo-fYq" secondAttribute="top" constant="36" id="I4p-nz-NmK"/>
                         <constraint firstItem="GK8-ll-W3y" firstAttribute="top" secondItem="f2m-uN-C7o" secondAttribute="bottom" constant="16" id="KXx-lW-6W1"/>
                         <constraint firstItem="WIL-bI-Y9R" firstAttribute="top" secondItem="wyi-yo-fYq" secondAttribute="top" constant="45" id="YdE-vv-tEy"/>
                         <constraint firstItem="WIL-bI-Y9R" firstAttribute="leading" secondItem="wyi-yo-fYq" secondAttribute="leading" constant="30" id="Zgo-Wd-FHG"/>
@@ -143,7 +143,7 @@
             <color red="1" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="uniTrack secondary label color">
-            <color red="0.55699998140335083" green="0.5910000205039978" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.58823529411764708" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

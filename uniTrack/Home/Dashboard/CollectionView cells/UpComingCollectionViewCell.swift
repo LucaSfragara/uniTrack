@@ -77,12 +77,17 @@ class UpComingCollectionViewCell: UICollectionViewCell {
         case true:
             self.taskLabel.strikeThroughText()
             task?.isCompleted = true
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
             
         case false:
             self.taskLabel.hideStrikeTextLayer()
             task?.isCompleted = false
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
         }
         DataManager.shared.saveToPersistantStore()
+        
     }
     
     

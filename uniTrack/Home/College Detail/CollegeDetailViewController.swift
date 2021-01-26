@@ -175,7 +175,8 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == deadlinesCollectionView{ //deadline collectionview
             //fixCollectionViewHeight()
-            return(CGSize(width: collectionView.frame.width, height: deadlineCellHeight ?? 54))
+            
+            return(CGSize(width: collectionView.frame.width, height: 54))
             //return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height))
         }else{ //todos collection view
             return(CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2))

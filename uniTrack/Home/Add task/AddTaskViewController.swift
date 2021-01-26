@@ -16,13 +16,19 @@ class AddTaskViewController: UIViewController {
 
     weak var delegate: AddTaskButtonDelegate?
     
+    override func viewDidAppear(_ animated: Bool) {
+        titleTextField.becomeFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: UIControl.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIControl.keyboardWillHideNotification, object: nil)
         
         addButton.disableButton()
-        titleTextField.becomeFirstResponder()
+        
+        titleTextField.delegate = self
+        titleTextField.returnKeyType = .done
         titleTextField.addTarget(self, action: #selector(handleTextChanged), for: .editingChanged)
         // Do any additional setup after loading the view.
     }
@@ -66,6 +72,19 @@ class AddTaskViewController: UIViewController {
     }
     */
 
+}
+
+//MARK: TEXTFIELD DELEGATE
+extension AddTaskViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 0 {
+            titleTextField.resignFirstResponder()
+            textTextField.becomeFirstResponder()
+        }else{
+            self.view.endEditing(true)
+        }
+        return false
+    }
 }
 
 protocol AddTaskButtonDelegate: class{

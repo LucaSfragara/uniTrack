@@ -28,6 +28,7 @@ class CollegeEditViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Edit University"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPressed))
+        
         countryChosen = university?.country
         nameField.text = university?.name
         courseField.text = university?.course
@@ -38,6 +39,13 @@ class CollegeEditViewController: UIViewController {
         linkField.text = university?.link
         
         countryField.addTarget(self, action: #selector(handleCountryTextChanged), for: .editingChanged)
+        
+        //setup textfields delegate
+        
+        for textField in allTextField(view: self.view){
+                textField.returnKeyType = .done
+                textField.delegate = self
+        }
         
     }
     
@@ -151,7 +159,6 @@ class CollegeEditViewController: UIViewController {
             "link": link
         ], completion: completion)
     }
-    
     /*
     // MARK: - Navigation
 
@@ -161,5 +168,25 @@ class CollegeEditViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func allTextField(view: UIView) -> [UITextField] {
+            var subviewArray = [UITextField]()
+            for subview in view.subviews {
+                subviewArray += self.allTextField(view: subview)
+                if let subview = subview as? UITextField{
+                    subviewArray.append(subview)
+                }
+            }
+            return subviewArray
+        }
 
+}
+
+//MARK: TEXTFIELD DELEGATE
+
+extension CollegeEditViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

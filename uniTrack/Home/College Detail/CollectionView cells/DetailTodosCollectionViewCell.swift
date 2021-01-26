@@ -54,10 +54,14 @@ class DetailTodosCollectionViewCell: UICollectionViewCell {
         case true:
             self.titleLabel.strikeThroughText()
             task?.isCompleted = true
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
             
         case false:
             self.titleLabel.hideStrikeTextLayer()
             task?.isCompleted = false
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
         }
         DataManager.shared.saveToPersistantStore()
     }

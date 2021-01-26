@@ -16,6 +16,10 @@ class AddDeadlineViewController: UIViewController {
     
     weak var delegate: addDeadlineButtonDelegate?
     
+    override func viewDidAppear(_ animated: Bool) {
+        titleTextField.becomeFirstResponder()
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -24,9 +28,8 @@ class AddDeadlineViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIControl.keyboardWillHideNotification, object: nil)
         
         addButton.disableButton()
-        titleTextField.becomeFirstResponder()
         titleTextField.addTarget(self, action: #selector(handleTextChanged), for: .editingChanged)
-        
+        titleTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -78,4 +81,12 @@ class AddDeadlineViewController: UIViewController {
 protocol addDeadlineButtonDelegate: class{
     
     func didPressAddDeadline(title: String, date: Date)
+}
+
+//MARK: TEXTFIELD DELEGATE
+extension AddDeadlineViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

@@ -27,12 +27,12 @@ class WebViewController: UIViewController {
         super.viewWillAppear(false)
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.isNavigationBarHidden = false
-        self.tabBarController?.tabBar.isHidden = true
+        //(self.tabBarController as? CustomTabBarController)?.hideTabBar()
         
     }
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = false
+        //(self.tabBarController as? CustomTabBarController)?.showTabBar()
         
     }
     
@@ -50,7 +50,6 @@ class WebViewController: UIViewController {
         guard let url = URL else{return}
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    
     /*
     // MARK: - Navigation
 
