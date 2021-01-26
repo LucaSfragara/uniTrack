@@ -469,7 +469,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xLb-O6-6mo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xLb-O6-6mo" firstAttribute="bottom" secondItem="Cae-q0-dR6" secondAttribute="bottom" id="Mzu-9D-FZO"/>
                             <constraint firstItem="Cae-q0-dR6" firstAttribute="top" secondItem="xLb-O6-6mo" secondAttribute="top" id="dIs-ae-qXv"/>

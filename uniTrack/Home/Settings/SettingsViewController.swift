@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingsViewController: UIViewController {
 
@@ -17,7 +18,6 @@ class SettingsViewController: UIViewController {
         
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
@@ -26,6 +26,15 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    private func sendEmail(){
+        if MFMailComposeViewController.canSendMail(){
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["lucasfragara@gmail.com"])
+            mail.setSubject("Hey Luca, regarding UniTrack...")
+            present(mail, animated: true)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -38,7 +47,14 @@ class SettingsViewController: UIViewController {
     */
 
 }
+//MARK: MAIL COMPOSER DELEGATE
+extension SettingsViewController: MFMailComposeViewControllerDelegate{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
 
+//MARK: TABLE VIEW DELEGATE AND DATASOURCE
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -87,6 +103,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate{
                 })
             }
             self.present(alertView, animated: true, completion: nil)
+        }else if indexPath.section == 1 && indexPath.row == 0{ //Get in touch with developer
+            sendEmail()
         }
     }
     

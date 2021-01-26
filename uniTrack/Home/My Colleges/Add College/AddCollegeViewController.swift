@@ -61,6 +61,11 @@ class AddCollegeViewController: UIViewController {
         }
         dimmerView.alpha = 0.0
         
+        //setup textfield
+        nameField.returnKeyType = .done
+        nameField.delegate = self
+        courseField.delegate = self
+        countryField.delegate = self
         
         
     }
@@ -278,8 +283,17 @@ extension AddCollegeViewController{
     
     
 }
+//MARK: TEXTFIELD DELEGATE
+extension AddCollegeViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+}
 
 
+
+//MARK: PROTOCOLS
 protocol doneButtonDelegate{
     
     func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String, country: Country)
