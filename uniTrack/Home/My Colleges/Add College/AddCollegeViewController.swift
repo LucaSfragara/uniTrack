@@ -10,8 +10,6 @@ import UIKit
 import CoreData
 import DropDown
 
-
-
 class AddCollegeViewController: UIViewController {
     
     @IBOutlet weak var cardView: DesignableView!
@@ -67,7 +65,21 @@ class AddCollegeViewController: UIViewController {
         courseField.delegate = self
         countryField.delegate = self
         
+        //Observe keyboards appearing
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShown(_:)), name: UIControl.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHide(_:)), name: UIControl.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    @objc private func handleKeyboardShown(_ notification: NSNotification){
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.view.frame.origin.y -= keyboardSize.height/1.5
+            }
+    }
+    
+    @objc private func handleKeyboardHide(_ notification: NSNotification){
+        self.view.frame.origin.y = 0
     }
     
     @objc  private func handleTextChanged(){
