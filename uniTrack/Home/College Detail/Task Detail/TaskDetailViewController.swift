@@ -16,6 +16,7 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak private var editView: UIView!
     @IBOutlet weak private var titleTextField: UITextField!
     @IBOutlet weak private var textTextField: UITextField!
+    @IBOutlet weak var taskNotesLabel: UILabel!
     
     private lazy var doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(mainButtonPressed))
     private lazy var editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(mainButtonPressed))
@@ -45,6 +46,19 @@ class TaskDetailViewController: UIViewController {
         hideEditView()
         taskTitle.text = task?.title
         taskText.text = task?.text
+        
+        taskTitle.layer.cornerRadius = 15
+        taskTitle.layer.shadowColor = UIColor(named: "uniTrack Light Blue")!.cgColor
+        taskTitle.layer.shadowOpacity = 1
+        taskTitle.layer.masksToBounds = true
+        taskTitle.layer.shadowOffset = CGSize(width: 0, height: 0)
+        taskTitle.layer.shouldRasterize = true
+        taskTitle.layer.rasterizationScale = UIScreen.main.scale
+        
+        taskText.layer.cornerRadius = 15
+        taskText.layer.masksToBounds = true
+        
+       
         // Do any additional setup after loading the view.
     }
     
@@ -111,8 +125,22 @@ class TaskDetailViewController: UIViewController {
         editView.isHidden = false
         textTextField.text = task?.text
         titleTextField.text = task?.title
+        
     }
     private func hideEditView(){
+        
+        if task?.text == nil{
+            taskNotesLabel.isHidden = true
+        }else{
+            taskNotesLabel.isHidden = false
+        }
+        
+        if task!.text.isEmpty{
+            taskNotesLabel.isHidden = true
+        }else{
+            taskNotesLabel.isHidden = false
+        }
+        
         taskInfoView.isHidden = false
         editView.isHidden = true
     }

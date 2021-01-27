@@ -284,8 +284,11 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-oE-tso">
-                                <rect key="frame" x="20" y="470.5" width="374" height="322.5"/>
+                                <rect key="frame" x="20" y="470.5" width="374" height="340"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="Odc-A4-EPA"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQK-Wv-0Be">
                                     <size key="itemSize" width="374" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -357,7 +360,6 @@
                             <constraint firstItem="S88-ny-lRU" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="EeR-kI-IHj"/>
                             <constraint firstItem="mGU-R0-GnE" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="G3h-91-VCQ"/>
                             <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="S88-ny-lRU" secondAttribute="trailing" constant="20" id="HOm-Sl-kKo"/>
-                            <constraint firstItem="37g-A1-LFH" firstAttribute="bottom" secondItem="Lxu-oE-tso" secondAttribute="bottom" constant="20" id="Nlt-dA-Tdp"/>
                             <constraint firstItem="y3L-wo-PRy" firstAttribute="top" secondItem="S88-ny-lRU" secondAttribute="bottom" constant="19" id="UDa-hf-NkL"/>
                             <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="lB0-BG-CVy" secondAttribute="trailing" constant="216" id="WFg-Rs-68Q"/>
                             <constraint firstItem="Qzk-6A-2qP" firstAttribute="centerX" secondItem="5jJ-uA-k1W" secondAttribute="centerX" id="bu1-3K-Ipr"/>
