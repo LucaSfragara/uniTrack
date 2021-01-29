@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import EmptyStateKit
 
 class DashboardViewController: UIViewController{
     
@@ -161,4 +162,5 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         }
     }
 }
+
 

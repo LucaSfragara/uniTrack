@@ -6,6 +6,7 @@ target 'uniTrack' do
   use_frameworks!
   pod 'M13Checkbox'
   pod 'DropDown'
+  pod 'EmptyStateKit'
   # Pods for uniTrack
 
 end

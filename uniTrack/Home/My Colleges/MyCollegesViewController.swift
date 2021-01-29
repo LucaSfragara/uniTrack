@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import EmptyStateKit
 
 class MyCollegesViewController: UIViewController {
 
@@ -21,6 +22,19 @@ class MyCollegesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setup emptystate view
+        var format = EmptyStateFormat()
+        
+        view.emptyState.delegate = self
+        view.emptyState.dataSource = self
+        
+        format.titleAttributes = [.font: UIFont(name: "Inter-bold", size: 26)!, .foregroundColor: UIColor.black]
+        format.descriptionAttributes = [.font: UIFont(name: "Inter-medium", size: 16)!, .foregroundColor: UIColor(named: "uniTrack secondary label color")]
+        format.buttonWidth = 150
+        format.buttonAttributes = [.font: UIFont(name: "Inter-medium", size: 16)!]
+        view.emptyState.format = format
+        
         CollegesCollectioView.delegate = self
         CollegesCollectioView.dataSource = self
         setUpSearchController()
@@ -101,8 +115,16 @@ extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let universities = universities else {
+            self.view.emptyState.show(MainState.noColleges)
             return 0
         }
+        
+        if universities.count == 0 {
+            self.view.emptyState.show(MainState.noColleges)
+        }else{
+            self.view.emptyState.hide()
+        }
+            
         return universities.count
     }
     
@@ -143,4 +165,66 @@ extension MyCollegesViewController: doneButtonDelegate{
         self.CollegesCollectioView.reloadData()
         
     }
+}
+//MARK: EMPTY STATE DELEGATE
+extension MyCollegesViewController: EmptyStateDelegate{
+    func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
+        let storyBoard = UIStoryboard(name: "addCollege", bundle: nil)
+        let addCollegeVC = storyBoard.instantiateViewController(withIdentifier: "addCollegeVC") as! AddCollegeViewController
+        addCollegeVC.delegate = self
+        addCollegeVC.modalPresentationStyle = .overFullScreen
+        
+        present(addCollegeVC, animated: false, completion: nil)
+    }
+}
+
+
+//MARK: EMPTY STATE DATASOURCE
+extension MyCollegesViewController: EmptyStateDataSource{
+    
+    func imageForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> UIImage? {
+        switch state as! MainState{
+        case .noColleges:
+            return UIImage(named: "Empty Box Icon")
+        case .noSearchResult:
+            break
+        }
+        return nil
+    }
+    
+    func titleForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
+        switch state as! MainState{
+        case .noColleges:
+            return "No Colleges"
+        case .noSearchResult:
+            break
+        }
+        return nil
+    }
+    
+    func descriptionForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
+        switch state as! MainState{
+        case .noColleges:
+            return "Looks like you have not added any colleges so far"
+        case .noSearchResult:
+            break
+        }
+        return nil
+    }
+    
+    func titleButtonForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
+        switch state as! MainState{
+        case .noColleges:
+            return "Add a college"
+        case .noSearchResult:
+            break
+        }
+        return nil
+    }
+    
+}
+
+fileprivate enum MainState: CustomState{
+    case noColleges
+    case noSearchResult
 }
