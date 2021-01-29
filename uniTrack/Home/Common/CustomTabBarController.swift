@@ -53,11 +53,13 @@ class CustomTabBarController: UITabBarController {
         self.view.addSubview(customTabBar)
         // Add positioning constraints to place the nav menu right where the tab bar should be
         
+        let bottomPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom
+        
         NSLayoutConstraint.activate([
             self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
             self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
             self.customTabBar.widthAnchor.constraint(equalToConstant: tabBar.frame.width),
-            self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight), // Fixed height for nav menu
+            self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight + (bottomPadding ?? 0.0)), // Fixed height for nav menu
             self.customTabBar.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor)
         ])
         

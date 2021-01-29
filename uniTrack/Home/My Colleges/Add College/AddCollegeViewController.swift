@@ -61,6 +61,8 @@ class AddCollegeViewController: UIViewController {
         
         //setup textfield
         nameField.returnKeyType = .done
+        courseField.returnKeyType = .done
+        countryField.returnKeyType = .done
         nameField.delegate = self
         courseField.delegate = self
         countryField.delegate = self
@@ -74,7 +76,7 @@ class AddCollegeViewController: UIViewController {
     
     @objc private func handleKeyboardShown(_ notification: NSNotification){
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.view.frame.origin.y -= keyboardSize.height/1.5
+            self.view.frame.origin.y = 0 - keyboardSize.height
             }
     }
     
