@@ -15,10 +15,13 @@ class MyCollegesViewController: UIViewController {
     
     var universities: [University]?
     var searchController: UISearchController?
+
+    private var currentState: VCCurrentState = .normal
     
     private var isSearchBarEmpty: Bool{
         return searchController?.searchBar.text?.isEmpty ?? true
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +34,9 @@ class MyCollegesViewController: UIViewController {
         
         format.titleAttributes = [.font: UIFont(name: "Inter-bold", size: 26)!, .foregroundColor: UIColor.black]
         format.descriptionAttributes = [.font: UIFont(name: "Inter-medium", size: 16)!, .foregroundColor: UIColor(named: "uniTrack secondary label color")]
+        format.backgroundColor = UIColor(named: "uniTrack Light Grey")!
         format.buttonWidth = 150
-        format.buttonAttributes = [.font: UIFont(name: "Inter-medium", size: 16)!]
+        format.buttonAttributes = [.font: UIFont(name: "Inter-semibold", size: 16)!]
         view.emptyState.format = format
         
         CollegesCollectioView.delegate = self
@@ -90,9 +94,8 @@ class MyCollegesViewController: UIViewController {
 extension MyCollegesViewController: UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        currentState = .searching
         let searchText = isSearchBarEmpty ? nil : searchController.searchBar.text
-        
         DataManager.shared.getUniversities(withNameContaining: searchText){[weak self] result in
             switch result {
             case .failure(let error):
@@ -101,6 +104,7 @@ extension MyCollegesViewController: UISearchResultsUpdating{
             case .success(let universities):
                 self?.universities = universities
                 self?.CollegesCollectioView.reloadData()
+                
             }
         }
         
@@ -114,17 +118,26 @@ extension MyCollegesViewController: UISearchResultsUpdating{
 extension MyCollegesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         guard let universities = universities else {
-            self.view.emptyState.show(MainState.noColleges)
+            if self.currentState == .normal{
+                self.view.emptyState.show(MainState.noColleges)
+            }else if self.currentState == .searching{
+                self.view.emptyState.show(MainState.noSearchResult)
+            }
             return 0
         }
         
         if universities.count == 0 {
-            self.view.emptyState.show(MainState.noColleges)
+            if self.currentState == .normal{
+                self.view.emptyState.show(MainState.noColleges)
+            }else if self.currentState == .searching{
+                self.view.emptyState.show(MainState.noSearchResult)
+            }
         }else{
             self.view.emptyState.hide()
         }
-            
+        currentState = .normal
         return universities.count
     }
     
@@ -187,7 +200,7 @@ extension MyCollegesViewController: EmptyStateDataSource{
         case .noColleges:
             return UIImage(named: "Empty Box Icon")
         case .noSearchResult:
-            break
+            return UIImage(named: "Empty Box Icon")
         }
         return nil
     }
@@ -197,9 +210,8 @@ extension MyCollegesViewController: EmptyStateDataSource{
         case .noColleges:
             return "No Colleges"
         case .noSearchResult:
-            break
+            return "No colleges found"
         }
-        return nil
     }
     
     func descriptionForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
@@ -207,9 +219,8 @@ extension MyCollegesViewController: EmptyStateDataSource{
         case .noColleges:
             return "Looks like you have not added any colleges so far"
         case .noSearchResult:
-            break
+            return "Look like no colleges were found matching your search"
         }
-        return nil
     }
     
     func titleButtonForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
@@ -222,6 +233,11 @@ extension MyCollegesViewController: EmptyStateDataSource{
         return nil
     }
     
+}
+
+fileprivate enum VCCurrentState{
+    case normal
+    case searching
 }
 
 fileprivate enum MainState: CustomState{
