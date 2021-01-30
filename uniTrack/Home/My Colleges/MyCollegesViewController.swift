@@ -37,6 +37,7 @@ class MyCollegesViewController: UIViewController {
         format.backgroundColor = UIColor(named: "uniTrack Light Grey")!
         format.buttonWidth = 150
         format.buttonAttributes = [.font: UIFont(name: "Inter-semibold", size: 16)!]
+        format.buttonColor = UIColor(named:"uniTrack Light Orange")!
         view.emptyState.format = format
         
         CollegesCollectioView.delegate = self

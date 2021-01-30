@@ -284,11 +284,8 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-oE-tso">
-                                <rect key="frame" x="20" y="473.5" width="374" height="340"/>
+                                <rect key="frame" x="20" y="473.5" width="374" height="339.5"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="Odc-A4-EPA"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQK-Wv-0Be">
                                     <size key="itemSize" width="374" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -358,6 +355,7 @@
                             <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="Lxu-oE-tso" secondAttribute="trailing" constant="20" id="8TZ-Xw-2hW"/>
                             <constraint firstItem="y3L-wo-PRy" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="AJy-Zv-W2w"/>
                             <constraint firstItem="S88-ny-lRU" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="EeR-kI-IHj"/>
+                            <constraint firstItem="37g-A1-LFH" firstAttribute="bottom" secondItem="Lxu-oE-tso" secondAttribute="bottom" id="G2j-KO-ft6"/>
                             <constraint firstItem="mGU-R0-GnE" firstAttribute="leading" secondItem="37g-A1-LFH" secondAttribute="leading" constant="20" id="G3h-91-VCQ"/>
                             <constraint firstItem="37g-A1-LFH" firstAttribute="trailing" secondItem="S88-ny-lRU" secondAttribute="trailing" constant="20" id="HOm-Sl-kKo"/>
                             <constraint firstItem="y3L-wo-PRy" firstAttribute="top" secondItem="S88-ny-lRU" secondAttribute="bottom" constant="19" id="UDa-hf-NkL"/>
@@ -381,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgN-Vq-HQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="-1292"/>
+            <point key="canvasLocation" x="382.60869565217394" y="-1292.4107142857142"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="eoy-Uu-EuY">

@@ -48,6 +48,10 @@ class DashboardViewController: UIViewController{
         CollegesCollectionView.delegate = self
         CollegesCollectionView.dataSource = self
         
+        //setup emptyStatekit
+        setupEmptyStateView()
+    
+        
         
     }
     
@@ -69,6 +73,25 @@ class DashboardViewController: UIViewController{
         }
     }
     
+    private func setupEmptyStateView(){
+        
+        var format = EmptyStateFormat()
+        format.titleAttributes = [.font: UIFont(name: "Inter-bold", size: 20)!, .foregroundColor: UIColor.black]
+        format.descriptionAttributes = [.font: UIFont(name: "Inter-medium", size: 14)!, .foregroundColor: UIColor(named: "uniTrack secondary label color")]
+        format.backgroundColor = UIColor(named: "uniTrack Light Grey")!
+        format.buttonWidth = 150
+        format.buttonAttributes = [.font: UIFont(name: "Inter-semibold", size: 16)!]
+        format.buttonColor = UIColor(named:"uniTrack Light Orange")!
+        format.imageSize = CGSize(width: 90, height: 90)
+        format.verticalMargin = 0
+    
+        format.position = EmptyStatePosition(view: EmptyStateViewPosition.top, text: EmptyStateTextPosition.center, image: EmptyStateImagePosition.top)
+        //format.position = EmptyStatePosition()
+        CollegesCollectionView.emptyState.delegate = self
+        CollegesCollectionView.emptyState.dataSource = self
+        CollegesCollectionView.emptyState.format = format
+        
+    }
 }
 
 
@@ -86,6 +109,14 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             return allDeadlines?.count ?? 0
             
         }else{ //CollegeCollectionView
+            
+            if universities?.count == nil{
+                CollegesCollectionView.emptyState.show(MainState.collegesNoData)
+            }
+            
+            if universities?.count == 0{
+                CollegesCollectionView.emptyState.show(MainState.collegesNoData)
+            }
             return universities?.count ?? 0
         }
     }
@@ -163,4 +194,46 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 }
 
+//MARK: EMPTYSTATEVIEW DATASOURCE
+extension DashboardViewController: EmptyStateDataSource{
+    func imageForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> UIImage? {
+        switch state as! MainState {
+        case .collegesNoData:
+            return UIImage(named: "Empty Box Icon")
+        }
+    }
+    
+    func titleForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
+        switch state as! MainState {
+        case .collegesNoData:
+            return "No colleges"
+        }
+    }
+    
+    func descriptionForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
+        switch state as! MainState {
+        case .collegesNoData:
+            return "Looks like you have not added any colleges so far"
+        }
+    }
+    
+    func titleButtonForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
+        switch state as! MainState {
+        case .collegesNoData:
+            return "Add college"
+        }
+    }
+}
 
+//MARK: EMPTYSTATEVIEW DELEGATE
+extension DashboardViewController: EmptyStateDelegate{
+    func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
+        //TODO: implement adding from here as well
+    }
+    
+    
+}
+
+fileprivate enum MainState: CustomState{
+    case collegesNoData
+}
