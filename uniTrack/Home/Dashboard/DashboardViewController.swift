@@ -91,6 +91,17 @@ class DashboardViewController: UIViewController{
         CollegesCollectionView.emptyState.dataSource = self
         CollegesCollectionView.emptyState.format = format
         
+        DeadlinesCollectionView.emptyState.delegate = self
+        DeadlinesCollectionView.emptyState.dataSource = self
+        DeadlinesCollectionView.emptyState.format = format
+        DeadlinesCollectionView.emptyState.format.imageSize = CGSize(width: 0, height:  0)
+        
+        UpComingCollectionView.emptyState.delegate = self
+        UpComingCollectionView.emptyState.dataSource = self
+        UpComingCollectionView.emptyState.format = format
+        UpComingCollectionView.emptyState.format.imageSize = CGSize(width: 0, height:  0)
+        UpComingCollectionView.emptyState.format.position = EmptyStatePosition(view: EmptyStateViewPosition.top, text: EmptyStateTextPosition.center, image: EmptyStateImagePosition.bottom)
+         
     }
 }
 
@@ -102,9 +113,30 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == self.UpComingCollectionView{
+            
+            if allTasks?.count == nil{
+                UpComingCollectionView.emptyState.show(MainState.upcomingNoData)
+            }
+            
+            if allTasks?.count == 0{
+                UpComingCollectionView.emptyState.show(MainState.upcomingNoData)
+            }else{
+                UpComingCollectionView.emptyState.hide()
+            }
+            
             return allTasks?.count ?? 0
             
         }else if collectionView == self.DeadlinesCollectionView{
+            
+            if allDeadlines?.count == nil{
+                DeadlinesCollectionView.emptyState.show(MainState.deadlinesNoData)
+            }
+            
+            if allDeadlines?.count == 0{
+                DeadlinesCollectionView.emptyState.show(MainState.deadlinesNoData)
+            }else{
+                DeadlinesCollectionView.emptyState.hide()
+            }
             
             return allDeadlines?.count ?? 0
             
@@ -116,7 +148,10 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             
             if universities?.count == 0{
                 CollegesCollectionView.emptyState.show(MainState.collegesNoData)
+            }else{
+                CollegesCollectionView.emptyState.hide()
             }
+            
             return universities?.count ?? 0
         }
     }
@@ -179,6 +214,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             let taskDetailVC = TaskDetailViewController()
             taskDetailVC.task = selectedTask
             navigationController?.pushViewController(taskDetailVC, animated: true)
+            
         }
         
         if collectionView == CollegesCollectionView{ //college collection view
@@ -190,6 +226,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             let detailVC = storyboard.instantiateViewController(withIdentifier: "CollegeDetailVCID") as! CollegeDetailViewController
             detailVC.university = universitySelected
             self.navigationController?.pushViewController(detailVC, animated: true)
+            
         }
     }
 }
@@ -200,13 +237,22 @@ extension DashboardViewController: EmptyStateDataSource{
         switch state as! MainState {
         case .collegesNoData:
             return UIImage(named: "Empty Box Icon")
+        case .deadlinesNoData:
+            return nil
+            //return UIImage(named: "Empty List Icon")
+        case .upcomingNoData:
+            return nil
         }
     }
     
     func titleForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {
         switch state as! MainState {
         case .collegesNoData:
-            return "No colleges"
+            return "No Colleges"
+        case .deadlinesNoData:
+            return "No Deadlines"
+        case .upcomingNoData:
+            return "No To-dos"
         }
     }
     
@@ -214,6 +260,10 @@ extension DashboardViewController: EmptyStateDataSource{
         switch state as! MainState {
         case .collegesNoData:
             return "Looks like you have not added any colleges so far"
+        case .deadlinesNoData:
+            return "Looks like you do not have any deadlines"
+        case .upcomingNoData:
+            return "Looks like you do not have any tasks"
         }
     }
     
@@ -221,19 +271,46 @@ extension DashboardViewController: EmptyStateDataSource{
         switch state as! MainState {
         case .collegesNoData:
             return "Add college"
+        case .upcomingNoData:
+            return nil
+        case .deadlinesNoData:
+            return nil
         }
+        
     }
 }
 
 //MARK: EMPTYSTATEVIEW DELEGATE
 extension DashboardViewController: EmptyStateDelegate{
     func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
-        //TODO: implement adding from here as well
+        
+        let storyBoard = UIStoryboard(name: "addCollege", bundle: nil)
+        let addCollegeVC = storyBoard.instantiateViewController(withIdentifier: "addCollegeVC") as! AddCollegeViewController
+        addCollegeVC.delegate = self
+        addCollegeVC.modalPresentationStyle = .overFullScreen
+        
+        present(addCollegeVC, animated: false, completion: nil)
     }
     
     
 }
 
+
+//doneButtonDelegate
+extension DashboardViewController: doneButtonDelegate{
+    func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String, country: Country) {
+        
+        let university = University(name: name, course: course, countryIsoCode: country.isoCountryCode, reachType: nil, baseModel: universityChosen)
+        
+        PersistantService.saveContext()
+        
+        self.universities?.insert(university, at: 0)
+        self.CollegesCollectionView.reloadData()
+    }
+}
+
 fileprivate enum MainState: CustomState{
     case collegesNoData
+    case deadlinesNoData
+    case upcomingNoData
 }
