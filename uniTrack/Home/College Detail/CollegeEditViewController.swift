@@ -190,8 +190,14 @@ class CollegeEditViewController: UIViewController {
                         DispatchQueue.main.async {
                             SwiftSpinner.hide()
                             self.view.isUserInteractionEnabled = true
-                            let alertView = Utilities.createAlertView(title: "Error in the link",message: "Oops, it looks like the link you provided is not valid", button1Title: "Try Again", button2title: nil){}
-                            self.present(alertView, animated: true, completion: nil)
+                            if error == .timeOutError{
+                                let alertView = Utilities.createAlertView(title: "Error in the link",message: "Oops, we could not validate the link. Check your internet connection", button1Title: "Try Again", button2title: nil){}
+                                self.present(alertView, animated: true, completion: nil)
+                            }else{
+                                let alertView = Utilities.createAlertView(title: "Error in the link",message: "Oops, it looks like the link you provided is not valid", button1Title: "Try Again", button2title: nil){}
+                                self.present(alertView, animated: true, completion: nil)
+                            }
+                            
                         }
                         
                         return

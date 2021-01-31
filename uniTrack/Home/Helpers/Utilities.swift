@@ -47,11 +47,19 @@ class Utilities{
         
         var request = URLRequest(url: URL)
         request.httpMethod = "HEAD"
+        request.timeoutInterval = 7
         URLSession(configuration: .default).dataTask(with: request){ (_, response, error) -> Void in
+            
             guard error == nil else{
+
+                if let error = error as? NSError, error.code == NSURLErrorTimedOut{
+                    completion(.failure(.timeOutError))
+                }
                 completion(.failure(.generalError))
                 return
+                
             }
+            
             guard (response as? HTTPURLResponse)?.statusCode == 200 else{
                 completion(.failure(.cannotReachHost))
                 return
@@ -67,6 +75,7 @@ enum LinkError: LocalizedError{
     case cannotConvertString
     case generalError
     case cannotReachHost
+    case timeOutError
 }
 
 struct Country{
