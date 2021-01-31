@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import EmptyStateKit
 
+
 class MyCollegesViewController: UIViewController {
 
     @IBOutlet private weak var CollegesCollectioView: UICollectionView!

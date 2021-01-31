@@ -2,23 +2,27 @@ PODS:
   - DropDown (2.3.13)
   - EmptyStateKit (1.1.0)
   - M13Checkbox (3.4.0)
+  - SwiftSpinner (2.2.0)
 
 DEPENDENCIES:
   - DropDown
   - EmptyStateKit
   - M13Checkbox
+  - SwiftSpinner
 
 SPEC REPOS:
   trunk:
     - DropDown
     - EmptyStateKit
     - M13Checkbox
+    - SwiftSpinner
 
 SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   EmptyStateKit: dc41e9ce5c6089f67a49d063bce73ade9f2ba73f
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  SwiftSpinner: f9b59477fe107427f2b5b835497d6636fa167ede
 
-PODFILE CHECKSUM: c8281fba058e31ab8e046585e13f6a2ba0a1efac
+PODFILE CHECKSUM: fa63a9e6c6293051bc084dcd3897380cb7032511
 
 COCOAPODS: 1.9.3

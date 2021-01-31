@@ -7,6 +7,7 @@ target 'uniTrack' do
   pod 'M13Checkbox'
   pod 'DropDown'
   pod 'EmptyStateKit'
+  pod 'SwiftSpinner'
   # Pods for uniTrack
 
 end

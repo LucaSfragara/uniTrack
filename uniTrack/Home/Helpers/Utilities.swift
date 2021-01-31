@@ -10,15 +10,20 @@ import UIKit
 
 class Utilities{
     
-    static func createAlertView(title: String, message: String?, completion: @escaping()->())->UIAlertController{
+    static func createAlertView(title: String, message: String?, button1Title: String = "No", button2title: String? = "yes", completion: @escaping()->())->UIAlertController{
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-        let doneAction = UIAlertAction(title: "Yes", style: .default){action in
-            completion()
+        let cancelAction = UIAlertAction(title: button1Title, style: .cancel, handler: nil)
+    
+        if let doneButtonTitle = button2title{
+            let doneAction = UIAlertAction(title: doneButtonTitle, style: .default){action in
+                completion()
+            }
+            alert.addAction(doneAction)
         }
+        
         alert.addAction(cancelAction)
-        alert.addAction(doneAction)
+        
         
         return alert
     }

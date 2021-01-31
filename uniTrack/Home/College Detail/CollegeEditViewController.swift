@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import SwiftSpinner
 
 class CollegeEditViewController: UIViewController {
 
@@ -73,12 +74,14 @@ class CollegeEditViewController: UIViewController {
             
             switch result{
             case .success(let updatedUniversity):
-                guard let presentingVC = self?.navigationController?.viewControllers[(self?.navigationController?.viewControllers.count)!-2] as? CollegeDetailViewController else{
-                    return
+                DispatchQueue.main.async {
+                    guard let presentingVC = self?.navigationController?.viewControllers[(self?.navigationController?.viewControllers.count)!-2] as? CollegeDetailViewController else{
+                        return
+                    }
+                    presentingVC.university = updatedUniversity
+                    self?.navigationController?.popViewController(animated: true)
                 }
                 
-                presentingVC.university = updatedUniversity
-                self?.navigationController?.popViewController(animated: true)
                 
             //TODO: TODO: handle error
             case .failure(let error):
@@ -149,20 +152,48 @@ class CollegeEditViewController: UIViewController {
         guard let university = self.university else{return}
         
         //check if link is valid
-        DispatchQueue.main.async {
-            if let link = link{
-                Utilities.pingURL(string: link){result in
+        if let link = link{
+            DispatchQueue.main.async {
+                SwiftSpinner.show("Checking if link is valid...")
+            }
+            
+            Utilities.pingURL(string: link){result in
+                
                     switch result{
                     case .success(let responseCode):
-                        print(responseCode)
+                        
+                        print("Link is valid: \(responseCode)")
+                        DataManager.shared.updateUniversity(universityToUpdate: university, updateValues: [
+                            "name" : name,
+                            "course" : course,
+                            "reachtype": reachType,
+                            "population" : population,
+                            "state" : state,
+                            "isoCountryCode": country.isoCountryCode,
+                            "link": link
+                        ], completion: completion)
+                        
+                        DispatchQueue.main.async {
+                            SwiftSpinner.hide()
+                        }
+                        
+                        return
+                        
                     case .failure(let error):
-                        print(error)
+                        print("Error in the link: \(error)")
+                        completion(.failure(.linkIsNotValid))
+                        
+                        DispatchQueue.main.async {
+                            SwiftSpinner.hide()
+                            let alertView = Utilities.createAlertView(title: "Error in the link",message: "Oops, it looks like the link you provided is not valid", button1Title: "Try Again", button2title: nil){}
+                            self.present(alertView, animated: true, completion: nil)
+                        }
+                        
+                        return
                     }
                 }
-            }
-
         }
-        print("Hello")
+        
         DataManager.shared.updateUniversity(universityToUpdate: university, updateValues: [
             "name" : name,
             "course" : course,
@@ -170,9 +201,10 @@ class CollegeEditViewController: UIViewController {
             "population" : population,
             "state" : state,
             "isoCountryCode": country.isoCountryCode,
-            "link": link
+            "link": nil
         ], completion: completion)
     }
+    
     /*
     // MARK: - Navigation
 
