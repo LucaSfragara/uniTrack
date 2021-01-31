@@ -62,7 +62,6 @@ class CollegeEditViewController: UIViewController {
     @objc func doneButtonPressed(){
         
         guard let name = nameField.text, let course = courseField.text,  let country = countryChosen else {return}
-        print(schoolTypeSelectorView.selectedOption)
         updateUniversity(newName: name,
                          newCourse: course,
                          newReachType: schoolTypeSelectorView.selectedOption,
@@ -149,6 +148,21 @@ class CollegeEditViewController: UIViewController {
         
         guard let university = self.university else{return}
         
+        //check if link is valid
+        DispatchQueue.main.async {
+            if let link = link{
+                Utilities.pingURL(string: link){result in
+                    switch result{
+                    case .success(let responseCode):
+                        print(responseCode)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
+
+        }
+        print("Hello")
         DataManager.shared.updateUniversity(universityToUpdate: university, updateValues: [
             "name" : name,
             "course" : course,

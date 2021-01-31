@@ -181,6 +181,7 @@ extension MyCollegesViewController: doneButtonDelegate{
         
     }
 }
+
 //MARK: EMPTY STATE DELEGATE
 extension MyCollegesViewController: EmptyStateDelegate{
     func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
@@ -204,7 +205,6 @@ extension MyCollegesViewController: EmptyStateDataSource{
         case .noSearchResult:
             return UIImage(named: "Empty Box Icon")
         }
-        return nil
     }
     
     func titleForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String? {

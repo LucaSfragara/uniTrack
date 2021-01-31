@@ -53,6 +53,7 @@ enum PersistantStoreError:Error{
     //update
     case updateKeyNotRecognized
     case updateValueNotValid
+    case linkIsNotValid //To be thrown if pinging the url does not return code 200
 }
 
 extension PersistantStoreError: LocalizedError{

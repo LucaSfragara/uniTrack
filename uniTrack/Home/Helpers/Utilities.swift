@@ -33,6 +33,35 @@ class Utilities{
         }
         return countries
     }
+    
+    static func pingURL(string: String, completion: @escaping(Result<Int, LinkError>)->()){
+        guard let URL = URL(string: string) else{
+            completion(.failure(.cannotConvertString))
+            return
+        }
+        
+        var request = URLRequest(url: URL)
+        request.httpMethod = "HEAD"
+        URLSession(configuration: .default).dataTask(with: request){ (_, response, error) -> Void in
+            guard error == nil else{
+                completion(.failure(.generalError))
+                return
+            }
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else{
+                completion(.failure(.cannotReachHost))
+                return
+            }
+            
+            completion(.success(200))
+        }.resume()
+    }
+    
+}
+
+enum LinkError: LocalizedError{
+    case cannotConvertString
+    case generalError
+    case cannotReachHost
 }
 
 struct Country{
