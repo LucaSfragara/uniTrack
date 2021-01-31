@@ -590,8 +590,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>

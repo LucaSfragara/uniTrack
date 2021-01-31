@@ -154,7 +154,10 @@ class CollegeEditViewController: UIViewController {
         //check if link is valid
         if let link = link{
             DispatchQueue.main.async {
+                SwiftSpinner.shared.outerColor = UIColor(named: "uniTrack Light Orange")
                 SwiftSpinner.show("Checking if link is valid...")
+                self.view.isUserInteractionEnabled = false
+                
             }
             
             Utilities.pingURL(string: link){result in
@@ -175,6 +178,7 @@ class CollegeEditViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                             SwiftSpinner.hide()
+                            self.view.isUserInteractionEnabled = true
                         }
                         
                         return
@@ -185,6 +189,7 @@ class CollegeEditViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                             SwiftSpinner.hide()
+                            self.view.isUserInteractionEnabled = true
                             let alertView = Utilities.createAlertView(title: "Error in the link",message: "Oops, it looks like the link you provided is not valid", button1Title: "Try Again", button2title: nil){}
                             self.present(alertView, animated: true, completion: nil)
                         }
