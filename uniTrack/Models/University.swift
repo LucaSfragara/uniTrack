@@ -80,7 +80,7 @@ public class University: NSManagedObject{
     
         self.init(entity: entity, insertInto: PersistantService.context)
         self.name = name
-        self.course = course
+        self.course = course.capitalizingFirstLetter()
         self.reachType = reachType?.rawValue
         self.baseModel = baseModel
         self.dateOfAdd = Date()

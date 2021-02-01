@@ -62,6 +62,7 @@
 		ACA35EA9258C0C690081D32D /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */; };
 		ACAAFC0425B3977600CC8EBE /* ProtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */; };
 		ACAAFC1425B39C1D00CC8EBE /* ProtonBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */; };
+		ACB2BCB125C8A9B3007160BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2BCB025C8A9B3007160BF /* Extensions.swift */; };
 		ACC74C4B2587A6D100AF1254 /* SwipableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */; };
 		ACC7FFCA25BA2D7200ED956F /* TabItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFC925BA2D7200ED956F /* TabItems.swift */; };
 		ACC7FFCD25BA2FB200ED956F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */; };
@@ -135,6 +136,7 @@
 		ACA35EA8258C0C690081D32D /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
 		ACAAFC0325B3977600CC8EBE /* ProtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonExtensions.swift; sourceTree = "<group>"; };
 		ACAAFC1325B39C1D00CC8EBE /* ProtonBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonBaseViewController.swift; sourceTree = "<group>"; };
+		ACB2BCB025C8A9B3007160BF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ACC74C4A2587A6D100AF1254 /* SwipableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableViewController.swift; sourceTree = "<group>"; };
 		ACC7FFC925BA2D7200ED956F /* TabItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItems.swift; sourceTree = "<group>"; };
 		ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		AC317E14253E107B00DADF91 /* uniTrack */ = {
 			isa = PBXGroup;
 			children = (
+				ACB2BCB025C8A9B3007160BF /* Extensions.swift */,
 				ACAAFC0225B396E500CC8EBE /* Proton Classes */,
 				AC4B990625484200005000B4 /* Home */,
 				AC317E39253F855E00DADF91 /* System */,
@@ -616,6 +619,7 @@
 				ACDC6D6A254E1E690037DF45 /* AddCollegeViewController.swift in Sources */,
 				AC71C08C258810CC0016AD68 /* AddDeadlineViewController.swift in Sources */,
 				ACC7FFD025BA310200ED956F /* TabNavigationMenu.swift in Sources */,
+				ACB2BCB125C8A9B3007160BF /* Extensions.swift in Sources */,
 				AC317E46253F8DBF00DADF91 /* PersistantService.swift in Sources */,
 				AC69E92F256C68F400D64083 /* CollegeDetailViewController.swift in Sources */,
 				ACCB170D2543570200D76512 /* UniversityFromJSON.swift in Sources */,

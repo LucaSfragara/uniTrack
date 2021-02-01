@@ -22,7 +22,7 @@ class CollegeCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 10
         nameLabel.text = university.name
         courseLabel.text = university.course
-        locationLabel.text = "\(university.country?.isoCountryCode)\(baseModel?.state == nil ? "" : ".,") \(baseModel?.state ?? "")"
+        locationLabel.text = "\(university.country?.isoCountryCode ?? "")\(baseModel?.state == nil ? "" : ".,") \(baseModel?.state ?? "")"
         reachLabel.text = university.reachType
         deadlinesLabel.text = getDeadlinesLabelText(rawDate: university.getDeadlines()?.last?.date)
         

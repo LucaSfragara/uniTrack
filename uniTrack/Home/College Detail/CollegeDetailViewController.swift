@@ -57,6 +57,7 @@ class CollegeDetailViewController: UIViewController {
                 //TODO:  TODO: handle error
                 print(error)
             }
+            
             self?.tasksCollectionView.reloadData()
             self?.deadlinesCollectionView.reloadData()
             self?.deadlineCellHeight = (self?.deadlinesCollectionView.frame.height)!/3

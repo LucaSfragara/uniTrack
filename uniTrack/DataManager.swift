@@ -215,7 +215,7 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid))
                     return
                 }
-                universityToUpdate.course = newCourse
+                universityToUpdate.course = newCourse.capitalizingFirstLetter()
             
             case "reachtype":
                 
@@ -246,7 +246,7 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid))
                     return
                 }
-                
+            
                 universityToUpdate.URL = newURL
             
             case "notes":
