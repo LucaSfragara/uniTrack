@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 for university in decodedUniversities.universities{
                     
                     let universityObject = UniversityFromData(context: BackgroundContext)
-                    universityObject.name = university.name
+                    universityObject.name = university.name?.lowercased().capitalizingFirstLetter()
                     universityObject.telephone = university.telephone
                     universityObject.zip = university.zip
                     universityObject.address = university.address

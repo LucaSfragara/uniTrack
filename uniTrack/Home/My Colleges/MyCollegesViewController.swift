@@ -105,14 +105,15 @@ extension MyCollegesViewController: UISearchResultsUpdating{
                 print(error)
             case .success(let universities):
                 self?.universities = universities
-                self?.CollegesCollectioView.reloadData()
+                DispatchQueue.main.async {
+                    self?.CollegesCollectioView.reloadData()
+                }
+                
                 
             }
         }
         
     }
-    
-    
 }
 
 //MARK: CollectionView delegate and datasource

@@ -57,10 +57,12 @@ class CollegeDetailViewController: UIViewController {
                 //TODO:  TODO: handle error
                 print(error)
             }
+            DispatchQueue.main.async {
+                self?.tasksCollectionView.reloadData()
+                self?.deadlinesCollectionView.reloadData()
+                self?.deadlineCellHeight = (self?.deadlinesCollectionView.frame.height)!/3
+            }
             
-            self?.tasksCollectionView.reloadData()
-            self?.deadlinesCollectionView.reloadData()
-            self?.deadlineCellHeight = (self?.deadlinesCollectionView.frame.height)!/3
         }
         
         guard let university = university else{return}
