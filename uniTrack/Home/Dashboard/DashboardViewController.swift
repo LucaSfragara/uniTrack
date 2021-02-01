@@ -65,9 +65,13 @@ class DashboardViewController: UIViewController{
                 print(error)
             case .success(let universities):
                 self.universities = universities
-                self.UpComingCollectionView.reloadData()
-                self.DeadlinesCollectionView.reloadData()
-                self.CollegesCollectionView.reloadData()
+                
+                DispatchQueue.main.async {
+                    self.UpComingCollectionView.reloadData()
+                    self.DeadlinesCollectionView.reloadData()
+                    self.CollegesCollectionView.reloadData()
+                }
+                
             }
             
         }

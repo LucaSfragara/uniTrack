@@ -364,13 +364,19 @@ extension DataManager{
             fetchRequest.predicate = fetchPredicate
         }
         
-        do {
-            let result = try PersistantService.context.fetch(fetchRequest)
-            completion(.success(result))
-        } catch{
-            //TODO: switch error type here and throw appropriate persistansStoreError
-            completion(.failure(.couldNotFetchUniversities))
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            do {
+                let result = try PersistantService.context.fetch(fetchRequest)
+                completion(.success(result))
+            } catch{
+                //TODO: switch error type here and throw appropriate persistansStoreError
+                completion(.failure(.couldNotFetchUniversities))
+            }
+
         }
+        
     }
     
     private func loadFromCoreData(withSortByDateAscending ascending: Bool, completion: @escaping(Result<[University], PersistantStoreError>)->()){

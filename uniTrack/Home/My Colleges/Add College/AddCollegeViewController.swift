@@ -179,17 +179,27 @@ class AddCollegeViewController: UIViewController {
         let fetchRequest = NSFetchRequest<UniversityFromData>(entityName: "UniversityFromData")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        if let text = inputText {
-            let fetchPredicate = NSPredicate(format: "name CONTAINS[c] %@", text)
-            fetchRequest.predicate = fetchPredicate
+        
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+            if let text = inputText {
+                let fetchPredicate = NSPredicate(format: "name CONTAINS[c] %@", text)
+                fetchRequest.predicate = fetchPredicate
+            }
+        
+            do {
+                
+                let result = try PersistantService.context.fetch(fetchRequest)
+                
+                DispatchQueue.main.async {
+                    self.handleUniversityDropDownMenu(data: result)
+                }
+                
+            } catch {
+                print(error.localizedDescription)
+            }
         }
-    
-        do {
-            let result = try PersistantService.context.fetch(fetchRequest)
-            handleUniversityDropDownMenu(data: result)
-        } catch {
-            print(error.localizedDescription)
-        }
+       
     }
     
     private func handleCountryDropDownMenu(data: [Country]){
