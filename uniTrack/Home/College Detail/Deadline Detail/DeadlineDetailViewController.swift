@@ -15,7 +15,8 @@ class DeadlineDetailViewController: UIViewController {
     
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var dateLabel: UILabel!
-   
+    @IBOutlet weak private var universityLabel: UILabel!
+    
     @IBOutlet weak private var titleField: UITextField!
     @IBOutlet weak private var datePicker: UIDatePicker!
 
@@ -47,6 +48,8 @@ class DeadlineDetailViewController: UIViewController {
         datePicker.minimumDate = Date()
         titleLabel.text = deadline?.title
         dateLabel.text = deadline?.date.toString()
+        universityLabel.text = deadline?.university.name
+        
         hideDeleteButton()
         hideEditView()
     

@@ -52,7 +52,7 @@ enum PersistantStoreError:Error{
     
     //update
     case updateKeyNotRecognized
-    case updateValueNotValid
+    case updateValueNotValid(forKey: String, withValue: Any?)
     case linkIsNotValid //To be thrown if pinging the url does not return code 200
 }
 

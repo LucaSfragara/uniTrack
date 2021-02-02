@@ -36,6 +36,7 @@
                 <outlet property="taskTitle" destination="8K1-Nw-xHY" id="Zeb-yD-xJz"/>
                 <outlet property="textTextField" destination="HME-g6-dSm" id="UhN-0d-Hgh"/>
                 <outlet property="titleTextField" destination="4g2-QZ-MPC" id="7VY-c6-W1J"/>
+                <outlet property="universityLabel" destination="Sgq-ft-pm7" id="tvd-F8-BoM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,13 +58,13 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK9-C3-dCm">
-                            <rect key="frame" x="20" y="0.0" width="74" height="19"/>
+                            <rect key="frame" x="20" y="0.0" width="67" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9h-GF-tRm">
-                            <rect key="frame" x="20" y="104" width="73.5" height="19"/>
+                            <rect key="frame" x="20" y="104" width="66.5" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
@@ -117,29 +118,42 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zo-jC-2jK">
-                            <rect key="frame" x="172.5" y="59" width="69" height="19"/>
+                            <rect key="frame" x="175.5" y="59" width="63" height="17.5"/>
                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-O6-jYD">
-                            <rect key="frame" x="20" y="121" width="95" height="21"/>
+                            <rect key="frame" x="20" y="122" width="89" height="20"/>
                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-ft-pm7">
-                            <rect key="frame" x="172" y="217" width="45" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
-                            <color key="textColor" name="uniTrack Light Orange"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Z9-js-Hcc" userLabel="University Stack View">
+                            <rect key="frame" x="90" y="217" width="234" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="University Icon" translatesAutoresizingMaskIntoConstraints="NO" id="E00-uL-7pT">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="46U-R5-VwR"/>
+                                        <constraint firstAttribute="height" constant="60" id="lNN-ZT-1fU"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford university" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgq-ft-pm7">
+                                    <rect key="frame" x="75" y="0.0" width="159" height="60"/>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
+                                    <color key="textColor" name="uniTrack Light Orange"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="vyu-O6-jYD" firstAttribute="leading" secondItem="cBz-GC-orp" secondAttribute="leading" constant="20" id="3Vx-JS-T30"/>
                         <constraint firstItem="8K1-Nw-xHY" firstAttribute="top" secondItem="cBz-GC-orp" secondAttribute="top" id="4Vd-du-bJo"/>
+                        <constraint firstItem="3Z9-js-Hcc" firstAttribute="top" secondItem="kqi-cS-Ki0" secondAttribute="bottom" constant="30" id="58x-up-fNz"/>
+                        <constraint firstItem="3Z9-js-Hcc" firstAttribute="centerX" secondItem="cBz-GC-orp" secondAttribute="centerX" id="IDh-cX-XDi"/>
                         <constraint firstAttribute="trailing" secondItem="8K1-Nw-xHY" secondAttribute="trailing" constant="20" id="IQ1-2A-bAT"/>
                         <constraint firstItem="kqi-cS-Ki0" firstAttribute="leading" secondItem="cBz-GC-orp" secondAttribute="leading" constant="20" id="WZt-sd-RJL"/>
                         <constraint firstAttribute="height" constant="300" id="Yir-vQ-iTl"/>
@@ -152,7 +166,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-Bk-OjN" userLabel="Delete Button">
-                    <rect key="frame" x="154.5" y="676" width="105" height="35"/>
+                    <rect key="frame" x="158" y="676" width="98" height="35"/>
                     <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
                     <state key="normal" title="Delete Task">
                         <color key="titleColor" systemColor="systemRedColor"/>
@@ -161,10 +175,6 @@
                         <action selector="didPressDeleteButton" destination="-1" eventType="touchUpInside" id="zqw-CR-gLY"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E00-uL-7pT">
-                    <rect key="frame" x="-7" y="308" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,10 +188,11 @@
                 <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sDI-5V-b8Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HO9-Bk-OjN" secondAttribute="bottom" constant="151" id="vB1-Q6-ueC"/>
             </constraints>
-            <point key="canvasLocation" x="136" y="128"/>
+            <point key="canvasLocation" x="134.78260869565219" y="127.90178571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="University Icon" width="50" height="50"/>
         <namedColor name="uniTrack Light Blue">
             <color red="0.81000000238418579" green="0.92500001192092896" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

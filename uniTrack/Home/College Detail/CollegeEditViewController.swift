@@ -70,7 +70,7 @@ class CollegeEditViewController: UIViewController {
                          newState: stateField.text,
                          newCountry: country,
                          newLink: linkField.text
-        ){[weak self] result in //a make the Int conversion return nil, hence the value is not updated
+        ){[weak self] result in //a make the Int conversion return nil, hence the population value is not updated
             
             switch result{
             case .success(let updatedUniversity):
@@ -152,7 +152,7 @@ class CollegeEditViewController: UIViewController {
         guard let university = self.university else{return}
         
         //check if link is valid
-        if let link = link{
+        if let link = link, !link.isEmpty{
             DispatchQueue.main.async {
                 SwiftSpinner.shared.outerColor = UIColor(named: "uniTrack Light Orange")
                 SwiftSpinner.show("Checking if link is valid...")
@@ -199,10 +199,10 @@ class CollegeEditViewController: UIViewController {
                             }
                             
                         }
-                        
                         return
                     }
                 }
+            return
         }
         
         DataManager.shared.updateUniversity(universityToUpdate: university, updateValues: [
@@ -214,6 +214,7 @@ class CollegeEditViewController: UIViewController {
             "isoCountryCode": country.isoCountryCode,
             "link": nil
         ], completion: completion)
+        
     }
     
     /*

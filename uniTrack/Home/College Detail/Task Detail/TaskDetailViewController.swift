@@ -16,7 +16,9 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak private var editView: UIView!
     @IBOutlet weak private var titleTextField: UITextField!
     @IBOutlet weak private var textTextField: UITextField!
-    @IBOutlet weak var taskNotesLabel: UILabel!
+    @IBOutlet weak private var taskNotesLabel: UILabel!
+    
+    @IBOutlet weak private var universityLabel: UILabel!
     
     private lazy var doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(mainButtonPressed))
     private lazy var editBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(mainButtonPressed))
@@ -46,6 +48,7 @@ class TaskDetailViewController: UIViewController {
         hideEditView()
         taskTitle.text = task?.title
         taskText.text = task?.text
+        universityLabel.text = task?.university.name
         
         taskTitle.layer.cornerRadius = 15
         taskTitle.layer.shadowColor = UIColor(named: "uniTrack Light Blue")!.cgColor

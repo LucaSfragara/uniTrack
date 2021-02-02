@@ -135,14 +135,14 @@ extension DataManager{
                 switch key.lowercased(){
                 case "date":
                     guard let newDate = value as? Date else{
-                        completion(.failure(.updateValueNotValid))
+                        completion(.failure(.updateValueNotValid(forKey: "date", withValue: value)))
                         return
                     }
                     deadlineToUpdate.date = newDate
                     
                 case "title":
                     guard let newTitle = value as? String else{
-                        completion(.failure(.updateValueNotValid))
+                        completion(.failure(.updateValueNotValid(forKey: "title", withValue: value)))
                         return
                     }
                     deadlineToUpdate.title = newTitle
@@ -165,14 +165,14 @@ extension DataManager{
                 switch key.lowercased(){
                 case "title":
                     guard let newTitle = value as? String else{
-                        completion(.failure(.updateValueNotValid))
+                        completion(.failure(.updateValueNotValid(forKey: "title", withValue: value)))
                         return
                     }
                     taskToUpdate.title = newTitle
                     
                 case "text":
                     guard let newText = value as? String else{
-                        completion(.failure(.updateValueNotValid))
+                        completion(.failure(.updateValueNotValid(forKey: "text", withValue: value)))
                         return
                     }
                     taskToUpdate.text = newText
@@ -203,7 +203,7 @@ extension DataManager{
             case "name":
                 
                 guard let newName = value as? String else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "name", withValue: value)))
                     return
                 }
                 universityToUpdate.baseModel?.name = newName
@@ -212,7 +212,7 @@ extension DataManager{
             case "course":
                 
                 guard let newCourse = value as? String else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "course", withValue: value)))
                     return
                 }
                 universityToUpdate.course = newCourse.capitalizingFirstLetter()
@@ -225,7 +225,7 @@ extension DataManager{
                 }
                 
                 guard let newReachType = value as? University.ReachType else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "reachtype", withValue: value)))
                     return
                 }
                 universityToUpdate.reachType = newReachType.rawValue
@@ -233,8 +233,13 @@ extension DataManager{
             
             case "link":
                 
+                guard value != nil else{
+                    universityToUpdate.link = nil
+                    continue
+                }
+                
                 guard let newLink = value as? String else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "link", withValue: value)))
                     return
                 }
                 
@@ -243,7 +248,7 @@ extension DataManager{
                     break
                 }
                 guard let newURL = URL(string: newLink) else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "link", withValue: value)))
                     return
                 }
             
@@ -252,7 +257,7 @@ extension DataManager{
             case "notes":
                 
                 guard let newNotes = value as? NSAttributedString else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "notes", withValue: value)))
                     return
                 }
                 
@@ -266,7 +271,7 @@ extension DataManager{
                     continue
                 }
                 guard let newPopulation = value as? Int else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "population", withValue: value)))
                     return
                 }
                 universityToUpdate.baseModel?.population = String(newPopulation)
@@ -275,7 +280,7 @@ extension DataManager{
            case "isoCountryCode":
 
                 guard let newIsoCode = value as? String else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "isoCountryCode", withValue: value)))
                     return
                 }
             universityToUpdate.isoCountryCode = newIsoCode
@@ -287,7 +292,7 @@ extension DataManager{
                 }
                 
                 guard let newState = value as? String else{
-                    completion(.failure(.updateValueNotValid))
+                    completion(.failure(.updateValueNotValid(forKey: "state", withValue: value)))
                     return
                 }
                 universityToUpdate.baseModel?.state = newState

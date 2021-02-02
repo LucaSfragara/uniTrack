@@ -21,6 +21,9 @@
         <array key="Inter-Regular-slnt=0.ttf">
             <string>Inter-Regular</string>
         </array>
+        <array key="Inter-SemiBold-slnt=0.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeadlineDetailViewController" customModule="uniTrack" customModuleProvider="target">
@@ -32,6 +35,7 @@
                 <outlet property="infoView" destination="f9M-X9-mbJ" id="PrM-IR-pL7"/>
                 <outlet property="titleField" destination="ex4-kP-G5p" id="9JJ-ZQ-jOg"/>
                 <outlet property="titleLabel" destination="s1m-Ti-gsW" id="aOS-Iy-DdT"/>
+                <outlet property="universityLabel" destination="OuU-Xa-J2w" id="DXQ-Kl-qYL"/>
                 <outlet property="view" destination="TEq-t4-x42" id="SZT-WO-VIh"/>
             </connections>
         </placeholder>
@@ -90,7 +94,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-X9-mbJ" userLabel="Deadline detail View">
-                    <rect key="frame" x="0.0" y="62" width="414" height="70"/>
+                    <rect key="frame" x="0.0" y="62" width="414" height="199"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Decision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-Ti-gsW" userLabel="Fill Questions">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
@@ -110,15 +114,35 @@
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ss8-Ek-Qqc" userLabel="University Stack View">
+                            <rect key="frame" x="90" y="131" width="234" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="University Icon" translatesAutoresizingMaskIntoConstraints="NO" id="LK6-q7-SpV">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="I0O-36-0Q7"/>
+                                        <constraint firstAttribute="height" constant="60" id="ObN-MO-3o5"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford university" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-Xa-J2w">
+                                    <rect key="frame" x="75" y="0.0" width="159" height="60"/>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
+                                    <color key="textColor" name="uniTrack Light Orange"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="iH9-zI-amE" firstAttribute="leading" secondItem="f9M-X9-mbJ" secondAttribute="leading" id="71h-ox-LHf"/>
-                        <constraint firstAttribute="height" constant="70" id="Bk4-zb-faV"/>
                         <constraint firstItem="s1m-Ti-gsW" firstAttribute="leading" secondItem="f9M-X9-mbJ" secondAttribute="leading" id="H90-yg-m3w"/>
+                        <constraint firstAttribute="bottom" secondItem="Ss8-Ek-Qqc" secondAttribute="bottom" constant="8" id="MMr-fq-tUm"/>
                         <constraint firstAttribute="trailing" secondItem="s1m-Ti-gsW" secondAttribute="trailing" id="Sfa-HL-Vch"/>
                         <constraint firstAttribute="trailing" secondItem="iH9-zI-amE" secondAttribute="trailing" id="Ts6-Cu-SFT"/>
                         <constraint firstItem="s1m-Ti-gsW" firstAttribute="top" secondItem="f9M-X9-mbJ" secondAttribute="top" id="cAb-hr-arN"/>
+                        <constraint firstItem="Ss8-Ek-Qqc" firstAttribute="centerX" secondItem="f9M-X9-mbJ" secondAttribute="centerX" id="dbW-CL-gWJ"/>
+                        <constraint firstItem="Ss8-Ek-Qqc" firstAttribute="top" secondItem="iH9-zI-amE" secondAttribute="bottom" constant="57" id="fjH-Tg-Mnm"/>
                         <constraint firstItem="iH9-zI-amE" firstAttribute="top" secondItem="s1m-Ti-gsW" secondAttribute="bottom" constant="25" id="orH-Oj-Va2"/>
                     </constraints>
                 </view>
@@ -149,6 +173,10 @@
         </view>
     </objects>
     <resources>
+        <image name="University Icon" width="50" height="50"/>
+        <namedColor name="uniTrack Light Orange">
+            <color red="1" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="uniTrack secondary label color">
             <color red="0.55686274509803924" green="0.58823529411764708" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -59,7 +59,7 @@ class AddDeadlineViewController: UIViewController {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
             return
         }
-        self.view.frame.origin.y -= keyboardSize.height
+        self.view.frame.origin.y = 0 - keyboardSize.height
     }
     
     @objc private func handleKeyboardWillHide(notification: NSNotification){
