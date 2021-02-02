@@ -600,7 +600,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AEEBD157-9E04-4F59-81B4-AA8967B14AB8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"

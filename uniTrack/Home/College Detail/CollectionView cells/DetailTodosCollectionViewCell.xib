@@ -12,6 +12,9 @@
         <array key="Inter-Regular-slnt=0.ttf">
             <string>Inter-Regular</string>
         </array>
+        <array key="Inter-SemiBold-slnt=0.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -31,7 +34,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Essay Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYv-9I-Ugs" customClass="StrikethroughLabel" customModule="uniTrack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="199.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
