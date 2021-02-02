@@ -53,51 +53,45 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b07-YE-Ngs" userLabel="Info Stack View">
-                                                    <rect key="frame" x="139" y="21.5" width="179" height="125.5"/>
+                                                    <rect key="frame" x="43" y="30.5" width="184" height="107"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-OF-50i">
-                                                            <rect key="frame" x="0.0" y="0.0" width="179" height="23"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="19"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="28"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="23"/>
+                                                            <color key="textColor" name="uniTrack Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4M-uB-PeU">
-                                                            <rect key="frame" x="0.0" y="28" width="179" height="21"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="33" width="184" height="22"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S, Florida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-0w-0lb">
-                                                            <rect key="frame" x="0.0" y="54" width="179" height="21"/>
+                                                            <rect key="frame" x="0.0" y="60" width="184" height="21"/>
                                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadline: 18 Nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKR-dg-PWo">
-                                                            <rect key="frame" x="0.0" y="80" width="179" height="21"/>
+                                                            <rect key="frame" x="0.0" y="86" width="184" height="21"/>
                                                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reach School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaQ-E2-9Ex">
-                                                            <rect key="frame" x="0.0" y="106" width="179" height="19.5"/>
-                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-gg-zAk">
-                                                    <rect key="frame" x="20" y="36" width="96" height="96"/>
+                                                    <rect key="frame" x="20" y="36" width="0.0" height="96"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="4sC-Zx-IfQ"/>
-                                                        <constraint firstAttribute="width" constant="96" id="hGy-SK-UBk"/>
+                                                        <constraint firstAttribute="width" id="hGy-SK-UBk"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="b07-YE-Ngs" firstAttribute="leading" secondItem="x3C-nz-yjD" secondAttribute="leading" constant="139" id="DA1-kn-Cx3"/>
                                                 <constraint firstItem="7e7-gg-zAk" firstAttribute="leading" secondItem="x3C-nz-yjD" secondAttribute="leading" constant="20" id="EaO-1w-gb3"/>
+                                                <constraint firstItem="b07-YE-Ngs" firstAttribute="leading" secondItem="7e7-gg-zAk" secondAttribute="trailing" constant="23" id="JfX-nE-xkL"/>
                                                 <constraint firstItem="7e7-gg-zAk" firstAttribute="centerY" secondItem="x3C-nz-yjD" secondAttribute="centerY" id="LJl-xW-C2p"/>
                                                 <constraint firstItem="b07-YE-Ngs" firstAttribute="centerY" secondItem="x3C-nz-yjD" secondAttribute="centerY" id="ZM7-2G-4cH"/>
                                             </constraints>
@@ -110,7 +104,6 @@
                                             <outlet property="locationLabel" destination="H1E-0w-0lb" id="jAF-kh-ycc"/>
                                             <outlet property="nameLabel" destination="MCk-OF-50i" id="cax-eT-zKz"/>
                                             <outlet property="photoImageView" destination="7e7-gg-zAk" id="miZ-RL-3YH"/>
-                                            <outlet property="reachLabel" destination="KaQ-E2-9Ex" id="Gs2-of-V0g"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -244,36 +237,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scalemass.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-vK-ZVC">
-                                                    <rect key="frame" x="20" y="18" width="94" height="94"/>
+                                                    <rect key="frame" x="20" y="18" width="0.0" height="94"/>
                                                     <color key="tintColor" name="uniTrack Light Blue"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="94" id="AuD-c5-dME"/>
+                                                        <constraint firstAttribute="width" id="AuD-c5-dME"/>
                                                         <constraint firstAttribute="height" constant="94" id="Btv-Ny-hwf"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-hO-cDe">
-                                                    <rect key="frame" x="138" y="39" width="226" height="24.5"/>
-                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-cf-xWS">
-                                                    <rect key="frame" x="138" y="82" width="170.5" height="23"/>
-                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
-                                                    <color key="textColor" name="uniTrack secondary label color"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mLy-YY-DUI">
+                                                    <rect key="frame" x="45" y="34.5" width="192" height="61"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-hO-cDe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="192" height="29.5"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
+                                                            <color key="textColor" name="uniTrack Blue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-cf-xWS">
+                                                            <rect key="frame" x="0.0" y="36.5" width="192" height="24.5"/>
+                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                                                            <color key="textColor" name="uniTrack secondary label color"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="J9g-hO-cDe" secondAttribute="trailing" constant="10" id="1Fi-zR-tOa"/>
-                                                <constraint firstItem="X3g-cf-xWS" firstAttribute="leading" secondItem="gdt-vK-ZVC" secondAttribute="trailing" constant="24" id="H2y-Rv-GII"/>
-                                                <constraint firstItem="X3g-cf-xWS" firstAttribute="top" secondItem="J9g-hO-cDe" secondAttribute="bottom" constant="18.5" id="P1E-Hd-PQw"/>
-                                                <constraint firstAttribute="bottom" secondItem="X3g-cf-xWS" secondAttribute="bottom" constant="25" id="R3I-kV-0V0"/>
                                                 <constraint firstItem="gdt-vK-ZVC" firstAttribute="leading" secondItem="p8v-HE-jhH" secondAttribute="leading" constant="20" id="ZPN-ed-YOf"/>
                                                 <constraint firstItem="gdt-vK-ZVC" firstAttribute="centerY" secondItem="p8v-HE-jhH" secondAttribute="centerY" id="d4T-Fg-F9d"/>
-                                                <constraint firstAttribute="bottom" secondItem="X3g-cf-xWS" secondAttribute="bottom" constant="25" id="f8s-nz-Zs6"/>
-                                                <constraint firstItem="J9g-hO-cDe" firstAttribute="leading" secondItem="gdt-vK-ZVC" secondAttribute="trailing" constant="24" id="vIk-aA-UOu"/>
-                                                <constraint firstItem="J9g-hO-cDe" firstAttribute="top" secondItem="p8v-HE-jhH" secondAttribute="top" constant="39" id="zA3-YE-nKu"/>
+                                                <constraint firstItem="mLy-YY-DUI" firstAttribute="leading" secondItem="gdt-vK-ZVC" secondAttribute="trailing" constant="25" id="lDj-n3-zUZ"/>
+                                                <constraint firstItem="mLy-YY-DUI" firstAttribute="centerY" secondItem="p8v-HE-jhH" secondAttribute="centerY" id="tXF-QJ-e7i"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

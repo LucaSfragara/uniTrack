@@ -12,7 +12,7 @@ class CollegeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var photoImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var courseLabel: UILabel!
-    @IBOutlet weak private var reachLabel: UILabel!
+
     @IBOutlet weak private var locationLabel: UILabel!
     @IBOutlet weak private var deadlinesLabel: UILabel!
 
@@ -23,7 +23,7 @@ class CollegeCollectionViewCell: UICollectionViewCell {
         nameLabel.text = university.name
         courseLabel.text = university.course
         locationLabel.text = "\(university.country?.isoCountryCode ?? "")\(baseModel?.state == nil ? "" : ".,") \(baseModel?.state ?? "")"
-        reachLabel.text = university.reachType
+        
         deadlinesLabel.text = getDeadlinesLabelText(rawDate: university.getDeadlines()?.last?.date)
         
     }
@@ -31,6 +31,7 @@ class CollegeCollectionViewCell: UICollectionViewCell {
     private func getDeadlinesLabelText(rawDate: Date?) -> String{  //"18 Nov"
         
         guard let rawDate = rawDate else{
+            deadlinesLabel.heightAnchor.constraint(equalToConstant: 0).isActive = true
             return "No deadlines added"
         }
         
