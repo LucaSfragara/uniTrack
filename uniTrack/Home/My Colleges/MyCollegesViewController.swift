@@ -47,10 +47,11 @@ class MyCollegesViewController: UIViewController {
        
     
     }
+ 
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.navigationController?.isNavigationBarHidden = false
+        
         DataManager.shared.getSortedUniversities(byDateAscending: false){[weak self ]result in
             
             switch result {
@@ -223,7 +224,7 @@ extension MyCollegesViewController: EmptyStateDataSource{
         case .noColleges:
             return "Looks like you have not added any colleges so far"
         case .noSearchResult:
-            return "Look like no colleges were found matching your search"
+            return "Looks like no colleges were found matching your search"
         }
     }
     

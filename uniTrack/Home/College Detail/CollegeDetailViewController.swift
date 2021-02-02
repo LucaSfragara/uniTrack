@@ -43,10 +43,14 @@ class CollegeDetailViewController: UIViewController {
         self.cardState = .normal
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        navigationController?.isNavigationBarHidden = true
+    }
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(true)
-        
+
         DataManager.shared.getUniversities(withNameContaining: self.university?.name){[weak self] result in
             switch result {
             case .success(let universities):
