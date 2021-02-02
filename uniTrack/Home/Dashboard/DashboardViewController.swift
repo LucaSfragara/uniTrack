@@ -22,6 +22,12 @@ class DashboardViewController: UIViewController{
     @IBOutlet private weak var DeadlinesCollectionView: UICollectionView!
     @IBOutlet private weak var CollegesCollectionView: UICollectionView!
     
+    @IBOutlet weak var CollegecollectionLayout: UICollectionViewFlowLayout! {
+        didSet {
+            CollegecollectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
+    
     private var universities: [University]? = []
     
     private var allDeadlines: [Deadline]? {

@@ -13,6 +13,8 @@ class DashboardCollegesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var courseLabel: UILabel!
     
+    @IBOutlet  private var mainView: UIView!
+    
     func setup(university: University?){
         
         self.layer.cornerRadius = 10
@@ -23,8 +25,11 @@ class DashboardCollegesCollectionViewCell: UICollectionViewCell {
         //photoImageView.image = university.photo
     }
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        mainView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width-40).isActive = true
     }
+    
 }
 
