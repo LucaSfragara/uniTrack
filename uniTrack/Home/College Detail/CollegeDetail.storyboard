@@ -35,29 +35,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stanford Sample " translatesAutoresizingMaskIntoConstraints="NO" id="XQf-81-Ovo" userLabel="Stanford ImageView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="287"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="287" id="O5K-Wx-P8g"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-JH-MQP">
-                                <rect key="frame" x="20" y="210.33333333333334" width="172" height="54.666666666666657"/>
-                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="45"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vkD-I4-npu" userLabel="Gradient View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-JH-MQP">
+                                <rect key="frame" x="20" y="177.66666666666666" width="374" height="38.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="33"/>
+                                <color key="textColor" name="uniTrack secondary label color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keD-0f-czW">
-                                <rect key="frame" x="20" y="125.00000000000001" width="191" height="54.666666666666671"/>
-                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="45"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keD-0f-czW">
+                                <rect key="frame" x="10" y="110" width="394" height="49"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="42"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewX-TW-DVd">
-                                <rect key="frame" x="20" y="69" width="51" height="46"/>
+                                <rect key="frame" x="20" y="58" width="61" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="94Z-ah-r20"/>
-                                    <constraint firstAttribute="width" constant="51" id="NPD-D4-ppF"/>
+                                    <constraint firstAttribute="height" constant="53" id="94Z-ah-r20"/>
+                                    <constraint firstAttribute="width" constant="61" id="NPD-D4-ppF"/>
                                 </constraints>
                                 <state key="normal" image="Back Arrow Icon"/>
                                 <connections>
@@ -65,10 +63,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6g-pi-Xfv" userLabel="Card view" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="320" width="414" height="542"/>
+                                <rect key="frame" x="0.0" y="275" width="414" height="621"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-yA-Zcc" userLabel="Separator View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="153.33333333333331" width="300" height="4"/>
+                                        <rect key="frame" x="57" y="152.33333333333331" width="300" height="4"/>
                                         <color key="backgroundColor" name="uniTrack Light Grey"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="OWq-Q4-jZv"/>
@@ -81,13 +79,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcx-5l-aZ4">
-                                        <rect key="frame" x="20" y="26" width="39" height="25.666666666666671"/>
+                                        <rect key="frame" x="19.999999999999996" y="26" width="35.666666666666657" height="24.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="FXT-gS-UTe" userLabel="Info StackView">
-                                        <rect key="frame" x="20" y="65.333333333333314" width="374" height="74"/>
+                                        <rect key="frame" x="20" y="64.333333333333314" width="374" height="74"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TZY-d9-qEZ" userLabel="Location ">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -202,13 +200,13 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzi-IO-GYu">
-                                        <rect key="frame" x="20" y="231.33333333333337" width="101" height="25.666666666666686"/>
+                                        <rect key="frame" x="20.000000000000007" y="230.33333333333331" width="92.666666666666686" height="24.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="163" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JBd-RL-Zyc" customClass="DynamicCollectionView" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="267" width="374" height="163"/>
+                                        <rect key="frame" x="20" y="265" width="374" height="163"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2py-76-Avj">
                                             <size key="itemSize" width="398" height="65"/>
@@ -245,13 +243,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVd-Uv-Lvk">
-                                        <rect key="frame" x="20" y="450" width="74.333333333333329" height="25.666666666666686"/>
+                                        <rect key="frame" x="20" y="448" width="67.333333333333329" height="24.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OPB-QG-PY0">
-                                        <rect key="frame" x="20" y="485.66666666666663" width="374" height="163"/>
+                                        <rect key="frame" x="20" y="482.66666666666663" width="374" height="163"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="163" id="AxL-EM-k50"/>
@@ -276,7 +274,7 @@
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-cU-bhz">
-                                        <rect key="frame" x="290" y="225" width="104" height="32"/>
+                                        <rect key="frame" x="297" y="224" width="97" height="31"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                         <state key="normal" title="Add Deadline">
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -286,7 +284,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhk-18-kus">
-                                        <rect key="frame" x="322" y="443.66666666666663" width="72" height="32"/>
+                                        <rect key="frame" x="327" y="441.66666666666663" width="67" height="31"/>
                                         <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                         <state key="normal" title="Add Task">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,7 +297,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Eg-je-6eV" userLabel="Reach school stackView">
-                                        <rect key="frame" x="20" y="171.33333333333331" width="251" height="30"/>
+                                        <rect key="frame" x="20" y="170.33333333333331" width="251" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safetySchool" translatesAutoresizingMaskIntoConstraints="NO" id="OTO-22-kkJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
@@ -344,7 +342,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIY-nZ-LiH">
-                                        <rect key="frame" x="311" y="171.33333333333331" width="64" height="33"/>
+                                        <rect key="frame" x="315" y="170.33333333333331" width="60" height="32"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                         <state key="normal" title="Notes &gt;">
                                             <color key="titleColor" name="uniTrack Light Orange"/>
@@ -413,24 +411,29 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ch8-IA-HIm"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="w6g-pi-Xfv" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" constant="276" id="0QL-lH-qSc"/>
-                            <constraint firstItem="ch8-IA-HIm" firstAttribute="bottom" secondItem="w6g-pi-Xfv" secondAttribute="bottom" id="0jE-0F-AJX"/>
+                            <constraint firstItem="w6g-pi-Xfv" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" constant="231" id="0QL-lH-qSc"/>
+                            <constraint firstAttribute="bottom" secondItem="w6g-pi-Xfv" secondAttribute="bottom" id="0jE-0F-AJX"/>
                             <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="2rY-GN-QX2" secondAttribute="trailing" constant="20" id="4df-qF-1Sg"/>
-                            <constraint firstItem="keD-0f-czW" firstAttribute="top" secondItem="ewX-TW-DVd" secondAttribute="bottom" constant="10" id="Fw6-O8-VOs"/>
+                            <constraint firstItem="keD-0f-czW" firstAttribute="top" secondItem="ewX-TW-DVd" secondAttribute="bottom" constant="-1" id="Fw6-O8-VOs"/>
+                            <constraint firstItem="w6g-pi-Xfv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Ov-JH-MQP" secondAttribute="bottom" id="HPA-Xu-noB"/>
                             <constraint firstItem="ewX-TW-DVd" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" constant="20" id="Jkr-nS-XHh"/>
                             <constraint firstItem="2rY-GN-QX2" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" constant="25" id="KgO-ep-ElH"/>
+                            <constraint firstItem="keD-0f-czW" firstAttribute="centerX" secondItem="7Ij-1N-nPD" secondAttribute="centerX" id="L9a-J8-ffK"/>
+                            <constraint firstItem="vkD-I4-npu" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" id="REg-U6-dis"/>
                             <constraint firstItem="w6g-pi-Xfv" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" id="T5R-xh-VY0"/>
-                            <constraint firstItem="7Ov-JH-MQP" firstAttribute="top" secondItem="keD-0f-czW" secondAttribute="bottom" constant="30.5" id="btl-aF-dqB"/>
-                            <constraint firstItem="XQf-81-Ovo" firstAttribute="trailing" secondItem="ch8-IA-HIm" secondAttribute="trailing" id="ei0-Qr-mUw"/>
+                            <constraint firstItem="7Ov-JH-MQP" firstAttribute="centerX" secondItem="7Ij-1N-nPD" secondAttribute="centerX" id="Yue-Sb-d8c"/>
+                            <constraint firstItem="7Ov-JH-MQP" firstAttribute="top" secondItem="keD-0f-czW" secondAttribute="bottom" constant="18.5" id="btl-aF-dqB"/>
                             <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="w6g-pi-Xfv" secondAttribute="trailing" id="fSy-qo-V6l"/>
+                            <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="vkD-I4-npu" secondAttribute="trailing" id="hck-Bn-feR"/>
                             <constraint firstItem="7Ov-JH-MQP" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" constant="20" id="hqB-3J-And"/>
-                            <constraint firstItem="XQf-81-Ovo" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" id="iDg-Zb-iHL"/>
-                            <constraint firstItem="keD-0f-czW" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" constant="20" id="k4i-JU-tlB"/>
-                            <constraint firstItem="XQf-81-Ovo" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" id="tXh-Tl-3o1"/>
-                            <constraint firstItem="ewX-TW-DVd" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" constant="25" id="x3w-ve-TGo"/>
+                            <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="keD-0f-czW" secondAttribute="trailing" constant="10" id="nrQ-Kg-zWZ"/>
+                            <constraint firstItem="vkD-I4-npu" firstAttribute="top" secondItem="7Ij-1N-nPD" secondAttribute="top" id="sfo-G4-do1"/>
+                            <constraint firstItem="keD-0f-czW" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" constant="10" id="t2k-me-J58"/>
+                            <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="7Ov-JH-MQP" secondAttribute="trailing" constant="20" id="uns-a3-3Wy"/>
+                            <constraint firstItem="ewX-TW-DVd" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" constant="14" id="x3w-ve-TGo"/>
+                            <constraint firstItem="w6g-pi-Xfv" firstAttribute="top" secondItem="vkD-I4-npu" secondAttribute="bottom" constant="-30" id="yQS-Zs-Ve7"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tp8-bJ-qkH" appends="YES" id="RjI-Zi-3fh"/>
@@ -446,10 +449,12 @@
                         <outlet property="countryLabel" destination="HDZ-Ft-Scq" id="DAu-eH-hDy"/>
                         <outlet property="courseLabel" destination="7Ov-JH-MQP" id="gYc-jH-73i"/>
                         <outlet property="deadlinesCollectionView" destination="JBd-RL-Zyc" id="2y3-5I-zb3"/>
+                        <outlet property="gradientView" destination="vkD-I4-npu" id="j3y-fg-cat"/>
                         <outlet property="linkButton" destination="ck2-KT-vdG" id="8bt-MK-EJO"/>
                         <outlet property="nameLabel" destination="keD-0f-czW" id="OJN-vm-DAP"/>
                         <outlet property="populationLabel" destination="nfQ-ow-CZO" id="FkN-cD-D6B"/>
                         <outlet property="reachTypeLabel" destination="ZAL-HJ-pZy" id="VPj-Ks-Q5A"/>
+                        <outlet property="reachTypeStackView" destination="3Eg-je-6eV" id="LLh-c8-JeG"/>
                         <outlet property="stateLabel" destination="DTl-ul-4wN" id="PRQ-y0-6cA"/>
                         <outlet property="tasksCollectionView" destination="OPB-QG-PY0" id="mzO-x5-9f2"/>
                     </connections>
@@ -461,7 +466,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="70" y="-31"/>
+            <point key="canvasLocation" x="69.565217391304358" y="-31.473214285714285"/>
         </scene>
         <!--College Edit View Controller-->
         <scene sceneID="3eI-cV-WU8">
@@ -667,7 +672,7 @@
     </scenes>
     <designables>
         <designable name="2rY-GN-QX2">
-            <size key="intrinsicContentSize" width="32" height="33"/>
+            <size key="intrinsicContentSize" width="30" height="32"/>
         </designable>
         <designable name="ck2-KT-vdG">
             <size key="intrinsicContentSize" width="20" height="22"/>
@@ -677,7 +682,6 @@
         <image name="Back Arrow Icon" width="33.333332061767578" height="33.333332061767578"/>
         <image name="Link Icon" width="20" height="20"/>
         <image name="Population Icon" width="16.666666030883789" height="16.666666030883789"/>
-        <image name="Stanford Sample " width="640" height="426.66665649414062"/>
         <image name="map Icon" width="16.666666030883789" height="16.666666030883789"/>
         <image name="safetySchool" width="16.666666030883789" height="16.666666030883789"/>
         <namedColor name="uniTrack Light Grey">

@@ -51,6 +51,8 @@ class MyCollegesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         DataManager.shared.getSortedUniversities(byDateAscending: false){[weak self ]result in
             

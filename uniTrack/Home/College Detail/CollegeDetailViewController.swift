@@ -11,6 +11,7 @@ class CollegeDetailViewController: UIViewController {
 
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var cardViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var gradientView: UIView!
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var courseLabel: UILabel!
@@ -20,6 +21,8 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet private weak var reachTypeLabel: UILabel!
     @IBOutlet weak var linkButton: DesignableButton!
     
+    @IBOutlet private var reachTypeStackView: UIStackView!
+    
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
     @IBOutlet private weak var tasksCollectionView: UICollectionView!
     
@@ -27,8 +30,9 @@ class CollegeDetailViewController: UIViewController {
     private var cardState: cardState!
     
     private var deadlineCellHeight: CGFloat?
-    
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         deadlinesCollectionView.delegate = self
@@ -39,7 +43,7 @@ class CollegeDetailViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = true
         
-        
+        addGradient(toView: gradientView)
         self.cardState = .normal
     }
     
@@ -78,12 +82,19 @@ class CollegeDetailViewController: UIViewController {
         stateLabel.text = university.baseModel?.state
         populationLabel.text = university.baseModel?.population ?? "na"
         reachTypeLabel.text = university.reachType
-        print(university.reachType)
+        
         if university.URL != nil {
             linkButton.enableButton()
         }else{
             linkButton.disableButton()
         }
+        if let reachType = university.reachType, !reachType.isEmpty{
+            reachTypeStackView.isHidden = false
+            reachTypeLabel.text = university.reachType
+        }else{
+            reachTypeStackView.isHidden = true
+        }
+        
     }
     
     @IBAction func didPressNotesButton(){
@@ -216,7 +227,33 @@ extension CollegeDetailViewController: UICollectionViewDelegate, UICollectionVie
     }
 }
  
-//Mark: draggable card view implementation
+//MARK: GRADIENT BACKGROUND
+extension CollegeDetailViewController{
+    
+    func addGradient(toView view: UIView){
+        
+        let gradientLayer = CAGradientLayer()
+
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor(named: "uniTrack Light Orange")?.cgColor]
+                
+        //define locations of colors as NSNumbers in range from 0.0 to 1.0
+        //if locations not provided the colors will spread evenly
+        gradientLayer.locations = [0.0, 0.8]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+    
+        
+        //define frame
+        gradientLayer.frame = view.bounds
+        
+        //insert the gradient layer to the view layer
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    
+}
+
+//MARK: draggable card view implementation
 extension CollegeDetailViewController{
     
     @IBAction private func panGestureRecognizer(_ panRecognizer: UIPanGestureRecognizer){
