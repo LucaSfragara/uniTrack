@@ -9,21 +9,33 @@ import UIKit
 import MessageUI
 
 class SettingsViewController: UIViewController {
-
-    @IBOutlet weak private var tableView: UITableView!
+    
+    let githubUrl = URL(string: "https://github.com/LucaSfragara/uniTrack")! //uniTrack github page
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Settings"
         
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
-        tableView.allowsSelection = true
-        tableView.separatorStyle = .none
+        navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction private func didPressDeleteAllData(){
+        let alertView = Utilities.createAlertView(title: "Delete all universities", message: "Are you sure you want to permanently delete all the data?"){
+            DataManager.shared.deleteAllUniversities(completion: {result in
+                
+            })
+        }
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    @IBAction private func didPressSendMail(){
+        sendEmail()
+    }
+    
+    @IBAction private func didPressGithub(){
+        UIApplication.shared.open(githubUrl, options: [:], completionHandler: nil)
     }
     
     private func sendEmail(){
@@ -54,59 +66,3 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate{
     }
 }
 
-//MARK: TABLE VIEW DELEGATE AND DATASOURCE
-extension SettingsViewController: UITableViewDataSource, UITableViewDelegate{
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        2
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section{
-        case 0:
-            
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") else{fatalError("Could not deque settings cell")}
-            
-            cell.textLabel?.text = "Delete all data"
-            cell.textLabel?.textColor = .red
-            cell.textLabel?.font = UIFont(name: "Inter-medium", size: 18)
-            
-            return cell
-        
-        case 1:
-        
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") else{fatalError("Could not deque settings cell")}
-            
-            cell.textLabel?.text = "Get in touch with the developer"
-            cell.textLabel?.textColor = .black
-            cell.textLabel?.font = UIFont(name: "Inter-medium", size: 18)
-            
-            return cell
-        
-        default:
-            fatalError()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0{ // Delete all data
-            let alertView = Utilities.createAlertView(title: "Delete all universities", message: "Are you sure you want to permanently delete all the data?"){
-                DataManager.shared.deleteAllUniversities(completion: {result in
-                    
-                })
-            }
-            self.present(alertView, animated: true, completion: nil)
-        }else if indexPath.section == 1 && indexPath.row == 0{ //Get in touch with developer
-            sendEmail()
-        }
-    }
-    
-    
-}
