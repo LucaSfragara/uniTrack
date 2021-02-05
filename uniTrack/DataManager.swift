@@ -206,7 +206,6 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid(forKey: "name", withValue: value)))
                     return
                 }
-                universityToUpdate.baseModel?.name = newName
                 universityToUpdate.name = newName
                 
             case "course":

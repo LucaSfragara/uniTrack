@@ -41,7 +41,7 @@ class CollegeDetailViewController: UIViewController {
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
         
-        navigationController?.isNavigationBarHidden = true
+       
         
         addGradient(toView: gradientView)
         self.cardState = .normal
@@ -51,7 +51,10 @@ class CollegeDetailViewController: UIViewController {
         super.viewWillLayoutSubviews()
         navigationController?.isNavigationBarHidden = true
     }
+    
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         super.viewWillAppear(true)
 

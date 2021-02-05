@@ -22,6 +22,7 @@
 		AC1792D425869D1400AEE111 /* DetailTodosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */; };
 		AC1792DC2586BD7600AEE111 /* Deadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792DB2586BD7600AEE111 /* Deadline.swift */; };
 		AC1792DF2586BD8900AEE111 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1792DE2586BD8900AEE111 /* Task.swift */; };
+		AC19001725CE0519002F8C06 /* NSAttributedStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19001625CE0519002F8C06 /* NSAttributedStringTransformer.swift */; };
 		AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E15253E107B00DADF91 /* AppDelegate.swift */; };
 		AC317E18253E107B00DADF91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC317E17253E107B00DADF91 /* SceneDelegate.swift */; };
 		AC317E1D253E107B00DADF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC317E1B253E107B00DADF91 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		AC1792D225869D1400AEE111 /* DetailTodosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTodosCollectionViewCell.xib; sourceTree = "<group>"; };
 		AC1792DB2586BD7600AEE111 /* Deadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deadline.swift; sourceTree = "<group>"; };
 		AC1792DE2586BD8900AEE111 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AC19001625CE0519002F8C06 /* NSAttributedStringTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTransformer.swift; sourceTree = "<group>"; };
 		AC317E12253E107B00DADF91 /* uniTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uniTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC317E15253E107B00DADF91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC317E17253E107B00DADF91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				ACC7FFC925BA2D7200ED956F /* TabItems.swift */,
 				ACC7FFCC25BA2FB200ED956F /* CustomTabBarController.swift */,
 				ACC7FFCF25BA310200ED956F /* TabNavigationMenu.swift */,
+				AC19001625CE0519002F8C06 /* NSAttributedStringTransformer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				ACDC6D5A254E1B9F0037DF45 /* MyCollegesViewController.swift in Sources */,
 				AC71C098258811330016AD68 /* AddTaskViewController.swift in Sources */,
 				AC9EF9F1254CB80100728162 /* DashBoardCollegesCollectionViewCell.swift in Sources */,
+				AC19001725CE0519002F8C06 /* NSAttributedStringTransformer.swift in Sources */,
 				AC317E16253E107B00DADF91 /* AppDelegate.swift in Sources */,
 				AC1792DC2586BD7600AEE111 /* Deadline.swift in Sources */,
 				AC024F59258D79A900790FD8 /* CrudStrategy.swift in Sources */,

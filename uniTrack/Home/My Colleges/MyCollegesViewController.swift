@@ -47,12 +47,13 @@ class MyCollegesViewController: UIViewController {
        
     
     }
- 
     
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         DataManager.shared.getSortedUniversities(byDateAscending: false){[weak self ]result in
             
@@ -81,7 +82,6 @@ class MyCollegesViewController: UIViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController?.searchResultsUpdater = self
         searchController?.obscuresBackgroundDuringPresentation = false
-        
         searchController?.searchBar.placeholder = "Search in My Colleges"
         navigationItem.searchController = searchController
         

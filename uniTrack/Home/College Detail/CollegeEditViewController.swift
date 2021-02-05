@@ -52,12 +52,13 @@ class CollegeEditViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationItem.largeTitleDisplayMode = .never
+        self.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.isNavigationBarHidden = false
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.navigationController?.isNavigationBarHidden = true
+        self.navigationItem.largeTitleDisplayMode = .always
     }
     
     @objc func doneButtonPressed(){
@@ -81,7 +82,6 @@ class CollegeEditViewController: UIViewController {
                     presentingVC.university = updatedUniversity
                     self?.navigationController?.popViewController(animated: true)
                 }
-                
                 
             //TODO: TODO: handle error
             case .failure(let error):
