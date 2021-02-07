@@ -25,6 +25,7 @@ public class University: NSManagedObject{
     @NSManaged var isoCountryCode: String
     @NSManaged var link: String?
     @NSManaged var notes: NSAttributedString?
+    @NSManaged var uuidName: String
     
     @NSManaged var baseModel: UniversityFromData?
     @NSManaged var deadlines: NSSet?
@@ -85,6 +86,7 @@ public class University: NSManagedObject{
         self.baseModel = baseModel
         self.dateOfAdd = Date()
         self.isoCountryCode = countryIsoCode
+        self.uuidName = name
         
     }
     

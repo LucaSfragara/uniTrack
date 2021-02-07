@@ -177,12 +177,22 @@ extension MyCollegesViewController: doneButtonDelegate{
     
     func doneButtonPressed(name: String, universityChosen: UniversityFromData?, course: String, country: Country) {
         
-        let university = University(name: name, course: course, countryIsoCode: country.isoCountryCode, reachType: nil, baseModel: universityChosen)
-        
-        PersistantService.saveContext()
-        
-        self.universities?.insert(university, at: 0)
-        self.CollegesCollectioView.reloadData()
+        DataManager.shared.doesNameAlreadyExist(forName: name){[weak self] doesAlreadyExist in
+            if !doesAlreadyExist{
+                let university = University(name: name, course: course, countryIsoCode: country.isoCountryCode, reachType: nil, baseModel: universityChosen)
+                self?.universities?.insert(university, at: 0)
+                DispatchQueue.main.async {
+                    self?.CollegesCollectioView.reloadData()
+                }
+                
+                PersistantService.saveContext()
+            }else{ //Name already exist
+                let alert = Utilities.createAlertView(title: "University already exists", message: "Oops, you cannot add the same university two time", button1Title: "Ok", button2title: nil){}
+                self?.present(alert, animated: true, completion: nil)
+                
+            }
+        }
+
         
     }
 }

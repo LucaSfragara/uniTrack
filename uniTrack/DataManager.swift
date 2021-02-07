@@ -42,6 +42,24 @@ extension DataManager{
         self.universities?.append(university)
         completion(.success(true))
     }
+    
+    func doesNameAlreadyExist(forName name: String, completion: @escaping (Bool)->()){ //Returns true if name already exist
+        loadFromCoreData(){ result in
+            switch result{
+            case .failure(let error):
+                print("error")
+            case .success(let universities):
+                for university in universities{
+                    if university.uuidName == name{
+                        completion(true)
+                        return
+                    }
+                }
+                completion(false)
+                return
+            }
+        }
+    }
 }
 
 //MARK: READ

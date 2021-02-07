@@ -116,9 +116,12 @@ class AddCollegeViewController: UIViewController {
            let name = self.nameField.text, name.isEmpty == false,
            let country = self.countryChosen
            else {return}
-           
-        delegate.doneButtonPressed(name: name, universityChosen: universityChosen, course: course, country: country)
-        hideCard()
+        
+        hideCard(){[weak self] in
+            self?.delegate?.doneButtonPressed(name: name, universityChosen: self?.universityChosen, course: course, country: country)
+        }
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -129,7 +132,7 @@ class AddCollegeViewController: UIViewController {
     
     @IBAction func tapGestureRecognizer (_ tapRecognizer: UITapGestureRecognizer ){
         
-        hideCard()
+        hideCard(){}
         
     }
     
@@ -151,7 +154,7 @@ class AddCollegeViewController: UIViewController {
         case .ended:
             if cardPanStartingTopConstant + translation.y > ((safeAreaHeight + bottomPadding) * (3/4)){
                 
-                hideCard()
+                hideCard(){}
                     
             }
             else{
@@ -253,7 +256,7 @@ class AddCollegeViewController: UIViewController {
 //MARK: animtions
 extension AddCollegeViewController{
     
-    private func hideCard(){
+    private func hideCard(completion: @escaping ()->() ){
         
         self.view.layoutIfNeeded()
         
@@ -275,7 +278,7 @@ extension AddCollegeViewController{
             if position == .end { //animation has ended
                 
                 self.dismiss(animated: false, completion: nil)
-                
+                completion()
             }
             
         }
