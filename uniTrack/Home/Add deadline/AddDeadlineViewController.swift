@@ -12,7 +12,7 @@ class AddDeadlineViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var addButton: DesignableButton!
-    
+    @IBOutlet weak private var mainView: DesignableView!
     
     weak var delegate: addDeadlineButtonDelegate?
     
@@ -21,6 +21,9 @@ class AddDeadlineViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        self.mainView.layer.cornerRadius = 15
+        self.mainView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
         super.viewDidLoad()
         datePicker.minimumDate = Date() //you can't pick a date that is earlier than the current one

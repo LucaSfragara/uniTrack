@@ -12,16 +12,21 @@ class AddTaskViewController: UIViewController {
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var textTextField: UITextField!
     @IBOutlet weak private var addButton: DesignableButton!
+    @IBOutlet weak private var mainView: DesignableView!
     
 
     weak var delegate: AddTaskButtonDelegate?
     
     override func viewDidAppear(_ animated: Bool) {
         titleTextField.becomeFirstResponder()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.mainView.layer.cornerRadius = 15
+        self.mainView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: UIControl.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIControl.keyboardWillHideNotification, object: nil)
         

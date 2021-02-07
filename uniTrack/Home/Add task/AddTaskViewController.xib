@@ -16,6 +16,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskViewController" customModule="uniTrack" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="1hZ-2N-ix5" id="rn1-BJ-Nsi"/>
+                <outlet property="mainView" destination="4Jh-Op-9Pi" id="pst-fp-bVX"/>
                 <outlet property="textTextField" destination="naf-I9-2Vo" id="xhF-Q7-WaG"/>
                 <outlet property="titleTextField" destination="ai5-Su-b6I" id="yEM-mi-4wl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -112,7 +113,7 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="15"/>
+                            <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>

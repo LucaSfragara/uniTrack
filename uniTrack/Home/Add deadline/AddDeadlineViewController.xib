@@ -17,6 +17,7 @@
             <connections>
                 <outlet property="addButton" destination="7Q6-H8-JUa" id="96O-bO-DZN"/>
                 <outlet property="datePicker" destination="o6h-wp-tL9" id="ov9-vC-I5H"/>
+                <outlet property="mainView" destination="wyi-yo-fYq" id="bki-Bc-dJS"/>
                 <outlet property="titleTextField" destination="f2m-uN-C7o" id="ntj-nJ-HnT"/>
                 <outlet property="view" destination="HGN-z7-Cp0" id="qh5-pQ-meP"/>
             </connections>
@@ -30,7 +31,7 @@
                     <rect key="frame" x="0.0" y="668" width="414" height="228"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIL-bI-Y9R">
-                            <rect key="frame" x="30" y="45" width="99.5" height="19"/>
+                            <rect key="frame" x="30" y="45" width="107" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
@@ -85,7 +86,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK8-ll-W3y">
-                            <rect key="frame" x="30" y="132" width="96" height="19"/>
+                            <rect key="frame" x="30" y="132" width="102.5" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
@@ -117,7 +118,7 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="15"/>
+                            <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
