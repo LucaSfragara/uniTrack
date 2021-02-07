@@ -38,6 +38,12 @@ class AddTaskViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func tapGestureRecognizer (_ tapRecognizer: UITapGestureRecognizer ){
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     @objc private func handleKeyboardWillShow(notification: NSNotification){
         
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{

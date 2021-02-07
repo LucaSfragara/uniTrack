@@ -31,7 +31,7 @@
                     <rect key="frame" x="0.0" y="696" width="414" height="200"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utT-ae-HCQ">
-                            <rect key="frame" x="30" y="43" width="69.5" height="19"/>
+                            <rect key="frame" x="30" y="43" width="75.5" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
@@ -117,16 +117,32 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikc-uZ-G9y">
+                    <rect key="frame" x="0.0" y="44" width="414" height="652"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="m0i-x8-dFv" appends="YES" id="0R5-ND-4Yi"/>
+                    </connections>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.37490159270000001" green="0.37495988609999997" blue="0.37488880749999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="4Jh-Op-9Pi" firstAttribute="top" secondItem="ikc-uZ-G9y" secondAttribute="bottom" id="NLe-5t-91y"/>
                 <constraint firstItem="4Jh-Op-9Pi" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="P2d-ZI-Fpl"/>
                 <constraint firstAttribute="bottom" secondItem="4Jh-Op-9Pi" secondAttribute="bottom" id="cXn-QF-arU"/>
+                <constraint firstItem="ikc-uZ-G9y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="l6S-jd-0EO"/>
+                <constraint firstItem="ikc-uZ-G9y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mJG-xD-Zpw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ikc-uZ-G9y" secondAttribute="trailing" id="qVY-2X-PNr"/>
                 <constraint firstItem="4Jh-Op-9Pi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ziU-v1-tok"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
+        <tapGestureRecognizer id="m0i-x8-dFv">
+            <connections>
+                <action selector="tapGestureRecognizer:" destination="-1" id="Gpv-uS-EB6"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <designables>
         <designable name="1hZ-2N-ix5">

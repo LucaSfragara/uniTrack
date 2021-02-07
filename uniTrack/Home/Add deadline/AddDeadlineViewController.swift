@@ -40,6 +40,14 @@ class AddDeadlineViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func tapGestureRecognizer (_ tapRecognizer: UITapGestureRecognizer ){
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
     @IBAction func didTapAddButton(_ sender: Any) {
         
         guard let title = titleTextField.text, title.isEmpty == false else{
