@@ -57,8 +57,6 @@ class DashboardViewController: UIViewController{
         //setup emptyStatekit
         setupEmptyStateView()
     
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -220,7 +218,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
             self.navigationController?.pushViewController(deadlineDetailVC, animated: true)
             
         }else if collectionView == UpComingCollectionView{ //Tasks collectionView
-            
+          
             guard let selectedTask = allTasks?[indexPath.row] else {return}
             
             let taskDetailVC = TaskDetailViewController()

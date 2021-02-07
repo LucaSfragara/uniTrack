@@ -8,6 +8,11 @@ target 'uniTrack' do
   pod 'DropDown'
   pod 'EmptyStateKit'
   pod 'SwiftSpinner'
-  # Pods for uniTrack
+  # Pods for uniTrack+
+  
+  pod 'Firebase/Crashlytics'
 
+  # Recommended: Add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  
 end

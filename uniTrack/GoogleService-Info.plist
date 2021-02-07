@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>531275140369-qna4a7rd18o6eap57af88uff2k0or13e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.531275140369-qna4a7rd18o6eap57af88uff2k0or13e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBBoeIjYFBhv6JKvWGfrjDMpR_kj-BuriE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>531275140369</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sfra.uniTrack</string>
+	<key>PROJECT_ID</key>
+	<string>unitrack-ce6b4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>unitrack-ce6b4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:531275140369:ios:bd4180f0f254e87e9a90b0</string>
+</dict>
+</plist>
