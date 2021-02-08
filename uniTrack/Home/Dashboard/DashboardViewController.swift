@@ -56,15 +56,18 @@ class DashboardViewController: UIViewController{
         
         //setup emptyStatekit
         setupEmptyStateView()
-    
+        
         
         
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        
+     
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        
+        
         DataManager.shared.getUniversities{result in
             
             switch result {

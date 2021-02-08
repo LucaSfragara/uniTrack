@@ -37,12 +37,12 @@ class DeadlineDetailViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.largeTitleDisplayMode = .always
         navigationController?.isNavigationBarHidden = false
+        
         state = .notEditing
         
         datePicker.minimumDate = Date()

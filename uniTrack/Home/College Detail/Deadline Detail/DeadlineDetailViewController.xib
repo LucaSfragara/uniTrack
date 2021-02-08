@@ -45,7 +45,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-hF-uXA" userLabel="Deadline Edit View">
-                    <rect key="frame" x="0.0" y="56" width="414" height="175"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="175"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ex4-kP-G5p" userLabel="title TextField">
                             <rect key="frame" x="20" y="34" width="374" height="50"/>
@@ -94,7 +94,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-X9-mbJ" userLabel="Deadline detail View">
-                    <rect key="frame" x="0.0" y="62" width="414" height="199"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="199"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Decision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-Ti-gsW" userLabel="Fill Questions">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
@@ -161,8 +161,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Ccs-Ge-Jqw" firstAttribute="centerX" secondItem="TEq-t4-x42" secondAttribute="centerX" id="7UZ-dR-XUP"/>
-                <constraint firstItem="f9M-X9-mbJ" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="18" id="IJh-nb-Uk1"/>
-                <constraint firstItem="wX4-hF-uXA" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" constant="12" id="JdG-qy-3Lc"/>
+                <constraint firstItem="f9M-X9-mbJ" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" id="IJh-nb-Uk1"/>
+                <constraint firstItem="wX4-hF-uXA" firstAttribute="top" secondItem="rR5-d1-N0X" secondAttribute="top" id="JdG-qy-3Lc"/>
                 <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="wX4-hF-uXA" secondAttribute="trailing" id="a73-Xc-qwm"/>
                 <constraint firstItem="rR5-d1-N0X" firstAttribute="trailing" secondItem="f9M-X9-mbJ" secondAttribute="trailing" id="aZo-Mv-x2J"/>
                 <constraint firstItem="f9M-X9-mbJ" firstAttribute="leading" secondItem="rR5-d1-N0X" secondAttribute="leading" id="bZI-M6-dGK"/>

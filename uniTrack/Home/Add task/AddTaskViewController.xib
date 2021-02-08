@@ -31,7 +31,7 @@
                     <rect key="frame" x="0.0" y="696" width="414" height="200"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utT-ae-HCQ">
-                            <rect key="frame" x="30" y="43" width="75.5" height="19"/>
+                            <rect key="frame" x="30" y="43" width="69.5" height="19"/>
                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>

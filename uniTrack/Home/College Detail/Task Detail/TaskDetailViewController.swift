@@ -40,8 +40,7 @@ class TaskDetailViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never
-        navigationController?.isNavigationBarHidden = false
+        
         state = .notEditing
 
         hideDeleteButton()
@@ -65,12 +64,17 @@ class TaskDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.isNavigationBarHidden = false
+        
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        self.navigationController?.isNavigationBarHidden = true
-        //This makes the collegeDetailViewController fetch the university with the updated task - not needed anymore cause of vc being pushed
-        //self.presentingViewController?.viewWillAppear(true)
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
     
      @objc func mainButtonPressed(sender: UIButton){ //this can either be 'Edit' or 'Done'

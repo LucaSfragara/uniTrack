@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -21,11 +21,11 @@
             <objects>
                 <viewController storyboardIdentifier="addCollegeVC" id="pmO-HO-3UB" customClass="AddCollegeViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Xp-s9-t36">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pke-ox-Hbz" userLabel="Dimmer View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -33,10 +33,10 @@
                                 </connections>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQ1-6y-25X" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="293" width="414" height="443"/>
+                                <rect key="frame" x="0.0" y="483" width="428" height="443"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-Pi-fwN">
-                                        <rect key="frame" x="114.33333333333333" y="33" width="185.33333333333337" height="24.666666666666671"/>
+                                        <rect key="frame" x="121.33333333333333" y="33" width="185.33333333333337" height="24.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="21"/>
                                         <color key="textColor" red="0.1061546281" green="0.06595418602" blue="0.20333009960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SrS-Mp-fKY">
-                                        <rect key="frame" x="30" y="89" width="354" height="42"/>
+                                        <rect key="frame" x="30" y="89" width="368" height="42"/>
                                         <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="g7Y-NQ-mNX"/>
@@ -63,13 +63,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Computer Science, Physics, etc..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-CL-E47">
-                                        <rect key="frame" x="30" y="184" width="354" height="42"/>
+                                        <rect key="frame" x="30" y="184" width="368" height="42"/>
                                         <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmH-BU-WOf" userLabel="drag View" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="114.33333333333333" y="16" width="185.33333333333337" height="7"/>
+                                        <rect key="frame" x="121.33333333333333" y="16" width="185.33333333333337" height="7"/>
                                         <color key="backgroundColor" red="0.89389103650000001" green="0.89796465640000001" blue="0.90614050629999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="7" id="vKn-1m-RXA"/>
@@ -81,7 +81,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-81-dOg" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="351" width="300" height="45"/>
+                                        <rect key="frame" x="64" y="351" width="300" height="45"/>
                                         <color key="backgroundColor" name="uniTrack Blue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="dqS-Mk-4bc"/>
@@ -117,7 +117,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="United States, Canada, Italy, ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-C7-zXN">
-                                        <rect key="frame" x="30" y="279" width="354" height="42"/>
+                                        <rect key="frame" x="30" y="279" width="368" height="42"/>
                                         <color key="backgroundColor" red="0.96839326619999999" green="0.97247892619999998" blue="0.98064213990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>

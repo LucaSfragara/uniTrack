@@ -46,7 +46,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPY-ZJ-AzJ" userLabel="Task Edit View">
-                    <rect key="frame" x="0.0" y="56" width="414" height="188"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="188"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g2-QZ-MPC" userLabel="title TextField">
                             <rect key="frame" x="20" y="34" width="374" height="50"/>
@@ -95,7 +95,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-GC-orp" userLabel="Task detail View">
-                    <rect key="frame" x="0.0" y="62" width="414" height="300"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="300"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look up on college website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-cS-Ki0">
                             <rect key="frame" x="20" y="150" width="374" height="37"/>
@@ -123,10 +123,10 @@
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-O6-jYD">
-                            <rect key="frame" x="20" y="122" width="89" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-O6-jYD">
+                            <rect key="frame" x="20" y="122" width="84.5" height="20"/>
                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Z9-js-Hcc" userLabel="University Stack View">
@@ -180,9 +180,9 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="HO9-Bk-OjN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="19P-9d-Dbv"/>
-                <constraint firstItem="cBz-GC-orp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="Cow-1e-m8H"/>
+                <constraint firstItem="cBz-GC-orp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Cow-1e-m8H"/>
                 <constraint firstItem="cBz-GC-orp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W7d-XV-3au"/>
-                <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="dho-h2-qak"/>
+                <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dho-h2-qak"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cBz-GC-orp" secondAttribute="trailing" id="gxL-74-lmH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yPY-ZJ-AzJ" secondAttribute="trailing" id="mPO-hV-iSY"/>
                 <constraint firstItem="yPY-ZJ-AzJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sDI-5V-b8Y"/>
