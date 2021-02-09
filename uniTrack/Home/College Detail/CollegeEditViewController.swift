@@ -34,8 +34,13 @@ class CollegeEditViewController: UIViewController {
         nameField.text = university?.name
         courseField.text = university?.course
         countryField.text = "\(university?.country?.flag ?? "") \(university?.country?.isoCountryCode ?? "")"
-        stateField.text = university?.baseModel?.state
-        populationField.text = university?.baseModel?.population
+        stateField.text = university?.state
+        
+        if let university = university, !(String(university.population).isEmpty){
+            populationField.text = (university.population == 0 ? "" : String(university.population))
+        }else{
+            populationField.text = "--"
+        }
         schoolTypeSelectorView.selectedOption = (university?.reachType).map { University.ReachType(rawValue: $0)!}
         linkField.text = university?.link
         
@@ -53,12 +58,14 @@ class CollegeEditViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.prefersLargeTitles  = true
         self.navigationController?.isNavigationBarHidden = false
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.navigationController?.isNavigationBarHidden = true
         self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     @objc func doneButtonPressed(){

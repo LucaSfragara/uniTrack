@@ -53,6 +53,7 @@ class CollegeDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         navigationController?.isNavigationBarHidden = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         
@@ -82,8 +83,14 @@ class CollegeDetailViewController: UIViewController {
         nameLabel.text = university.name
         courseLabel.text = university.course
         countryLabel.text = university.country?.isoCountryCode
-        stateLabel.text = university.baseModel?.state
-        populationLabel.text = university.baseModel?.population ?? "na"
+        stateLabel.text = university.state
+        
+        if !(String(university.population).isEmpty){
+            populationLabel.text = (university.population == 0 ? "--" : String(university.population))
+        }else{
+            populationLabel.text = "--"
+        }
+        
         reachTypeLabel.text = university.reachType
         
         if university.URL != nil {

@@ -291,7 +291,7 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid(forKey: "population", withValue: value)))
                     return
                 }
-                universityToUpdate.baseModel?.population = String(newPopulation)
+                universityToUpdate.population = Int32(newPopulation)
             
             
            case "isoCountryCode":
@@ -312,7 +312,7 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid(forKey: "state", withValue: value)))
                     return
                 }
-                universityToUpdate.baseModel?.state = newState
+                universityToUpdate.state = newState
          
                 
             default:

@@ -19,7 +19,9 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String" valueTransformerName="NSAttributedStringTransformer" customClassName="NSAttributedString"/>
         <attribute name="photo" optional="YES" attributeType="String"/>
+        <attribute name="population" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="reachType" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
         <attribute name="uuidName" optional="YES" attributeType="String"/>
         <relationship name="baseModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UniversityFromData"/>
         <relationship name="deadlines" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Deadline" inverseName="university" inverseEntity="Deadline"/>
@@ -40,7 +42,7 @@
     <elements>
         <element name="Deadline" positionX="-102.5927734375" positionY="-166.1656799316406" width="128" height="74"/>
         <element name="Task" positionX="-27" positionY="36" width="128" height="89"/>
-        <element name="University" positionX="115.2598876953125" positionY="-273.0502319335938" width="218.1953125" height="209"/>
+        <element name="University" positionX="115.2598876953125" positionY="-273.0502319335938" width="218.1953125" height="239"/>
         <element name="UniversityFromData" positionX="172.5072021484375" positionY="-4.01434326171875" width="128" height="179"/>
     </elements>
 </model>

@@ -22,10 +22,14 @@ public class University: NSManagedObject{
     @NSManaged var reachType: ReachType.RawValue?
     @NSManaged var photo: String
     @NSManaged var dateOfAdd: Date
-    @NSManaged var isoCountryCode: String
     @NSManaged var link: String?
     @NSManaged var notes: String?
     @NSManaged var uuidName: String
+    
+    @NSManaged var isoCountryCode: String
+    @NSManaged var state: String?
+    @NSManaged var population: Int32
+    
     
     @NSManaged var baseModel: UniversityFromData?
     @NSManaged var deadlines: NSSet?
@@ -87,6 +91,12 @@ public class University: NSManagedObject{
         self.dateOfAdd = Date()
         self.isoCountryCode = countryIsoCode
         self.uuidName = name
+        
+        self.state = baseModel?.state
+        if let population = baseModel?.population{
+            self.population = Int32(population) ?? 0
+            
+        }
         
     }
     

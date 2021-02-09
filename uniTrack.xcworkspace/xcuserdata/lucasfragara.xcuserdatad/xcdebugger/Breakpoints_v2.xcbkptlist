@@ -62,8 +62,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "didPressAddDeadline(title:date:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
             landmarkName = "didPressAddDeadline(title:date:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -398,8 +398,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -414,8 +414,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,8 +574,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -590,8 +590,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -606,8 +606,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -622,8 +622,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "doneButtonPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -638,8 +638,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -654,8 +654,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "doneButtonPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -670,8 +670,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -686,8 +686,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "doneButtonPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -702,8 +702,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "updateUniversity(newName:newCourse:newReachType:newPopulation:newState:newCountry:newLink:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -750,8 +750,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -766,8 +766,8 @@
             filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "doneButtonPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1074,6 +1074,426 @@
             endingLineNumber = "153"
             landmarkName = "setupEditor()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A93DB93E-4F19-4F91-97E0-85BEE7E59721"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95E318F8-E3FF-4BCE-A0D9-CAE57BE6803E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9F71E82-34AA-4212-848D-90A68A8C62CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "438C7CB3-E83A-4CE8-93D4-2068BD7697EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "doneButtonPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC6E0B8F-1241-4FF9-85AF-0D3598BD58F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16AE498B-E003-4FEB-B8ED-69CFA6E517E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C115AA5-7520-4C8D-B93E-B00E63BDBBD4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/Home/College Detail/CollegeDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CE33E62-9E8B-4880-86DD-BCE7B467D0EA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "doneButtonPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0737A09-D435-4D52-B7E1-B613E38111C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/Home/College Detail/CollegeEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "doneButtonPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D59F4DC9-F474-4202-A15A-9893802294BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "735">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "1654">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "2561">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "3476">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "5127">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "6043">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "7084">
+               </Location>
+               <Location
+                  uuid = "D59F4DC9-F474-4202-A15A-9893802294BA - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "8003">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "updateUniversity(universityToUpdate:updateValues:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "735">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "1654">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "2561">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "3476">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "5127">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "6043">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "7084">
+               </Location>
+               <Location
+                  uuid = "1E885320-9A36-43AD-8E04-1FE3FE4CB04F - d81d1a2032a53841"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "uniTrack.DataManager.updateUniversity(universityToUpdate: uniTrack.University, updateValues: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, completion: (Swift.Result&lt;uniTrack.University, uniTrack.PersistantStoreError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "uniTrack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucasfragara/uniTrack/uniTrack/DataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "8003">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
