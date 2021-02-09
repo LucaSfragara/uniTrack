@@ -74,11 +74,11 @@ class CollegeEditViewController: UIViewController {
         updateUniversity(newName: name,
                          newCourse: course,
                          newReachType: schoolTypeSelectorView.selectedOption,
-                         newPopulation: Int(populationField.text ?? "a"),
+                         newPopulation: populationField.text,
                          newState: stateField.text,
                          newCountry: country,
                          newLink: linkField.text
-        ){[weak self] result in //a make the Int conversion return nil, hence the population value is not updated
+        ){[weak self] result in
             
             switch result{
             case .success(let updatedUniversity):
@@ -150,7 +150,7 @@ class CollegeEditViewController: UIViewController {
     private func updateUniversity(newName name: String,
                                   newCourse course: String,
                                   newReachType reachType: University.ReachType?,
-                                  newPopulation population: Int?,
+                                  newPopulation population: String?,
                                   newState state: String?,
                                   newCountry country: Country,
                                   newLink link: String?,

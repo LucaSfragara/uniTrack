@@ -284,10 +284,17 @@ extension DataManager{
             //EDITS on base model
             
             case "population":
+                
                 guard value != nil else{
                     continue
                 }
-                guard let newPopulation = value as? Int else{
+                
+                guard let stringValue = value as? String, !stringValue.isEmpty else{
+                    universityToUpdate.population = 0
+                    continue
+                }
+                
+                guard let newPopulation =  Int(stringValue) else{
                     completion(.failure(.updateValueNotValid(forKey: "population", withValue: value)))
                     return
                 }
