@@ -142,8 +142,8 @@ class ProtonBaseViewController: UIViewController {
             stackView.addArrangedSubview(button)
         }
         
-        view.addSubview(editorScrollView)
-        editorScrollView.addSubview(stackView)
+        //view.addSubview(editorScrollView)
+        //editorScrollView.addSubview(stackView)
         
         //Editor setup
         editor.listFormattingProvider = listFormattingProvider
@@ -161,19 +161,19 @@ class ProtonBaseViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             
-            editorScrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            editorScrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            editorScrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+//            editorScrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+//            editorScrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+//            editorScrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+//
+//            editorScrollView.heightAnchor.constraint(equalTo: stackView.heightAnchor, constant: 10),
+//
+//            stackView.widthAnchor.constraint(greaterThanOrEqualTo: editorScrollView.widthAnchor),
+//            stackView.topAnchor.constraint(equalTo: editorScrollView.topAnchor),
+//            stackView.bottomAnchor.constraint(equalTo: editorScrollView.bottomAnchor),
+//            stackView.leadingAnchor.constraint(equalTo: editorScrollView.leadingAnchor),
+//            stackView.trailingAnchor.constraint(equalTo: editorScrollView.trailingAnchor),
 
-            editorScrollView.heightAnchor.constraint(equalTo: stackView.heightAnchor, constant: 10),
-
-            stackView.widthAnchor.constraint(greaterThanOrEqualTo: editorScrollView.widthAnchor),
-            stackView.topAnchor.constraint(equalTo: editorScrollView.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: editorScrollView.bottomAnchor),
-            stackView.leadingAnchor.constraint(equalTo: editorScrollView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: editorScrollView.trailingAnchor),
-
-            editor.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            editor.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             editor.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             editor.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             editor.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),

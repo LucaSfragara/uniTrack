@@ -17,7 +17,7 @@
         <attribute name="isoCountryCode" optional="YES" attributeType="String"/>
         <attribute name="link" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="notes" optional="YES" attributeType="Transformable" valueTransformerName="NSAttributedStringTransformer" customClassName="NSAttributedString"/>
+        <attribute name="notes" optional="YES" attributeType="String" valueTransformerName="NSAttributedStringTransformer" customClassName="NSAttributedString"/>
         <attribute name="photo" optional="YES" attributeType="String"/>
         <attribute name="reachType" optional="YES" attributeType="String"/>
         <attribute name="uuidName" optional="YES" attributeType="String"/>

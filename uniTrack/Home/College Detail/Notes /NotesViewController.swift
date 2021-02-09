@@ -23,12 +23,12 @@ class NotesViewController: ProtonBaseViewController {
             return
         }
         
-        if notes.string.isEmpty{ //deal with notes being emptykkk
+        if notes.isEmpty{ //deal with notes being empty
             super.state = .editing //Shows editor
             super.editor.attributedText = NSAttributedString(string: "")
         }else{
             super.state = .notEditing //Shows renderer
-            super.renderer.attributedText = university.notes!
+            super.renderer.attributedText = NSAttributedString(string: university.notes!)
             
         }
     }
@@ -43,14 +43,14 @@ class NotesViewController: ProtonBaseViewController {
         
         if super.state == .editing{
             
-            updateNotes(attributedText: super.editor.attributedText)
-            self.university?.notes = super.editor.attributedText
-            self.renderer.attributedText = self.university?.notes ?? NSAttributedString(string: "") //update text on renderer
+            updateNotes(attributedText: super.editor.attributedText.string)
+            self.university?.notes = super.editor.attributedText.string
+            self.renderer.attributedText = NSAttributedString(string: self.university?.notes ?? "") //update text on renderer
             super.state = .notEditing
             
         }else{
             
-            self.editor.attributedText = self.university?.notes ?? NSAttributedString(string: "") //update text on editor
+            self.editor.attributedText = NSAttributedString(string: self.university?.notes ?? "")  //update text on editor
             super.state = .editing
             
         }
@@ -58,7 +58,7 @@ class NotesViewController: ProtonBaseViewController {
         
     }
     
-    private func updateNotes(attributedText: NSAttributedString){
+    private func updateNotes(attributedText: String){
         guard let university = university else{
             return
         }

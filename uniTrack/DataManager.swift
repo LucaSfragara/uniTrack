@@ -273,7 +273,7 @@ extension DataManager{
             
             case "notes":
                 
-                guard let newNotes = value as? NSAttributedString else{
+                guard let newNotes = value as? String else{
                     completion(.failure(.updateValueNotValid(forKey: "notes", withValue: value)))
                     return
                 }

@@ -942,8 +942,8 @@
             filePath = "uniTrack/Home/My Colleges/Add College/AddCollegeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "hideCard(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1057,6 +1057,22 @@
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0AC3D4B-BA90-445B-BB3C-AD3C80B43989"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "uniTrack/Proton Classes/ProtonBaseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "setupEditor()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
