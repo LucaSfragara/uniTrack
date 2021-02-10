@@ -54,9 +54,21 @@ enum PersistantStoreError:Error{
     case updateKeyNotRecognized
     case updateValueNotValid(forKey: String, withValue: Any?)
     case linkIsNotValid //To be thrown if pinging the url does not return code 200
+    
 }
 
 extension PersistantStoreError: LocalizedError{
+    
+    func getWrongKey()->String{ //returns the key that caused the error during the updaye
+        switch self{
+        case .updateValueNotValid(forKey: let key, withValue: let value):
+            return key
+        case .linkIsNotValid:
+            return "link"
+        default:
+            fatalError("This function is not available for this error type - but only for updateValueNotValid")
+        }
+    }
     
     public var errorDescription: String?{
         switch self{
@@ -66,8 +78,9 @@ extension PersistantStoreError: LocalizedError{
             return "The university you tried to delete does not exist in the store"
         case .couldNotFetchUniversities:
             return "An error occured while fetching universities from coreData"
+            
         default:
-            return "No errorDescription provided for this error"
+            return "No error Description provided for this error"
         }
         
         

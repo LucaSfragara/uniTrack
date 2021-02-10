@@ -224,6 +224,12 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid(forKey: "name", withValue: value)))
                     return
                 }
+                
+                guard !newName.isEmpty else{
+                    completion(.failure(.updateValueNotValid(forKey: "name", withValue: value)))
+                    return
+                }
+                
                 universityToUpdate.name = newName
                 
             case "course":
@@ -232,6 +238,13 @@ extension DataManager{
                     completion(.failure(.updateValueNotValid(forKey: "course", withValue: value)))
                     return
                 }
+                
+                guard !newCourse.isEmpty else{
+                    completion(.failure(.updateValueNotValid(forKey: "course", withValue: value)))
+                    return
+                }
+                
+                
                 universityToUpdate.course = newCourse.capitalizingFirstLetter()
             
             case "reachtype":

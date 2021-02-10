@@ -93,6 +93,11 @@ class CollegeEditViewController: UIViewController {
             //TODO: TODO: handle error
             case .failure(let error):
                 print(error)
+                DispatchQueue.main.async {
+                    let alertView = Utilities.createAlertView(title: "Oops, Value not valid", message: "The value you provided for the \(error.getWrongKey()) field is not valid.", button1Title: "Ok, Got it", button2title: nil, completion: {})
+                    self?.present(alertView, animated: true, completion: nil)
+                }
+                
             }
         }
     }
