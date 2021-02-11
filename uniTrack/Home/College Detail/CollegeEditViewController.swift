@@ -145,7 +145,7 @@ class CollegeEditViewController: UIViewController {
         }
         
         dropDown.anchorView = countryField
-        dropDown.direction = .bottom
+        dropDown.direction = .any
         dropDown.cornerRadius = 10
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.show()

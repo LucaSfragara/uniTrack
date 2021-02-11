@@ -26,6 +26,8 @@ class CollegeDetailViewController: UIViewController {
     @IBOutlet private weak var deadlinesCollectionView: DynamicCollectionView!
     @IBOutlet private weak var tasksCollectionView: UICollectionView!
     
+    private var initialCardTopCostraint: CGFloat!
+    
     weak var university: University?
     private var cardState: cardState!
     
@@ -41,7 +43,7 @@ class CollegeDetailViewController: UIViewController {
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
         
-       
+        initialCardTopCostraint = cardViewTopConstraint.constant
         
         addGradient(toView: gradientView)
         self.cardState = .normal
@@ -322,7 +324,7 @@ extension CollegeDetailViewController{
            let bottomPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom {
         }
         
-        self.cardViewTopConstraint.constant = self.view.frame.height * 69/224
+        self.cardViewTopConstraint.constant = initialCardTopCostraint
         
         
         let cardAnimation = UIViewPropertyAnimator(duration: 0.25, curve: .easeIn){

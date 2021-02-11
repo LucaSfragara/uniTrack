@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -40,13 +41,13 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-JH-MQP">
-                                <rect key="frame" x="20" y="185.66666666666666" width="374" height="40"/>
+                                <rect key="frame" x="20" y="179.66666666666666" width="374" height="40"/>
                                 <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="33"/>
                                 <color key="textColor" name="uniTrack secondary label color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keD-0f-czW">
-                                <rect key="frame" x="10" y="116" width="394" height="51"/>
+                                <rect key="frame" x="10" y="110" width="394" height="51"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -416,6 +417,7 @@
                             <constraint firstItem="w6g-pi-Xfv" firstAttribute="top" secondItem="7Ij-1N-nPD" secondAttribute="top" constant="275" id="0QL-lH-qSc"/>
                             <constraint firstAttribute="bottom" secondItem="w6g-pi-Xfv" secondAttribute="bottom" id="0jE-0F-AJX"/>
                             <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="2rY-GN-QX2" secondAttribute="trailing" constant="20" id="4df-qF-1Sg"/>
+                            <constraint firstItem="keD-0f-czW" firstAttribute="top" secondItem="2rY-GN-QX2" secondAttribute="bottom" constant="5" id="6TX-ZC-NeX"/>
                             <constraint firstItem="w6g-pi-Xfv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Ov-JH-MQP" secondAttribute="bottom" constant="5" id="HPA-Xu-noB"/>
                             <constraint firstItem="ewX-TW-DVd" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" constant="20" id="Jkr-nS-XHh"/>
                             <constraint firstItem="2rY-GN-QX2" firstAttribute="top" secondItem="ch8-IA-HIm" secondAttribute="top" constant="25" id="KgO-ep-ElH"/>
@@ -424,7 +426,6 @@
                             <constraint firstItem="w6g-pi-Xfv" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" id="T5R-xh-VY0"/>
                             <constraint firstItem="7Ov-JH-MQP" firstAttribute="centerX" secondItem="7Ij-1N-nPD" secondAttribute="centerX" id="Yue-Sb-d8c"/>
                             <constraint firstItem="7Ov-JH-MQP" firstAttribute="top" secondItem="keD-0f-czW" secondAttribute="bottom" constant="18.5" id="btl-aF-dqB"/>
-                            <constraint firstItem="keD-0f-czW" firstAttribute="top" secondItem="7Ij-1N-nPD" secondAttribute="top" constant="116" id="cWm-wa-YLd"/>
                             <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="w6g-pi-Xfv" secondAttribute="trailing" id="fSy-qo-V6l"/>
                             <constraint firstItem="ch8-IA-HIm" firstAttribute="trailing" secondItem="vkD-I4-npu" secondAttribute="trailing" id="hck-Bn-feR"/>
                             <constraint firstItem="7Ov-JH-MQP" firstAttribute="leading" secondItem="ch8-IA-HIm" secondAttribute="leading" constant="20" id="hqB-3J-And"/>
@@ -477,7 +478,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-sd-Ldc" userLabel="Delete Button">
-                                <rect key="frame" x="131" y="525" width="152" height="302"/>
+                                <rect key="frame" x="131" y="525" width="152" height="267"/>
                                 <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
                                 <state key="normal" title="Delete University">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -648,7 +649,7 @@
                         <viewLayoutGuide key="safeArea" id="ZMV-We-J8l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZMV-We-J8l" firstAttribute="bottom" secondItem="gK4-sd-Ldc" secondAttribute="bottom" constant="35" id="HFc-w9-52U"/>
+                            <constraint firstItem="ZMV-We-J8l" firstAttribute="bottom" secondItem="gK4-sd-Ldc" secondAttribute="bottom" constant="70" id="HFc-w9-52U"/>
                             <constraint firstItem="gK4-sd-Ldc" firstAttribute="top" relation="lessThanOrEqual" secondItem="ciD-iH-7Es" secondAttribute="bottom" constant="60" id="OfH-0e-yvM"/>
                             <constraint firstItem="ciD-iH-7Es" firstAttribute="top" secondItem="ZMV-We-J8l" secondAttribute="top" constant="20" id="kCm-Cs-uuR"/>
                             <constraint firstItem="gK4-sd-Ldc" firstAttribute="centerX" secondItem="O0c-rX-aKR" secondAttribute="centerX" id="s6i-5a-eQC"/>
