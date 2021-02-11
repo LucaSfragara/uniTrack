@@ -20,10 +20,10 @@ class DynamicCollectionView: UICollectionView {
         
         override var intrinsicContentSize: CGSize
         {
-            if self.collectionViewLayout.collectionViewContentSize.height < 163{
+            if self.collectionViewLayout.collectionViewContentSize.height < 100{
                 return self.collectionViewLayout.collectionViewContentSize
             }else{
-                return CGSize(width: self.collectionViewLayout.collectionViewContentSize.width, height: 163.0)
+                return CGSize(width: self.collectionViewLayout.collectionViewContentSize.width, height: 100.0)
             }
         }
     

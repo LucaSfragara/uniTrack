@@ -64,28 +64,28 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b07-YE-Ngs" userLabel="Info Stack View">
-                                                            <rect key="frame" x="20" y="33.333333333333336" width="334" height="101.33333333333331"/>
+                                                            <rect key="frame" x="20" y="34.999999999999993" width="334" height="98.333333333333314"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-OF-50i">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="24.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="23.333333333333332"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
                                                                     <color key="textColor" name="uniTrack Blue"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4M-uB-PeU">
-                                                                    <rect key="frame" x="0.0" y="29.333333333333329" width="334" height="20.666666666666671"/>
+                                                                    <rect key="frame" x="0.0" y="28.333333333333336" width="334" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S, Florida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-0w-0lb">
-                                                                    <rect key="frame" x="0.0" y="54.999999999999993" width="334" height="20.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="53.333333333333329" width="334" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadline: 18 Nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKR-dg-PWo">
-                                                                    <rect key="frame" x="0.0" y="80.666666666666657" width="334" height="20.666666666666671"/>
+                                                                    <rect key="frame" x="0.0" y="78.333333333333329" width="334" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -161,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-6A-2qP">
-                                <rect key="frame" x="20" y="124.33333333333331" width="388" height="70"/>
+                                <rect key="frame" x="20" y="123.33333333333331" width="388" height="70"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="opP-uU-Rhv"/>
@@ -181,16 +181,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aiF-qo-wrt">
-                                                    <rect key="frame" x="14" y="13.666666666666664" width="140" height="50"/>
+                                                    <rect key="frame" x="14" y="14.333333333333332" width="140" height="48.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-RQ-zgt" customClass="StrikethroughLabel" customModule="uniTrack" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="23"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="73" height="22.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish essay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v23-yg-Wdq">
-                                                            <rect key="frame" x="0.0" y="27" width="98.333333333333329" height="23"/>
+                                                            <rect key="frame" x="0.0" y="26.333333333333329" width="93.333333333333329" height="22.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -225,19 +225,19 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB0-BG-CVy">
-                                <rect key="frame" x="20" y="92" width="192" height="24.333333333333329"/>
+                                <rect key="frame" x="20" y="92" width="192" height="23.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-R0-GnE">
-                                <rect key="frame" x="20" y="207.33333333333334" width="164.33333333333334" height="26.666666666666657"/>
+                                <rect key="frame" x="20" y="206.33333333333334" width="149.33333333333334" height="25.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-oE-tso">
-                                <rect key="frame" x="20" y="419.66666666666674" width="388" height="441.33333333333326"/>
+                                <rect key="frame" x="20" y="416.66666666666674" width="388" height="444.33333333333326"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQK-Wv-0Be">
                                     <size key="itemSize" width="374" height="130"/>
@@ -262,16 +262,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mLy-YY-DUI">
-                                                    <rect key="frame" x="45" y="34.666666666666671" width="309" height="60.666666666666671"/>
+                                                    <rect key="frame" x="45" y="36" width="309" height="58.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-hO-cDe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="29.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="28"/>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
                                                             <color key="textColor" name="uniTrack Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-cf-xWS">
-                                                            <rect key="frame" x="0.0" y="36.333333333333336" width="309" height="24.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="35" width="309" height="23.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
                                                             <color key="textColor" name="uniTrack secondary label color"/>
                                                             <nil key="highlightedColor"/>
@@ -301,13 +301,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-wo-PRy">
-                                <rect key="frame" x="20" y="385" width="134.33333333333334" height="26.666666666666686"/>
+                                <rect key="frame" x="20" y="383" width="122" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S88-ny-lRU">
-                                <rect key="frame" x="20" y="242" width="388" height="130"/>
+                                <rect key="frame" x="20" y="240" width="388" height="130"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="wVr-mR-ZI9"/>
@@ -327,19 +327,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-qO-71p">
-                                                    <rect key="frame" x="40.333333333333343" y="38.666666666666657" width="47.666666666666657" height="51"/>
+                                                    <rect key="frame" x="40.666666666666657" y="39.666666666666657" width="47" height="49"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="42"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfz-0B-QgG">
-                                                    <rect key="frame" x="39.666666666666671" y="13.000000000000002" width="48.666666666666671" height="26.666666666666671"/>
+                                                    <rect key="frame" x="41.333333333333329" y="13.000000000000002" width="45.333333333333329" height="25.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YALE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln1-fO-0eo">
-                                                    <rect key="frame" x="10" y="81" width="108" height="47"/>
+                                                    <rect key="frame" x="10" y="80" width="108" height="48"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>

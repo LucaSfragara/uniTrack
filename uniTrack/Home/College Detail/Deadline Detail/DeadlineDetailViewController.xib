@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -45,10 +46,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-hF-uXA" userLabel="Deadline Edit View">
-                    <rect key="frame" x="0.0" y="44" width="414" height="175"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="176"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ex4-kP-G5p" userLabel="title TextField">
-                            <rect key="frame" x="20" y="34" width="374" height="50"/>
+                            <rect key="frame" x="20" y="34.5" width="374" height="50"/>
                             <color key="backgroundColor" name="uniTrack textField BackGround"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="QlU-QU-B91"/>
@@ -57,19 +58,19 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sn-eE-DsW" userLabel="Deadline Title">
-                            <rect key="frame" x="20" y="0.0" width="97" height="19"/>
+                            <rect key="frame" x="20" y="0.0" width="105.5" height="19.5"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnj-rg-tfv" userLabel="Deadline Text">
-                            <rect key="frame" x="20" y="104" width="99" height="19"/>
+                            <rect key="frame" x="20" y="104.5" width="106" height="19.5"/>
                             <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                             <color key="textColor" name="uniTrack secondary label color"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-Cc-rkD">
-                            <rect key="frame" x="20" y="138" width="126" height="37"/>
+                            <rect key="frame" x="20" y="139" width="126" height="37"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="37" id="3aE-Tq-T1c"/>
                                 <constraint firstAttribute="width" constant="126" id="q5d-sZ-XJS"/>
@@ -115,7 +116,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ss8-Ek-Qqc" userLabel="University Stack View">
-                            <rect key="frame" x="90" y="131" width="234" height="60"/>
+                            <rect key="frame" x="69.5" y="131" width="275" height="60"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="University Icon" translatesAutoresizingMaskIntoConstraints="NO" id="LK6-q7-SpV">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -124,8 +125,11 @@
                                         <constraint firstAttribute="height" constant="60" id="ObN-MO-3o5"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford university" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-Xa-J2w">
-                                    <rect key="frame" x="75" y="0.0" width="159" height="60"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford university" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-Xa-J2w">
+                                    <rect key="frame" x="75" y="0.0" width="200" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="hAX-PX-Vcm"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
                                     <color key="textColor" name="uniTrack Light Orange"/>
                                     <nil key="highlightedColor"/>
@@ -147,7 +151,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccs-Ge-Jqw" userLabel="Delete Button">
-                    <rect key="frame" x="140" y="676" width="134" height="35"/>
+                    <rect key="frame" x="136.5" y="676" width="141" height="35"/>
                     <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
                     <state key="normal" title="Delete Deadline">
                         <color key="titleColor" systemColor="systemRedColor"/>
