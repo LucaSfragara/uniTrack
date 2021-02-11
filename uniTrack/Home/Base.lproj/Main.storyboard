@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaV-8a-nbe">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -33,11 +33,11 @@
             <objects>
                 <viewController id="C0M-sc-NfA" customClass="MyCollegesViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAT-Yw-VoJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qf8-SA-fNC">
-                                <rect key="frame" x="20" y="98" width="374" height="725"/>
+                                <rect key="frame" x="20" y="98" width="388" height="755"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Li-9l-aMG">
                                     <size key="itemSize" width="374" height="151"/>
@@ -47,54 +47,70 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collegeCellID" id="cS6-4c-xIt" customClass="CollegeCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="168"/>
+                                        <rect key="frame" x="7" y="0.0" width="374" height="168"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="x3C-nz-yjD">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b07-YE-Ngs" userLabel="Info Stack View">
-                                                    <rect key="frame" x="43" y="30.5" width="184" height="107"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-3j-Rb5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="168"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-OF-50i">
-                                                            <rect key="frame" x="0.0" y="0.0" width="184" height="28"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="23"/>
-                                                            <color key="textColor" name="uniTrack Blue"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4M-uB-PeU">
-                                                            <rect key="frame" x="0.0" y="33" width="184" height="22"/>
-                                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S, Florida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-0w-0lb">
-                                                            <rect key="frame" x="0.0" y="60" width="184" height="21"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
-                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadline: 18 Nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKR-dg-PWo">
-                                                            <rect key="frame" x="0.0" y="86" width="184" height="21"/>
-                                                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-gg-zAk">
+                                                            <rect key="frame" x="0.0" y="36" width="0.0" height="96"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="96" id="4sC-Zx-IfQ"/>
+                                                                <constraint firstAttribute="width" id="hGy-SK-UBk"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b07-YE-Ngs" userLabel="Info Stack View">
+                                                            <rect key="frame" x="20" y="33.333333333333336" width="334" height="101.33333333333331"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-OF-50i">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="24.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                                                    <color key="textColor" name="uniTrack Blue"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4M-uB-PeU">
+                                                                    <rect key="frame" x="0.0" y="29.333333333333329" width="334" height="20.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U.S, Florida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-0w-0lb">
+                                                                    <rect key="frame" x="0.0" y="54.999999999999993" width="334" height="20.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadline: 18 Nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKR-dg-PWo">
+                                                                    <rect key="frame" x="0.0" y="80.666666666666657" width="334" height="20.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
-                                                </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7e7-gg-zAk">
-                                                    <rect key="frame" x="20" y="36" width="0.0" height="96"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="96" id="4sC-Zx-IfQ"/>
-                                                        <constraint firstAttribute="width" id="hGy-SK-UBk"/>
+                                                        <constraint firstAttribute="width" constant="374" id="5wG-Jd-a5f"/>
+                                                        <constraint firstItem="7e7-gg-zAk" firstAttribute="leading" secondItem="Pt6-3j-Rb5" secondAttribute="leading" id="OAA-ke-zJl"/>
+                                                        <constraint firstItem="b07-YE-Ngs" firstAttribute="leading" secondItem="7e7-gg-zAk" secondAttribute="trailing" constant="20" id="eC3-3u-gQm"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="b07-YE-Ngs" secondAttribute="bottom" id="en5-Yh-ZzH"/>
+                                                        <constraint firstItem="b07-YE-Ngs" firstAttribute="centerY" secondItem="Pt6-3j-Rb5" secondAttribute="centerY" id="g4u-ha-e2N"/>
+                                                        <constraint firstItem="b07-YE-Ngs" firstAttribute="centerX" secondItem="Pt6-3j-Rb5" secondAttribute="centerX" id="gsB-Hd-ByW"/>
+                                                        <constraint firstItem="b07-YE-Ngs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Pt6-3j-Rb5" secondAttribute="top" id="lpc-lw-zDk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="b07-YE-Ngs" secondAttribute="trailing" constant="20" id="qj9-2m-qrp"/>
+                                                        <constraint firstItem="7e7-gg-zAk" firstAttribute="centerY" secondItem="Pt6-3j-Rb5" secondAttribute="centerY" id="yYy-Fs-JIA"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7e7-gg-zAk" firstAttribute="leading" secondItem="x3C-nz-yjD" secondAttribute="leading" constant="20" id="EaO-1w-gb3"/>
-                                                <constraint firstItem="b07-YE-Ngs" firstAttribute="leading" secondItem="7e7-gg-zAk" secondAttribute="trailing" constant="23" id="JfX-nE-xkL"/>
-                                                <constraint firstItem="7e7-gg-zAk" firstAttribute="centerY" secondItem="x3C-nz-yjD" secondAttribute="centerY" id="LJl-xW-C2p"/>
-                                                <constraint firstItem="b07-YE-Ngs" firstAttribute="centerY" secondItem="x3C-nz-yjD" secondAttribute="centerY" id="ZM7-2G-4cH"/>
+                                                <constraint firstItem="Pt6-3j-Rb5" firstAttribute="top" secondItem="x3C-nz-yjD" secondAttribute="top" id="B3f-U4-nTm"/>
+                                                <constraint firstAttribute="bottom" secondItem="Pt6-3j-Rb5" secondAttribute="bottom" id="cEX-ds-I2q"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pt6-3j-Rb5" secondAttribute="trailing" id="cIC-HN-Px2"/>
+                                                <constraint firstItem="Pt6-3j-Rb5" firstAttribute="leading" secondItem="x3C-nz-yjD" secondAttribute="leading" id="iOC-xb-y8L"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,18 +150,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfh-yT-BW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="-335"/>
+            <point key="canvasLocation" x="382.60869565217394" y="-335.49107142857139"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="nxv-5n-sKY">
             <objects>
                 <viewController id="Rtp-tl-bda" customClass="DashboardViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5jJ-uA-k1W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-6A-2qP">
-                                <rect key="frame" x="20" y="124.5" width="374" height="70"/>
+                                <rect key="frame" x="20" y="124.33333333333331" width="388" height="70"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="opP-uU-Rhv"/>
@@ -158,23 +174,23 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingcellID" id="UDu-WF-w1E" customClass="UpComingCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-3.5" width="199" height="77"/>
+                                        <rect key="frame" x="0.0" y="-3.6666666666666665" width="199" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jVn-B8-fZi">
                                             <rect key="frame" x="0.0" y="0.0" width="199" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aiF-qo-wrt">
-                                                    <rect key="frame" x="14" y="13.5" width="140" height="50"/>
+                                                    <rect key="frame" x="14" y="13.666666666666664" width="140" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-RQ-zgt" customClass="StrikethroughLabel" customModule="uniTrack" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="79.5" height="23"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="23"/>
                                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="19"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish essay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v23-yg-Wdq">
-                                                            <rect key="frame" x="0.0" y="27" width="98.5" height="23"/>
+                                                            <rect key="frame" x="0.0" y="27" width="98.333333333333329" height="23"/>
                                                             <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -209,19 +225,19 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To-Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB0-BG-CVy">
-                                <rect key="frame" x="20" y="92" width="178" height="24.5"/>
+                                <rect key="frame" x="20" y="92" width="192" height="24.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Deadlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-R0-GnE">
-                                <rect key="frame" x="20" y="207.5" width="164.5" height="27"/>
+                                <rect key="frame" x="20" y="207.33333333333334" width="164.33333333333334" height="26.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-oE-tso">
-                                <rect key="frame" x="20" y="420.5" width="374" height="410.5"/>
+                                <rect key="frame" x="20" y="419.66666666666674" width="388" height="441.33333333333326"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQK-Wv-0Be">
                                     <size key="itemSize" width="374" height="130"/>
@@ -231,14 +247,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dashboardCollegeCellID" id="UCW-7p-xCQ" customClass="DashboardCollegesCollectionViewCell" customModule="uniTrack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
+                                        <rect key="frame" x="7" y="0.0" width="374" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="p8v-HE-jhH">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scalemass.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-vK-ZVC">
-                                                    <rect key="frame" x="20" y="18" width="0.0" height="94"/>
+                                                    <rect key="frame" x="20" y="18.333333333333336" width="0.0" height="93.333333333333329"/>
                                                     <color key="tintColor" name="uniTrack Light Blue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" id="AuD-c5-dME"/>
@@ -246,16 +262,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="mLy-YY-DUI">
-                                                    <rect key="frame" x="45" y="34.5" width="309" height="61"/>
+                                                    <rect key="frame" x="45" y="34.666666666666671" width="309" height="60.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carnegie Mellon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-hO-cDe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="29.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="29.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
                                                             <color key="textColor" name="uniTrack Blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-cf-xWS">
-                                                            <rect key="frame" x="0.0" y="36.5" width="309" height="24.5"/>
+                                                            <rect key="frame" x="0.0" y="36.333333333333336" width="309" height="24.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
                                                             <color key="textColor" name="uniTrack secondary label color"/>
                                                             <nil key="highlightedColor"/>
@@ -285,13 +301,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Colleges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3L-wo-PRy">
-                                <rect key="frame" x="20" y="385.5" width="134.5" height="27"/>
+                                <rect key="frame" x="20" y="385" width="134.33333333333334" height="26.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S88-ny-lRU">
-                                <rect key="frame" x="20" y="242.5" width="374" height="130"/>
+                                <rect key="frame" x="20" y="242" width="388" height="130"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="wVr-mR-ZI9"/>
@@ -311,13 +327,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-qO-71p">
-                                                    <rect key="frame" x="40" y="38.5" width="48" height="51"/>
+                                                    <rect key="frame" x="40.333333333333343" y="38.666666666666657" width="47.666666666666657" height="51"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="42"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfz-0B-QgG">
-                                                    <rect key="frame" x="40" y="13" width="48.5" height="27"/>
+                                                    <rect key="frame" x="39.666666666666671" y="13.000000000000002" width="48.666666666666671" height="26.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -412,7 +428,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="book.fill" catalog="system" id="B0d-8H-bfS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="SA8-rZ-Zkz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -431,7 +447,7 @@
                     <tabBarItem key="tabBarItem" title="My Colleges" image="magnifyingglass" catalog="system" id="7bA-TM-RRn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZKF-m5-rg2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -449,7 +465,7 @@
                 <navigationController storyboardIdentifier="SettingsNavVCID" id="Jwz-ro-ryz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Nmr-cf-WfJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cSt-pn-Bu0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -465,11 +481,11 @@
             <objects>
                 <viewController id="wE9-ZE-vLT" customClass="SettingsViewController" customModule="uniTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CcV-IW-2SW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7Y-dW-Y0O" customClass="DesignableButton" customModule="uniTrack" customModuleProvider="target">
-                                <rect key="frame" x="132" y="180" width="150" height="45"/>
+                                <rect key="frame" x="139" y="180" width="150" height="45"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="CNn-7g-tFH"/>
@@ -498,7 +514,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xu1-Fc-zca" customClass="DesignableView" customModule="uniTrack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="265" width="334" height="5"/>
+                                <rect key="frame" x="40" y="265" width="348" height="5"/>
                                 <color key="backgroundColor" name="uniTrack Light Grey"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="5" id="aGY-GZ-zXC"/>
@@ -510,7 +526,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VQm-65-WRn" userLabel="Contact Stack View">
-                                <rect key="frame" x="82" y="310" width="250" height="153"/>
+                                <rect key="frame" x="89" y="310" width="250" height="153"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vbU-2H-7w2">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="153"/>
@@ -599,9 +615,9 @@
         </designable>
     </designables>
     <resources>
-        <image name="Mail Icon" width="250" height="250"/>
+        <image name="Mail Icon" width="166.66667175292969" height="166.66667175292969"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
-        <image name="githubIcon" width="250" height="250"/>
+        <image name="githubIcon" width="166.66667175292969" height="166.66667175292969"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="scalemass.fill" catalog="system" width="128" height="119"/>
         <namedColor name="uniTrack Blue">
