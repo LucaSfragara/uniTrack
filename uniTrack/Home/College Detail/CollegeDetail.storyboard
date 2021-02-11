@@ -478,7 +478,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-sd-Ldc" userLabel="Delete Button">
-                                <rect key="frame" x="131" y="525" width="152" height="267"/>
+                                <rect key="frame" x="135" y="525" width="144" height="267"/>
                                 <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="19"/>
                                 <state key="normal" title="Delete University">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -537,19 +537,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2hg-RN-wgk" userLabel="Info Stack View">
-                                        <rect key="frame" x="0.0" y="152" width="285" height="66"/>
+                                        <rect key="frame" x="0.0" y="152" width="271" height="66"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="czs-R3-oAf" userLabel="Country Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="66"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWW-NN-Uw5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="34"/>
                                                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                                                         <color key="textColor" name="uniTrack secondary label color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhv-vp-FUb">
-                                                        <rect key="frame" x="0.0" y="32" width="81.666666666666671" height="34"/>
+                                                        <rect key="frame" x="0.0" y="32" width="77" height="34"/>
                                                         <color key="backgroundColor" name="uniTrack textField BackGround"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -557,16 +557,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="H8q-Fr-PVw" userLabel="State Stack View">
-                                                <rect key="frame" x="101.66666666666666" y="0.0" width="81.666666666666657" height="66"/>
+                                                <rect key="frame" x="97" y="0.0" width="77" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jce-kU-H2v">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="34"/>
                                                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                                                         <color key="textColor" name="uniTrack secondary label color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-X3-0sh">
-                                                        <rect key="frame" x="0.0" y="32" width="81.666666666666671" height="34"/>
+                                                        <rect key="frame" x="0.0" y="32" width="77" height="34"/>
                                                         <color key="backgroundColor" name="uniTrack textField BackGround"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -574,16 +574,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="gnK-RF-V60" userLabel="Country Stack View">
-                                                <rect key="frame" x="203.33333333333334" y="0.0" width="81.666666666666657" height="66"/>
+                                                <rect key="frame" x="194" y="0.0" width="77" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aI-FT-7LF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="34"/>
                                                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
                                                         <color key="textColor" name="uniTrack secondary label color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYj-aV-nmh">
-                                                        <rect key="frame" x="0.0" y="32" width="81.666666666666671" height="34"/>
+                                                        <rect key="frame" x="0.0" y="32" width="77" height="34"/>
                                                         <color key="backgroundColor" name="uniTrack textField BackGround"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>

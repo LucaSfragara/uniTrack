@@ -207,7 +207,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         }else if collectionView == self.DeadlinesCollectionView{
             return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.height)
         }else{ //Colleges CollectionView
-            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/6)
+            return CGSize(width: collectionView.frame.width, height: view.frame.height/9.5)
         }
         
     }
